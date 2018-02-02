@@ -1,0 +1,876 @@
+
+#enrolPenrol
+{
+    line-height:20px;
+    padding:10px 20px;
+}
+.form table th,.form table td
+{
+    border-bottom:5px solid #ffffff;
+}
+.normalText{
+	width: 180px;
+}
+.shortText{
+	width: 140px;
+}
+.longText{
+	width: 230px;
+}
+.smallText{
+	width: 50px;
+}
+.companyContent
+{
+    display:none;
+}
+caption{
+	margin: 15px 0;
+	text-align: left;
+}
+h3 span{
+	float: right;
+	padding-right: 10px;
+	font-weight: normal;
+}
+h3 span a{
+	color: #ff6600;
+}
+#registerSuccess{
+	width: 960px;
+	margin: 20px 0 0 20px;
+}
+.successBox{
+	width: 100%;
+	margin: 15px 0;
+	padding: 20px 0;
+	background-color: #ededed;
+	text-align: center;
+	color: #525A6B;
+}
+#success{
+	display: inline-block;
+	height: 30px;
+	margin: 0 auto;
+	padding-left: 40px;
+	font-size: 16px;
+	line-height: 30px;
+	background:url(../images/success.png) no-repeat;
+}
+#important{
+	display: inline-block;
+	height: 30px;
+	margin: 0 auto;
+	padding-left: 40px;
+	font-size: 16px;
+	line-height: 30px;
+	background:url(../images/important.png) no-repeat;
+}
+.successText{
+	width: 250px;
+	margin: 15px auto;
+	text-align: left;
+	line-height: 20px;
+}
+.successText span{
+	color: #fd6b09;
+	font-weight: bold;
+}
+#smallbd{
+	width: 760px;
+	margin: 0 auto;
+	position: relative;
+}
+.formTable tr td{
+	padding: 5px;
+}
+.formTable td.title{
+	width: 18%;
+}
+.title{
+	text-align: right;
+}
+#accountBox{
+	width: 92%;
+	margin: 15px auto;
+	background-color: #ededed;
+	padding: 25px 3%;
+}
+#accountBox span{
+	font-size: 14px;
+	font-weight: bold; 
+}
+#accountControl{
+	background-color: #4a5163;
+	margin-top: 15px;
+	color: #e4e4e4;
+	height: 60px;
+	padding: 15px;
+	position: relative;	
+}
+#accountControl span{
+	background: url(../images/smile.png) no-repeat left 50%;
+	padding-left: 40px;
+}
+#accountControl a{
+	display: block;
+	width: 190px;
+	height: 36px;
+	text-align: center; 
+	line-height: 30px; 
+}
+.infoBox{
+	width: 98%;
+	margin: 15px auto;
+}
+.infoBox tr{
+	border-bottom: 1px dotted #cecece;
+}
+.infoBox td{
+	padding: 15px;
+}
+#collectionBox{
+	display: none;
+}
+.correct{
+	padding: 0 15px;
+}
+.accountInfo td.title{
+	width: 140px;
+	background-color: #ededed;
+}
+.accountInfo td a.gotoPoolpay{
+	margin-left: 15px;
+	padding: 5px;
+	background-color: #ff610d;
+	color: #fff;
+}
+.balanceInfo td.title{
+	width: 70px;
+	background-color: #ededed;
+}
+#pointBox{
+	margin-top:15px;
+	height: 60px;
+	padding: 15px;
+	background-color: #ededed;
+	line-height: 30px;
+}
+#pointBox p span{
+	font-weight: bold;
+}
+#pointBox p a{
+	padding-left: 15px;
+	color: #fc7d2a;
+}
+#pointBox a{
+	padding-right: 15px;
+	color:#2651a9;
+	text-decoration:underline;
+}
+#goodsList{
+	margin-top: 15px;
+	padding-bottom: 20px;
+	position: relative;
+}
+.goodsTitle{
+	height: 35px;
+	background-color: #4A5163;
+	color: #e8e9ec;
+	line-height: 35px;
+	padding: 0 0 0 30px;
+}
+#goodsList ul{
+	overflow: hidden;
+}
+#goodsList ul li{
+	float: left;
+	padding: 10px 15px 10px 0;
+	position: relative;
+}
+#goodsList img{
+	width: 200px;
+	height: 150px;
+	border: 1px solid #f3f3f3;
+}
+#goodsList li span{
+	display: block;
+	width: 200px;
+	height: 30px;
+	border: 1px solid #f3f3f3;
+	background-color: #f3f3f3;
+	line-height: 30px;
+	text-align: center;
+	position: relative;
+}
+.goodsNumber{
+	height: 25px;
+	width: 100px;
+	line-height: 25px;
+	text-align:  center;
+	background-color: #cd0000;
+	color: #e8e9ec;
+	position: absolute;
+	top: 10px;
+	left: 55px;
+	z-index: 10;
+}
+.pointPrice{
+	margin-top: 5px;
+	width: 180px;
+	height: 30px; 
+	background-color: #cd0000;
+	border: 1px solid #cd0000;
+	color: #e8e9ec;
+	line-height: 30px;
+	padding: 0 10px;
+	font-weight: bold;
+	position: relative;
+}
+.pointBtn{
+	padding: 0;
+	height: 20px;
+	width: 60px;
+	background-color: #edce2d;
+	font-weight: bold;
+	cursor: pointer;
+	position: absolute;
+	top:5px;
+	right: 15px;
+}
+.page{
+	text-align: center;
+	margin: 15px 0;
+}
+.page li{
+	display: inline;
+	padding: 0 5px;
+}
+.page li.null{
+	color: #c1c1c1;
+}
+.page li span{
+	color: #fd8a3c;
+}
+.pointError{
+	display: none;
+	width: 300px;
+	height: 150px;
+	text-align: center;
+	background-color: #fff;
+	border:1px solid #cbcbcb;
+	position: absolute;
+	top: 35%;
+	left: 30%;
+	z-index: 999;
+}
+.pointError h4{
+	padding: 0;
+	height: 30px;
+	line-height: 30px;
+	background-color: #d2d2d2;
+	color: #292929;
+}
+.pointError span{
+	margin: 20px 0 20px 70px; 
+	*margin:20px 0 20px 0;
+	display: block;
+	text-align: left;
+	height: 30px;
+	line-height: 15px;
+	width: 140px;
+	padding-left: 40px;
+	background:url(../images/important.png) no-repeat;
+}
+.textBox{
+	margin-top: 5px;
+	float: left;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 5px;
+}
+.textBox span{
+	margin-left: 30px;
+}
+.borderBox{
+	float:left;
+	background-color: #fff;
+	margin-top: 5px;
+	width: 150px;
+	height: 26px;
+	border:1px solid #abadb3;
+}
+.inputBox{
+	float: left;
+	border: 0;
+	width: 110px;
+	height: 20px;
+}
+.arrivalBox{
+	display: block;
+	margin-top: 2px;
+	background-image: url(../images/caigou-ico.png);
+	background-position: -43px -37px;
+	height: 20px;
+	width: 24px;
+	overflow: hidden;
+	padding: 0;
+}
+span.btnMargin{
+	display: block;
+	margin:15px 0 0 45px;
+}
+.record{
+	margin: 15px 0;
+	text-align: center;
+}
+.record th{
+	background-color: #ededed;
+}
+.record tr.loginGrowth{
+	height: 25px;
+	line-height: 25px;
+}
+.record tr.goodsGrowth{
+	background-color: #ededed;
+	height: 30px;
+	line-height: 30px;
+}
+.goodsPic{
+	float: left;
+	margin-top: 15px;
+	padding: 15px;
+	padding-right: 0px;
+}
+.goodsPic img{
+	width: 230px;
+	height: 190px;
+	border:1px solid #bebebe;
+}
+.goodsPic span{
+	display: block;
+	width: 230px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.goodsOperate{
+	float: left;
+	margin-top: 15px;
+	padding: 15px;
+}
+.operateTitle{
+	display: block;
+	margin: 15px 0;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 40px;
+	background:url(../images/inquire.png) no-repeat;
+}
+.operateContent{
+	display: block;
+	margin: 20px 40px;
+	color: #f97214;
+	line-height: 30px;
+}
+.operateContent input{
+	width: 40px;
+}
+.goodsOk{
+	display: none;
+	margin-top: 15px;
+	padding: 15px;
+}
+.goodsOk span.operateTitle{
+	display: block;
+	margin: 15px 0;
+	height: 40px;
+	line-height: 20px;
+	padding-left: 40px;
+	background:url(../images/inquire.png) no-repeat left 50%;
+}
+.return{
+	padding-left: 40px;
+}
+.return a{
+	padding-right: 20px;
+	color: #355eac;
+}
+.pointSet{
+	margin: 15px 0;
+}
+.pointSet div.borderBox{
+	float:left;
+	background-color: #fff;
+	margin-top: 5px;
+	width: 150px;
+	height: 26px;
+	border:1px solid #abadb3;
+}
+.pointSet tr{
+	display: block;
+	margin:10px 0;
+}
+.pointSet td{
+	padding-left: 20px;
+}
+.pointSet span{
+	color: #666;
+}
+.pointTitle{
+	width: 100px;
+	vertical-align: middle;
+	text-align: right;
+	background-color: #ededed;
+}
+.find{
+	background-color: #ededed;
+}
+.pointSet textarea{
+	height: 50px;
+	width: 200px;
+	padding: 0 5px;
+	border:1px solid #666;
+}
+.short{
+	width: 50px;
+	padding: 0;
+}
+.setBtn{
+	width: 100px;
+	height: 30px;
+	background-color: #4a5163;
+	margin-left: 140px;
+	color: #f8fcff;
+}
+.setBtn:hover{
+	background-color: #7c7e86;
+}
+.commodityOperate{
+	display: none;
+	text-align: center;
+	width: 200px;
+	background-color: #fff;
+	border: 1px solid #b0b0b0;
+	padding-bottom: 10px;
+	position: absolute;
+	top: 30%;
+	left: 35%;
+}
+.commodityOperate h4{
+	background-color: #cccccc;
+	height: 25px;
+	line-height: 25px;
+	padding: 0;
+}
+td.content{
+	text-align: left;
+	padding: 5px 0;
+}
+.commodity{
+	padding: 10px 0;
+}
+/*----------------------------------*/
+/* general
+	###############################################
+*/
+.tableType1 tr{
+	height: 40px;
+	line-height: 40px;
+}
+.tableType1 th,
+.tableType1 td{
+	border-top: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+	padding: 0 5px;
+}
+.tableType1 th{
+	background-color: #f2f2f2;
+	text-align: right;
+}
+.buttonType1{
+	height: 40px;
+	line-height: 40px;
+	padding: 0 35px;
+	margin: 0 10px;
+}
+.commitType1{
+	background-color: #f60;
+	color: white;
+}
+.commitType1:hover{
+	background-color: #f50;
+}
+.cancelType1{
+	background-color: #f2f2f2;
+	color: #333;
+}
+.cancelType1:hover{
+	background-color: #e3e3e3;
+}
+.navType1{
+	margin: 0 0 15px;
+	height: 32px;
+}
+.navType1 li{
+	margin-right: 5px;
+	float: left;
+}
+.navType1 li a{
+	display: block;
+	width: 156px;
+	height: 32px;
+	background: url(../images/reg/2.png) no-repeat;
+	line-height: 32px;
+	text-align: center;
+}
+.navType1 li a.navType1Selected,
+.navType1 li a:hover{
+	background: url(../images/reg/1.png) no-repeat;
+	color:white;
+	text-decoration: none;
+}
+
+/*
+	#############################################
+*/
+.addBox{
+	width:700px;
+	margin: 15px auto;
+	border:1px solid #ededed;
+	padding: 40px 15px 15px;
+	position: relative;
+}
+.addBox h4{
+	width: 118px;
+	height: 24px;
+	background: url(../images/add_header_bg.png) no-repeat;
+	line-height: 24px;
+	position: absolute;
+	top: 0px;
+	left: 42%;
+	text-align: center;
+}
+.addBox p{
+	height: 30px;
+	width: 98%;
+	background-color: #f2f2f2;
+	border: 1px dotted #dbdbdb;
+	line-height: 30px;
+	padding-left: 2%;
+	margin-bottom: 15px;
+}
+.addBox form{
+	text-align: center;
+}
+.addTable{
+	margin: 30px 0;
+}
+.addTable th{
+	width: 18%;
+}
+/*
+.addTable select{
+	width: 31%;
+	color: black;
+}*/
+.addTable input{
+	width: 95%;
+	border: 1px solid #ddd;
+}
+.companyTable{
+	margin: 15px 0;
+	text-align: left;
+}
+.companyTable th{
+	width: 17%;
+}
+/*
+.companyTable select{
+	width: 31%;
+	color: black;
+}*/
+.companyTable input{
+	width: 95%;
+	border: 1px solid #ddd;
+}
+.infoMaintenanceForm{
+	text-align: center;
+}
+.companyTable input.inputType1{
+	width: 35%;
+}
+.companyTable input.buttonType2{
+	width: 50px;
+	text-align: center;
+}
+.companyTable input.buttonType2:hover{
+	background-color: #e3e3e3;
+}
+.companyTable select.selectTime{
+	width: 10%;
+}
+td.width35{
+    width:35%;
+}
+.maintainLeft{
+    width:48.5%;
+    float:left;
+    border: 1px solid #dbdbdb;
+    margin:15px 0;
+}
+.maintainRight{
+    width:48.5%;
+    float:right;
+    border: 1px solid #dbdbdb;
+    margin:15px 0;
+}
+.maintainTitle{
+    height: 33px;
+	width: 95.2%;
+	background: #ececec url(../images/caigou-ico.png) no-repeat -315px -6px;
+	color:#fff;
+	line-height: 33px;
+	text-align:left;
+	padding-left:5%
+}
+.maintainTitle1
+{
+    height: 33px;
+	width: 95.2%;
+	background: url(../images/caigou-ico.png) no-repeat -315px -6px;
+	color:#fff;
+	line-height: 33px;
+	text-align:left;
+	padding-left:5%
+}
+.table .maintainTable th,
+.table .maintainTable td
+{
+    height: 20px;
+    border-bottom:1px dotted #cecece;
+}
+.maintainBtns{
+    height:50px;
+}
+.maintainBtnsBorder
+{
+    margin:10px 10px 10px 10%;
+    width:60%;
+    background-color: #6C7493;
+    height:30px;
+    line-height:30px;
+    color:#fff;
+    float:left;
+}
+.maintainBtnsBorder input.text
+{
+    height: 14px;
+    width:55%;
+}
+.maintainBtn
+{
+    margin: 10px 0;
+}
+.maintainBtnFloat
+{
+    float:left;
+}
+.maintainRight table input.text
+{
+    width:95%;
+    height:12px;
+    line-height:12px;
+}
+table.maintainTable1 th,
+table.maintainTable1 td
+{
+    height:20px;
+    padding:10px 4px;
+}
+.maintainCenter
+{
+    width:100%;
+    border: 1px solid #dbdbdb;
+    margin:15px 0;
+}
+.maintainTitle3
+{
+    background-color: #6C7493;
+    height: 30px;
+	width: 95%;
+	color:#fff;
+	line-height: 30px;
+	text-align:left;
+	padding: 0 0 0 5%;
+}
+.textLeft
+{
+    text-align:left;
+}
+.smallbd1 
+{
+    margin: 0;
+    position: relative;
+    width:100%;
+}
+
+/*
+	################################################*/
+.jiebang_ico{
+	background: url(/images/jiebang.png) no-repeat;
+}
+.account_box{
+	background-color: #EDEDED;
+	font-size: 14px;
+	margin: 15px 0;
+	padding: 15px 50px;
+}
+.account_box p{
+	margin: 0 0 10px;
+}
+.account_list_box{
+	background-color: #4A5163;
+	padding: 10px 50px;
+}
+.account_list li{
+	display: inline-block;
+	float: left;
+	margin-right:10px;
+	width: 200px; 
+}
+.account_list li.hidden{
+	display: none;
+}
+.account_name{
+	background-position: 0 0;
+	color: #fff;
+	display: inline-block;
+	height: 35px;
+	line-height: 35px;
+	margin-right: 5px;
+	position: relative;
+	width: 186px;
+}
+.curr .account_name{
+	background-position: 0 -43px;
+}
+.account_ico{
+	display: block;
+	height: 36px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 40px;
+}
+.pay_ico{
+	background-position: 0 -214px;
+}
+.curr .pay_ico{
+	background-position: 0 -255px;
+}
+.collection_ico{
+	background-position: 0 -296px;
+}
+.curr .collection_ico{
+	background-position: 0 -338px;
+}
+.account_btn{
+	color: #fff;
+	background-position: 0 -129px;
+	display: inline-block;
+	height: 35px;
+	line-height: 35px;
+	width: 100px;
+}
+.account_list a:hover{
+	text-decoration: none;
+}
+.account_add_btn{
+	color: #fff;
+	background-position: 0 -172px;
+	display: inline-block;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 36px;
+	width: 150px;
+}
+.account_table td{
+	padding: 10px 5px;
+}
+.account_info_box{
+	width: 56%;
+}
+.account_exc_box{
+	width: 42%;
+}
+.account_layer_box{
+	width: 700px;
+}
+.layer_box{
+	background-color: #fff;
+	border: 1px solid #fff;
+}
+.layer_hd{
+	background: url(/images/piaohao-ico1.png) repeat-x;
+	height: 30px;
+	position: relative;
+}
+.layer_hd h4{
+	line-height: 30px;
+	padding: 0 15px;
+}
+.layer_hd .close{
+	background: url(/images/piaohao-ico1.png) no-repeat -4px -35px;
+	height: 16px;
+	position: absolute;
+	right: 10px;
+	text-indent: -9999px;
+	top: 5px;
+	width: 16px;
+}
+.layer_tips{
+	background-color: #FFFAE0;
+	border: 1px dotted #EDEDED;
+	line-height: 30px;
+	margin: 2px auto;
+	width: 98%;
+}
+.ico_important{
+	background: url(/images/ico1.png) no-repeat;
+	display: inline-block;
+	height: 20px;
+	margin-right: 5px;
+	vertical-align: middle;
+	width: 20px;
+}
+.ico_success{
+	background: url(/images/ico1.png) no-repeat 0 bottom;
+	display: inline-block;
+	height: 20px;
+	margin-right: 5px;
+	vertical-align: middle;
+	width: 20px;
+}
+.ico_important{
+	*display: inline;
+}
+.layer_table.form table{
+	border-top: none;
+}
+.layer_table.form table span{
+	color: #999;
+}
+.smallBtn.btn{
+	padding: 3px 7px;
+}
+.layer_dl{
+	line-height: 1.5;
+	padding: 10px 0 20px 70px;
+}
+.layer_dl span{
+	display: inline-block;
+	margin-left: -70px;
+	text-align: right;
+	width: 70px;
+}

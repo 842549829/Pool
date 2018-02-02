@@ -1,0 +1,623 @@
+﻿button{
+	cursor: pointer;
+}
+#formBox{
+	width: 960px;
+	height: 80px;
+    line-height: 40px;
+}
+form.formBox{
+	width: 700px;
+	height: 80px;
+	float: left;
+	background-color: #f5f5f5;
+	line-height: 40px;
+}
+a#inquireHistory{
+	display: block;
+	width: 60px;
+	height: 80px;
+	float: left;
+	color: #2a85c5;
+	line-height: 80px;
+}
+ul#recentlyHistory{
+	width:200px;
+	height: 60px;
+	padding: 10px 0;
+	float: left;
+	line-height: 30px;
+}
+#recentlyHistory li{
+	float: left;
+	width: 100px;
+	height: 30px;
+	text-align: left;
+	overflow: hidden;
+}
+#recentlyHistory a{
+	color: #2a85c5;
+}
+.divType1{
+	width: 120px;
+	float: left;
+	text-align: center;
+	display: inline;
+}
+.divType2{
+	width: 230px;
+	float: left;
+	text-align: center;
+	display: inline;
+}
+.boxTitle{
+	float: left;
+}
+.borderBox{
+	background-color: #fff;
+	margin-top: 5px;
+	float: left;
+	width: 150px;
+	height: 26px;
+	border:1px solid #abadb3;
+}
+.inputBox{
+	float: left;
+	border: 0;
+	width: 110px;
+	height: 20px;
+	line-height: 20px;
+}
+.cityBox{
+	display: block;
+	margin-top: 2px;
+	background-image: url(../images/caigou-ico.png);
+	background-position: 0 -37px;
+	height: 20px;
+	width: 23px;
+	overflow: hidden;
+	padding: 0;
+}
+.arrivalBox{
+	display: block;
+	margin-top: 2px;
+	background-image: url(../images/caigou-ico.png);
+	background-position: -43px -37px;
+	height: 20px;
+	width: 24px;
+	overflow: hidden;
+	padding: 0;
+}
+.returnBox{
+	display: block;
+	margin-top: 2px;
+	background-image: url(../images/caigou-ico.png);
+	background-position: -66px -37px;
+	height: 20px;
+	width: 24px;
+	overflow: hidden;
+	padding: 0;
+}
+div#changeCity{
+	float: right;
+	width: 23px;
+	height: 56px;
+	background-image: url(../images/huan.png);
+	background-repeat: no-repeat;
+	position: relative;
+	top:12px;
+	left:-20px;
+	*top:10px;
+	*left: -20px;
+	overflow: visible;
+	display: inline;
+}
+.gobackdate{
+    display:none;
+}
+.divType1 button{
+	width: 90px;
+	height: 30px;
+	background-color: #f74e27;
+	color: white;
+	margin-top:25px; 
+}
+.divType1 button:hover{
+	background-color: #f27458;
+}
+#gotoflight{
+	height: 80px;
+	background-color: #f5f5f5;
+}
+#gotoTittle{
+	display: block;
+	float: left;
+	width: 66px;
+	height: 46px;
+	padding: 15px;
+	border: 2px solid #f5f5f5;
+	background-color: #fff;
+	font-size: 16px;
+	line-height: 23px;
+	font-weight: bold;
+	color: gray;
+}
+#gotoTable{
+	width: 860px;
+	height: 80px;
+}
+#gotoTable td{
+	vertical-align: middle;
+}
+#RePick{
+	padding: 0 5px;
+	width: 100px;
+	height: 25px;
+	background-color: #fff;
+	border:1px solid #000;
+    cursor: pointer;
+}
+#flightHeader{
+	height: 40px;
+	width: 980px;
+	line-height: 40px;
+	margin-top: 10px;
+    position: relative;
+}
+#flightHeader .corner {
+    line-height: 1;   
+}
+#flightHeader h4{
+	font-size: 16px;
+	display: inline;
+}
+#flightHeader p{
+	display: inline;
+}
+#flightHeader  span.num{
+	color: #F74C24;
+}
+#flightHeader ul{
+	float: right;
+}
+#flightHeader ul li{
+	float: left;
+	margin: 0 15px;
+}
+#flightHeader ul li a
+{
+    display:block;
+    border-top:5px solid black;
+    cursor:default;
+}
+#flightHeader ul li a:hover{
+    text-decoration:none;
+}
+#flightHeader ul li a.liselected{
+	border-top:5px solid #f74e27;
+	color: #f74e27;	
+}
+#flightChoose{
+	width:958px;
+	height:98px;
+	background-color: #f5f5f5;
+}
+#flightChooseTop {
+	height: 39px;
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #eeeeee;
+	line-height: 40px;
+    padding: 2px 10px;
+}
+input#leftBtn{
+	float: left;
+	display:inline;
+	height: 58px;
+	width: 31px;
+	padding: 3px 15px;
+    border:none;
+	background-image: url(../images/caigou-ico.png);
+	background-position: -515px -55px;
+    cursor: pointer;
+    border-left: 1px solid #999;
+    border-top: 5px solid #999;
+    border-bottom: 1px solid #999;
+    _border-right: 1px solid #999;
+}
+input#rightBtn{
+	float: right;
+	display:inline;
+	height: 58px;
+	width: 31px;
+	padding: 3px 15px;
+    border: none;
+	background-image: url(../images/caigou-ico.png);
+	background-position: -473px -55px;
+    cursor: pointer;
+    border-top: 5px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+#flightChooseBottom ul li{
+	height: 49px;
+	width: 131px;
+	float: left;
+	display:inline;
+	text-align: center;
+	line-height: 20px;
+}
+#flightChooseBottom ul li a
+{
+    background-color: #F5F5F5;
+    display:block;
+    height: 44px;
+	width: 130px;
+	padding-top:8px;
+	border-top: 5px solid #999;
+	border-bottom:1px solid #999;
+	border-right:1px solid #999;
+	border-left:1px solid #999;
+	_border-left:0;
+}
+#flightChooseBottom ul li a:hover{
+	border-top: 5px solid #fa4d23;
+	background-color:#EAEAEA;
+	text-decoration:none;
+}
+#flightChooseBottom ul li a.liselected{
+	border-top: 5px solid #fa4d23;
+	border-bottom: 0;
+	background-color: #fff;
+	cursor: default;
+}
+#flightChooseBottom span.fontBlue{
+	color: #2a85c5;
+}
+#flightChooseBottom span.fontRed{
+	color: #fb4c26;
+}
+span.subFan{
+	width: 42px;
+	height: 24px;
+	/*background-image: url(../images/fan1.png); */
+	background-repeat:no-repeat;
+	background-position: 5px 1px;
+	padding: 0 21px;
+	color: blue;
+	font-size: 12px;
+}
+.divErrorBox
+{
+    width:978px;
+    height:80px;
+    border:1px solid #E3E7E8;
+    background-color:#EDF1F2;
+}
+.divErrorBox p
+{
+    font:13px "微软雅黑";
+    line-height: 2em;
+}
+.divErrorPic
+{
+    background:url(../images/shibai.png) no-repeat;
+    height:60px;
+    line-height:30px;
+    margin:10px auto;
+    padding-left:70px;
+    width:300px;
+}
+.divErrorPic a.refresh
+{
+    background-color:#cfdce2;
+    border:1px solid #bfc7c9;
+    color:#333;
+    padding:2px 15px;
+}
+.divErrorPic a.refresh:hover
+{
+    background-color:#DBDEE0;
+    text-decoration:none;
+}
+.divErrorPic span
+{
+    padding:0 5px;
+}
+.divErrorPic span a
+{
+    color:#2A85C5;
+    padding:0 5px;
+    text-decoration:underline;
+}
+.divNoflightPic
+{
+    background:url(../images/noflight.png) no-repeat;
+    height:60px;
+    line-height:30px;
+    margin:10px auto;
+    padding-left:70px;
+    width:300px;
+}
+.divNoflightPic a
+{
+    color:#2A85C5;
+    padding:0 5px;
+    text-decoration:underline;
+}
+#FlightList{
+	margin-top: 15px;
+    border:1px solid #eeeeee;
+	background-color: #f5f5f5;
+}
+.TitleTable th
+{
+ 	background-color: #f74c24;
+ 	color: #fff;
+  
+}
+.TitleTable{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.TitleTable th{
+	text-align: left;
+}
+.FlightTable{
+	height: 70px;
+	position:relative;
+}
+.FlightTable:hover{
+	background-color: #ffe2dc;
+}
+.FlightTable td{
+	height: 50px;
+	vertical-align: middle;
+}
+.flightCompany{
+	padding-left: 30px;
+	width: 30%;
+}
+.startTime{
+	width: 17.5%;
+}
+.airport{
+	width: 17.5%;
+}
+.flightPrice{
+	width: 20%;
+}
+.flightOperate{
+	width: 15%;
+}
+.flightContent{
+	display: block;
+	/*padding-left: 20px;*/
+	float: left;
+}
+a.tooltip{
+	position: relative;
+}
+a.tooltip:hover{
+    *z-index:998;
+}
+a.tooltip span{
+	display: none;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: left;
+    width: 220px;
+    *z-index:999;
+}
+a.tooltip:hover span{
+	word-wrap: break-word;
+	display: block;
+	position: absolute;
+	top: 25px;
+	left: -45px;
+	padding: 5px;
+	background-color: #f5f5f5;
+	border:1px solid gray;
+    word-break: break-all;
+	z-index: 999;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: left;
+    width: 220px;
+    line-height: 1.5;
+}
+
+.fontgray{
+	color: gray;
+}
+.flightAction{
+	display: block;
+	text-align: center;
+}
+a.flightAction:hover span{
+	position: absolute;
+	top: 25px;
+	left: 100px;
+	padding: 5px;
+    width: 160px;
+	background-color: #FFF;
+	border:1px solid gray;
+}
+a.nextDay:hover span {
+ 	padding: 5px;
+    width: 120px;
+	background-color: #FFF;
+   
+}
+.nextDay{
+	margin-left: 15px;
+}
+.fontBlodRed{
+	font-size: 16px;
+	font-weight: bold;
+	color: #fb4c26;
+}
+.flightBtn{ 
+	padding: 0 0 0 16px;
+	width: 70px;
+    border: none;
+	height: 23px;
+	background: #2986bd url(../images/down.png) no-repeat 45px 8px;
+	color: #fff;
+	text-align:left;
+}
+.flightBtn:hover{
+	background-color: #71b4db;
+}
+.flightBtn1{ 
+	padding: 0 0 0 16px;
+	width: 70px;
+    border: none;
+	height: 23px;
+	background: #666 url(../images/up.png) no-repeat 46px 9px;
+	color: #fff;
+	text-align:left;
+}
+.flightBtn1:hover{
+	background-color: #999;
+}
+.subFlightList{
+	display: none;
+	float: right;
+	margin-right: 15px;
+	background-color: #fff;
+	width: 900px;
+	border: 1px solid #a1a1a1;
+	box-shadow: 1px 1px 1px #666;
+}
+.sunFlightinfo{
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+}
+.bprice{
+	position: absolute;
+	right: 160px;
+}
+.oprice{
+	position: absolute;
+	right: 10px;
+}
+.subtitle{
+	margin:10px;
+	width: 880px;
+	height: 25px;
+	line-height: 25px;
+	background-color: #f5f5f5;
+	color: gray;
+	text-align: left;
+}
+.cabin{
+	width: 140px;
+}
+.tickets{
+	width: 140px;
+}
+.ticketPrice{
+	width: 160px;
+}
+.rule{
+	width: 110px;
+}
+.mainPrice{
+	width: 130px;
+}
+.return{
+	width: 100px;
+}
+.operate{
+	width: 100px;
+}
+.subTable{
+	margin:15px 10px;
+	width: 880px;
+	height: 50px;
+	line-height: 25px;
+	text-align: left;
+}
+.subTable:hover{
+	background-color: #ffe2dc
+}
+.subTable td{
+	height: 50px;
+	vertical-align: middle;
+}
+.subtitle th{
+	text-align: left;
+}
+
+.fontBold{
+	font-weight: bold;
+}
+.fan{
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	width: 45px;
+	height: 23px;
+	line-height: 23px;
+	padding-left: 25px;
+	text-align: center;
+	background: url(../images/newfan.png) no-repeat;
+	color: #2a85c5;
+}
+.wufan
+{
+	display: block;
+	width: 36px;
+	height: 14px;
+	font-size:0.9em;
+	line-height: 14px;
+	padding-left: 16px;
+	text-indent:-9999px;
+	background: url(../images/wufan.png) no-repeat;
+	color: #2a85c5;
+}
+.subFlightBtn{
+	padding: 0 0 0 16px;
+	width: 70px;
+	height: 23px;
+	background: #ff6707 url(../images/right.png) no-repeat 49px 7px;
+    border: none;
+	color: #fff;
+	text-align: left;
+}
+.subFlightGoBtn
+{
+    padding: 0;
+	width: 70px;
+	height: 23px;
+	background-color: #ff6707;
+    border: none;
+	color: #fff;
+}
+.subFlightBtn:hover{
+	background-color: #f7a776;
+}
+table a { white-space:normal;}
+td.flightOperate{
+	position: relative;
+}
+.subBoxTitle{
+	width: 100%;
+	height: 70px;
+	position: absolute;
+	top: 1px;
+	background: url(../images/xuanz.png) no-repeat left 10px;
+}
+
+.flightOperate .flightBtn {
+    margin-left:18px;
+}
+
+.subBoxTitle input{
+	margin: 30px 18px;
+}

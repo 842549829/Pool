@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configurations>
+  <setting model="immediate" writer="sqlserver" connectionstring="SERVER=192.168.1.253;DATABASE=LOG;UID=sa;PASSWORD=123456"></setting>
+  <sections>
+    <section type="ChinaPay.B3B.Service.Log.Domain.OrderLog" catalog="T_Order">
+      <mapping property="OrderId"></mapping>
+      <mapping property="ApplyformId"></mapping>
+      <mapping property="Account"></mapping>
+      <mapping property="Keyword"></mapping>
+      <mapping property="Content"></mapping>
+      <mapping property="Company"></mapping>
+      <mapping property="Role"></mapping>
+      <mapping property="Time"></mapping>
+      <mapping property="VisibleRole"></mapping>
+    </section>
+  </sections>
+  <sections>
+    <section type="ChinaPay.SMS.LogMessage.SMSLogMessage" catalog="SMSLog">
+      <mapping property="ActiveID"></mapping>
+      <mapping property="Time"></mapping>
+      <mapping property="Account"></mapping>
+      <mapping property="PassWord"></mapping>
+      <mapping property="CellPhone"></mapping>
+      <mapping property="Content"></mapping>
+      <mapping property="Sattes"></mapping>
+    </section>
+  </sections>
+  <sections>
+    <section type="ChinaPay.B3B.Service.Log.Domain.OperationLog" catalog="T_Operation">
+      <!--<setting model="queue" interval="3" maxcount="10"></setting>-->
+      <mapping property="Module"></mapping>
+      <mapping property="OperationType"></mapping>
+      <mapping property="Account"></mapping>
+      <mapping property="Role"></mapping>
+      <mapping property="AssociateKey"></mapping>
+      <mapping property="Content"></mapping>
+      <mapping property="Time"></mapping>
+    </section>
+  </sections>
+  <sections>
+    <section type="ChinaPay.B3B.Service.Log.Domain.CompanyGroupOperationLog" catalog="T_CompanyGroupOperationLog">
+      <!--<setting model="queue" interval="3" maxcount="10"></setting>-->
+      <mapping property="Company"></mapping>
+      <mapping property="Group"></mapping>
+      <mapping property="GroupName"></mapping>
+      <mapping property="Module"></mapping>
+      <mapping property="OperationType"></mapping>
+      <mapping property="Account"></mapping>
+      <mapping property="Role"></mapping>
+      <mapping property="Time"></mapping>
+    </section>
+  </sections>
+  <sections>
+    <section type="ChinaPay.B3B.Service.Log.Domain.CompanyGroupMemberOperationLog" catalog="T_CompanyGroupMemberOperationLog">
+      <!--<setting model="queue" interval="3" maxcount="10"></setting>-->
+      <mapping property="Company"></mapping>
+      <mapping property="Group"></mapping>
+      <mapping property="GroupName"></mapping>
+      <mapping property="Member"></mapping>
+      <mapping property="MemberName"></mapping>
+      <mapping property="Module"></mapping>
+      <mapping property="OperationType"></mapping>
+      <mapping property="Account"></mapping>
+      <mapping property="Role"></mapping>
+      <mapping property="Time"></mapping>
+    </section>
+  </sections>
+  <sections>
+    <section type="ChinaPay.B3B.Service.Log.Domain.ExceptionLog" catalog="T_Exception">
+      <!--<setting model="queue" interval="3" maxcount="5"></setting>-->
+      <mapping property="Message"></mapping>
+      <mapping property="Source"></mapping>
+      <mapping property="TargetSite"></mapping>
+      <mapping property="StackTrace"></mapping>
+      <mapping property="Time"></mapping>
+      <mapping property="Remark"></mapping>
+    </section>
+  </sections>
+  <sections>
+    <section type="ChinaPay.B3B.Service.Log.Domain.LogonLog" catalog="T_Logon">
+      <!--<setting model="queue" interval="3" maxcount="5"></setting>-->
+      <mapping property="Account"></mapping>
+      <mapping property="Company"></mapping>
+      <mapping property="CompanyName"></mapping>
+      <mapping property="Mode"></mapping>
+      <mapping property="IPAddress"></mapping>
+      <mapping property="Address"></mapping>
+      <mapping property="Time"></mapping>
+    </section>
+  </sections>
+  <sections>
+    <section type="ChinaPay.B3B.Service.Log.Domain.TradementLog" catalog="T_Tradement">
+      <mapping property="OrderId"></mapping>
+      <mapping property="ApplyformId"></mapping>
+      <mapping property="Type"></mapping>
+      <mapping property="Request"></mapping>
+      <mapping property="Response"></mapping>
+      <mapping property="Time"></mapping>
+      <mapping property="Remark"></mapping>
+    </section>
+  </sections>
+  <sections>
+    <section type="PoolPay.AccountApplicationService.CustomLog.ExceptionLog" catalog="ExceptionLog">
+      <setting model="immediate" writer="SqlServer" connectionstring="server=192.168.1.253;database=PoolPayLog;uid=sa;pwd=123456"></setting>
+      <mapping property="LogDate"></mapping>
+      <mapping property="Message"></mapping>
+      <mapping property="Source"></mapping>
+      <mapping property="TargetSite"></mapping>
+      <mapping property="StackTrace"></mapping>
+      <mapping property="OrderId"></mapping>
+    </section>
+    <section type="PoolPay.AccountApplicationService.CustomLog.NotifyLog" catalog="NotifyLog">
+      <setting model="immediate" writer="SqlServer" connectionstring="server=192.168.1.253;database=PoolPayLog;uid=sa;pwd=123456"></setting>
+      <mapping property="NotifyDate"></mapping>
+      <mapping property="RequestSource"></mapping>
+      <mapping property="NotifyType"></mapping>
+      <mapping property="NotifyResult"></mapping>
+      <mapping property="OrderId"></mapping>
+    </section>
+    <section type="PoolPay.AccountApplicationService.CustomLog.RequestLog" catalog="RequestLog">
+      <setting model="immediate" writer="SqlServer" connectionstring="server=192.168.1.253;database=PoolPayLog;uid=sa;pwd=123456"></setting>
+      <mapping property="RequestDate"></mapping>
+      <mapping property="RequestAddress"></mapping>
+      <mapping property="RequestType"></mapping>
+      <mapping property="RequestSource"></mapping>
+      <mapping property="OrderId"></mapping>
+    </section>
+    <section type="ChinaPay.PoolPay.DataLogUtility.RequestLog" catalog="RequestLog">
+      <setting model="immediate" writer="SqlServer" connectionstring="server=192.168.1.253;database=PoolPayLog;uid=sa;pwd=123456"></setting>
+      <mapping property="RequestDate"></mapping>
+      <mapping property="RequestAddress"></mapping>
+      <mapping property="RequestType"></mapping>
+      <mapping property="RequestSource"></mapping>
+      <mapping property="OrderId"></mapping>
+    </section>
+  </sections>
+
+  <sections>
+    <section type="ChinaPay.B3B.Service.Log.Domain.FareErrorLog" catalog="T_FareError">
+      <mapping property="Departure"></mapping>
+      <mapping property="Arrival"></mapping>
+      <mapping property="Carrier"></mapping>
+      <mapping property="FlightDate"></mapping>
+      <mapping property="Bunk"></mapping>
+      <mapping property="Fare"></mapping>
+      <mapping property="Time"></mapping>
+    </section>
+  </sections>
+
+  <sections>
+    <section type="ChinaPay.B3B.Service.Log.Domain.InterfaceInvokeLog" catalog="T_InterfaceInvokeLog">
+      <mapping property="InterfaceName"></mapping>
+      <mapping property="UserName"></mapping>
+      <mapping property="Organization"></mapping>
+      <mapping property="OrganizationName"></mapping>
+      <mapping property="IPAddress"></mapping>
+      <mapping property="Request"></mapping>
+      <mapping property="Response"></mapping>
+      <mapping property="Time"></mapping>
+    </section>
+  </sections>
+
+  <sections>
+    <section type="ChinaPay.B3B.Service.Log.Domain.NotifyLog" catalog="T_NotifyLog">
+      <mapping property="OrderId"></mapping>
+      <mapping property="Request"></mapping>
+      <mapping property="Response"></mapping>
+      <mapping property="RequestTime"></mapping>
+      <mapping property="ResponseTime"></mapping>
+      <mapping property="type"></mapping>
+    </section>
+  </sections>
+  <sections>
+    <section type="ChinaPay.B3B.Service.Log.Domain.ExternalPlatformAlternatingLog" catalog="T_ExternalPlatformAlternatingLog">
+    <mapping property="Platform"></mapping>
+    <mapping property="Type"></mapping>
+    <mapping property="Remark"></mapping>
+    <mapping property="Request"></mapping>
+    <mapping property="Response"></mapping>
+    <mapping property="Time"></mapping>
+	</section>
+  </sections>
+</configurations>

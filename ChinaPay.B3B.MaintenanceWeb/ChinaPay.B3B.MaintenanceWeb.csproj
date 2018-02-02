@@ -1,0 +1,775 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35590FAF-6FE9-4FB3-9CB9-6A90981527D1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChinaPay.B3B.MaintenanceWeb</RootNamespace>
+    <AssemblyName>ChinaPay.B3B.MaintenanceWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChinaPay.AddressLocator">
+      <HintPath>..\DependentDLL\ChinaPay.AddressLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\ChinaPay.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Infrastructure.WebEx.AjaxHandler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\ChinaPay.Infrastructure.WebEx.AjaxHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\ChinaPay.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BasicData\Check_In.aspx" />
+    <Content Include="BasicData\Check_In_New.aspx" />
+    <Content Include="BasicData\FixedNavigation.aspx" />
+    <Content Include="BasicData\RefundAndReschedulingDetati.aspx" />
+    <Content Include="BasicData\RefundChangeRuleList.aspx" />
+    <Content Include="BasicData\RefundChangeRuleDetail.aspx" />
+    <Content Include="BasicData\RefundChangeTicket.aspx" />
+    <Content Include="BasicData\RefundChangeTicketNewUpdate.aspx" />
+    <Content Include="BasicData\RefundChangeTicketUpdate.aspx" />
+    <Content Include="css\core.css" />
+    <Content Include="css\form.css" />
+    <Content Include="css\logon.css" />
+    <Content Include="css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="css\zTreeStyle\img\diy\2.png" />
+    <Content Include="css\zTreeStyle\img\diy\3.png" />
+    <Content Include="css\zTreeStyle\img\diy\4.png" />
+    <Content Include="css\zTreeStyle\img\diy\5.png" />
+    <Content Include="css\zTreeStyle\img\diy\6.png" />
+    <Content Include="css\zTreeStyle\img\diy\7.png" />
+    <Content Include="css\zTreeStyle\img\diy\8.png" />
+    <Content Include="css\zTreeStyle\img\diy\9.png" />
+    <Content Include="css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="css\zTreeStyle\img\loading.gif" />
+    <Content Include="css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="css\zTree\data.css" />
+    <Content Include="css\zTree\img\checkbox.png" />
+    <Content Include="css\zTree\img\edit.png" />
+    <Content Include="css\zTree\img\flag\10.png" />
+    <Content Include="css\zTree\img\flag\1_close.png" />
+    <Content Include="css\zTree\img\flag\1_open.png" />
+    <Content Include="css\zTree\img\flag\2.png" />
+    <Content Include="css\zTree\img\flag\3.png" />
+    <Content Include="css\zTree\img\flag\4.png" />
+    <Content Include="css\zTree\img\flag\5.png" />
+    <Content Include="css\zTree\img\flag\6.png" />
+    <Content Include="css\zTree\img\flag\7.png" />
+    <Content Include="css\zTree\img\flag\8.png" />
+    <Content Include="css\zTree\img\flag\9.png" />
+    <Content Include="css\zTree\img\folder_Close.gif" />
+    <Content Include="css\zTree\img\folder_Open.gif" />
+    <Content Include="css\zTree\img\line_bottom.gif" />
+    <Content Include="css\zTree\img\line_center.gif" />
+    <Content Include="css\zTree\img\line_conn.gif" />
+    <Content Include="css\zTree\img\line_top.gif" />
+    <Content Include="css\zTree\img\minus_bottom.gif" />
+    <Content Include="css\zTree\img\minus_center.gif" />
+    <Content Include="css\zTree\img\minus_noLine.gif" />
+    <Content Include="css\zTree\img\minus_root.gif" />
+    <Content Include="css\zTree\img\minus_top.gif" />
+    <Content Include="css\zTree\img\page.gif" />
+    <Content Include="css\zTree\img\plus_bottom.gif" />
+    <Content Include="css\zTree\img\plus_center.gif" />
+    <Content Include="css\zTree\img\plus_noLine.gif" />
+    <Content Include="css\zTree\img\plus_root.gif" />
+    <Content Include="css\zTree\img\plus_top.gif" />
+    <Content Include="css\zTree\img\radio.png" />
+    <Content Include="css\zTree\img\remove.png" />
+    <Content Include="css\zTree\img\sim\10.png" />
+    <Content Include="css\zTree\img\sim\1_close.png" />
+    <Content Include="css\zTree\img\sim\1_open.png" />
+    <Content Include="css\zTree\img\sim\2.png" />
+    <Content Include="css\zTree\img\sim\3.png" />
+    <Content Include="css\zTree\img\sim\4.png" />
+    <Content Include="css\zTree\img\sim\5.png" />
+    <Content Include="css\zTree\img\sim\6.png" />
+    <Content Include="css\zTree\img\sim\7.png" />
+    <Content Include="css\zTree\img\sim\8.png" />
+    <Content Include="css\zTree\img\sim\9.png" />
+    <Content Include="css\zTree\zTreeIcons.css" />
+    <Content Include="css\zTree\zTreeStyle.css" />
+    <Content Include="css\style.css" />
+    <Content Include="BasicData\Airline.aspx" />
+    <Content Include="BasicData\Airline_new.aspx" />
+    <Content Include="BasicData\Airport.aspx" />
+    <Content Include="BasicData\Airport_new.aspx" />
+    <Content Include="BasicData\BasePrice.aspx" />
+    <Content Include="BasicData\BasePrice_new.aspx" />
+    <Content Include="BasicData\ChildTicketClass_Add.aspx" />
+    <Content Include="BasicData\ChildTicketMaintain.aspx" />
+    <Content Include="BasicData\City.aspx" />
+    <Content Include="BasicData\City_new.aspx" />
+    <Content Include="BasicData\Bunk.aspx" />
+    <Content Include="BasicData\Bunk_new.aspx" />
+    <Content Include="BasicData\Fuel.aspx" />
+    <Content Include="BasicData\Fuel_new.aspx" />
+    <Content Include="BasicData\PlaneType.aspx" />
+    <Content Include="BasicData\PlaneType_new.aspx" />
+    <Content Include="BasicData\Province.aspx" />
+    <Content Include="BasicData\Province_new.aspx" />
+    <Content Include="BasicData\County.aspx" />
+    <Content Include="BasicData\County_new.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="images\Add.png" />
+    <Content Include="images\back.jpg" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\bj.jpg" />
+    <Content Include="images\bj01.jpg" />
+    <Content Include="images\button2.gif" />
+    <Content Include="images\button4.gif" />
+    <Content Include="images\button_bj.jpg" />
+    <Content Include="images\Cut.png" />
+    <Content Include="images\down.png" />
+    <Content Include="images\edit.gif" />
+    <Content Include="images\empty.gif" />
+    <Content Include="images\feng.gif" />
+    <Content Include="images\GO01.gif" />
+    <Content Include="images\icon.png" />
+    <Content Include="images\icon_down.png" />
+    <Content Include="images\icon_right.png" />
+    <Content Include="images\inp_bj.gif" />
+    <Content Include="images\kaihu.png" />
+    <Content Include="images\kaihuOn.png" />
+    <Content Include="images\left.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logon\bg.jpg" />
+    <Content Include="images\logon\button.png" />
+    <Content Include="images\logon\content.png" />
+    <Content Include="images\logon\password.png" />
+    <Content Include="images\logon\title.png" />
+    <Content Include="images\logon\username.png" />
+    <Content Include="images\menu_head.jpg" />
+    <Content Include="images\menu_icon.png" />
+    <Content Include="images\newres.gif" />
+    <Content Include="images\online.gif" />
+    <Content Include="images\outline.gif" />
+    <Content Include="images\pic_next.gif" />
+    <Content Include="images\pic_pre.gif" />
+    <Content Include="images\reference.gif" />
+    <Content Include="images\tab.gif" />
+    <Content Include="images\tabOff_L.png" />
+    <Content Include="images\tabOff_R.png" />
+    <Content Include="images\tabOn_L.png" />
+    <Content Include="images\tabOn_R.png" />
+    <Content Include="images\title_head.gif" />
+    <Content Include="images\welcome.png" />
+    <Content Include="images\welcome_bj.gif" />
+    <Content Include="Index.aspx" />
+    <Content Include="js\AjaxList.js" />
+    <Content Include="js\Check.js" />
+    <Content Include="js\core.js" />
+    <Content Include="js\DateExtensions.js" />
+    <Content Include="js\forms.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jQuery\jquery-1.4.2.js" />
+    <Content Include="js\jQuery\jquery-ztree-2.0.js" />
+    <Content Include="js\menu.js" />
+    <Content Include="js\My97DatePicker\calendar.js" />
+    <Content Include="js\My97DatePicker\config.js" />
+    <Content Include="js\My97DatePicker\lang\en.js" />
+    <Content Include="js\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="js\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="js\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="js\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="js\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="js\My97DatePicker\skin\default\img.gif" />
+    <Content Include="js\My97DatePicker\skin\view_table.gif" />
+    <Content Include="js\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="js\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="js\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="js\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="js\My97DatePicker\WdatePicker.js" />
+    <Content Include="js\openLayer.js" />
+    <Content Include="js\SelectCity.js" />
+    <Content Include="LogConfig.xml" />
+    <Content Include="Logon.aspx" />
+    <Content Include="Log\ExceptionLog.aspx" />
+    <Content Include="Log\ExternalPlatformAlternatingLog.aspx" />
+    <Content Include="Log\ExternalPolicyLog.aspx" />
+    <Content Include="Log\FareLog.aspx" />
+    <Content Include="Log\InterfaceInvokeLog.aspx" />
+    <Content Include="Log\Logon.aspx" />
+    <Content Include="Log\NotifyLog.aspx" />
+    <Content Include="Log\OperationLog.aspx" />
+    <Content Include="Log\PoolPayInvokeLog.aspx" />
+    <Content Include="Log\SMSLog.aspx" />
+    <Content Include="Log\Tradement.aspx" />
+    <Content Include="ReleaseNote\ReleaseNote.aspx" />
+    <Content Include="ReleaseNote\ReleaseNoteManagement.aspx" />
+    <Content Include="Scripts\airport.js" />
+    <Content Include="Scripts\BasicData\Bunk_new.js" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery.ztree.all-3.2.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\LogPageWidth.js" />
+    <Content Include="Scripts\SaveCondition.js" />
+    <Content Include="Scripts\Scroll.js" />
+    <Content Include="Scripts\selector.js" />
+    <Content Include="Scripts\sys_menus.js" />
+    <Content Include="StaticHtml\ErrorPage.htm" />
+    <Content Include="StaticHtml\NoAccess.htm" />
+    <Content Include="SystemManagement\Dictionary.aspx" />
+    <Content Include="SystemManagement\Dictionary_new.aspx" />
+    <Content Include="SystemManagement\SpecialProductManagement.aspx" />
+    <Content Include="SystemManagement\SpecialProductManagement_new.aspx" />
+    <Content Include="SystemManagement\SystemParameter.aspx" />
+    <Content Include="SystemManagement\SystemParameter_Update.aspx" />
+    <Content Include="SystemMenu\System_Menu.htm" />
+    <Content Include="UserControl\Airport.ascx" />
+    <Content Include="UserControl\Ariline.ascx" />
+    <Content Include="UserControl\Pager.ascx" />
+    <Content Include="ValidateCode.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseHandler.cs" />
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\Airline.aspx.cs">
+      <DependentUpon>Airline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\Airline.aspx.designer.cs">
+      <DependentUpon>Airline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\Airline_new.aspx.cs">
+      <DependentUpon>Airline_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\Airline_new.aspx.designer.cs">
+      <DependentUpon>Airline_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\Airport.aspx.cs">
+      <DependentUpon>Airport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\Airport.aspx.designer.cs">
+      <DependentUpon>Airport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\Airport_new.aspx.cs">
+      <DependentUpon>Airport_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\Airport_new.aspx.designer.cs">
+      <DependentUpon>Airport_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\BasePrice.aspx.cs">
+      <DependentUpon>BasePrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\BasePrice.aspx.designer.cs">
+      <DependentUpon>BasePrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\BasePrice_new.aspx.cs">
+      <DependentUpon>BasePrice_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\BasePrice_new.aspx.designer.cs">
+      <DependentUpon>BasePrice_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\Check_In.aspx.cs">
+      <DependentUpon>Check_In.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\Check_In.aspx.designer.cs">
+      <DependentUpon>Check_In.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\Check_In_New.aspx.cs">
+      <DependentUpon>Check_In_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\Check_In_New.aspx.designer.cs">
+      <DependentUpon>Check_In_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\ChildTicketClass_Add.aspx.cs">
+      <DependentUpon>ChildTicketClass_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\ChildTicketClass_Add.aspx.designer.cs">
+      <DependentUpon>ChildTicketClass_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\ChildTicketMaintain.aspx.cs">
+      <DependentUpon>ChildTicketMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\ChildTicketMaintain.aspx.designer.cs">
+      <DependentUpon>ChildTicketMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\City.aspx.cs">
+      <DependentUpon>City.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\City.aspx.designer.cs">
+      <DependentUpon>City.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\City_new.aspx.cs">
+      <DependentUpon>City_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\City_new.aspx.designer.cs">
+      <DependentUpon>City_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\Bunk.aspx.cs">
+      <DependentUpon>Bunk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\Bunk.aspx.designer.cs">
+      <DependentUpon>Bunk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\Bunk_new.aspx.cs">
+      <DependentUpon>Bunk_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\Bunk_new.aspx.designer.cs">
+      <DependentUpon>Bunk_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\FixedNavigation.aspx.cs">
+      <DependentUpon>FixedNavigation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\FixedNavigation.aspx.designer.cs">
+      <DependentUpon>FixedNavigation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\Fuel.aspx.cs">
+      <DependentUpon>Fuel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\Fuel.aspx.designer.cs">
+      <DependentUpon>Fuel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\Fuel_new.aspx.cs">
+      <DependentUpon>Fuel_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\Fuel_new.aspx.designer.cs">
+      <DependentUpon>Fuel_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\PlaneType.aspx.cs">
+      <DependentUpon>PlaneType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\PlaneType.aspx.designer.cs">
+      <DependentUpon>PlaneType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\PlaneType_new.aspx.cs">
+      <DependentUpon>PlaneType_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\PlaneType_new.aspx.designer.cs">
+      <DependentUpon>PlaneType_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\Province.aspx.cs">
+      <DependentUpon>Province.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\Province.aspx.designer.cs">
+      <DependentUpon>Province.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\Province_new.aspx.cs">
+      <DependentUpon>Province_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\Province_new.aspx.designer.cs">
+      <DependentUpon>Province_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\County.aspx.cs">
+      <DependentUpon>County.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\County.aspx.designer.cs">
+      <DependentUpon>County.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\County_new.aspx.cs">
+      <DependentUpon>County_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\County_new.aspx.designer.cs">
+      <DependentUpon>County_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\RefundAndReschedulingDetati.aspx.cs">
+      <DependentUpon>RefundAndReschedulingDetati.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\RefundAndReschedulingDetati.aspx.designer.cs">
+      <DependentUpon>RefundAndReschedulingDetati.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\RefundChangeRuleList.aspx.cs">
+      <DependentUpon>RefundChangeRuleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\RefundChangeRuleList.aspx.designer.cs">
+      <DependentUpon>RefundChangeRuleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\RefundChangeRuleDetail.aspx.cs">
+      <DependentUpon>RefundChangeRuleDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\RefundChangeRuleDetail.aspx.designer.cs">
+      <DependentUpon>RefundChangeRuleDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\RefundChangeTicket.aspx.cs">
+      <DependentUpon>RefundChangeTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\RefundChangeTicket.aspx.designer.cs">
+      <DependentUpon>RefundChangeTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\RefundChangeTicketNewUpdate.aspx.cs">
+      <DependentUpon>RefundChangeTicketNewUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\RefundChangeTicketNewUpdate.aspx.designer.cs">
+      <DependentUpon>RefundChangeTicketNewUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\RefundChangeTicketUpdate.aspx.cs">
+      <DependentUpon>RefundChangeTicketUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\RefundChangeTicketUpdate.aspx.designer.cs">
+      <DependentUpon>RefundChangeTicketUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConditionItem.cs" />
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logon.aspx.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logon.aspx.designer.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogonUtility.cs" />
+    <Compile Include="Logout.ashx.cs">
+      <DependentUpon>Logout.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\ExceptionLog.aspx.cs">
+      <DependentUpon>ExceptionLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log\ExceptionLog.aspx.designer.cs">
+      <DependentUpon>ExceptionLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\ExternalPlatformAlternatingLog.aspx.cs">
+      <DependentUpon>ExternalPlatformAlternatingLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log\ExternalPlatformAlternatingLog.aspx.designer.cs">
+      <DependentUpon>ExternalPlatformAlternatingLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\ExternalPolicyLog.aspx.cs">
+      <DependentUpon>ExternalPolicyLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log\ExternalPolicyLog.aspx.designer.cs">
+      <DependentUpon>ExternalPolicyLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\FareLog.aspx.cs">
+      <DependentUpon>FareLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log\FareLog.aspx.designer.cs">
+      <DependentUpon>FareLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\InterfaceInvokeLog.aspx.cs">
+      <DependentUpon>InterfaceInvokeLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log\InterfaceInvokeLog.aspx.designer.cs">
+      <DependentUpon>InterfaceInvokeLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\Logon.aspx.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log\Logon.aspx.designer.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\NotifyLog.aspx.cs">
+      <DependentUpon>NotifyLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log\NotifyLog.aspx.designer.cs">
+      <DependentUpon>NotifyLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\OperationLog.aspx.cs">
+      <DependentUpon>OperationLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log\OperationLog.aspx.designer.cs">
+      <DependentUpon>OperationLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\PoolPayInvokeLog.aspx.cs">
+      <DependentUpon>PoolPayInvokeLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log\PoolPayInvokeLog.aspx.designer.cs">
+      <DependentUpon>PoolPayInvokeLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\SMSLog.aspx.cs">
+      <DependentUpon>SMSLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log\SMSLog.aspx.designer.cs">
+      <DependentUpon>SMSLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\Tradement.aspx.cs">
+      <DependentUpon>Tradement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log\Tradement.aspx.designer.cs">
+      <DependentUpon>Tradement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReleaseNote\ReleaseNote.aspx.cs">
+      <DependentUpon>ReleaseNote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReleaseNote\ReleaseNote.aspx.designer.cs">
+      <DependentUpon>ReleaseNote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReleaseNote\ReleaseNoteManagement.aspx.cs">
+      <DependentUpon>ReleaseNoteManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReleaseNote\ReleaseNoteManagement.aspx.designer.cs">
+      <DependentUpon>ReleaseNoteManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagement\Dictionary.aspx.cs">
+      <DependentUpon>Dictionary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemManagement\Dictionary.aspx.designer.cs">
+      <DependentUpon>Dictionary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagement\Dictionary_new.aspx.cs">
+      <DependentUpon>Dictionary_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemManagement\Dictionary_new.aspx.designer.cs">
+      <DependentUpon>Dictionary_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagement\SpecialProductManagement.aspx.cs">
+      <DependentUpon>SpecialProductManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemManagement\SpecialProductManagement.aspx.designer.cs">
+      <DependentUpon>SpecialProductManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagement\SpecialProductManagement_new.aspx.cs">
+      <DependentUpon>SpecialProductManagement_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemManagement\SpecialProductManagement_new.aspx.designer.cs">
+      <DependentUpon>SpecialProductManagement_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagement\SystemParameter.aspx.cs">
+      <DependentUpon>SystemParameter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemManagement\SystemParameter.aspx.designer.cs">
+      <DependentUpon>SystemParameter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagement\SystemParameter_Update.aspx.cs">
+      <DependentUpon>SystemParameter_Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemManagement\SystemParameter_Update.aspx.designer.cs">
+      <DependentUpon>SystemParameter_Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemMenuHandlers\MenusQuery.ashx.cs">
+      <DependentUpon>MenusQuery.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Airport.ascx.cs">
+      <DependentUpon>Airport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Airport.ascx.designer.cs">
+      <DependentUpon>Airport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Ariline.ascx.cs">
+      <DependentUpon>Ariline.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Ariline.ascx.designer.cs">
+      <DependentUpon>Ariline.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Pager.ascx.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Pager.ascx.designer.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateCode.aspx.cs">
+      <DependentUpon>ValidateCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidateCode.aspx.designer.cs">
+      <DependentUpon>ValidateCode.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ChinaPay.B3B.Common\ChinaPay.B3B.Common.csproj">
+      <Project>{1A2B88D1-C6C9-491F-9AF0-DE5D5CD713BC}</Project>
+      <Name>ChinaPay.B3B.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.DataEnvironment\ChinaPay.B3B.DataEnvironment.csproj">
+      <Project>{2F327D7D-E2AB-4339-9A6A-721E9EF91131}</Project>
+      <Name>ChinaPay.B3B.DataEnvironment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.DataTransferObject\ChinaPay.B3B.DataTransferObject.csproj">
+      <Project>{41D94D83-9BF2-487E-9542-78E138287C7B}</Project>
+      <Name>ChinaPay.B3B.DataTransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.ExternalPlatform\ChinaPay.B3B.Service.ExternalPlatform.csproj">
+      <Project>{25A1C6B1-63D5-43F3-881B-79FCDC3E54B2}</Project>
+      <Name>ChinaPay.B3B.Service.ExternalPlatform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Foundation\ChinaPay.B3B.Service.Foundation.csproj">
+      <Project>{6B27FDF3-33E6-4F67-9A03-1C6C6D1D023E}</Project>
+      <Name>ChinaPay.B3B.Service.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Log\ChinaPay.B3B.Service.Log.csproj">
+      <Project>{A610B1FF-C0EF-4FF7-A246-7CC4BA76BD21}</Project>
+      <Name>ChinaPay.B3B.Service.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Organization\ChinaPay.B3B.Service.Organization.csproj">
+      <Project>{97490979-5CB9-4925-B5FD-A95FA1204711}</Project>
+      <Name>ChinaPay.B3B.Service.Organization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Permission\ChinaPay.B3B.Service.Permission.csproj">
+      <Project>{7488ABD9-C6B4-473F-98BF-0F91A5397A16}</Project>
+      <Name>ChinaPay.B3B.Service.Permission</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.ReleaseNote\ChinaPay.B3B.Service.ReleaseNote.csproj">
+      <Project>{D0F5ACCE-7889-4BBC-BD74-587BF1C56D63}</Project>
+      <Name>ChinaPay.B3B.Service.ReleaseNote</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.SystemManagement\ChinaPay.B3B.Service.SystemManagement.csproj">
+      <Project>{828B159A-5475-4610-BB05-03FF862B7E67}</Project>
+      <Name>ChinaPay.B3B.Service.SystemManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Izual.Core\Izual.Core.csproj">
+      <Project>{BD9CA612-4062-42C0-B29E-39DABD560EBE}</Project>
+      <Name>Izual.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StaticHtml\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\Web.config" />
+    <None Include="css\zTree\img\flag\Thumbs.db" />
+    <None Include="css\zTree\img\sim\Thumbs.db" />
+    <None Include="css\zTree\img\Thumbs.db" />
+    <Content Include="Scripts\Web.config" />
+    <Content Include="js\Web.config" />
+    <Content Include="images\Web.config" />
+    <Content Include="Logout.ashx" />
+    <Content Include="SystemMenuHandlers\MenusQuery.ashx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>997</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

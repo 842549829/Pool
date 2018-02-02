@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>角色管理</title>
+    <script type="text/javascript" src="../../Scripts/jquery-1.4.1.min.js"></script>
+    <script src="../../Scripts/jquery-1.4.1-vsdoc.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../Scripts/json2.js"></script>
+    <link href="../../Styles/core.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript">
+        $("table").html("");
+        $(function () {
+            $.ajax({
+                type: "POST",
+                url: "../../PermissionHandlers/PermissionRoleQuery.ashx/QueryPermissionRoles",
+                data: JSON.stringify({ "company": "00000000-0000-0000-0000-000000000000" }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (e) {
+                    var table = "<tr><th>角色名称</th><th>状态</th><th>备注</th><th class='op'>操作</th></tr>";
+                    $.each(e, function (i, item) {
+                        table += "<tr><td>" + item.RoleName + "</td><td>" + item.Statu + "</td><td>" + item.Remark + "</td><td class='op'>" + item.Href_Statue
+                        + "<a href='#'>修改</a><a href='#'>删除</a></td></tr>";
+                    });
+                    $("table").html(table);
+                },
+                error: function (e) {
+                    if (e.status == 300) {
+                        alert(JSON.parse(e.responseText));
+                    } else {
+                        alert(e.statusText);
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div id="bd">
+            <div class="column  table">
+                <h2>
+                    角色管理</h2>
+                <table cellspacing="0" cellpadding="0">
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

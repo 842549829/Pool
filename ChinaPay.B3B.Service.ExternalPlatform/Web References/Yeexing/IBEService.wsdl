@@ -1,0 +1,1939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.webservice.yeexing.com" name="IBEService" targetNamespace="http://service.webservice.yeexing.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://service.webservice.yeexing.com">
+      <xsd:element name="QueryReturnTicketsList" type="tns:QueryReturnTicketsList" />
+      <xsd:complexType name="QueryReturnTicketsList">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="startTime" type="xsd:string" />
+          <xsd:element minOccurs="0" name="endTime" type="xsd:string" />
+          <xsd:element minOccurs="0" name="type" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryReturnTicketsListResponse" type="tns:QueryReturnTicketsListResponse" />
+      <xsd:complexType name="QueryReturnTicketsListResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PayOut" type="tns:PayOut" />
+      <xsd:complexType name="PayOut">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="totalPrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="payPlatform" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pay_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PayOutResponse" type="tns:PayOutResponse" />
+      <xsd:complexType name="PayOutResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Order_QueryStatusContract" type="tns:Order_QueryStatusContract" />
+      <xsd:complexType name="Order_QueryStatusContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Order_QueryStatusContractResponse" type="tns:Order_QueryStatusContractResponse" />
+      <xsd:complexType name="Order_QueryStatusContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryOrderIdByStatus" type="tns:QueryOrderIdByStatus" />
+      <xsd:complexType name="QueryOrderIdByStatus">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="timeSlot" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderStatus" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryOrderIdByStatusResponse" type="tns:QueryOrderIdByStatusResponse" />
+      <xsd:complexType name="QueryOrderIdByStatusResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Pay" type="tns:Pay" />
+      <xsd:complexType name="Pay">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="totalPrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="payPlatform" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pay_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PayResponse" type="tns:PayResponse" />
+      <xsd:complexType name="PayResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="RefundTicket" type="tns:RefundTicket" />
+      <xsd:complexType name="RefundTicket">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="passengerName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="airId" type="xsd:string" />
+          <xsd:element minOccurs="0" name="refundType" type="xsd:string" />
+          <xsd:element minOccurs="0" name="refundMemo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="refundSegment" type="xsd:string" />
+          <xsd:element minOccurs="0" name="refund_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="RefundTicketResponse" type="tns:RefundTicketResponse" />
+      <xsd:complexType name="RefundTicketResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryFlight" type="tns:QueryFlight" />
+      <xsd:complexType name="QueryFlight">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="orgCity" type="xsd:string" />
+          <xsd:element minOccurs="0" name="dstCity" type="xsd:string" />
+          <xsd:element minOccurs="0" name="startDate" type="xsd:string" />
+          <xsd:element minOccurs="0" name="startTime" type="xsd:string" />
+          <xsd:element minOccurs="0" name="airCompany" type="xsd:string" />
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryFlightResponse" type="tns:QueryFlightResponse" />
+      <xsd:complexType name="QueryFlightResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrBook" type="tns:PnrBook" />
+      <xsd:complexType name="PnrBook">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="plcid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ibePrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="disc" type="xsd:string" />
+          <xsd:element minOccurs="0" name="extReward" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrBookResponse" type="tns:PnrBookResponse" />
+      <xsd:complexType name="PnrBookResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="DrawBounceTicketRecord" type="tns:DrawBounceTicketRecord" />
+      <xsd:complexType name="DrawBounceTicketRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="startTime" type="xsd:string" />
+          <xsd:element minOccurs="0" name="endTime" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="DrawBounceTicketRecordResponse" type="tns:DrawBounceTicketRecordResponse" />
+      <xsd:complexType name="DrawBounceTicketRecordResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Refund_Query" type="tns:Refund_Query" />
+      <xsd:complexType name="Refund_Query">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="passengername" type="xsd:string" />
+          <xsd:element minOccurs="0" name="airId" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Refund_QueryResponse" type="tns:Refund_QueryResponse" />
+      <xsd:complexType name="Refund_QueryResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="RegisterNewUser" type="tns:RegisterNewUser" />
+      <xsd:complexType name="RegisterNewUser">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="loginname" type="xsd:string" />
+          <xsd:element minOccurs="0" name="loginpwd" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drcname" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drcmobile" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drcemail" type="xsd:string" />
+          <xsd:element minOccurs="0" name="localcity" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drccompname" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drccompadd" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drccomptel" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drccomppost" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="RegisterNewUserResponse" type="tns:RegisterNewUserResponse" />
+      <xsd:complexType name="RegisterNewUserResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Refund_QueryContract" type="tns:Refund_QueryContract" />
+      <xsd:complexType name="Refund_QueryContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="passengername" type="xsd:string" />
+          <xsd:element minOccurs="0" name="airId" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Refund_QueryContractResponse" type="tns:Refund_QueryContractResponse" />
+      <xsd:complexType name="Refund_QueryContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AirpSync" type="tns:AirpSync" />
+      <xsd:complexType name="AirpSync">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="lastUpdateTime" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AirpSyncResponse" type="tns:AirpSyncResponse" />
+      <xsd:complexType name="AirpSyncResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ResupplyOrder" type="tns:ResupplyOrder" />
+      <xsd:complexType name="ResupplyOrder">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ResupplyOrderResponse" type="tns:ResupplyOrderResponse" />
+      <xsd:complexType name="ResupplyOrderResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AirpSyncLastDate" type="tns:AirpSyncLastDate" />
+      <xsd:complexType name="AirpSyncLastDate">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AirpSyncLastDateResponse" type="tns:AirpSyncLastDateResponse" />
+      <xsd:complexType name="AirpSyncLastDateResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrBookDetail" type="tns:PnrBookDetail" />
+      <xsd:complexType name="PnrBookDetail">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="plcid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ibePrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="disc" type="xsd:string" />
+          <xsd:element minOccurs="0" name="extReward" type="xsd:string" />
+          <xsd:element minOccurs="0" name="linkman" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrBookDetailResponse" type="tns:PnrBookDetailResponse" />
+      <xsd:complexType name="PnrBookDetailResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryOrderStatus" type="tns:QueryOrderStatus" />
+      <xsd:complexType name="QueryOrderStatus">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="outorderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryOrderStatusResponse" type="tns:QueryOrderStatusResponse" />
+      <xsd:complexType name="QueryOrderStatusResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Order_QueryStatus" type="tns:Order_QueryStatus" />
+      <xsd:complexType name="Order_QueryStatus">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Order_QueryStatusResponse" type="tns:Order_QueryStatusResponse" />
+      <xsd:complexType name="Order_QueryStatusResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="RefundTicketContract" type="tns:RefundTicketContract" />
+      <xsd:complexType name="RefundTicketContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="passengerName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="airId" type="xsd:string" />
+          <xsd:element minOccurs="0" name="refundType" type="xsd:string" />
+          <xsd:element minOccurs="0" name="refundMemo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="refundSegment" type="xsd:string" />
+          <xsd:element minOccurs="0" name="refund_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="RefundTicketContractResponse" type="tns:RefundTicketContractResponse" />
+      <xsd:complexType name="RefundTicketContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="UserSign" type="tns:UserSign" />
+      <xsd:complexType name="UserSign">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appPassword" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="UserSignResponse" type="tns:UserSignResponse" />
+      <xsd:complexType name="UserSignResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrBookDetailContract" type="tns:ParsePnrBookDetailContract" />
+      <xsd:complexType name="ParsePnrBookDetailContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnrText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="plcid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ibePrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="disc" type="xsd:string" />
+          <xsd:element minOccurs="0" name="extReward" type="xsd:string" />
+          <xsd:element minOccurs="0" name="linkman" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrBookDetailContractResponse" type="tns:ParsePnrBookDetailContractResponse" />
+      <xsd:complexType name="ParsePnrBookDetailContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrBookContract" type="tns:PnrBookContract" />
+      <xsd:complexType name="PnrBookContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="plcid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ibePrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="disc" type="xsd:string" />
+          <xsd:element minOccurs="0" name="extReward" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrBookContractResponse" type="tns:PnrBookContractResponse" />
+      <xsd:complexType name="PnrBookContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="BookTicket" type="tns:BookTicket" />
+      <xsd:complexType name="BookTicket">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="encryptString" type="xsd:string" />
+          <xsd:element minOccurs="0" name="passengerInfo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="outorderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="BookTicketResponse" type="tns:BookTicketResponse" />
+      <xsd:complexType name="BookTicketResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrBookDetailContract" type="tns:PnrBookDetailContract" />
+      <xsd:complexType name="PnrBookDetailContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="plcid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ibePrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="disc" type="xsd:string" />
+          <xsd:element minOccurs="0" name="extReward" type="xsd:string" />
+          <xsd:element minOccurs="0" name="linkman" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrBookDetailContractResponse" type="tns:PnrBookDetailContractResponse" />
+      <xsd:complexType name="PnrBookDetailContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="CancelTicketContract" type="tns:CancelTicketContract" />
+      <xsd:complexType name="CancelTicketContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="passengerName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cancel_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="CancelTicketContractResponse" type="tns:CancelTicketContractResponse" />
+      <xsd:complexType name="CancelTicketContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryAllAirp" type="tns:QueryAllAirp" />
+      <xsd:complexType name="QueryAllAirp">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryAllAirpResponse" type="tns:QueryAllAirpResponse" />
+      <xsd:complexType name="QueryAllAirpResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Order_QueryContract" type="tns:Order_QueryContract" />
+      <xsd:complexType name="Order_QueryContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Order_QueryContractResponse" type="tns:Order_QueryContractResponse" />
+      <xsd:complexType name="Order_QueryContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Order_QueryAirid" type="tns:Order_QueryAirid" />
+      <xsd:complexType name="Order_QueryAirid">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Order_QueryAiridResponse" type="tns:Order_QueryAiridResponse" />
+      <xsd:complexType name="Order_QueryAiridResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrBookContract" type="tns:ParsePnrBookContract" />
+      <xsd:complexType name="ParsePnrBookContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnrText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="plcid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ibePrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="disc" type="xsd:string" />
+          <xsd:element minOccurs="0" name="extReward" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrBookContractResponse" type="tns:ParsePnrBookContractResponse" />
+      <xsd:complexType name="ParsePnrBookContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrMatchAirp" type="tns:ParsePnrMatchAirp" />
+      <xsd:complexType name="ParsePnrMatchAirp">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnrText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrMatchAirpResponse" type="tns:ParsePnrMatchAirpResponse" />
+      <xsd:complexType name="ParsePnrMatchAirpResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrBookDetail" type="tns:ParsePnrBookDetail" />
+      <xsd:complexType name="ParsePnrBookDetail">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnrText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="plcid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ibePrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="disc" type="xsd:string" />
+          <xsd:element minOccurs="0" name="extReward" type="xsd:string" />
+          <xsd:element minOccurs="0" name="linkman" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrBookDetailResponse" type="tns:ParsePnrBookDetailResponse" />
+      <xsd:complexType name="ParsePnrBookDetailResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ChangeContract" type="tns:ChangeContract" />
+      <xsd:complexType name="ChangeContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="changeMemo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="change_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ChangeContractResponse" type="tns:ChangeContractResponse" />
+      <xsd:complexType name="ChangeContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryAirpSyncZip" type="tns:QueryAirpSyncZip" />
+      <xsd:complexType name="QueryAirpSyncZip">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="fileUrl" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryAirpSyncZipResponse" type="tns:QueryAirpSyncZipResponse" />
+      <xsd:complexType name="QueryAirpSyncZipResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrMatchAirpContract" type="tns:ParsePnrMatchAirpContract" />
+      <xsd:complexType name="ParsePnrMatchAirpContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnrText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrMatchAirpContractResponse" type="tns:ParsePnrMatchAirpContractResponse" />
+      <xsd:complexType name="ParsePnrMatchAirpContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryAirpolicy" type="tns:QueryAirpolicy" />
+      <xsd:complexType name="QueryAirpolicy">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="encryptString" type="xsd:string" />
+          <xsd:element minOccurs="0" name="airpGet" type="xsd:string" />
+          <xsd:element minOccurs="0" name="airpSource" type="xsd:string" />
+          <xsd:element minOccurs="0" name="tickType" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryAirpolicyResponse" type="tns:QueryAirpolicyResponse" />
+      <xsd:complexType name="QueryAirpolicyResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PrintInv" type="tns:PrintInv" />
+      <xsd:complexType name="PrintInv">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ticketNo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="invNo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PrintInvResponse" type="tns:PrintInvResponse" />
+      <xsd:complexType name="PrintInvResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrMatchAirp" type="tns:PnrMatchAirp" />
+      <xsd:complexType name="PnrMatchAirp">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrMatchAirpResponse" type="tns:PnrMatchAirpResponse" />
+      <xsd:complexType name="PnrMatchAirpResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AirpQueryStatusBusiness" type="tns:AirpQueryStatusBusiness" />
+      <xsd:complexType name="AirpQueryStatusBusiness">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="plcid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orgCity" type="xsd:string" />
+          <xsd:element minOccurs="0" name="dstCity" type="xsd:string" />
+          <xsd:element minOccurs="0" name="airComp" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cabin" type="xsd:string" />
+          <xsd:element minOccurs="0" name="startDate" type="xsd:string" />
+          <xsd:element minOccurs="0" name="flightNo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="userType" type="xsd:string" />
+          <xsd:element minOccurs="0" name="airSeg" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AirpQueryStatusBusinessResponse" type="tns:AirpQueryStatusBusinessResponse" />
+      <xsd:complexType name="AirpQueryStatusBusinessResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="UserUnsign" type="tns:UserUnsign" />
+      <xsd:complexType name="UserUnsign">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="UserUnsignResponse" type="tns:UserUnsignResponse" />
+      <xsd:complexType name="UserUnsignResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Order_QueryAiridContract" type="tns:Order_QueryAiridContract" />
+      <xsd:complexType name="Order_QueryAiridContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Order_QueryAiridContractResponse" type="tns:Order_QueryAiridContractResponse" />
+      <xsd:complexType name="Order_QueryAiridContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrMatchAirpNoPat" type="tns:ParsePnrMatchAirpNoPat" />
+      <xsd:complexType name="ParsePnrMatchAirpNoPat">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnrText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrMatchAirpNoPatResponse" type="tns:ParsePnrMatchAirpNoPatResponse" />
+      <xsd:complexType name="ParsePnrMatchAirpNoPatResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrMatchAirpContract" type="tns:PnrMatchAirpContract" />
+      <xsd:complexType name="PnrMatchAirpContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrMatchAirpContractResponse" type="tns:PnrMatchAirpContractResponse" />
+      <xsd:complexType name="PnrMatchAirpContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="VoidInv" type="tns:VoidInv" />
+      <xsd:complexType name="VoidInv">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ticketNo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="invNo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="VoidInvResponse" type="tns:VoidInvResponse" />
+      <xsd:complexType name="VoidInvResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrBookWithChild" type="tns:PnrBookWithChild" />
+      <xsd:complexType name="PnrBookWithChild">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="adultPnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="childPnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="adultPlcId" type="xsd:string" />
+          <xsd:element minOccurs="0" name="childPlcId" type="xsd:string" />
+          <xsd:element minOccurs="0" name="adultIbePrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="childIbePrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="disc" type="xsd:string" />
+          <xsd:element minOccurs="0" name="extReward" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PnrBookWithChildResponse" type="tns:PnrBookWithChildResponse" />
+      <xsd:complexType name="PnrBookWithChildResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrBook" type="tns:ParsePnrBook" />
+      <xsd:complexType name="ParsePnrBook">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnr" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pnrText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="plcid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ibePrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="disc" type="xsd:string" />
+          <xsd:element minOccurs="0" name="extReward" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ParsePnrBookResponse" type="tns:ParsePnrBookResponse" />
+      <xsd:complexType name="ParsePnrBookResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Change" type="tns:Change" />
+      <xsd:complexType name="Change">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="changeMemo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="change_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ChangeResponse" type="tns:ChangeResponse" />
+      <xsd:complexType name="ChangeResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="CancelTicket" type="tns:CancelTicket" />
+      <xsd:complexType name="CancelTicket">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="passengerName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cancel_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="CancelTicketResponse" type="tns:CancelTicketResponse" />
+      <xsd:complexType name="CancelTicketResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryBuyTicketsList" type="tns:QueryBuyTicketsList" />
+      <xsd:complexType name="QueryBuyTicketsList">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="startTime" type="xsd:string" />
+          <xsd:element minOccurs="0" name="endTime" type="xsd:string" />
+          <xsd:element minOccurs="0" name="type" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryBuyTicketsListResponse" type="tns:QueryBuyTicketsListResponse" />
+      <xsd:complexType name="QueryBuyTicketsListResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PayOutContract" type="tns:PayOutContract" />
+      <xsd:complexType name="PayOutContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="totalPrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="payPlatform" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pay_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="PayOutContractResponse" type="tns:PayOutContractResponse" />
+      <xsd:complexType name="PayOutContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Order_Query" type="tns:Order_Query" />
+      <xsd:complexType name="Order_Query">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Order_QueryResponse" type="tns:Order_QueryResponse" />
+      <xsd:complexType name="Order_QueryResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryAirp" type="tns:QueryAirp" />
+      <xsd:complexType name="QueryAirp">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orgCity" type="xsd:string" />
+          <xsd:element minOccurs="0" name="dstCity" type="xsd:string" />
+          <xsd:element minOccurs="0" name="airComp" type="xsd:string" />
+          <xsd:element minOccurs="0" name="flight" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cabin" type="xsd:string" />
+          <xsd:element minOccurs="0" name="startDate" type="xsd:string" />
+          <xsd:element minOccurs="0" name="startTime" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="QueryAirpResponse" type="tns:QueryAirpResponse" />
+      <xsd:complexType name="QueryAirpResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AirpQueryStatusBusinessContract" type="tns:AirpQueryStatusBusinessContract" />
+      <xsd:complexType name="AirpQueryStatusBusinessContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="appUserName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="plcid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orgCity" type="xsd:string" />
+          <xsd:element minOccurs="0" name="dstCity" type="xsd:string" />
+          <xsd:element minOccurs="0" name="airComp" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cabin" type="xsd:string" />
+          <xsd:element minOccurs="0" name="startDate" type="xsd:string" />
+          <xsd:element minOccurs="0" name="flightNo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="userType" type="xsd:string" />
+          <xsd:element minOccurs="0" name="airSeg" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AirpQueryStatusBusinessContractResponse" type="tns:AirpQueryStatusBusinessContractResponse" />
+      <xsd:complexType name="AirpQueryStatusBusinessContractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AutoOut" type="tns:AutoOut" />
+      <xsd:complexType name="AutoOut">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="userName" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="totalPrice" type="xsd:string" />
+          <xsd:element minOccurs="0" name="payPlatform" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pay_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="out_notify_url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sign" type="xsd:string" />
+          <xsd:element minOccurs="0" name="isAutoCancel" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cancel_notify_url" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AutoOutResponse" type="tns:AutoOutResponse" />
+      <xsd:complexType name="AutoOutResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="QueryAirpolicy">
+    <wsdl:part name="parameters" element="tns:QueryAirpolicy" />
+  </wsdl:message>
+  <wsdl:message name="Order_Query">
+    <wsdl:part name="parameters" element="tns:Order_Query" />
+  </wsdl:message>
+  <wsdl:message name="Order_QueryStatusResponse">
+    <wsdl:part name="parameters" element="tns:Order_QueryStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterNewUser">
+    <wsdl:part name="parameters" element="tns:RegisterNewUser" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrBookDetail">
+    <wsdl:part name="parameters" element="tns:ParsePnrBookDetail" />
+  </wsdl:message>
+  <wsdl:message name="PnrBookWithChildResponse">
+    <wsdl:part name="parameters" element="tns:PnrBookWithChildResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayOutResponse">
+    <wsdl:part name="parameters" element="tns:PayOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeResponse">
+    <wsdl:part name="parameters" element="tns:ChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Order_QueryContract">
+    <wsdl:part name="parameters" element="tns:Order_QueryContract" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrMatchAirpNoPatResponse">
+    <wsdl:part name="parameters" element="tns:ParsePnrMatchAirpNoPatResponse" />
+  </wsdl:message>
+  <wsdl:message name="RefundTicketResponse">
+    <wsdl:part name="parameters" element="tns:RefundTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAirpSyncZip">
+    <wsdl:part name="parameters" element="tns:QueryAirpSyncZip" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrBookResponse">
+    <wsdl:part name="parameters" element="tns:ParsePnrBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayOutContract">
+    <wsdl:part name="parameters" element="tns:PayOutContract" />
+  </wsdl:message>
+  <wsdl:message name="Order_QueryContractResponse">
+    <wsdl:part name="parameters" element="tns:Order_QueryContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="PnrBookDetailContract">
+    <wsdl:part name="parameters" element="tns:PnrBookDetailContract" />
+  </wsdl:message>
+  <wsdl:message name="QueryAirpResponse">
+    <wsdl:part name="parameters" element="tns:QueryAirpResponse" />
+  </wsdl:message>
+  <wsdl:message name="Order_QueryResponse">
+    <wsdl:part name="parameters" element="tns:Order_QueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="PnrBookDetailResponse">
+    <wsdl:part name="parameters" element="tns:PnrBookDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="AirpQueryStatusBusinessResponse">
+    <wsdl:part name="parameters" element="tns:AirpQueryStatusBusinessResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllAirp">
+    <wsdl:part name="parameters" element="tns:QueryAllAirp" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderIdByStatus">
+    <wsdl:part name="parameters" element="tns:QueryOrderIdByStatus" />
+  </wsdl:message>
+  <wsdl:message name="AirpSync">
+    <wsdl:part name="parameters" element="tns:AirpSync" />
+  </wsdl:message>
+  <wsdl:message name="QueryFlight">
+    <wsdl:part name="parameters" element="tns:QueryFlight" />
+  </wsdl:message>
+  <wsdl:message name="ChangeContractResponse">
+    <wsdl:part name="parameters" element="tns:ChangeContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="VoidInv">
+    <wsdl:part name="parameters" element="tns:VoidInv" />
+  </wsdl:message>
+  <wsdl:message name="Pay">
+    <wsdl:part name="parameters" element="tns:Pay" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrBookDetailContractResponse">
+    <wsdl:part name="parameters" element="tns:ParsePnrBookDetailContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderStatus">
+    <wsdl:part name="parameters" element="tns:QueryOrderStatus" />
+  </wsdl:message>
+  <wsdl:message name="RegisterNewUserResponse">
+    <wsdl:part name="parameters" element="tns:RegisterNewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="AirpSyncResponse">
+    <wsdl:part name="parameters" element="tns:AirpSyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoOut">
+    <wsdl:part name="parameters" element="tns:AutoOut" />
+  </wsdl:message>
+  <wsdl:message name="QueryReturnTicketsListResponse">
+    <wsdl:part name="parameters" element="tns:QueryReturnTicketsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllAirpResponse">
+    <wsdl:part name="parameters" element="tns:QueryAllAirpResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryFlightResponse">
+    <wsdl:part name="parameters" element="tns:QueryFlightResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrMatchAirpResponse">
+    <wsdl:part name="parameters" element="tns:ParsePnrMatchAirpResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrMatchAirpContractResponse">
+    <wsdl:part name="parameters" element="tns:ParsePnrMatchAirpContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserUnsign">
+    <wsdl:part name="parameters" element="tns:UserUnsign" />
+  </wsdl:message>
+  <wsdl:message name="PnrBookWithChild">
+    <wsdl:part name="parameters" element="tns:PnrBookWithChild" />
+  </wsdl:message>
+  <wsdl:message name="PnrBookResponse">
+    <wsdl:part name="parameters" element="tns:PnrBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="Refund_QueryContractResponse">
+    <wsdl:part name="parameters" element="tns:Refund_QueryContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="PnrMatchAirpContract">
+    <wsdl:part name="parameters" element="tns:PnrMatchAirpContract" />
+  </wsdl:message>
+  <wsdl:message name="QueryBuyTicketsList">
+    <wsdl:part name="parameters" element="tns:QueryBuyTicketsList" />
+  </wsdl:message>
+  <wsdl:message name="CancelTicketContractResponse">
+    <wsdl:part name="parameters" element="tns:CancelTicketContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrMatchAirpContract">
+    <wsdl:part name="parameters" element="tns:ParsePnrMatchAirpContract" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrBookDetailContract">
+    <wsdl:part name="parameters" element="tns:ParsePnrBookDetailContract" />
+  </wsdl:message>
+  <wsdl:message name="UserSignResponse">
+    <wsdl:part name="parameters" element="tns:UserSignResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryReturnTicketsList">
+    <wsdl:part name="parameters" element="tns:QueryReturnTicketsList" />
+  </wsdl:message>
+  <wsdl:message name="PnrMatchAirpResponse">
+    <wsdl:part name="parameters" element="tns:PnrMatchAirpResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryBuyTicketsListResponse">
+    <wsdl:part name="parameters" element="tns:QueryBuyTicketsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeContract">
+    <wsdl:part name="parameters" element="tns:ChangeContract" />
+  </wsdl:message>
+  <wsdl:message name="PnrBookContractResponse">
+    <wsdl:part name="parameters" element="tns:PnrBookContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="AirpSyncLastDateResponse">
+    <wsdl:part name="parameters" element="tns:AirpSyncLastDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Change">
+    <wsdl:part name="parameters" element="tns:Change" />
+  </wsdl:message>
+  <wsdl:message name="PrintInvResponse">
+    <wsdl:part name="parameters" element="tns:PrintInvResponse" />
+  </wsdl:message>
+  <wsdl:message name="Order_QueryStatusContractResponse">
+    <wsdl:part name="parameters" element="tns:Order_QueryStatusContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderIdByStatusResponse">
+    <wsdl:part name="parameters" element="tns:QueryOrderIdByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserSign">
+    <wsdl:part name="parameters" element="tns:UserSign" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrBookContractResponse">
+    <wsdl:part name="parameters" element="tns:ParsePnrBookContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="Order_QueryAiridContract">
+    <wsdl:part name="parameters" element="tns:Order_QueryAiridContract" />
+  </wsdl:message>
+  <wsdl:message name="ResupplyOrder">
+    <wsdl:part name="parameters" element="tns:ResupplyOrder" />
+  </wsdl:message>
+  <wsdl:message name="DrawBounceTicketRecordResponse">
+    <wsdl:part name="parameters" element="tns:DrawBounceTicketRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderStatusResponse">
+    <wsdl:part name="parameters" element="tns:QueryOrderStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="AirpQueryStatusBusinessContract">
+    <wsdl:part name="parameters" element="tns:AirpQueryStatusBusinessContract" />
+  </wsdl:message>
+  <wsdl:message name="PrintInv">
+    <wsdl:part name="parameters" element="tns:PrintInv" />
+  </wsdl:message>
+  <wsdl:message name="PayResponse">
+    <wsdl:part name="parameters" element="tns:PayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrBook">
+    <wsdl:part name="parameters" element="tns:ParsePnrBook" />
+  </wsdl:message>
+  <wsdl:message name="ResupplyOrderResponse">
+    <wsdl:part name="parameters" element="tns:ResupplyOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="BookTicketResponse">
+    <wsdl:part name="parameters" element="tns:BookTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayOut">
+    <wsdl:part name="parameters" element="tns:PayOut" />
+  </wsdl:message>
+  <wsdl:message name="QueryAirpSyncZipResponse">
+    <wsdl:part name="parameters" element="tns:QueryAirpSyncZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="Refund_QueryResponse">
+    <wsdl:part name="parameters" element="tns:Refund_QueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Refund_Query">
+    <wsdl:part name="parameters" element="tns:Refund_Query" />
+  </wsdl:message>
+  <wsdl:message name="Order_QueryStatus">
+    <wsdl:part name="parameters" element="tns:Order_QueryStatus" />
+  </wsdl:message>
+  <wsdl:message name="Order_QueryAiridContractResponse">
+    <wsdl:part name="parameters" element="tns:Order_QueryAiridContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayOutContractResponse">
+    <wsdl:part name="parameters" element="tns:PayOutContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="AirpQueryStatusBusiness">
+    <wsdl:part name="parameters" element="tns:AirpQueryStatusBusiness" />
+  </wsdl:message>
+  <wsdl:message name="PnrBookDetailContractResponse">
+    <wsdl:part name="parameters" element="tns:PnrBookDetailContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="Order_QueryStatusContract">
+    <wsdl:part name="parameters" element="tns:Order_QueryStatusContract" />
+  </wsdl:message>
+  <wsdl:message name="UserUnsignResponse">
+    <wsdl:part name="parameters" element="tns:UserUnsignResponse" />
+  </wsdl:message>
+  <wsdl:message name="RefundTicket">
+    <wsdl:part name="parameters" element="tns:RefundTicket" />
+  </wsdl:message>
+  <wsdl:message name="Order_QueryAirid">
+    <wsdl:part name="parameters" element="tns:Order_QueryAirid" />
+  </wsdl:message>
+  <wsdl:message name="RefundTicketContractResponse">
+    <wsdl:part name="parameters" element="tns:RefundTicketContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="BookTicket">
+    <wsdl:part name="parameters" element="tns:BookTicket" />
+  </wsdl:message>
+  <wsdl:message name="AutoOutResponse">
+    <wsdl:part name="parameters" element="tns:AutoOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="PnrBookContract">
+    <wsdl:part name="parameters" element="tns:PnrBookContract" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrMatchAirp">
+    <wsdl:part name="parameters" element="tns:ParsePnrMatchAirp" />
+  </wsdl:message>
+  <wsdl:message name="CancelTicketResponse">
+    <wsdl:part name="parameters" element="tns:CancelTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="PnrBook">
+    <wsdl:part name="parameters" element="tns:PnrBook" />
+  </wsdl:message>
+  <wsdl:message name="Order_QueryAiridResponse">
+    <wsdl:part name="parameters" element="tns:Order_QueryAiridResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrBookDetailResponse">
+    <wsdl:part name="parameters" element="tns:ParsePnrBookDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAirp">
+    <wsdl:part name="parameters" element="tns:QueryAirp" />
+  </wsdl:message>
+  <wsdl:message name="CancelTicket">
+    <wsdl:part name="parameters" element="tns:CancelTicket" />
+  </wsdl:message>
+  <wsdl:message name="VoidInvResponse">
+    <wsdl:part name="parameters" element="tns:VoidInvResponse" />
+  </wsdl:message>
+  <wsdl:message name="RefundTicketContract">
+    <wsdl:part name="parameters" element="tns:RefundTicketContract" />
+  </wsdl:message>
+  <wsdl:message name="AirpQueryStatusBusinessContractResponse">
+    <wsdl:part name="parameters" element="tns:AirpQueryStatusBusinessContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="DrawBounceTicketRecord">
+    <wsdl:part name="parameters" element="tns:DrawBounceTicketRecord" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrBookContract">
+    <wsdl:part name="parameters" element="tns:ParsePnrBookContract" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrMatchAirpNoPat">
+    <wsdl:part name="parameters" element="tns:ParsePnrMatchAirpNoPat" />
+  </wsdl:message>
+  <wsdl:message name="PnrBookDetail">
+    <wsdl:part name="parameters" element="tns:PnrBookDetail" />
+  </wsdl:message>
+  <wsdl:message name="PnrMatchAirp">
+    <wsdl:part name="parameters" element="tns:PnrMatchAirp" />
+  </wsdl:message>
+  <wsdl:message name="AirpSyncLastDate">
+    <wsdl:part name="parameters" element="tns:AirpSyncLastDate" />
+  </wsdl:message>
+  <wsdl:message name="Refund_QueryContract">
+    <wsdl:part name="parameters" element="tns:Refund_QueryContract" />
+  </wsdl:message>
+  <wsdl:message name="PnrMatchAirpContractResponse">
+    <wsdl:part name="parameters" element="tns:PnrMatchAirpContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelTicketContract">
+    <wsdl:part name="parameters" element="tns:CancelTicketContract" />
+  </wsdl:message>
+  <wsdl:message name="QueryAirpolicyResponse">
+    <wsdl:part name="parameters" element="tns:QueryAirpolicyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBEServicePortType">
+    <wsdl:operation name="QueryReturnTicketsList">
+      <wsdl:input name="QueryReturnTicketsList" message="tns:QueryReturnTicketsList" />
+      <wsdl:output name="QueryReturnTicketsListResponse" message="tns:QueryReturnTicketsListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PayOut">
+      <wsdl:input name="PayOut" message="tns:PayOut" />
+      <wsdl:output name="PayOutResponse" message="tns:PayOutResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Order_QueryStatusContract">
+      <wsdl:input name="Order_QueryStatusContract" message="tns:Order_QueryStatusContract" />
+      <wsdl:output name="Order_QueryStatusContractResponse" message="tns:Order_QueryStatusContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrderIdByStatus">
+      <wsdl:input name="QueryOrderIdByStatus" message="tns:QueryOrderIdByStatus" />
+      <wsdl:output name="QueryOrderIdByStatusResponse" message="tns:QueryOrderIdByStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Pay">
+      <wsdl:input name="Pay" message="tns:Pay" />
+      <wsdl:output name="PayResponse" message="tns:PayResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RefundTicket">
+      <wsdl:input name="RefundTicket" message="tns:RefundTicket" />
+      <wsdl:output name="RefundTicketResponse" message="tns:RefundTicketResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFlight">
+      <wsdl:input name="QueryFlight" message="tns:QueryFlight" />
+      <wsdl:output name="QueryFlightResponse" message="tns:QueryFlightResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PnrBook">
+      <wsdl:input name="PnrBook" message="tns:PnrBook" />
+      <wsdl:output name="PnrBookResponse" message="tns:PnrBookResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DrawBounceTicketRecord">
+      <wsdl:input name="DrawBounceTicketRecord" message="tns:DrawBounceTicketRecord" />
+      <wsdl:output name="DrawBounceTicketRecordResponse" message="tns:DrawBounceTicketRecordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Refund_Query">
+      <wsdl:input name="Refund_Query" message="tns:Refund_Query" />
+      <wsdl:output name="Refund_QueryResponse" message="tns:Refund_QueryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewUser">
+      <wsdl:input name="RegisterNewUser" message="tns:RegisterNewUser" />
+      <wsdl:output name="RegisterNewUserResponse" message="tns:RegisterNewUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Refund_QueryContract">
+      <wsdl:input name="Refund_QueryContract" message="tns:Refund_QueryContract" />
+      <wsdl:output name="Refund_QueryContractResponse" message="tns:Refund_QueryContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AirpSync">
+      <wsdl:input name="AirpSync" message="tns:AirpSync" />
+      <wsdl:output name="AirpSyncResponse" message="tns:AirpSyncResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ResupplyOrder">
+      <wsdl:input name="ResupplyOrder" message="tns:ResupplyOrder" />
+      <wsdl:output name="ResupplyOrderResponse" message="tns:ResupplyOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AirpSyncLastDate">
+      <wsdl:input name="AirpSyncLastDate" message="tns:AirpSyncLastDate" />
+      <wsdl:output name="AirpSyncLastDateResponse" message="tns:AirpSyncLastDateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PnrBookDetail">
+      <wsdl:input name="PnrBookDetail" message="tns:PnrBookDetail" />
+      <wsdl:output name="PnrBookDetailResponse" message="tns:PnrBookDetailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrderStatus">
+      <wsdl:input name="QueryOrderStatus" message="tns:QueryOrderStatus" />
+      <wsdl:output name="QueryOrderStatusResponse" message="tns:QueryOrderStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Order_QueryStatus">
+      <wsdl:input name="Order_QueryStatus" message="tns:Order_QueryStatus" />
+      <wsdl:output name="Order_QueryStatusResponse" message="tns:Order_QueryStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RefundTicketContract">
+      <wsdl:input name="RefundTicketContract" message="tns:RefundTicketContract" />
+      <wsdl:output name="RefundTicketContractResponse" message="tns:RefundTicketContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UserSign">
+      <wsdl:input name="UserSign" message="tns:UserSign" />
+      <wsdl:output name="UserSignResponse" message="tns:UserSignResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrBookDetailContract">
+      <wsdl:input name="ParsePnrBookDetailContract" message="tns:ParsePnrBookDetailContract" />
+      <wsdl:output name="ParsePnrBookDetailContractResponse" message="tns:ParsePnrBookDetailContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PnrBookContract">
+      <wsdl:input name="PnrBookContract" message="tns:PnrBookContract" />
+      <wsdl:output name="PnrBookContractResponse" message="tns:PnrBookContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="BookTicket">
+      <wsdl:input name="BookTicket" message="tns:BookTicket" />
+      <wsdl:output name="BookTicketResponse" message="tns:BookTicketResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PnrBookDetailContract">
+      <wsdl:input name="PnrBookDetailContract" message="tns:PnrBookDetailContract" />
+      <wsdl:output name="PnrBookDetailContractResponse" message="tns:PnrBookDetailContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelTicketContract">
+      <wsdl:input name="CancelTicketContract" message="tns:CancelTicketContract" />
+      <wsdl:output name="CancelTicketContractResponse" message="tns:CancelTicketContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllAirp">
+      <wsdl:input name="QueryAllAirp" message="tns:QueryAllAirp" />
+      <wsdl:output name="QueryAllAirpResponse" message="tns:QueryAllAirpResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Order_QueryContract">
+      <wsdl:input name="Order_QueryContract" message="tns:Order_QueryContract" />
+      <wsdl:output name="Order_QueryContractResponse" message="tns:Order_QueryContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Order_QueryAirid">
+      <wsdl:input name="Order_QueryAirid" message="tns:Order_QueryAirid" />
+      <wsdl:output name="Order_QueryAiridResponse" message="tns:Order_QueryAiridResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrBookContract">
+      <wsdl:input name="ParsePnrBookContract" message="tns:ParsePnrBookContract" />
+      <wsdl:output name="ParsePnrBookContractResponse" message="tns:ParsePnrBookContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrMatchAirp">
+      <wsdl:input name="ParsePnrMatchAirp" message="tns:ParsePnrMatchAirp" />
+      <wsdl:output name="ParsePnrMatchAirpResponse" message="tns:ParsePnrMatchAirpResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrBookDetail">
+      <wsdl:input name="ParsePnrBookDetail" message="tns:ParsePnrBookDetail" />
+      <wsdl:output name="ParsePnrBookDetailResponse" message="tns:ParsePnrBookDetailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeContract">
+      <wsdl:input name="ChangeContract" message="tns:ChangeContract" />
+      <wsdl:output name="ChangeContractResponse" message="tns:ChangeContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAirpSyncZip">
+      <wsdl:input name="QueryAirpSyncZip" message="tns:QueryAirpSyncZip" />
+      <wsdl:output name="QueryAirpSyncZipResponse" message="tns:QueryAirpSyncZipResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrMatchAirpContract">
+      <wsdl:input name="ParsePnrMatchAirpContract" message="tns:ParsePnrMatchAirpContract" />
+      <wsdl:output name="ParsePnrMatchAirpContractResponse" message="tns:ParsePnrMatchAirpContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAirpolicy">
+      <wsdl:input name="QueryAirpolicy" message="tns:QueryAirpolicy" />
+      <wsdl:output name="QueryAirpolicyResponse" message="tns:QueryAirpolicyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintInv">
+      <wsdl:input name="PrintInv" message="tns:PrintInv" />
+      <wsdl:output name="PrintInvResponse" message="tns:PrintInvResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PnrMatchAirp">
+      <wsdl:input name="PnrMatchAirp" message="tns:PnrMatchAirp" />
+      <wsdl:output name="PnrMatchAirpResponse" message="tns:PnrMatchAirpResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AirpQueryStatusBusiness">
+      <wsdl:input name="AirpQueryStatusBusiness" message="tns:AirpQueryStatusBusiness" />
+      <wsdl:output name="AirpQueryStatusBusinessResponse" message="tns:AirpQueryStatusBusinessResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UserUnsign">
+      <wsdl:input name="UserUnsign" message="tns:UserUnsign" />
+      <wsdl:output name="UserUnsignResponse" message="tns:UserUnsignResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Order_QueryAiridContract">
+      <wsdl:input name="Order_QueryAiridContract" message="tns:Order_QueryAiridContract" />
+      <wsdl:output name="Order_QueryAiridContractResponse" message="tns:Order_QueryAiridContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrMatchAirpNoPat">
+      <wsdl:input name="ParsePnrMatchAirpNoPat" message="tns:ParsePnrMatchAirpNoPat" />
+      <wsdl:output name="ParsePnrMatchAirpNoPatResponse" message="tns:ParsePnrMatchAirpNoPatResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PnrMatchAirpContract">
+      <wsdl:input name="PnrMatchAirpContract" message="tns:PnrMatchAirpContract" />
+      <wsdl:output name="PnrMatchAirpContractResponse" message="tns:PnrMatchAirpContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidInv">
+      <wsdl:input name="VoidInv" message="tns:VoidInv" />
+      <wsdl:output name="VoidInvResponse" message="tns:VoidInvResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PnrBookWithChild">
+      <wsdl:input name="PnrBookWithChild" message="tns:PnrBookWithChild" />
+      <wsdl:output name="PnrBookWithChildResponse" message="tns:PnrBookWithChildResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrBook">
+      <wsdl:input name="ParsePnrBook" message="tns:ParsePnrBook" />
+      <wsdl:output name="ParsePnrBookResponse" message="tns:ParsePnrBookResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Change">
+      <wsdl:input name="Change" message="tns:Change" />
+      <wsdl:output name="ChangeResponse" message="tns:ChangeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelTicket">
+      <wsdl:input name="CancelTicket" message="tns:CancelTicket" />
+      <wsdl:output name="CancelTicketResponse" message="tns:CancelTicketResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryBuyTicketsList">
+      <wsdl:input name="QueryBuyTicketsList" message="tns:QueryBuyTicketsList" />
+      <wsdl:output name="QueryBuyTicketsListResponse" message="tns:QueryBuyTicketsListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PayOutContract">
+      <wsdl:input name="PayOutContract" message="tns:PayOutContract" />
+      <wsdl:output name="PayOutContractResponse" message="tns:PayOutContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Order_Query">
+      <wsdl:input name="Order_Query" message="tns:Order_Query" />
+      <wsdl:output name="Order_QueryResponse" message="tns:Order_QueryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAirp">
+      <wsdl:input name="QueryAirp" message="tns:QueryAirp" />
+      <wsdl:output name="QueryAirpResponse" message="tns:QueryAirpResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AirpQueryStatusBusinessContract">
+      <wsdl:input name="AirpQueryStatusBusinessContract" message="tns:AirpQueryStatusBusinessContract" />
+      <wsdl:output name="AirpQueryStatusBusinessContractResponse" message="tns:AirpQueryStatusBusinessContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoOut">
+      <wsdl:input name="AutoOut" message="tns:AutoOut" />
+      <wsdl:output name="AutoOutResponse" message="tns:AutoOutResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IBEServiceSoapBinding" type="tns:IBEServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryReturnTicketsList">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="QueryReturnTicketsList">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryReturnTicketsListResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Order_QueryStatusContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="Order_QueryStatusContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Order_QueryStatusContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayOut">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="PayOut">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PayOutResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrderIdByStatus">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="QueryOrderIdByStatus">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryOrderIdByStatusResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pay">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="Pay">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PayResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefundTicket">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="RefundTicket">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RefundTicketResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFlight">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="QueryFlight">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryFlightResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PnrBook">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="PnrBook">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PnrBookResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DrawBounceTicketRecord">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="DrawBounceTicketRecord">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DrawBounceTicketRecordResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Refund_Query">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="Refund_Query">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Refund_QueryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AirpSync">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="AirpSync">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AirpSyncResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Refund_QueryContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="Refund_QueryContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Refund_QueryContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewUser">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="RegisterNewUser">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RegisterNewUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResupplyOrder">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ResupplyOrder">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ResupplyOrderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AirpSyncLastDate">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="AirpSyncLastDate">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AirpSyncLastDateResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PnrBookDetail">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="PnrBookDetail">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PnrBookDetailResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrderStatus">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="QueryOrderStatus">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryOrderStatusResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Order_QueryStatus">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="Order_QueryStatus">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Order_QueryStatusResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefundTicketContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="RefundTicketContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RefundTicketContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserSign">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="UserSign">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UserSignResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrBookDetailContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ParsePnrBookDetailContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ParsePnrBookDetailContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PnrBookContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="PnrBookContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PnrBookContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookTicket">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="BookTicket">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="BookTicketResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PnrBookDetailContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="PnrBookDetailContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PnrBookDetailContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelTicketContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="CancelTicketContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CancelTicketContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Order_QueryAirid">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="Order_QueryAirid">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Order_QueryAiridResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Order_QueryContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="Order_QueryContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Order_QueryContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllAirp">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="QueryAllAirp">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryAllAirpResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrBookContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ParsePnrBookContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ParsePnrBookContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrMatchAirp">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ParsePnrMatchAirp">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ParsePnrMatchAirpResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrBookDetail">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ParsePnrBookDetail">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ParsePnrBookDetailResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ChangeContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ChangeContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAirpSyncZip">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="QueryAirpSyncZip">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryAirpSyncZipResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrMatchAirpContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ParsePnrMatchAirpContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ParsePnrMatchAirpContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AirpQueryStatusBusiness">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="AirpQueryStatusBusiness">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AirpQueryStatusBusinessResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PnrMatchAirp">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="PnrMatchAirp">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PnrMatchAirpResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintInv">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="PrintInv">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrintInvResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAirpolicy">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="QueryAirpolicy">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryAirpolicyResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrMatchAirpNoPat">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ParsePnrMatchAirpNoPat">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ParsePnrMatchAirpNoPatResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Order_QueryAiridContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="Order_QueryAiridContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Order_QueryAiridContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserUnsign">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="UserUnsign">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UserUnsignResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PnrMatchAirpContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="PnrMatchAirpContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PnrMatchAirpContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidInv">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="VoidInv">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="VoidInvResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PnrBookWithChild">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="PnrBookWithChild">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PnrBookWithChildResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnrBook">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ParsePnrBook">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ParsePnrBookResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Change">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="Change">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ChangeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelTicket">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="CancelTicket">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CancelTicketResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryBuyTicketsList">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="QueryBuyTicketsList">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryBuyTicketsListResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Order_Query">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="Order_Query">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Order_QueryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayOutContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="PayOutContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PayOutContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AirpQueryStatusBusinessContract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="AirpQueryStatusBusinessContract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AirpQueryStatusBusinessContractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAirp">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="QueryAirp">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryAirpResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoOut">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="AutoOut">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AutoOutResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IBEService">
+    <wsdl:port name="IBEServiceHttpPort" binding="tns:IBEServiceSoapBinding">
+      <soap:address location="http://www2.yeexing.com/CXF/services/IBEService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

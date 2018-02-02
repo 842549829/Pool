@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>换供应商出票弹层</title>
+	<link href="../Styles/core.css?20121118" rel="stylesheet" type="text/css" />
+    <link href="../Styles/form.css?20121118" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+      #dl_Reasons button {
+            width: 315px;   
+        }
+      .h {
+          display: none;
+      }
+      .form li {
+          padding: 5px 0 10px 50px;   
+      }
+      .form li.table {
+          padding-left: 0;  
+      }
+      .flightNo {
+          width: 50px;   
+      }
+    </style>
+</head>
+<body>
+	<div class="column layer" id="divRefund" style="position: absolute; left: 296px; top: 143px; z-index: 9999; display: block; ">
+        <div class="tips-info tips-info-a">
+            <div class="hd"><h3>申请退/废票</h3></div>
+            <div class="con">
+                <p class="layer3Tips">请注意，该票为特，应供应商要求，该票若发生废票规定需要收取10元废票手续费，敬请悉知！（如果您是编码导入订票，请在提交废票前将您的座位取消并将行程单作废）</p>
+                <p class="layer3Tips">请注意，该票为特殊票，应供应商要求，该票若发生废票规定需要收取20元废票手续费，敬请悉知！（如果您是编码导入订票，请在提交废票前将您的座位取消并将行程单作废）</p>
+                <ul class="form">
+                    <li><span class="name">乘机人：</span><span id="refundPassengerNames" class="obvious-a">宁德龙</span></li>
+                    <li><span class="name">航&nbsp;&nbsp;&nbsp;段：</span><span id="refundVoyages" class="obvious-a">昆明 - 西安</span></li>
+                    <li>
+                        <span class="name">类&nbsp;&nbsp;&nbsp;型：</span>
+                        <div class="check" id="divRefundType">
+                            <input type="radio" id="reasonType1" value="-1" key="12545" name="refundGroup"><label for="reasonType1">当日作废</label><br /><br />
+                            <input type="radio" id="reasonType2" value="0" key="12546" name="refundGroup"><label for="reasonType2">升舱全退</label>
+                            <input type="radio" id="reasonType3" value="1" key="12547" name="refundGroup"><label for="reasonType3">自愿按客规退票</label>
+                            <input type="radio" id="reasonType4" value="2" key="12548" name="refundGroup"><label for="reasonType4">非自愿退票</label>
+                            <input type="radio" id="reasonType5" value="3" key="12549" name="refundGroup"><label for="reasonType5">特殊原因退票</label>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="name">原&nbsp;&nbsp;&nbsp;因：</span>
+                        <select id="Reasons" style="width: 326px; display: none; " class="custed"><option>旅客自愿退票。</option></select><dl id="dl_Reasons" class="dropdown"><dt><button class="btn class4" style="width: 326px; "><i class="icon icon-down-open fr"></i></button><span class="value">undefined</span></dt><dd style="display: none; "><ul style="width: 326px; "><li>旅客自愿退票。<span class="value">旅客自愿退票。</span></li></ul></dd></dl>
+                        <textarea name="txtRefundReason" rows="5" cols="50" id="txtRefundReason" class="text"></textarea>
+                    </li>
+                </ul>
+                <div class="btns">
+                    <input type="button" class="btn class1" onclick="CommitApplyRefund(this);" value="提&nbsp;&nbsp;&nbsp;交">
+                    <input type="button" class="btn class2 close" value="返&nbsp;&nbsp;&nbsp;回">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

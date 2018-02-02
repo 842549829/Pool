@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>换供应商出票弹层</title>
+	<link href="../Styles/core.css?20121118" rel="stylesheet" type="text/css" />
+    <link href="../Styles/form.css?20121118" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="divPNRCode" class="column">
+        <div class="hd">
+        	<h2>编码信息</h2>
+        </div>
+        <div class="PNRCodeBox">
+        	请在此输入<span class="b">小编码</span>：
+        	<input type="text" class="text" />
+        	<a href="javascript:void(0);" class="obvious-a">若您没有小编码，请点此输入大编码</a>
+        </div>
+    </div>
+    <div class="colume">
+    	<div class="hd">
+    		<h2>出票信息</h2>
+    	</div>
+    	<div class="PNRCodeBox">
+    		<span class="condition">
+    			出票方式：<input type="radio" /><label>BSP</label><input type="radio" /><label>B2B</label>
+    		</span>
+    		<span class="condition">
+    			出票Office号：
+    			<select>
+    				<option>KMG215</option>
+    				<option>KMG212</option>
+    				<option>KMG213</option>
+    			</select>
+    		</span>
+    	</div>
+    </div>
+    <div class="btns">
+        <input name="btnSupply" type="button" id="btnSupply" class="btn class1" value="提供座位" onclick="supplyResource()" />
+        <input name="" type="button" class="btn class1" value="修改价格" />        
+        <input name="btnDeny" type="button" id="btnDeny" class="btn class1" value="拒绝提供" onclick="denySupply();" />
+        <input type="submit" name="btnReleaseLockAndBack" value="解锁并返回" id="btnReleaseLockAndBack" class="btn class2" />
+        <input name="btnBack" type="button" id="btnBack" class="btn class2" value="返&nbsp;&nbsp;&nbsp;回" onclick="window.location.href='http://192.168.1.254:998/OrderModule/Provide/ResourceList.aspx?type=Applied';return false;" />
+    </div>
+	<div id="divPNRCode" class="column">
+        <div class="hd">
+        	<h2>编码信息</h2>
+        </div>
+        <div class="PNRCodeBox">
+        	请在此输入<span class="b">小编码</span>：
+        	<input type="text" class="text" />
+        	<span class="thin">您至少需要提供一个（大或小）编码</span>
+        	<a href="javascript:void(0);" class="obvious-a" style="display:none;">若您没有小编码，请点此输入大编码</a>
+        	<br />
+        	请在此输入<span class="b">大编码</span>：
+        	<input type="text" class="text" />
+        	<span class="thin">您至少需要提供一个（大或小）编码</span>
+        </div>
+    </div>
+    <div class="colume">
+    	<div class="hd">
+    		<h2>出票信息</h2>
+    	</div>
+    	<div class="PNRCodeBox">
+    		<span class="condition">
+    			出票方式：<input type="radio" /><label>BSP</label><input type="radio" /><label>B2B</label>
+    		</span>
+    		<span class="condition">
+    			出票Office号：
+    			<select>
+    				<option>KMG215</option>
+    				<option>KMG212</option>
+    				<option>KMG213</option>
+    			</select>
+    		</span>
+    	</div>
+    </div>
+    <div class="btns">
+        <input name="btnSupply" type="button" id="btnSupply" class="btn class1" value="提供座位" onclick="supplyResource()" />
+        <input name="" type="button" class="btn class1" value="修改价格" />        
+        <input name="btnDeny" type="button" id="btnDeny" class="btn class1" value="拒绝提供" onclick="denySupply();" />
+        <input type="submit" name="btnReleaseLockAndBack" value="解锁并返回" id="btnReleaseLockAndBack" class="btn class2" />
+        <input name="btnBack" type="button" id="btnBack" class="btn class2" value="返&nbsp;&nbsp;&nbsp;回" onclick="window.location.href='http://192.168.1.254:998/OrderModule/Provide/ResourceList.aspx?type=Applied';return false;" />
+    </div>
+</body>
+</html>

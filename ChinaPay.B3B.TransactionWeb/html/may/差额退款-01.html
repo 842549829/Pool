@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/Styles/skins/default/core.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/skins/default/form.css" />
+</head>
+<body>
+    <div id="divContact" class="column">
+        <div class="tips-info">
+            <div class="hd">
+                <h2>
+                    联系人信息</h2>
+            </div>
+            <div class="con tips">
+                <div class="col-3">
+                    <div class="col">
+                        联系人：<span id="lblContact">曾令华</span></div>
+                    <div class="col">
+                        手机号码：<span id="lblContactMobile">18288799793</span></div>
+                    <div class="col">
+                        电子邮箱：<span id="lblContactEmail">swift252@qq.com</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btns addition-box">
+        <button id="btnApply" class="btn class1" onclick="">
+            申请退改签</button>
+        <button id="btnBack" class="btn class2" onclick="window.location.href='OrderList.aspx?Search=Back';return false;">
+            返&nbsp;&nbsp;&nbsp;回</button>
+        <div class="addition">
+            <a href="#"><i class="g-icon-time"></i>订单历史记录</a> <a href="#"><i class="g-icon-list">
+            </i>进行中的申请</a>
+        </div>
+    </div>
+    <div class="column table">
+        <h3 class="titleBg">
+            账单信息</h3>
+        <div id="bill_divBills" class="table">
+            <table cellspacing="0">
+                <tbody>
+                    <tr>
+                        <th>
+                            类型
+                        </th>
+                        <th>
+                            订单/申请单号
+                        </th>
+                        <th>
+                            金额
+                        </th>
+                        <th>
+                            交易账号
+                        </th>
+                        <th>
+                            交易流水号
+                        </th>
+                        <th>
+                            时间
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            退/废票
+                        </td>
+                        <td>
+                            1304281000060
+                        </td>
+                        <td>
+                            <span class="price">-1576</span>
+                        </td>
+                        <td>
+                            123321
+                        </td>
+                        <td>
+                            201304282100072
+                        </td>
+                        <td>
+                            2013-04-28 20:55:25
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="btns addition-box">
+        <button id="btnBack" class="btn class2" onclick="window.location.href='OrderList.aspx?Search=Back';return false;">
+            返&nbsp;&nbsp;&nbsp;回</button>
+        <div class="addition">
+            <a href="#"><i class="g-icon-warning-sign"></i>退/废票金额错误</a>
+        </div>
+    </div>
+    <div class="layer3">
+        <h4>
+            退废票金额错误争议处理申请<a href="javascript:;" class="close">关闭</a></h4>
+        <table class="mini-table">
+            <tr>
+                <th>
+                    <label class="title">申请单号：</label>
+                </th>
+                <td>
+                    20130508237281<span class="warning-box dis-ib">请注意：一个申请单只能申请一次差错退款</span>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label class="title">已退款金额：</label>
+                </th>
+                <td>
+                    268.96元<span class="pad-l obvious1">(该运价是生成订单时的运价历史记录，不一定是当前运价)</span>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label class="title">差错备注：</label>
+                </th>
+                <td>
+                    <textarea class="text" rows="4" cols="80"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <button class="btn class1">
+                        提交</button>
+                    <button class="btn class2 mar-l">
+                            取消</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>基础政策发布</title>
+    <link rel="stylesheet" href="/Styles/core.css">
+    <link rel="stylesheet" href="/Styles/form.css">
+    <link rel="stylesheet" href="/Styles/icon/fontello.css">
+    <link rel="stylesheet" href="/Styles/page.css">
+    <link href="/Scripts/DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .text-ss{width: 40px;}
+    </style>
+</head>
+<body>
+	<div style="width:1100px;float:right;">
+		<div class="policy_group">
+        <div class="parent_div">
+            <h4 class="groupHd">
+                第&nbsp;1&nbsp;组政策
+            </h4>
+            <div class="groupCt" style="min-height: 370px;">
+                <div class="groupBox1">
+                    <div class="fl pd_right groupLine">
+                        适用航班日期：
+                        <input type="text" onchange="ClearBunksByTime(this);" class="text datepicker datefrom  class3 quchengkaishi">
+                        至
+                        <input type="text" onchange="ClearBunksByTime(this);" class="text datepicker datefrom  class3 quchengjieshu">
+                    </div>
+                    <div class="fl pd_right groupLine">
+                        开始出票日期：
+                        <input type="text" onchange="ClearBunksByTime(this);" class="text datepicker datefrom  class3 chupiao">
+                    </div>
+                    <div class="fl groupLine btnRefreshWangfan" style="">
+                        <input type="button" class="btn class2 btnRefresh" value="刷新舱位">
+                    </div>
+                    <div class="clearfix groupLine">
+                        航班排除日期：
+                        <input type="text" class="text text_width">
+                        <p class="obvious1 pd">
+                            请填写政策航班排除日期，单天如：20121121 连续多天如:20121125-20121127 多个天数用“,”隔开
+                        </p>
+                    </div>
+                    <div class="pd_left groupLine">
+                        适用班期：
+                        <input type="checkbox" checked="checked" id="mon" value="1">
+                        <label for="mon">
+                            周一</label>
+                        <input type="checkbox" checked="checked" id="tue" value="2">
+                        <label for="tue">
+                            周二</label>
+                        <input type="checkbox" checked="checked" id="wed" value="3">
+                        <label for="wed">
+                            周三</label>
+                        <input type="checkbox" checked="checked" id="thur" value="4">
+                        <label for="thur">
+                            周四</label>
+                        <input type="checkbox" checked="checked" id="fri" value="5">
+                        <label for="fri">
+                            周五</label>
+                        <input type="checkbox" checked="checked" id="sat" value="6">
+                        <label for="sat">
+                            周六</label>
+                        <input type="checkbox" checked="checked" id="sun" value="7">
+                        <label for="sun">
+                            周日</label>
+                        <span class="obvious1">提示：若某个班期不适用，请将周期前的勾去掉</span>
+                    </div>
+                    <div class="pd_left groupLine">
+                        提前天数：
+                        <input type="text" class="text text-s">
+                        天 <span class="obvious1">提示：如果有提前订票限制，请输入限制天数 </span>
+                    </div>
+                    <div class="pd_left groupLine jituan" style="">
+                        舱位选择：<input type="radio" id="normal" checked="checked" name="chooiceBunks" value="0"><label for="normal">普通舱位</label>
+                        <input type="radio" id="bargain" name="chooiceBunks" value="1"><label for="bargain">特价舱位</label>
+                    </div>
+                    <div class="pd_left groupLine heipingtongbu" style="display: none;">
+                        黑屏同步：
+                        <div class="pd_left groupLine">
+                            <input id="hptb" type="radio" class="hptb1" value="0" name="tongbu"><label for="hptb">同&nbsp;&nbsp;
+                                步</label><span class="BunksRad hptb shuliangBunks" style="display: none;"><label class="refBtnBunks btn class3">点击获取舱位</label></span> <span class="obvious1">提示：选择同步后系统将在用户导入编码或查询时自动查询剩余机票张数
+                                    </span>
+                        </div>
+                        <div class="pd_left groupLine">
+                            <input id="bhptb" type="radio" class="hptb1" value="1" name="tongbu"><label for="bhptb">不同步</label>
+                            <span class="obvious1">提示：如果您能确保为购买该政策机票的客户出票，则选择不同步 </span>
+                            <div class="pd_left groupLine shuliangBunks bhptb" style="display: none;">
+                                <input id="youwei" type="radio" value="0" name="youwei"><label for="youwei">有位出票</label>
+                                <span class="obvious1">提示：须保证编码状态为OK </span>
+                                <br>
+                                <input id="wuwei" type="radio" value="1" name="youwei"><label for="wuwei">无位出票</label>
+                                <span class="obvious1">提示：即候补状态可以保证出票 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pd_left groupLine chanpinBunks" style="display: none;">
+                        产品舱位：
+                        <input type="text" class="text text-s" maxlength="2"><span class="obvious1 chanpinPrice" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;提示：请输入产品舱位
+                        </span>
+                    </div>
+                    <div class="pd_left groupLine shuliang shuliangBunks bhptb" style="display: none;">
+                        提供产品数量：
+                        <input type="text" class="text text-s">
+                        张&nbsp;&nbsp;&nbsp;&nbsp; <span class="obvious1 tishi">提示：请输入1-9的纯数字</span>
+                    </div>
+                    <div class="fl pd_left groupLine chanpinPrice neibu" style="display: none;">
+                        内部结 算 价 ：
+                        <input type="text" class="text text-s" maxlength="5">
+                        元
+                    </div>
+                    <div class="fl pd_left groupLine chanpinPrice xiaji" style="display: none;">
+                        下级结 算 价 ：
+                        <input type="text" class="text text-s" maxlength="5">
+                        元
+                    </div>
+                    <div class="fl pd_left groupLine chanpinPrice tonghang" style="display: none;">
+                        同行结 算 价 ：
+                        <input type="text" class="text text-s" maxlength="5">
+                        元 <span class="obvious1 chanpinPrice" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;提示：请输入整数的价格 </span>
+                    </div>
+                </div>
+                <div class="groupBox2 clearfix">
+                    <table class="wanfangTable" style="">
+                        <tbody><tr>
+                            <th>
+                                舱位
+                            </th>
+                            <th class="discount">
+                                票面价格
+                            </th>
+                            <th class="shanglvka" style="">
+                                客票类型
+                            </th>
+                            <th class="canHaveSubordinate" style="">
+                                内部结算价
+                            </th>
+                            <th>
+                                下级结算价
+                            </th>
+                            <th class="allowBrotherPurchase" style="">
+                                同行结算价
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="BunksRad"><label class="refBtnBunks btn class3">点击获取舱位</label></div>
+                                <div class="BunksBargain" style="display: none;"><label class="refBtnBunks btn class3">点击获取舱位</label></div>
+                            </td>
+                            <td class="discount">
+                                <select onchange="selPriceOrDiscount(this)" class="selectPrice">
+                                    <option value="1">按直减发布</option>
+                                    <option value="0">按价格发布</option>
+                                </select>
+                                <span class="price0" style="display: none;">
+                                    <input type="text" class="text text-s" maxlength="5">元</span> <span class="discount0" style="">
+                                        直减<input type="text" class="text text-ss" maxlength="4">%</span>
+                            </td>
+                            <td class="BSP" style="">
+                                <input type="checkbox" checked="checked" id="bsp">
+                                <label for="bsp">
+                                    BSP</label>
+                            </td>
+                            <td class="canHaveSubordinate" style="">
+                                直减<input type="text" class="text text-ss" maxlength="4"><span class="yaunOrzhijian">%</span>
+                            </td>
+                            <td>
+                                直减<input type="text" class="text text-ss" maxlength="4"><span class="yaunOrzhijian">%</span>
+                            </td>
+                            <td class="allowBrotherPurchase" style="">
+                                直减<input type="text" class="text text-ss" maxlength="4"><span class="yaunOrzhijian">%</span>
+                            </td>
+                        </tr>
+                        <tr class="shanglvka" style="">
+                            <td>
+                                <div class="BunksRad"><label class="refBtnBunks btn class3">点击获取舱位</label></div>
+                                <div class="BunksBargain" style="display: none;"><label class="refBtnBunks btn class3">点击获取舱位</label></div>
+                            </td>
+                            <td class="discount">
+                                <select onchange="selPriceOrDiscount(this)" class="selectPrice">
+                                    <option value="0">按价格发布</option>
+                                    <option value="1">按直减发布</option>
+                                </select>
+                                <span class="price0">
+                                    <input type="text" class="text text-s" maxlength="5">元</span> <span class="discount0" style="display: none;">
+                                        <input type="text" class="text text-s" maxlength="4">%</span>
+                            </td>
+                            <td class="B2B">
+                                <input type="checkbox" checked="checked" id="b2b">
+                                <label for="b2b">
+                                    B2B</label><br />
+                                    
+                            </td>
+                            <td class="canHaveSubordinate" style="">
+                                <input type="text" class="text text-s" maxlength="4"><span class="yaunOrzhijian">元</span>
+                            </td>
+                            <td>
+                                <input type="text" class="text text-s" maxlength="4"><span class="yaunOrzhijian">元</span>
+                            </td>
+                            <td class="allowBrotherPurchase" style="">
+                                <input type="text" class="text text-s" maxlength="4"><span class="yaunOrzhijian">元</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border: 0 none;"></td>
+                            <td colspan="4" style="border: 0 none;text-align:left;">
+                                <input type="checkbox" id="qfqcp" class="qfqcp" style="margin-left:20px;">
+                                <label for="qfqkcp" class="qfqcp" style="">起飞前2小时内可用B2B出票</label>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                    <div class="fl policy_check">
+                        <input type="checkbox" id="zjsh">
+                        <label for="zjsh">
+                            直接审核</label>
+                        <input type="checkbox" class="xqrzy" id="xqrzy" style="display: none;">
+                        <label for="xqrzy" class="xqrzy" style="display: none;">
+                            采购时需要确认座位</label><span class="obvious1 querenzuowei" style="display: none;">即采购选择政策后暂不支付，待您确认有座时再进行支付，再进行出票</span><br>
+                        <input type="checkbox" onclick="chkDjbc(this)" id="chkdijbc" class="djbc" style=""><label for="chkdijbc" class="djbc" style="">
+                            低价不出</label>
+                        <span class="djbctxt djbc" style="display: none;">票面价低于<input type="text" class="text text-s">元不出票</span>
+                        <span class="obvious1 djbc djbctip" style="">如你不希望出票面价较低的航线，您可以选择此项设置</span>
+                        <br>
+                        <input type="checkbox" onclick="chkDjbc(this)" id="chkdjdf" class="djdf" style="">
+                        <label for="chkdjdf" class="djdf" style="">
+                            低价低返</label>
+                        <span class="djdftxt djdf" style="display: none;">票面价低于<input type="text" class="text text-s">元时,同行返点为<input type="text" class="text text-s">% </span><span class="obvious1 djdf chkdjdftip" style="">内部和下级返点不受该设置的影响</span>
+                    </div>
+                    <div class="fr">
+                        <input type="button" class="btn class2 btnpolicyaddgroup" value="添加新组政策&nbsp;&nbsp;+">
+                        <input type="button" class="btn class2" onclick="DelPolicyGroup(this);" value="删除本组政策&nbsp;&nbsp;×">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+</body>
+</html>

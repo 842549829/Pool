@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ChinaPay.B3B.Service.CommandExecutor.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ChinaPay_B3B_Service_CommandExecutor_VeWebReference_VeShareWebServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://116.55.243.38:80/VeShareWebService/VeShareWebService.dll?Handler=Default</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

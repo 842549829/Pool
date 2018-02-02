@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Passenger">
+    <Position X="14.5" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Price" Type="ChinaPay.B3B.Service.Order.Domain.Price" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.5" Y="2.125" />
+        <Point X="20.969" Y="2.125" />
+        <Point X="20.969" Y="3.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQCCBAIQQIAAEAAAAAAACQAAoAEAAAFAAAAMAAAAAA=</HashCode>
+      <FileName>Domain\Order\Passenger.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Price" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Tickets" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Airport">
+    <Position X="11.75" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Flight\Airport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Carrier">
+    <Position X="11.75" Y="8.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAgAAQgAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Flight\Carrier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Flight">
+    <Position X="14.5" Y="5.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACBiAgAYAQAIIAAAgAAgAAChABAgAKFAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Flight\Flight.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Carrier" />
+      <Property Name="Departure" />
+      <Property Name="Bunk" />
+      <Property Name="Price" />
+      <Property Name="Arrival" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Deduction">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgAAAAAEAIAAAAIAAABAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Order\Deduction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Order">
+    <Position X="7.75" Y="0.5" Width="2.25" />
+    <Members>
+      <Method Name="checkCanChangeProvider" Hidden="true" />
+      <Method Name="checkConfirmResource" Hidden="true" />
+      <Method Name="checkExpired" Hidden="true" />
+      <Method Name="checkPublisherIsWorking" Hidden="true" />
+      <Method Name="checkReservationPNRValidity" Hidden="true" />
+      <Method Name="checkSupplyResource" Hidden="true" />
+      <Method Name="getProductInfo" Hidden="true" />
+      <Method Name="getProvider" Hidden="true" />
+      <Method Name="getPurchaserInfo" Hidden="true" />
+      <Method Name="getSupplierInfo" Hidden="true" />
+      <Method Name="hasETDZPermission" Hidden="true" />
+      <Method Name="initLazyLoaders" Hidden="true" />
+      <Method Name="updateOrderForResource" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>SQQCSIgfUhAlYpIYCMSIDEAQHIAQAIAJChCACCACpYA=</HashCode>
+      <FileName>Domain\Order\Order\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Supplier" />
+      <Property Name="Provider" />
+      <Property Name="Purchaser" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PNRInfos" />
+      <Property Name="Coordinations" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.PNRInfo">
+    <Position X="11.25" Y="0.5" Width="2" />
+    <Members>
+      <Method Name="apportionFare" Hidden="true" />
+      <Method Name="cancelFlights" Hidden="true" />
+      <Method Name="cancelPassengers" Hidden="true" />
+      <Method Name="cancelPNR" Hidden="true" />
+      <Method Name="getFlight" Hidden="true" />
+      <Method Name="getPassenger" Hidden="true" />
+      <Method Name="isAllFlights" Hidden="true" />
+      <Method Name="isAllPassengers" Hidden="true" />
+      <Method Name="pat" Hidden="true" />
+      <Method Name="removeAll" Hidden="true" />
+      <Method Name="removeFlight" Hidden="true" />
+      <Method Name="removeFlights" Hidden="true" />
+      <Method Name="removePassengers" Hidden="true" />
+      <Method Name="separate" Hidden="true" />
+      <Method Name="updateFlights" Hidden="true" />
+      <Method Name="validateTicketNos" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BCgCAKEaQwRRAEABAEAgACCCEIAABgAABUAFEBEAAAQ=</HashCode>
+      <FileName>Domain\Order\Order\PNRInfo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Passengers" />
+      <Property Name="Flights" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.CommonProductInfo">
+    <Position X="0.5" Y="5.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="ChinaPay.B3B.Service.Order.Domain.ProductInfo" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.375" Y="4.936" />
+        <Point X="1.375" Y="5.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>CAAgAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Order\CommonProductInfo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ETDZMode" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.SpeicalProductInfo">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="ChinaPay.B3B.Service.Order.Domain.ProductInfo" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.125" Y="2.75" />
+        <Point X="1.125" Y="2.176" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Order\SpecialProductInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.ProviderInfo">
+    <Position X="4.75" Y="3.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="ChinaPay.B3B.Service.Order.Domain.OrderRoleInfo" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="2.312" />
+        <Point X="4.384" Y="2.312" />
+        <Point X="4.384" Y="4" />
+        <Point X="4.75" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Order\ProviderInfo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.PurchaserInfo">
+    <Position X="4.75" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="ChinaPay.B3B.Service.Order.Domain.OrderRoleInfo" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="2.312" />
+        <Point X="4.543" Y="2.312" />
+        <Point X="4.543" Y="2.312" />
+        <Point X="4.75" Y="2.312" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Order\PurchaserInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.SupplierInfo">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="ChinaPay.B3B.Service.Order.Domain.OrderRoleInfo" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="4" Y="2.312" />
+        <Point X="4.384" Y="2.312" />
+        <Point X="4.384" Y="1.304" />
+        <Point X="4.75" Y="1.304" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Order\SupplierInfo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Ticket">
+    <Position X="17.5" Y="3.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAQQAQAAAAIAAAAAAgQjAAAAAABAAAAAACAAQ=</HashCode>
+      <FileName>Domain\Order\Order\Ticket.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Price" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Flights" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Coordination">
+    <Position X="8.25" Y="11.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAoAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAAUA=</HashCode>
+      <FileName>Domain\Order\Order\Coordination.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Mode" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.OrderRoleInfo">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAJAAAAAAAAAAASAAAAAAAAAAAAABAIAAAA=</HashCode>
+      <FileName>Domain\Order\Order\OrderRoleInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Applyform.BaseApplyform">
+    <Position X="4.25" Y="8" Width="1.5" />
+    <Members>
+      <Method Name="initLazyLoaders" Hidden="true" />
+      <Method Name="setPassengers" Hidden="true" />
+      <Method Name="setPNRPair" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAECBAUOIkQBIAAAAIEAAEiAIAAQhAEBAAADgAAwlAA=</HashCode>
+      <FileName>Domain\Order\Applyform\BaseApplyform.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Order" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Applyform.PostponeApplyform">
+    <Position X="6" Y="15.25" Width="1.75" />
+    <Members>
+      <Method Name="initLazyLoader" Hidden="true" />
+      <Method Name="setFlights" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAQAAEQAARAAAEEAAABAAAAAAQAAwBFAEQAAAggAQ=</HashCode>
+      <FileName>Domain\Order\Applyform\PostponeApplyform.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Flights" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Applyform.RefundApplyform">
+    <Position X="1.25" Y="21" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Domain\Order\Applyform\RefundApplyform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Applyform.RefundOrScrapApplyform">
+    <Position X="2.25" Y="15.25" Width="2" />
+    <Members>
+      <Method Name="cancelReservation" Hidden="true" />
+      <Method Name="checkProcessByBusiness" Hidden="true" />
+      <Method Name="checkProcessByTreasurer" Hidden="true" />
+      <Method Name="initLazyLoader" Hidden="true" />
+      <Method Name="requireCancelReservation" Hidden="true" />
+      <Method Name="setFlights" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIIAAAAEAAIRAQIEwAQCABAAAAIAAwBDBgEgAAAggAQ=</HashCode>
+      <FileName>Domain\Order\Applyform\RefundOrScrapApplyform.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Flights" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Applyform.ScrapApplyform">
+    <Position X="3.5" Y="21" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Applyform\ScrapApplyform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Applyform.PostponeFlight">
+    <Position X="9" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAABAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Applyform\PostponeFlight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Applyform.RefundFeeInfo">
+    <Position X="6" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Applyform\RefundFeeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Applyform.RefundFlight">
+    <Position X="5.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Applyform\RefundFlight.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RefundFeeInfo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Bunk.BaseBunk">
+    <Position X="14.75" Y="10.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAIAAIAgAAAEAAABBAAAAgAAEAAAAAA=</HashCode>
+      <FileName>Domain\Order\Bunk\BaseBunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Bunk.SpecialBunk">
+    <Position X="13.5" Y="15.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAgAAAAAAAAAIAEAAAAAAAAAkAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Bunk\SpecialBunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Bunk.EconomicBunk">
+    <Position X="16.75" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Bunk\EconomicBunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Bunk.FirstOrBusinessBunk">
+    <Position X="14.5" Y="18.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Bunk\FirstOrBusinessBunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Bunk.GeneralBunk">
+    <Position X="15.75" Y="15.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAEAAAgAAAAAkAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Bunk\GeneralBunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Bunk.ProductionBunk">
+    <Position X="17.5" Y="13.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAkAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Bunk\ProductionBunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Bunk.PromotionBunk">
+    <Position X="11.75" Y="15.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAgAAAEAAAAAAAEAAAAAAAAAkAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Bunk\PromotionBunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Bunk.SoleOrderableBunk">
+    <Position X="13.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Bunk\SoleOrderableBunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.Price">
+    <Position X="20.5" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAQAAAAAAEAQAAQAAABAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Price.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Order.Domain.ProductInfo">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAASAAQAAAAAAQAAAAABAAAAAAAAAAIAAAAAAwA=</HashCode>
+      <FileName>Domain\Order\Order\ProductInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ChinaPay.B3B.Service.Order.Domain.ETDZMode">
+    <Position X="0.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Domain\Order\Order\ETDZMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ChinaPay.B3B.Service.Order.Domain.BusinessType">
+    <Position X="11.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAACAAAAAABAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Order\Coordination.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ChinaPay.B3B.Service.Order.Domain.ContactMode">
+    <Position X="11.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAEBAAAAAAA=</HashCode>
+      <FileName>Domain\Order\Order\Coordination.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

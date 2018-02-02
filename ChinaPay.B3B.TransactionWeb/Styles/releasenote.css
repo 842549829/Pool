@@ -1,0 +1,55 @@
+.bg{
+	background-color: #E5E5E5;
+}
+.bd{
+	border-top: 1px solid #fff;
+	margin: 10px auto;
+	padding: 30px 10px;
+	width: 980px;
+}
+.history-date {
+	background: url(../images/about/release/line.png) repeat-y 214px 0;
+}
+.history-date h2{
+	background: url(../images/about/release/icon-time.png) no-repeat;
+	font-size: 40px;
+	height: 59px;
+	line-height: 59px;
+	margin-bottom: 40px;
+	padding-left: 280px;
+	width: 700px;
+}
+.history-date-box{
+	background: url(../images/about/release/icon-span.png) no-repeat 197px 5px;
+	line-height: 1.5;
+	margin:0 0 20px 10px;
+}
+.history-date-box h3{
+	float: left;
+	font-size: 16px;
+	line-height: 26px;
+	margin-right: 40px;
+	text-align: right;
+	width: 180px;
+}
+.recently{
+	background: url(../images/about/release/new.gif) no-repeat;
+	display: inline-block;
+	height: 30px;
+	vertical-align: middle;
+	padding-right: 10px;
+	width: 26px;
+}
+.recently{
+	*display: inline;
+}
+.history-date-box h3 span{
+	font-size: 12px;
+	font-weight: 400;
+}
+.history-date-con{
+	margin-left: 220px;
+}
+.font-strong{
+	font-size: 18px;
+}

@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>行程告知单在线打印 B3B机票交易平台 中国首家创新型电子机票销售平台</title>
+    <meta name="description" content="B3B机票平台提供免费的在线行程告知单打印功能，支持单程、往返、中转联程、多联程的行程打印，您无需登录即可进行打印操作，是一个免费、快捷的在线行程通知单打印工具" />
+    <meta name="keywords" content="行程单,行程告知单,电子客票行程单,打印行程单,免费打印行程单,在线行程单,在线打印行程单,在线免费打印行程单,行程单是什么,行程单真假,行程单验真" />
+    <meta charset="utf-8" />
+    <link href="/Styles/core.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/form.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body
+        {
+            font-size: 14px;
+        }
+        .ticket-num
+        {
+            border-bottom: 2px solid #dedede;
+            padding: 25px 0;
+            text-align: center;
+            width: 100%;
+        }
+        .ticket-table
+        {
+            border: 1px solid #aaa;
+            margin: 15px auto;
+        }
+        .ticket-table caption
+        {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 10px 0;
+        }
+        .ticket-table th, .ticket-table td
+        {
+            border: 1px solid #aaa;
+            padding: 2px 3px;
+        }
+        .ticket-table th
+        {
+            background-color: #f8f8f8;
+            height: 40px;
+            line-height: 40px;
+        }
+        .ticket-table td
+        {
+            height: 30px;
+            line-height: 30px;
+        }
+        .wd6
+        {
+            width: 60px;
+        }
+        .wd8
+        {
+            width: 70px;
+        }
+        .wd9
+        {
+            width: 80px;
+        }
+        .wd10
+        {
+            width: 100px;
+        }
+        .wd12
+        {
+            width: 120px;
+        }
+        .wd17
+        {
+            width: 170px;
+        }
+        .bunk
+        {
+            width: 40px;
+        }
+        .Date
+        {
+            width: 80px;
+        }
+        .DateTime
+        {
+            width: 125px;
+        }
+        .DateRange
+        {
+            width: 160px;
+        }
+        .voyage
+        {
+            width:130px
+        }
+        .print .ticket-table th, .print .ticket-table td
+        {
+            border-color: black;
+        }
+        .print input,.print textarea
+        {
+            border: none;
+        }
+        #ulPassengers li, #ulPassengers span
+        {
+          border:1px solid #ddd;
+          color:#06f;
+          float :left;    
+          min-width:60px;
+          padding:5px;
+          text-align:center;
+          margin:5px;
+          cursor:pointer;
+        }
+        #ulPassengers li.curr, #ulPassengers span.curr
+        {
+            color: #666;
+            border-color:#aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket-num" id="TicketInputer">
+        <label>
+            <select id="dropSelect">
+                <option value="1">按票号导入</option>
+                <option value="2">按订单号导入</option>
+            </select>
+        </label>
+        <input type="text" class="text" id="txtTicketNOInput" />
+        <button class="btn class1" type="button" id="btnSearch">
+            导入</button>
+    </div>
+    <ul class="pager clearfix" id="ulPassengers" style="position:relative; top:10px; left:50px;width:93%;"></ul>
+    <table class="ticket-table" id="ticket-table">
+        <caption>
+            行程告知单</caption>
+        <tr>
+            <td colspan="9">
+                <label>
+                    旅客姓名:
+                </label>
+                <span id="divPassengers">
+                    <input type="text" class="text wd17" id="PassengerName" />
+                    <label style="padding-left: 50px;">
+                        证件号码:
+                    </label>
+                    <input type="text" class="text wd17" id="Credentials" />
+                    <label style="padding-left: 100px;">
+                        备注:
+                    </label>
+                    <input type="text" class="text wd17" id="Remark" />
+                </span>
+                <span>
+                    <textarea class="text" rows="1" id="textPassengerName" style=" width:93%; display:none;overflow:hidden; line-height:normal; vertical-align:middle;"></textarea>
+                </span>
+            </td>
+        </tr>
+        <tr id="thead">
+            <th>
+                始发地/目的地
+            </th>
+            <th>
+                航空公司
+            </th>
+            <th>
+                航班号
+            </th>
+            <th>
+                舱位类型
+            </th>
+            <th>
+                舱位
+            </th>
+            <th>
+                起飞时间
+            </th>
+            <th>
+                到达时间
+            </th>
+            <th>
+                客票有效期
+            </th>
+            <th>
+                免费行李
+            </th>
+        </tr>
+        <tr class="data">
+            <td>自<input type="text" class="text voyage" /></td>
+            <td><input type="text" class="text wd8" /></td>
+            <td><input type="text" class="text wd6" /></td>
+            <td><input type="text" class="text wd8" /></td>
+            <td><input type="text" class="text bunk" /></td>
+            <td><input type="text" class="text DateTime" /></td>
+            <td><input type="text" class="text DateTime" /></td>
+            <td><input type="text" class="text DateRange" /></td>
+            <td><input type="text" class="text bunk" /></td>
+        </tr>
+        <tr class="data">
+            <td>至<input type="text" class="text voyage" /></td>
+            <td><input type="text" class="text wd8" /></td>
+            <td><input type="text" class="text wd6" /></td>
+            <td><input type="text" class="text wd8" /></td>
+            <td><input type="text" class="text bunk" /></td>
+            <td><input type="text" class="text DateTime" /></td>
+            <td><input type="text" class="text DateTime" /></td>
+            <td><input type="text" class="text DateRange" /></td>
+            <td><input type="text" class="text bunk" /></td>
+        </tr>
+        <tr class="data">
+            <td>至<input type="text" class="text voyage" /></td>
+            <td><input type="text" class="text wd8" /></td>
+            <td><input type="text" class="text wd6" /></td>
+            <td><input type="text" class="text wd8" /></td>
+            <td><input type="text" class="text bunk" /></td>
+            <td><input type="text" class="text DateTime" /></td>
+            <td><input type="text" class="text DateTime" /></td>
+            <td><input type="text" class="text DateRange" /></td>
+            <td><input type="text" class="text bunk" /></td>
+        </tr>
+        <tr class="data">
+            <td>至<input type="text" class="text voyage" /></td>
+            <td><input type="text" class="text wd8" /></td>
+            <td><input type="text" class="text wd6" /></td>
+            <td><input type="text" class="text wd8" /></td>
+            <td><input type="text" class="text bunk" /></td>
+            <td><input type="text" class="text DateTime" /></td>
+            <td><input type="text" class="text DateTime" /></td>
+            <td><input type="text" class="text DateRange" /></td>
+            <td><input type="text" class="text bunk" /></td>
+        </tr>
+
+        <tr class="data">
+            <td>至<input type="text" class="text voyage" /></td>
+            <td><input type="text" class="text wd8" /></td>
+            <td><input type="text" class="text wd6" /></td>
+            <td><input type="text" class="text wd8" /></td>
+            <td><input type="text" class="text bunk" /></td>
+            <td><input type="text" class="text DateTime" /></td>
+            <td><input type="text" class="text DateTime" /></td>
+            <td><input type="text" class="text DateRange" /></td>
+            <td><input type="text" class="text bunk" /></td>
+        </tr>
+
+        <tr>
+            <td colspan="9">
+                <label>
+                    票价:
+                </label>
+                <input type="text" class="text wd9" id="txtTicketPrice" onblur="CalcFee()" />
+                元
+                <label style="padding-left: 15px;">
+                    民航基金:
+                </label>
+                <input type="text" class="text wd9" id="txtAirPortFee" onblur="CalcFee()" />
+                元
+                <label style="padding-left: 15px;">
+                    燃油附加费:
+                </label>
+                <input type="text" class="text wd9" id="txtBAF" onblur="CalcFee()" />
+                元
+                <label style="padding-left: 15px;">
+                    其他税费:
+                </label>
+                <input type="text" class="text wd9" id="txtOtherFee" onblur="CalcFee()" />
+                元
+                <label style="padding-left: 15px;">
+                    合计:
+                </label>
+                <input type="text" class="text wd9" id="txtTotal" />
+                元
+            </td>
+        </tr>
+        <tr>
+            <td colspan="9">
+                <label>
+                    电子客票号码:
+                </label>
+                <input type="text" class="text" id="TicketNos" style="width: 130" />
+                <label style="padding-left: 50px;">
+                    保险费:
+                </label>
+                <input type="text" class="text wd6" id="insureFee" />
+                元
+                <label style="padding-left: 50px;">
+                    填开单位:
+                </label>
+                <input type="text" class="text wd12" id="inputer" />
+                <label style="padding-left: 50px;">
+                    填开日期:
+                </label>
+                <input type="text" class="text Date" id="InputDate" />
+            </td>
+        </tr>
+    </table>
+    <div class="importantBox broaden" runat="server" id="Tips" visible="False">
+        <p class="important">
+            提示：本单为行程告知单，仅作为备注使用，不可做为报销凭证。
+        </p>
+    </div>
+    <div class="btns" id="btns">
+        <button class="btn class1" type="button" onclick="PrintItinerary()">
+            打印</button>
+        <!--<button class="btn class2" >
+                预览</button>-->
+    </div>
+</body>
+<script type="text/x-jquery-tmpl" id="FlightsInfoTmpl">
+        <tr class="data">
+                <td>${$item.getText()} <input type="text" class="text voyage" value='${Voyage}' /></td>
+                <td><input type="text" class="text wd8"  value='${Carrier}' /></td>
+                <td><input type="text" class="text wd6"  value='${FlightNo}' /></td>
+                <td><input type="text" class="text wd8"  value='${BunkType}' /></td>
+                <td><input type="text" class="text bunk"  value='${BunkCode}' /></td>
+                <td><input type="text" class="text DateTime"  value='${TakeoffTime}' /></td>
+                <td><input type="text" class="text DateTime"  value='${ArrivalTime}' /></td>
+                <td><input type="text" class="text DateRange" value="${ValidPeriod}" /></td>
+                <td><input type="text" class="text bunk" value="${XingLing}" /></td>
+            </tr>
+</script>
+<script src="/Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="/Scripts/json2.js" type="text/javascript"></script>
+<script src="/Scripts/widget/common.js" type="text/javascript"></script>
+<script src="/Scripts/widget/template.js" type="text/javascript"></script>
+<script src="/Scripts/Global.js" type="text/javascript"></script>
+<script src="/Scripts/selector.js" type="text/javascript"></script>
+<script src="/Scripts/OrderModule/purchase/Itinerary.html.js?20130314" type="text/javascript"></script>
+</html>

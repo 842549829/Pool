@@ -1,0 +1,88 @@
+.coordinate{
+	width: 100%;
+}
+.coordinate h3{
+	border-bottom: 1px dotted #666;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+.c_me{
+	text-align: left;
+	margin: 0 5px 20px;
+}
+.c_others{
+	text-align: right;
+	margin: 0 5px 20px;
+}
+.c_txt{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	display: inline-block;
+	line-height: 20px;
+	margin-bottom: 5px;
+	padding: 3px 10px;
+	position: relative;
+}
+.c_txt{
+	*display: inline;
+}
+.c_me .c_txt{
+	background-color: #B8DFFC;
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#F9FCFF), to(#B8DFFC));
+	background-image: -webkit-linear-gradient(top, #F9FCFF, #B8DFFC);
+	background-image: -moz-linear-gradient(top, #F9FCFF, #B8DFFC);
+	background-image: -ms-linear-gradient(top, #F9FCFF, #B8DFFC);
+	background-image: -o-linear-gradient(top, #F9FCFF, #B8DFFC);
+	background-image: linear-gradient(top, #F9FCFF, #B8DFFC);
+	border: 1px solid #B9DEFC;
+}
+.c_me .c_ico{
+	background: url(../images/coordinate/jt.png) no-repeat 0 0;
+	display: block;
+	height: 9px;
+	left: -9px;
+	position: absolute;
+	top: 8px;
+	width: 9px;
+}
+.c_others .c_txt{
+	background-color: #E8E8E8;
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#F9F9F9), to(#E8E8E8));
+	background-image: -webkit-linear-gradient(top, #F9F9F9, #E8E8E8);
+	background-image: -moz-linear-gradient(top, #F9F9F9, #E8E8E8);
+	background-image: -ms-linear-gradient(top, #F9F9F9, #E8E8E8);
+	background-image: -o-linear-gradient(top, #F9F9F9, #E8E8E8);
+	background-image: linear-gradient(top, #F9F9F9, #E8E8E8);
+	border: 1px solid #D0D0D0;
+}
+.c_others .c_ico{
+	background: url(../images/coordinate/jt.png) no-repeat 0 -9px;
+	display: block;
+	height: 9px;
+	right: -9px;
+	position: absolute;
+	top: 8px;
+	width: 9px;
+}
+.c_info{
+	color: #999;
+}
+.c_info a{
+	color: #177DDF;
+}
+.c_handle{
+	margin: 2px 0;
+}
+.c_btns{
+	text-align: center;
+}
+.c_btn{
+	background-color: #FE8F00;
+	border: 1px solid #E36306;
+	border-radius: 5px;
+	color: #fff;
+	margin: 0 5px;
+}

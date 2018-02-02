@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{357571BA-6DCD-40AC-858E-C78266D9F3BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChinaPay.B3B.Service.FlightQuery</RootNamespace>
+    <AssemblyName>ChinaPay.B3B.Service.FlightQuery</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChinaPay.Core">
+      <HintPath>..\DependentDLL\ChinaPay.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Data">
+      <HintPath>..\DependentDLL\ChinaPay.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ChinaPay.Repository">
+      <HintPath>..\DependentDLL\ChinaPay.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Airport.cs" />
+    <Compile Include="Domain\AVHCache\IAVHCache.cs" />
+    <Compile Include="Domain\AVHCache\LocalAVHCache.cs" />
+    <Compile Include="Domain\Bunk.cs" />
+    <Compile Include="Domain\BunkFilter.cs" />
+    <Compile Include="Domain\Flight.cs" />
+    <Compile Include="Domain\FlightDatasCenter.cs" />
+    <Compile Include="Domain\FlightProcessor.cs" />
+    <Compile Include="Domain\FlightRecord.cs" />
+    <Compile Include="FlightQueryService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Factory.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\SqlServer\Repository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChinaPay.B3B.Common\ChinaPay.B3B.Common.csproj">
+      <Project>{1A2B88D1-C6C9-491F-9AF0-DE5D5CD713BC}</Project>
+      <Name>ChinaPay.B3B.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.DataTransferObject\ChinaPay.B3B.DataTransferObject.csproj">
+      <Project>{41D94D83-9BF2-487E-9542-78E138287C7B}</Project>
+      <Name>ChinaPay.B3B.DataTransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Foundation\ChinaPay.B3B.Service.Foundation.csproj">
+      <Project>{6B27FDF3-33E6-4F67-9A03-1C6C6D1D023E}</Project>
+      <Name>ChinaPay.B3B.Service.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Command\ChinaPay.B3B.Service.Command.csproj">
+      <Project>{EF8E1402-7388-4FB1-BAC0-4C2380EB7A85}</Project>
+      <Name>ChinaPay.B3B.Service.Command</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Log\ChinaPay.B3B.Service.Log.csproj">
+      <Project>{A610B1FF-C0EF-4FF7-A246-7CC4BA76BD21}</Project>
+      <Name>ChinaPay.B3B.Service.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.SystemManagement\ChinaPay.B3B.Service.SystemManagement.csproj">
+      <Project>{828B159A-5475-4610-BB05-03FF862B7E67}</Project>
+      <Name>ChinaPay.B3B.Service.SystemManagement</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,22 @@
+.Wdate{
+	BORDER-TOP-WIDTH: 0px;
+	PADDING-LEFT: 2px;
+	BORDER-LEFT-WIDTH: 0px;
+	FONT-SIZE: 13px;
+	FLOAT: left;
+	BORDER-BOTTOM-WIDTH: 0px;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	HEIGHT: 16px;
+	BORDER-RIGHT-WIDTH: 0px;
+	padding-top: 2px;
+	background:#fff url(view_table.gif) no-repeat right;
+}
+
+.edate{	
+	background:#fff url(view_table.gif) no-repeat right;
+}
+
+.WdateFmtErr{
+	font-weight:bold;
+	color:red;
+}

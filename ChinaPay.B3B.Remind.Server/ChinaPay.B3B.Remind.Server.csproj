@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A14FA5F8-87E9-4DEC-8BD5-0A17565A3E55}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChinaPay.B3B.Remind.Server</RootNamespace>
+    <AssemblyName>ChinaPay.B3B.Remind.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tray32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChinaPay.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\ChinaPay.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Data">
+      <HintPath>..\DependentDLL\ChinaPay.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\ChinaPay.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\ChinaPay.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\CommandProcessor.cs" />
+    <Compile Include="Command\QueryAllCarriers.cs" />
+    <Compile Include="Command\QueryAllStatus.cs" />
+    <Compile Include="Command\Remind.cs" />
+    <Compile Include="DataProcessor.cs" />
+    <Compile Include="DataSource\DataCenter.cs" />
+    <Compile Include="CustomGCCollection.cs" />
+    <Compile Include="LogonModel\LogonCenter.cs" />
+    <Compile Include="LogonModel\Company.cs" />
+    <Compile Include="DataSource\RemindData.cs" />
+    <Compile Include="LogonModel\Settings.cs" />
+    <Compile Include="LogonModel\User.cs" />
+    <Compile Include="RequestListner.cs" />
+    <Compile Include="Command\Logoff.cs" />
+    <Compile Include="Command\Logon.cs" />
+    <Compile Include="Command\QueryCarrier.cs" />
+    <Compile Include="Command\QueryStatus.cs" />
+    <Compile Include="Command\SaveCarrier.cs" />
+    <Compile Include="Command\SaveStatus.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tray32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChinaPay.B3B.Common\ChinaPay.B3B.Common.csproj">
+      <Project>{1A2B88D1-C6C9-491F-9AF0-DE5D5CD713BC}</Project>
+      <Name>ChinaPay.B3B.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.DataEnvironment\ChinaPay.B3B.DataEnvironment.csproj">
+      <Project>{2F327D7D-E2AB-4339-9A6A-721E9EF91131}</Project>
+      <Name>ChinaPay.B3B.DataEnvironment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.DataTransferObject\ChinaPay.B3B.DataTransferObject.csproj">
+      <Project>{41D94D83-9BF2-487E-9542-78E138287C7B}</Project>
+      <Name>ChinaPay.B3B.DataTransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Foundation\ChinaPay.B3B.Service.Foundation.csproj">
+      <Project>{6B27FDF3-33E6-4F67-9A03-1C6C6D1D023E}</Project>
+      <Name>ChinaPay.B3B.Service.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Log\ChinaPay.B3B.Service.Log.csproj">
+      <Project>{A610B1FF-C0EF-4FF7-A246-7CC4BA76BD21}</Project>
+      <Name>ChinaPay.B3B.Service.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Organization\ChinaPay.B3B.Service.Organization.csproj">
+      <Project>{97490979-5CB9-4925-B5FD-A95FA1204711}</Project>
+      <Name>ChinaPay.B3B.Service.Organization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Remind\ChinaPay.B3B.Service.Remind.csproj">
+      <Project>{F6DBE331-DA35-4D62-91E8-4994AAE412A8}</Project>
+      <Name>ChinaPay.B3B.Service.Remind</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

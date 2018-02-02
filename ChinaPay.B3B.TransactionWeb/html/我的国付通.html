@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>账户信息</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/page.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/core.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/form.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/register.css" />
+</head>
+<body>
+	<div>
+		<h3>账户信息</h3>
+		<div class="account_box">
+			<p>国付通可以帮助您实现安全、便捷的网络支付，购票时可以使用国付通支付</p>
+			<div class="account_list_box">
+				<ul class="account_list clearfix">
+					<li class="curr">
+						<a href="javascript:void(0);" class="fl text-c account_name jiebang_ico">
+							<i class="account_ico pay_ico jiebang_ico"></i>
+							webchong
+						</a>
+					</li>
+					<li class="hidden">
+						<a href="javascript:void(0);" class="fl text-c account_name jiebang_ico">
+							<i class="account_ico collection_ico jiebang_ico"></i>
+							webchong
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" class="jiebang_ico account_add_btn">添加国付通收款账号</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="account_table clearfix">
+			<div class="fl account_info_box">
+				<table class="accountInfo">
+					<caption>
+						<h3>付款账户</h3>
+					</caption>
+					<tr>
+						<td class="title">绑定的收款账户：</td>
+						<td>webchong<a href="javascript:void(0);"  class="correct hidden" id="register" onclick="ShowMark();showDiv();">更换收款账号</a><a href="#" class="gotoPoolpay">进入国付通</a></td>
+					</tr>
+					<tr>
+						<td class="title">账户名：</td>
+						<td>宁德龙</td>
+					</tr>
+					<tr>
+						<td class="title">地址：</td>
+						<td>云南省昆明市五华区人民中路36号<a href="" class="correct">修改</a></td>
+					</tr>
+					<tr>
+						<td class="title">邮编：</td>
+						<td>650000</td>
+					</tr>
+					<tr>
+						<td class="title">身份证号：</td>
+						<td><a href="" >查看</a></td>
+					</tr>
+					<tr>
+						<td class="title">管理员姓名：</td>
+						<td>宁德龙</td>
+					</tr>
+					<tr>
+						<td class="title">管理员手机：</td>
+						<td><a href="">查看</a></td>
+					</tr>
+					<tr>
+						<td class="title">管理员邮箱：</td>
+						<td>master@webchong.com</td>
+					</tr>
+					<tr>
+						<td class="title">注册时间：</td>
+						<td>2012-10-18</td>
+					</tr>
+				</table>
+			</div>
+			<div class="fr account_exc_box">
+				<table class="balanceInfo">
+					<caption>
+						<h3>余额信息</h3>
+					</caption>
+					<tr>
+						<td class="title">账户余额:</td>
+						<td><a href="">查看</a>|<a href="">充值</a></td>
+					</tr>
+					<tr>
+						<td class="title">状态：</td>
+						<td>正常</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div id="replacement_account" class="layer_box account_layer_box">
+		<div class="layer_hd">
+			<h4>更换国付通收款账号</h4>
+			<a href="javascript:void(0)" title="关闭" class="close" onclick="HideMark();closeDiv();">关闭</a>
+		</div>
+		<div class="layer_tips text-c obvious">
+			<i class="ico_important"></i>
+			建议在申请更换账号前将您的机票订单处理完毕以避免因退改签等发送的机票分账纠纷。
+		</div>
+		<div class="layer_table form">
+			<table>
+				<tr>
+					<td class="title">原收款账号：</td>
+					<td>webchong</td>
+				</tr>
+				<tr>
+					<td class="title">新收款账号：</td>
+					<td>
+						<input type="text" class="text" />
+						<span>请认真核对后输入，</span>
+                        <a href="javascript:void(0)">没有账号？点此注册</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="title">新账号登录密码：</td>
+					<td>
+						<input type="text" class="text" />
+						<span>请输入新收款账号的登录密码</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="title">新账号支付密码：</td>
+					<td>
+						<input type="text" class="text" />
+						<span>请输入新收款账号的支付密码</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="title">手机验证码：</td>
+					<td>
+						<input type="text" class="text smallText" />
+						<input type="button" value="获取验证码" class="smallBtn btn class3" />
+						<span>请输入新收款账号的支付密码</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="btns">
+			<input type="button" value="确认更换" class="btn class1" />
+			<input type="button" value="取&nbsp;&nbsp;&nbsp;消" class="btn class2" onclick="HideMark();closeDiv();" />
+		</div>
+	</div>
+	<div class="layer_box account_layer_box">
+		<div class="layer_hd">
+			<h4>注册新的收款账号</h4>
+			<a href="javascript:void(0)" title="关闭" class="close" onclick="HideMark();closeDiv();">关闭</a>
+		</div>
+		<div class="layer_table form">
+			<table>
+				<tr>
+					<td class="title">请选择账户类型</td>
+					<td>
+						<input type="radio" />
+						<label>个人账户</label>
+						<input type="radio" />
+						<label>企业账户</label> 
+					</td>
+				</tr>
+				<tr>
+					<td class="title">国付通账号：</td>
+					<td>
+						<input type="text" class="text" />
+						<span>手机号/QQ/邮箱等均可</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="title">登录密码：</td>
+					<td>
+						<input type="text" class="text" />
+						<span>请输入登录密码</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="title">确认登录密码：</td>
+					<td>
+						<input type="text" class="text" />
+						<span>请重复登录密码并牢记</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="title">支付密码：</td>
+					<td>
+						<input type="text" class="text" />
+						<span>请输入与登录密码不同的支付密码</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="title">确认支付密码：</td>
+					<td>
+						<input type="text" class="text" />
+						<span>请重复支付密码并牢记</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="title">真实姓名：</td>
+					<td>
+						<input type="text" class="text" />
+						<span>姓名需与身份证及银行卡姓名一致，否则无法结算</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="title">身份证号：</td>
+					<td>
+						<input type="text" class="text" />
+						<span>填写您的身份证号</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="title">联系人手机号码：</td>
+					<td>
+						<input type="text" class="text" />
+						<span>填写11位的手机号码</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="btns">
+			<input type="button" value="确认并以此作为收款账号" class="btn class1" />
+			<input type="button" value="取&nbsp;&nbsp;&nbsp;消" class="btn class2" onclick="HideMark();closeDiv();" />
+		</div>
+	</div>
+	<div class="layer_box account_layer_box">
+		<div class="layer_hd">
+			<h4>更换国付通收款账号</h4>
+			<a href="javascript:void(0)" title="关闭" class="close" onclick="HideMark();closeDiv();">关闭</a>
+		</div>
+		<div class="layer_tips text-c obvious">
+			<i class="ico_success"></i>
+			<span>收款账号更换成功</span>
+			<br />
+			<span class="b">新收款账号：</span><span>someword</span>
+		</div>
+		<div class="btns">
+			<input type="button" value="返回我的国付通" class="btn class1" />
+		</div>
+	</div>
+	<script type="text/javascript" src="/Scripts/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" >
+		$(document).ready(function(){
+			$(".account_list li .account_name").click(function(){
+				$(".account_list li").removeClass("curr");
+				$(this).parent().addClass("curr");
+			});
+			$(".account_add_btn").click(function(){
+				$(".account_list li").each(function(){
+					$(this).removeClass("curr");
+					if($(this).hasClass("hidden")){
+						$(this).addClass("curr").removeClass("hidden");
+					}
+				});
+				$(this).parent().addClass("hidden");
+				$("#register").removeClass("hidden");
+			});
+		});
+		function ShowMark(){
+            var xp_mark=document.getElementById("xp_mark");
+            if(xp_mark!=null){
+                xp_mark.style.left=0+"px";
+                xp_mark.style.top=0+"px";
+                xp_mark.style.position="absolute";
+                xp_mark.style.backgroundColor="#000";
+                xp_mark.style.zIndex="9998";            
+                xp_mark.style.filter="alpha(opacity=50)";
+                var Ie_ver=navigator["appVersion"].substr(22,1);
+                if(Ie_ver==6||Ie_ver==5){
+                    hideSelectBoxes();
+                }
+                else{
+                    xp_mark.style.opacity="0.5";
+                }
+                var XP_pt=XP_getPageSize();
+                var XP_height=XP_pt.h+"px";
+                xp_mark.style.width="100%";
+                xp_mark.style.height=XP_height;
+                xp_mark.style.display="block";
+            }
+            else{
+                $("body").prepend("<div id='xp_mark' style='display:none'></div>");
+                ShowMark();
+            }
+        }
+        function HideMark(){
+            var xp_mark=document.getElementById("xp_mark");
+            xp_mark.style.display="none";
+            var Ie_ver=navigator["appVersion"].substr(22,1);
+            if(Ie_ver==6||Ie_ver==5){
+                showSelectBoxes();
+            }
+        }
+        function XP_getPageSize(){
+            var pt={w:0,h:0};
+            if(window.innerHeight && window.scrollMaxY){
+                pt.w = document.body.scrollWidth;
+                pt.h = window.innerHeight + window.scrollMaxY;
+            }
+            else if(document.body.scrollHeight > document.body.offsetHeight){
+                pt.w =document.body.scrollWidth;
+                pt.h =document.body.scrollHeight;
+            }
+            else{
+                pt.w =document.body.offsetWidth;
+                pt.h =document.body.offsetHeight;
+            }
+            return pt;
+        }
+        function showSelectBoxes(){
+            selects =document.getElementsByTagName("select");
+            for(i=0;i!=selects.length;i++){
+                selects[i].style.visibility="visible";
+            }
+        }
+        function hideSelectBoxes(){
+            selects =document.getElementsByTagName("select");
+            for(i=0;i!=selects.length;i++){
+                selects[i].style.visibility="hidden";
+            }
+        }
+        function showDiv(){
+            var obj=document.getElementById("replacement_account");
+            obj.style.position ="absolute";
+            obj.style.zIndex ="9999";
+            obj.style.display="block";
+
+            var d=document.documentElement,b=document.body,w=window;
+            var viewPort ={left:0,top:0,width:0,height:0};
+            viewPort.top=b.scrollTop||d.scrollTop;
+            viewPort.left=b.scrollLeft||d.scrollLeft;
+            viewPort.height=w.innerHeight||d.clientHeight||b.clientHeight;
+            viewPort.width=w.innerWidth||d.clientWidth||b.clientWidth;
+            obj.style.top=(viewPort.top+viewPort.height/2-obj.offsetHeight/2)+"px";
+            obj.style.left=(viewPort.left+viewPort.width/2-obj.offsetWidth/2)+"px";
+        }
+        function closeDiv(){
+            var obj=document.getElementById("replacement_account");
+            obj.style.display="none";
+        }
+	</script>
+</body>
+</html>

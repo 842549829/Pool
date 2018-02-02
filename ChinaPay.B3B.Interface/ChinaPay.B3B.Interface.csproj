@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AB5B033-FB2A-45EB-82C7-31AD0A7C0B7B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChinaPay.B3B.Interface</RootNamespace>
+    <AssemblyName>ChinaPay.B3B.Interface</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChinaPay.AddressLocator">
+      <HintPath>..\DependentDLL\ChinaPay.AddressLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\ChinaPay.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\ChinaPay.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.MailService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\ChinaPay.MailService.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.PoolPay.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\ChinaPay.PoolPay.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\ChinaPay.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Utility">
+      <HintPath>..\DependentDLL\ChinaPay.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Izual.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\Izual.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Izual.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\Izual.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Izual.Data.SqlClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\Izual.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Izual.Linq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\Izual.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="PoolPay.DataTransferObject, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\PoolPay.DataTransferObject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.htm" />
+    <Content Include="InterfaceService.asmx" />
+    <Content Include="RegularExpression.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\EmployeeCenter.cs" />
+    <Compile Include="Cache\InterfaceCache.cs" />
+    <Compile Include="Cache\InterfaceSettingCenter.cs" />
+    <Compile Include="Cache\OrganizationCenter.cs" />
+    <Compile Include="Cache\ContextCenter.cs" />
+    <Compile Include="InterfaceProcessor\ApplyPostpone.cs" />
+    <Compile Include="InterfaceProcessor\ApplyRefund.cs" />
+    <Compile Include="InterfaceProcessor\PayApplyformByPayType.cs" />
+    <Compile Include="InterfaceProcessor\PayOrderByPayType.cs" />
+    <Compile Include="InterfaceProcessor\PayApplyform.cs" />
+    <Compile Include="InterfaceProcessor\PNRImportWithoutPat.cs" />
+    <Compile Include="InterfaceProcessor\ProduceOrder.cs" />
+    <Compile Include="InterfaceProcessor\QueryApplyform.cs" />
+    <Compile Include="InterfaceProcessor\QueryOrder.cs" />
+    <Compile Include="InvokeStatistic.cs" />
+    <Compile Include="InterfaceInvokeException.cs" />
+    <Compile Include="InterfaceProcessor\OrderPay.cs" />
+    <Compile Include="InterfaceProcessor\PNRImport.cs" />
+    <Compile Include="InterfaceService.asmx.cs">
+      <DependentUpon>InterfaceService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Message.cs" />
+    <Compile Include="Processor\ApplyPostpone.cs" />
+    <Compile Include="Processor\ApplyRefund.cs" />
+    <Compile Include="Processor\ManualPay.cs" />
+    <Compile Include="Processor\OrderPay.cs" />
+    <Compile Include="Processor\PayApplyform.cs" />
+    <Compile Include="Processor\PayApplyformByPayType.cs" />
+    <Compile Include="Processor\AutoPay.cs" />
+    <Compile Include="Processor\PayUtility.cs" />
+    <Compile Include="Processor\PayOrder.cs" />
+    <Compile Include="Processor\PayOrderByPayType.cs" />
+    <Compile Include="Processor\PNRImport.cs" />
+    <Compile Include="Processor\PNRImportWithoutPat.cs" />
+    <Compile Include="Processor\ProduceOrder.cs" />
+    <Compile Include="Processor\ProduceOrder2.cs" />
+    <Compile Include="Processor\QueryApplyform.cs" />
+    <Compile Include="Processor\QueryFlight.cs" />
+    <Compile Include="Processor\QueryFlights.cs" />
+    <Compile Include="Processor\QueryFlightStop.cs" />
+    <Compile Include="Processor\QueryOrder.cs" />
+    <Compile Include="Processor\ReturnStringUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="InterfaceProcessor\Processor.cs" />
+    <Compile Include="PublicClass\B3BEmailSender.cs" />
+    <Compile Include="PublicClass\FormatUtility.cs" />
+    <Compile Include="PublicClass\PNRHelper.cs" />
+    <Compile Include="PublicClass\ReserveViewConstuctor.cs" />
+    <Compile Include="RequestContext.cs" />
+    <Compile Include="RequestProcessor.cs" />
+    <Compile Include="Responser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChinaPay.B3B.Common\ChinaPay.B3B.Common.csproj">
+      <Project>{1A2B88D1-C6C9-491F-9AF0-DE5D5CD713BC}</Project>
+      <Name>ChinaPay.B3B.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.DataEnvironment\ChinaPay.B3B.DataEnvironment.csproj">
+      <Project>{2F327D7D-E2AB-4339-9A6A-721E9EF91131}</Project>
+      <Name>ChinaPay.B3B.DataEnvironment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.DataTransferObject\ChinaPay.B3B.DataTransferObject.csproj">
+      <Project>{41D94D83-9BF2-487E-9542-78E138287C7B}</Project>
+      <Name>ChinaPay.B3B.DataTransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Command\ChinaPay.B3B.Service.Command.csproj">
+      <Project>{EF8E1402-7388-4FB1-BAC0-4C2380EB7A85}</Project>
+      <Name>ChinaPay.B3B.Service.Command</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.FlightQuery\ChinaPay.B3B.Service.FlightQuery.csproj">
+      <Project>{357571BA-6DCD-40AC-858E-C78266D9F3BE}</Project>
+      <Name>ChinaPay.B3B.Service.FlightQuery</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Foundation\ChinaPay.B3B.Service.Foundation.csproj">
+      <Project>{6B27FDF3-33E6-4F67-9A03-1C6C6D1D023E}</Project>
+      <Name>ChinaPay.B3B.Service.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Locker\ChinaPay.B3B.Service.Locker.csproj">
+      <Project>{B176C22D-A49C-4BEB-B55D-63F10B774722}</Project>
+      <Name>ChinaPay.B3B.Service.Locker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Log\ChinaPay.B3B.Service.Log.csproj">
+      <Project>{A610B1FF-C0EF-4FF7-A246-7CC4BA76BD21}</Project>
+      <Name>ChinaPay.B3B.Service.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Order\ChinaPay.B3B.Service.Order.csproj">
+      <Project>{114E29C9-EFDD-43E4-8087-D66A1006BFDB}</Project>
+      <Name>ChinaPay.B3B.Service.Order</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Organization\ChinaPay.B3B.Service.Organization.csproj">
+      <Project>{97490979-5CB9-4925-B5FD-A95FA1204711}</Project>
+      <Name>ChinaPay.B3B.Service.Organization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.PolicyMatch\ChinaPay.B3B.Service.PolicyMatch.csproj">
+      <Project>{DE224BD1-F706-4258-A853-1A219EDBCF35}</Project>
+      <Name>ChinaPay.B3B.Service.PolicyMatch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Policy\ChinaPay.B3B.Service.Policy.csproj">
+      <Project>{08F2DE67-74C5-4F7F-B084-16D5EAC2C2A9}</Project>
+      <Name>ChinaPay.B3B.Service.Policy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.PriceCheckService\ChinaPay.B3B.Service.PriceCheck.csproj">
+      <Project>{1BA7D4A9-DD5D-41BC-929A-936DFACEEF11}</Project>
+      <Name>ChinaPay.B3B.Service.PriceCheck</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Statistic\ChinaPay.B3B.Service.Statistic.csproj">
+      <Project>{86D8D2D8-F556-4E74-9644-E0F2FDD7D13F}</Project>
+      <Name>ChinaPay.B3B.Service.Statistic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.SystemManagement\ChinaPay.B3B.Service.SystemManagement.csproj">
+      <Project>{828B159A-5475-4610-BB05-03FF862B7E67}</Project>
+      <Name>ChinaPay.B3B.Service.SystemManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Tradement\ChinaPay.B3B.Service.Tradement.csproj">
+      <Project>{0C33CD41-7BFB-4C3A-BD32-9484D7146952}</Project>
+      <Name>ChinaPay.B3B.Service.Tradement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.Gateway\ChinaPay.Gateway.csproj">
+      <Project>{1DEB2165-33E8-4A24-A25E-1A4AAF95F1FE}</Project>
+      <Name>ChinaPay.Gateway</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>1177</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

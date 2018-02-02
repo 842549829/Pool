@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/Styles/skins/default/core.css" />
+	<link rel="stylesheet" type="text/css" href="/Styles/skins/default/form.css" />
+	<link rel="stylesheet" type="text/css" href="/Styles/oem.css" />
+</head>
+<body>
+	<h3 class="titleBg">收益设置</h3>
+	<div class="importantBox broaden">
+		<p class="obvious">提示：本页所设置的规则将对您的所有用户生效，请认真核对后再提交！</p><br />
+		<p>全局收益设置就是对您所有的用户进行普通票返点扣除或特殊票加价销售的操作，设置后用户在平台购票时您将得到您所设置的交易利润。</p>
+	</div>
+	<label class="g-radiobox"><input type="radio" />允许各用户组分别进行收益设置</label>
+	<label class="g-radiobox"><input type="radio" />使用全局的统一收益设置</label>
+	<table class="mini-table">
+		<tr>
+			<th>
+				<label class="title">扣点设置：</label>
+			</th>
+			<td class="range-box">
+				<p class="range-border"><span class="pad-r"><label><input type="radio" />区间扣点</label></span><span class="pad-l pad-r"><label><input type="radio" />区间扣点</label></span><span class="pad-l obvious1">请注意，本栏目的设置仅对普通单程政策进行扣点</span></p>
+				<p class="range-border">
+					返点在
+					<input type="text" class="text" style="width:35px;">
+					%至
+					<input type="text" class="text" style="width:35px;">
+					%时，扣除
+					<input type="text" class="text" style="width:35px;">
+					%
+					<a class="reduce">-</a>
+				</p>
+				<p class="range-border">
+					返点在
+					<input type="text" class="text" style="width:35px;">
+					%至
+					<input type="text" class="text" style="width:35px;">
+					%时，扣除
+					<input type="text" class="text" style="width:35px;">
+					%
+					<a class="reduce">-</a>
+				</p>
+				<p class="range-border">
+					返点在
+					<input type="text" class="text" style="width:35px;">
+					%至
+					<input type="text" class="text" style="width:35px;">
+					%时，扣除
+					<input type="text" class="text" style="width:35px;">
+					%
+					<a class="add">+</a>
+				</p>
+				<p><span class="obvious1">你最多可用设置5个返点区间扣点，若多个冲突时，则取扣点最低的区间设置</span></p>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<label class="title">加价设置：</label>
+			</th>
+			<td>
+				<p>
+					每张票加价
+					<input type="text" class="text text-s">
+					元进行出售
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<label class="title">备注：</label>
+			</th>
+			<td>
+				<textarea class="text" style="width:400px;height:80px;"></textarea><span class="obvious1">备注本次操作理由，若无可留空</span>
+			</td>
+		</tr>
+	</table>
+	<button class="btn class1">提交</button>
+	<button class="btn class2">取消</button>
+	<div style="background:#1A1A1A;color:#fff;margin:10px 0;padding:8px 0;text-align:center;">---------------------------------分割线---------------------------------</div>
+	<table class="mini-table">
+		<tr>
+			<th>
+				<label class="title">扣点设置：</label>
+			</th>
+			<td class="range-box">
+				<p class="range-border"><span class="pad-r"><label><input type="radio" />区间扣点</label></span><span class="pad-l pad-r"><label><input type="radio" />区间扣点</label></span></p>
+				<p class="range-border importantBox broaden" style="margin:0;">
+					设置后您的所以下级用户都将看到统一的返点，当供应商发布的返点低于您设置的统一返点时将显示供应商的实际返点，当供应商发布了高于您设置的统一返点时，超出部分的返点都将会做为利润分配到您的账户。
+				</p>
+				<p>为下级统一返点：<input type="text" class="text" style="width:35px;"> %</p>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

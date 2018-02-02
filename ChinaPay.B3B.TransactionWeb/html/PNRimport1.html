@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>PNR编码内容导入</title>
+	<link rel="stylesheet" type="text/css" href="/Styles/core.css?20121118">
+	<link rel="stylesheet" type="text/css" href="/Styles/form.css?20121118">
+</head>
+<body>
+	<form class="rightContent">
+		<ul class="importNav clearfix">
+			<li>
+				<a href="#" class="curr">编码导入</a>
+			</li>
+			<li>
+				<a href="#">内容导入</a>
+			</li>
+		</ul>
+		<div class="importBox">
+			<p class="importTips">建议使用PNR编码导入的类型：<span>普通单程</span><span>特价单程</span></p>
+			<div class="PNRBox">
+				<table>
+						<tr>
+							<td colspan="2">
+								<input id="radAdultPNR" type="radio" name="radPNRType" value="radAdultPNR" checked="checked" />
+								<label for="radAdultPNR" style="padding-right:30px;">成人编码</label>
+								<input id="radChildrenPNR" type="radio" name="radPNRType" value="radChildrenPNR" />
+								<label for="radChildrenPNR">儿童编码</label>
+							</td>
+						</tr>
+						<tr>
+							<td style="height:60px;">
+								<div id="divAdultPNRContent" style="display: none; ">
+									<span>输入PNR编码：</span>
+									<input name="txtPNRCode" type="text" id="txtPNRCode" class="text" />
+								</div>
+								<div id="divChildrenPNRContent" style="display: block; ">
+									<span>输入儿童编码：</span>
+									<input name="txtChildrenPNRCode" type="text" id="txtChildrenPNRCode" class="text" />
+									<br />
+									<span>备注成人编码：</span>
+									<input name="txtAdultPNRCode" type="text" id="txtAdultPNRCode" class="text" />
+                    			</div>
+							</td>
+							<td>
+								<input type="submit" name="btnPNRCodeImport" value="提交PNR编码" id="btnPNRCodeImport" class="btn class1" />
+							</td>
+						</tr>
+				</table>
+			</div>
+			<div class="PNRTips">
+				<h4>PNR导入注意事项：</h4>
+				<p><span class="numList">1、</span>重要更新提示：国航（CA）、海航（HU）、联航（KN）编码需要加OSI项</p>
+				<p>指令：OSI航空公司代码CTCT您的手机号码/Pn<span class="eg">例如：OSI CA CTCT138*****888/P1</span></p>
+				<p><span class="numList">2、</span>该PNR姓名组正确，航段租正确、舱位状态正确，每个乘客均有真实的SSR FOID项输入</p>
+				<p><span class="numList">3、</span>该PNR不能包含票价组项，如FC/FN/FP，儿童编码导入时，需要备注成人编码</p>
+			</div>
+		</div>
+		<ul class="importNav clearfix">
+			<li>
+				<a href="#">编码导入</a>
+			</li>
+			<li>
+				<a href="#" class="curr">内容导入</a>
+			</li>
+		</ul>
+		<div class="importBox">
+			<p class="importTips">建议使用PNR编码导入的类型：<span>普通往返</span><span>普通联程</span><span>特价往返</span><span>特价联程</span><span>团队票</span><span>缺口程</span></p>
+			<div class="PATBox clearfix">
+				<div class="fl">
+					<h4>以下为示例内容：</h4>
+					<div>
+						<textarea class="eg">
+>RTHZMGLY
+1.刘西北 HTMHLV
+2. HO1322 M SU13NOV KWLSHA HK1 1240 1535 E --T2
+3.PEK/T PEK/T99887766/HUOXINQIULAIDE SOUTHWEST TRAVEL/HUO XIN QIU ABCDEFG 4.13800138000/P1
+5.TL/1200/13NOV/YYY111
+6.SSR FOID
+7.SSR ADTK 1E BY YYY11NOV11/1240 OR CXL HO1322 M13NOV
+8.OSI HO CTCT13800138000/P1
+9.RMK CA/HYGNKR
+10.YYY111
+>
+>PAT:A
+PAT:A
+01 M FARE:CNY1520.00 TAX:CNY50.00 YQ:CNY130.00 TOTAL:1700.00
+>SFC:01
+></textarea>
+					</div>
+				</div>
+				<div class="fr">
+					<p>
+						<input type="radio" /><label>成人编码</label>
+						<input type="radio" /><label>儿童编码</label>
+						备注成人编码：<input type="text" />
+					</p>
+					<textarea name="txtPNRContent" rows="2" cols="20" id="txtPNRContent" class="pnrContent">
+温馨提示：
+1.请用您的黑屏系统，调取PNR内容，再执行PAT-A指令，将其全部内容复制，并粘贴到左边黑色输入框内；
+2.您需要注意的是：复制的内容必须从RT编码开始复制到PAT:A结果的所有内容；
+3.点击查看演示说明；
+4.如有不会使用请拨打帮助热线：400-739-0838</textarea>
+					<div class="btns">
+						<input type="submit" name="btnPNRContentImport" value="立即提交" id="btnPNRContentImport" class="btn class1" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="layer4 importLayer">
+			<h4>操作提示：<a href="#">关闭</a></h4>
+			<p class="important">请输入PAT信息</p>
+			<div class="addBox">
+				<p>请在此处粘贴PAT内容</p>
+				<textarea></textarea>
+				<div class="layerBtns">
+					<a href="#" class="btn class1">提交</a>
+					<a href="#" class="btn class2">取消</a>
+				</div>
+			</div>
+			<div class="tipsBox">
+				<p>操作帮助：在RT编码后，“成人编码”请您再执行“PAT:A”指令，如：</p>
+				<p>&gt;<b class="b">PAT:A</b></p>
+				<p>PAT:A</p>
+				<p>01 Y FARE:CNY890:00 TAX:CNY50.00 YQ:CNY140:00 TOTAL:1080.00</p>
+				<p>&gt;SFC:01</p>
+				<p>操作帮助：在RT编码后，“儿童编码”请您在执行“PAT:A*CH”指令，如：</p>
+				<p>&gt;<b class="b">PAT:A*CH</b></p>
+				<P>PAT:A</P>
+				<p>01 Y FARE:CNY890.00 TAX:CNY50.00 YQ:CNY140.00 TOTAL:1080.00</p>
+				<p>&gt;SFC:01</p>
+				<p>最后将PAT指令所获得的内容复制到PAT内容输入框中，点击确认生成订单</p>
+			</div>
+		</div>
+		<div class="layer4 importLayer">
+			<h4>操作提示：<a href="#">关闭</a></h4>
+			<p class="important">请输入正确的PNR内容</p>
+			<div class="layerBtns">
+				<a href="#" class="btn class1">确定</a>
+			</div>
+		</div>
+		<div class="layer4 importLayer">
+			<h4>操作提示：<a href="#">关闭</a></h4>
+			<p class="important">PNR内容不完整，请重新输入</p>
+			<div class="layerBtns">
+				<a href="#" class="btn class1">确定</a>
+			</div>
+		</div>
+		<div class="layer4 importLayer">
+			<h4>操作提示：<a href="#">关闭</a></h4>
+			<p class="important">获取乘机人信息失败，请重试</p>
+			<div class="layerBtns">
+				<a href="#" class="btn class1">确定</a>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

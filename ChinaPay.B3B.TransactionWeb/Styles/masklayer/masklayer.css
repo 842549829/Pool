@@ -1,0 +1,6 @@
+﻿   .fixed{position: fixed;left: 0;top: 0; width: 100%;height: 100%;z-index: 20;background-color: Black;filter: alpha(opacity=50);-moz-opacity: 0.5;-khtml-opacity: 0.5;opacity: 0.5;display:none;}
+        .layers{position: fixed; height: 135px; width: 350px;left: 35%;top: 30%;z-index: 999;background-color: #ffffff;border:10px solid #F1F1F1;padding: 0px;display:none;}
+        .layers div, h2{width: 100%; margin:0px;}
+        .hei{ background-color: #F1F1F1; }
+        .qclose{ float: right; margin-right: 5px;}
+        .ds{display: inline-block; height: 53px;}

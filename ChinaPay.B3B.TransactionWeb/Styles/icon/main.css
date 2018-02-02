@@ -1,0 +1,28 @@
+/* 矢量图标 */
+@font-face {
+	font-family: 'uxiconfont';
+	font-weight: normal;
+	font-style: normal;
+
+	src:url('uxiconfont.eot'); /* IE9 */
+	src:url('uxiconfont.eot?#iefix') format('embedded-opentype'),
+		url('uxiconfont.woff') format('woff'),
+		url('uxiconfont.ttf')  format('truetype');
+}
+.iconfont{ font-family:uxiconfont; font-size:14px; font-style:normal; cursor: pointer; }
+.iconfont.p10 { font-size: 10px; margin-top: 2px;}
+
+/* 通用模板设置 */
+.areaSelect{display: block;}
+.areaSelect span{ margin-right:10px;}
+.firstAreaClass { border:1px solid #dc4321; background-color:#ffffff; width:500px; padding:0 10px; display:none; position:absolute;  z-index:1; }
+	.firstAreaClass dl { padding:0 0 0 60px; margin:10px 0; }
+	.firstAreaClass dt { float:left; display: inline; width:50px; font-weight:bold; color:#333333; margin-left:-50px; }
+	.firstAreaClass dd { display:inline; white-space:nowrap; }
+	.firstAreaClass a { color:#666666; margin:0 5px; padding:3px; }
+	.firstAreaClass a:hover { color:#dc4321; }
+
+.cityBox, .areaBox { border:1px solid #eeeeee; display:none; padding:10px; margin:10px 0; }
+.curDiv { border:1px solid #ef7d64; background-color:#faece9; }
+a.curSel, a.curSel:hover { background-color:#dc4321; color:#ffffff; }
+table a{ white-space:normal; outline:none; text-decoration:none; color:#dc4321;}

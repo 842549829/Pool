@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8" />
+	<title>
+	B3B机票交易平台 中国首家创新型电子机票销售平台 全球首家任意编码行程支持平台</title>
+	<link rel="stylesheet" href="/OrganizationHandlers/FileProxy.ashx?fileName=core.css">
+    <link rel="stylesheet" href="/Styles/public.css?20121118" />
+	<link rel="stylesheet" href="/Styles/icon/fontello.css" />
+	<link rel="stylesheet" href="/OrganizationHandlers/FileProxy.ashx?fileName=form.css" />
+	<link rel="stylesheet" href="/OrganizationHandlers/FileProxy.ashx?fileName=page.css" />
+	<link href="/Scripts/DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		.settleCode{ width: 35px;}
+	</style>
+</head>
+<body>
+	<div style="width:1093px;position:absolute;right:10px;" >
+		<div class="column table">
+			<div class="hd">
+				<h2>出票信息</h2>
+			</div>
+			<div class="PNRCodeBox">
+				<span class="condition">
+    		    	出票方式：
+    		    	<input value="1" name="ticketType" type="radio" checked="checked"><label for="TicketType1" />BSP</label>
+    		    	<input value="0" name="ticketType" type="radio" /><label for="TicketType2">B2B</label>
+    			</span>
+    			<span class="condition">
+    			出票Office号：
+                <select name="ddlOfficeNo" id="ddlOfficeNo" class="custed" style="display: none; ">
+                	<option value="KMG215">KMG215</option>
+					<option value="PEK555">PEK555</option>
+					<option selected="selected" value="LKE696">LKE696</option>
+				</select>
+				<dl id="dl_ddlOfficeNo" class="dropdown">
+					<dt>
+						<button class="btn class4" style="width: 158px; "><i class="icon icon-down-open fr"></i>LKE696</button>
+						<span class="value">LKE696</span>
+					</dt>
+					<dd style="display: none; ">
+						<ul style="width: 158px; ">
+							<li>KMG215<span class="value">KMG215</span></li>
+							<li>PEK555<span class="value">PEK555</span></li>
+							<li>LKE696<span class="value">LKE696</span></li>
+						</ul>
+					</dd>
+				</dl>
+    			</span>
+    			<div>
+    				<span class="condition">
+    					换编码出票：
+    					<input type="radio" /><label>不需要</label>
+    					<input type="radio" checked="checked" /><label>需要</label>
+    				</span>
+    				<div class="changeCodeBox">
+    				<span class="pad-r">
+    					新小编码：
+    					<input type="text" class="text" />
+    				</span>
+    				<span class="pad-r">
+    					新大编码：
+    					<input type="text" class="text" />
+    				</span>
+    				<span class="obvious1 pad-r">
+    					原小编码：
+    					<b>HGKH4X</b>
+    				</span>
+    				<span class="obvious1 pad-r">
+    					原大编码：
+    					<b>MEY0LK</b>
+    				</span>
+    				</div>
+    			</div>
+			</div>
+			<table><tbody><tr><th>乘机人姓名</th><th>乘机人类型</th><th>证件号</th><th>票面价</th><th>返点</th><th>民航基金/燃油税</th><th>总价</th><th>票号</th></tr><tr><td>田灵萱</td><td><span>成人</span><span class="h" style="display:none">0</span><span class="h" style="display:none"></span></td><td><span>410422197812279587</span><span class="h" style="display:none">0</span></td><td><span class="ticketPrice">1900</span></td><td>9%</td><td><span class="price">50</span> / <span class="price">140</span></td><td><span class="price">2090</span></td><td><input type="text" class="text settleCode" value="781"> <input type="text" class="text ticketNo"> </td></tr></tbody></table>
+		</div>
+		<div class="column">
+			<div class="hd">
+				<h2>政策备注</h2>
+			</div>
+			<div id="divPolicyRemarkContent"> <span class="systemEndFix">请出票员核实本订单舱位、金额和实际出票信息是否相符，以免造成差价赔付。</span></div>
+		</div>
+		<div class="btns">
+        	<input name="btnETDZ" type="button" id="btnETDZ" class="btn class1" value="出&nbsp;&nbsp;&nbsp;票" onclick="etdz();">
+        	<input name="btnDeny" type="button" id="btnDeny" class="btn class1" value="拒绝出票" onclick="denyETDZ();">
+        	<input type="submit" name="btnReleaseLockAndBack" value="解锁并返回" id="btnReleaseLockAndBack" class="btn class1">
+        	<button id="btnBack" class="btn class2" onclick="window.location.href='/OrderModule/Provide/WaitOrderList.aspx';return false;">返&nbsp;&nbsp;&nbsp;回</button>
+    	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+body {
+    background-image: url(/images/logon/bg.jpg);
+}
+.content {
+    width: 540px;
+    height: 328px;
+    background-image: url(/images/logon/content.png);
+    vertical-align: middle;
+    margin: 100px auto;
+    padding-top: 10px;
+}
+.title {
+    background-image: url(/images/logon/title.png);
+    width: 341px;
+    height: 40px;
+    color: #FFF;
+    font-size: 24px;
+    font-family: Î¢ÈíÑÅºÚ,Verdana, Geneva, sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 15px;
+}
+table {
+    width: 100%;
+    margin-top: 30px;
+}
+table tr {
+    height: 50px;
+    vertical-align: middle;
+}
+table tr .name {
+    width: 185px;
+    text-align: right;
+    font-size: 16px;
+    color: #333;
+    font-family: Î¢ÈíÑÅºÚ,Verdana, Geneva, sans-serif;
+}
+.text {
+    color: #999;
+    width: 196px;
+    height: 14px;
+    border: 0;
+    margin-top: 5px;
+    margin-left: 25px;
+}
+.text2 {
+    color: #333;
+    width: 80px;
+    height: 20px;
+}
+.userName {
+    background-image: url(/images/logon/username.png);
+    width: 226px;
+    height: 26px;
+}
+.password {
+    background-image: url(/images/logon/password.png);
+    width: 226px;
+    height: 26px;
+}
+.validateCode {
+    width: 60px;
+    height: 20px;
+}
+.submit {
+    background-image: url(/images/logon/button.png);
+    width: 75px;
+    height: 28px;
+    border: 0;
+    font-size: 16px;
+    font-family: Î¢ÈíÑÅºÚ,Verdana, Geneva, sans-serif;
+    color: #FFF;
+}

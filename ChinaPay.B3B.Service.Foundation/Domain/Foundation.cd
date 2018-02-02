@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.AirCraft">
+    <Position X="16.5" Y="7" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAgCAAAAAAAgAAAEAAAgAAQAAAAAAAIABAAABAAAAAA=</HashCode>
+      <FileName>Domain\AirCraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.RefundAndRescheduling">
+    <Position X="11.5" Y="1.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAFAAAAAAAQAAAAAAAAAAAABAAAAACAAAQA=</HashCode>
+      <FileName>Domain\RefundAndRescheduling.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Airline" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.AirCraftCollection" Collapsed="true">
+    <Position X="30.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgEAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Domain\AirCraftCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.Airline">
+    <Position X="15" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAEAAAgAAQgAAAAAIQAAAAABAAAAAg=</HashCode>
+      <FileName>Domain\Airline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.AirlineCollection" Collapsed="true">
+    <Position X="27.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Domain\AirlineCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.Airport">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABAACAAAAAAAABAEAAIgAAQAAAAAAYAAAAAABAAAAAA=</HashCode>
+      <FileName>Domain\Airport.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Location" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.AirportCollection" Collapsed="true">
+    <Position X="27.25" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Domain\AirportCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.BAF">
+    <Position X="16.5" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAICAAAAAAEgAIAEAAAAAAMAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Domain\BAF.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Airline" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.BAFCollection" Collapsed="true">
+    <Position X="30.25" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAEAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Domain\BAFCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.BasicPrice">
+    <Position X="18.5" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAICRAAAAQEAAABEAAgAAAAAAAAAACAIAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\BasicPrice.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Airline" />
+      <Property Name="Departure" />
+      <Property Name="Arrival" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.BasicPriceCollection" Collapsed="true">
+    <Position X="27.25" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEBAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Domain\BasicPriceCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.Bunk">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>UAACAAAAAAUAAABEAAAgAAAAAAAQAAAAAAAAFAAAAAA=</HashCode>
+      <FileName>Domain\Bunk.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Airline" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.GeneralBunk">
+    <Position X="3.75" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQQARAAACAEAAAgEAAgAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Domain\Bunk.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Extended" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.ExtendedWithDiscountBunk">
+    <Position X="0.5" Y="4.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAgAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Domain\Bunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.EconomicBunk">
+    <Position X="2.75" Y="7.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Bunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.FirstBusinessBunk">
+    <Position X="4.75" Y="7.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Bunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.PromotionBunk">
+    <Position X="7.75" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQQAAAAACAAgAAgEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Bunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.ProductionBunk">
+    <Position X="9.75" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Bunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.TransferBunk">
+    <Position X="5.75" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Bunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.BunkCollection" Collapsed="true">
+    <Position X="27.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAEAAAAAAAAAAAAAAAAAJAAQAAACAAAQAAAAAACAAA=</HashCode>
+      <FileName>Domain\BunkCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.ChildOrderableBunk">
+    <Position X="14.25" Y="4" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAAEQAAAEAAAAAAAAAAAEAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Domain\ChildOrderableBunk.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Airline" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.ChildOrderableBunkCollection" Collapsed="true">
+    <Position X="30.25" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAACAAAQAIAAAAAAAA=</HashCode>
+      <FileName>Domain\ChildOrderableBunkCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.City">
+    <Position X="21.25" Y="6.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAMAAAAAAAAAAAAAAAAAAAAAgAABAA=</HashCode>
+      <FileName>Domain\City.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Province" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Counties" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.CityCollection" Collapsed="true">
+    <Position X="24.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Domain\CityCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.County">
+    <Position X="23.75" Y="6.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAMAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\County.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="City" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.CountyCollection" Collapsed="true">
+    <Position X="24.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Domain\CountyCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.Province">
+    <Position X="18.75" Y="6.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAEAAAgIAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Province.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Cities" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.ProvinceCollection" Collapsed="true">
+    <Position X="24.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Domain\ProvinceCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChinaPay.B3B.Service.Foundation.Domain.Location">
+    <Position X="21.5" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAABgAAQAAAAAIAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Domain\Location.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

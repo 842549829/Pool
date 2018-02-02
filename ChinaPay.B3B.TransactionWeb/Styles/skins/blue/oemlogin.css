@@ -1,0 +1,66 @@
+.O-wrap{background: url(img/OEM_bg.jpg) no-repeat 50% 80px;margin: 0 auto;min-height: 490px;position: relative;}
+.O-header-bg{background: url(img/head.png) no-repeat 50% bottom;height: 83px;}
+.O-footer-bg{background-color: #EDEDED;color: #8B8B8B;padding-bottom: 10px;}
+.O-header,
+.O-content,
+.O-footer{margin: 0 auto;position: relative;width: 980px;}
+.O-logo{height: 80px;left: 140px;position: absolute;top: 0;width: 80px;}
+.O-bar{color: #3A7BB5;height: 40px;line-height: 40px;position: absolute;right: 0;top: 5px;width: 550px;}
+
+/* 电话图标 */
+.O-phone{background: url(img/phone.png) no-repeat 5px 50%;display: inline-block;padding-left: 30px;}
+.O-phone{*display: inline;}
+
+.O-ui{position: absolute;right: 0;top: 0;}
+
+/* 注册按钮 */
+.O-register{background: url(img/reg.png) no-repeat 50% 50%;color: #fff;display: inline-block;height: 20px;margin-right: 10px; line-height: 20px;text-align: center;width: 45px;}
+.O-register{*display: inline;}
+.O-register:hover{text-decoration: none;}
+
+/* 登录区域 */
+.O-login-box{background: url(img/loginarea.png) no-repeat;height: 321px;position: absolute;right: -5px;top: 5px;width: 316px;}
+.O-login-area{background-color: #eee;border-radius: 10px;margin: 20px 20px 10px;padding: 15px;}
+.O-login-area h4{color: #3A7BB5;margin: 0;padding: 0;text-align: center;}
+.O-line{background: url(img/line.png) repeat-x;height: 2px;margin: 10px 0;width: 100%;}
+.O-login-info{padding: 5px 0 20px;position: relative;}
+.O-login-info input.text{border: 1px solid #E6E7E6;width: 180px;}
+.O-login-info input[type="checkbox"]{margin-right: 5px;vertical-align: top;}
+.O-login-info img{display: inline-block;width: 90px;height: 25px;vertical-align: middle;}
+.O-login-info.last{padding-bottom: 0;}
+.O-save-pw{bottom: 0;left: 50px;position: absolute;vertical-align: top;}
+.O-forget-pw{bottom: 0;position: absolute;right: 10px;text-decoration: underline;}
+.O-warning{color: #D92672;line-height: 20px;}
+.O-login-btn{background-color: #00A2E1;border:0 none;color: #fff;cursor:pointer;display:inline-block;font-size: 16px;font-weight: 400;height: 30px;line-height: 30px;margin: 0 20px;padding: 0;word-spacing: 10px;width: 150px;}
+.O-register-btn{background-color: #B3B3B3;border:0 none;color: #333;display:inline-block;font-size: 16px;font-weight: 400;height: 30px;line-height: 30px;margin: 0;padding: 0;text-align:center;width: 90px;}
+.O-register-btn:hover{background-color:#909090;text-decoration:none;}
+.O-login-btn:hover{background-color: #48AFD6;}
+.O-login-btn，.O-register-btn{*display:inline;}
+
+.O-con{padding-top: 340px;}
+
+/* 推荐信息 */
+.O-recommend-box{float: left;position: relative;width: 700px;}
+.O-aim-box{float: right;width: 200px;}
+.O-recommend-box .O-title{left: 0;position: absolute;top: 0;}
+.O-title{background: url(img/title.png) no-repeat 3px 0;color: #006CBE;height: 26px;line-height: 26px;padding: 0 0 0 30px;}
+.O-recommend-menu{height: 26px;line-height: 26px;margin: 0 0 10px 100px;}
+.O-recommend-menu li{background: url(img/menu.png) no-repeat;cursor: pointer;float: left;height: 26px;line-height: 26px;text-align: center;width: 70px;}
+.O-recommend-menu li.curr{background-position: right 50%;color: #fff;}
+.O-recommend-con{height: 124px;overflow: hidden;width: 100%;}
+.O-recommend-con li{border-bottom: 1px dashed #DEDEDE;float: left;height: 20px;line-height: 20px;margin: 0 10px;padding: 5px 0;width: 210px;}
+.O-fight{background: url(img/fight.png) no-repeat 50% 6px;display: inline-block;height: 20px;width: 25px;}
+.O-city{padding: 0 5px;}
+.O-fight{*display: inline;}
+.O-way{padding: 0 20px 0 10px;}
+.O-price{color: #FD6000;font-size: 14px;font-weight: 600;}
+
+.O-aim{background-color: #E6E6E6;border-radius: 5px;margin: 5px 0;padding: 15px;width: 130px;}
+.O-aim li{text-align: justify;width: 100%;}
+
+/* 合作 */
+.O-collaborate{float: left;width: 50%;}
+.O-collaborate h4{margin: 10px 0;padding: 0;}
+.O-fight-com{background: url(img/ico-fight.png);display: block;height: 74px;text-indent: -9999px;width: 400px;}
+.O-other-com{background: url(img/ico-other.png);display: block;height: 64px;text-indent: -9999px;width: 416px;}
+.O-copyright p{line-height: 20px;text-align: center;}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/Styles/skins/default/core.css" />
+	<link rel="stylesheet" type="text/css" href="/Styles/skins/default/form.css" />
+</head>
+<body style="margin-left:250px;">
+	<h3 class="titleBg">默认用户组-采买设置<span class="pad-l">本设置将限制本组用户所能采购的政策范围及返点等，若您需要对所有用户统一设置请点此<a href="#" class="obvious-a">全局设置</a></span></h3>
+	<div class="box-a">
+		<div class="clearfix">
+			<div class="user-type-left">用户组名称：默认用户组 <a href="#" class="obvious-a">修改</a></div>
+			<div class="user-type-right">用户数量：183 <a href="#" class="obvious-a">查看用户列表</a> | <a href="#" class="obvious-a">添加用户</a></div>
+		</div>
+		<div class="user-type">用户组描述：默认组就是常规用户分组，主要是对一些通过促销等方式吸引进来的用户所设置的用户组。</div>
+	</div>
+	<div class="importantBox broaden">
+		<p class="important">采买限制将控制您的用户只允许购买哪些航空公司及哪些出港城市的航班，若您没有发布某些航线的政策时，将根据您所设置政策设置来显示。</p>
+	</div>
+	<div class="simple-box clearfix">
+				<label class="title">限制航空公司：</label>
+				<div class="simple-content check-box-list">
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>大新华</label></span>
+					<span><input type="checkbox" /><label>大新华</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>大新华</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span>
+					<span><input type="checkbox" /><label>国航</label></span><br />
+					<span class="obvious"><input type="checkbox" /><label>全选</label></span><span class="obvious"><input type="checkbox" /><label>反选</label></span>
+				</div>
+	</div>
+	<div class="simple-box clearfix">
+		<div class="fl" style="width:500px;">
+			<div class="clearfix">
+				<label class="title">限制出港城市：</label>
+				<div class="simple-content">
+					<div class="s-dbl_select wangfanTh" style="display:inline-block;*display:inline;">
+                        <input type="radio" id="radInculd" checked="checked" name="radDepartureRange" value="0"><label for="radInculd">包含</label>&nbsp;&nbsp;
+                        <input type="radio" id="radUnInculd" name="radDepartureRange" value="1"><label for="radUnInculd">不包含</label><br>
+                        <input type="text" class="text text_width" id="txtAirports" style="width:300px;"><br>
+                            <div class="op_item">
+                                <select class="op_con op_con_l" id="lbSource" multiple="multiple">
+                                </select>
+                                <select class="op_con op_con_r" id="lbSelected" multiple="multiple">
+                                </select>
+                                <div class="btns">
+                                    <button class="btn class2" id="btnAddAll">
+                                        全部添加</button>
+                                    <button class="btn class2" id="btnAdd">
+                                        添&nbsp;&nbsp; &nbsp;&nbsp; 加</button>
+                                    <button class="btn class2" id="btnRemove">
+                                        删&nbsp;&nbsp; &nbsp;&nbsp; 除</button>
+                                    <button class="btn class2" id="btnRemoveAll">
+                                        全部删除</button>
+                                </div>
+                            </div>
+                	</div>
+				</div>
+			</div>
+		</div>
+		<div style="margin-left:510px;">
+			<p class="obvious1">
+			温馨提示：支持多选，可用Shift连选，也支持Ctrl间隔选择。可手动输入机场三字码，如果三字码正确，城市名字会自动加到右边的已选择列表中。输入三字码时，如果有多个，请用"/"分隔，如：CTU/PEK留空则表示选择了全国出港城市
+			</p>
+		</div>
+	</div>
+	<div class="simple-box">
+		<label class="title">普通政策限制：</label>
+		<div class="simple-content">
+			<label class="g-radiobox"><input type="radio" />我未发布政策时允许下级采购其他供应商的普通政策</label>
+			<label class="g-radiobox"><input type="radio" />即使我未发布政策也只允许采购我发布的默认返点的普通政策</label>
+			<div class="box">
+				<p>当您未发布采购所采买的航线政策时，将使用下面的默认返点，仅适用于普通政策默认返点：</p>
+				<p>下级默认返点：<input type="text" class="text" />% <span class="pad-l obvious1">仅对成人类型乘客进行限制，不支持儿童政策出票</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="simple-box">
+		<label class="title">特价政策限制：</label>
+		<div class="simple-content">
+			<label class="g-radiobox"><input type="radio" />我未发布政策时允许下级采购其他供应商的特价政策</label>
+			<label class="g-radiobox"><input type="radio" />即使我未发布政策也只允许采购我发布的默认返点的特价政策</label>
+			<div class="box">
+				<p>当您未发布采购所采买的航线政策时，将使用下面的默认返点，仅适用于普通政策默认返点：</p>
+				<p>下级默认返点：<input type="text" class="text" />% <span class="pad-l obvious1">仅对成人类型乘客进行限制，不支持儿童政策出票</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="simple-box">
+		<label class="title">团队政策限制：</label>
+		<div class="simple-content">
+			<label class="g-radiobox"><input type="radio" />我未发布政策时允许下级采购其他供应商的团队政策</label>
+			<label class="g-radiobox"><input type="radio" />即使我未发布政策也只允许采购我发布的默认返点的团队政策</label>
+			<div class="box">
+				<p>当您未发布采购所采买的航线政策时，将使用下面的默认返点，仅适用于普通政策默认返点：</p>
+				<p>下级默认返点：<input type="text" class="text" />% <span class="pad-l obvious1">仅对成人类型乘客进行限制，不支持儿童政策出票</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="simple-box">
+		<label class="title">缺口政策限制：</label>
+		<div class="simple-content">
+			<label class="g-radiobox"><input type="radio" />我未发布政策时允许下级采购其他供应商的缺口政策</label>
+			<label class="g-radiobox"><input type="radio" />即使我未发布政策也只允许采购我发布的默认返点的缺口政策</label>
+			<div class="box">
+				<p>当您未发布采购所采买的航线政策时，将使用下面的默认返点，仅适用于普通政策默认返点：</p>
+				<p>下级默认返点：<input type="text" class="text" />% <span class="pad-l obvious1">仅对成人类型乘客进行限制，不支持儿童政策出票</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="simple-box">
+		<label class="title">特殊政策限制：</label>
+		<div class="simple-content">
+			<label class="g-radiobox"><input type="radio" />我未发布政策时允许下级采购其他供应商的特殊政策</label>
+		</div>
+	</div>
+	<div class="simple-box last">
+		<div class="simple-content">
+			<a href="#" class="simple-add-btn">添加到下面的分组</a>
+		</div>
+	</div>
+	<div class="accumulate-box">
+				<h4>双击即可编辑您添加的分组</h4>
+				<p>
+					KMG/CTU/SHA/LJG/PEK/MFM/XIY(3U/MU)<br />
+					普通政策：可采购同行政策<br />
+					特价政策：可采购同行政策<br />
+					团队政策：只显示我的默认返点政策<br />
+					缺口政策：可采购同行政策<br />
+					特殊政策：可采购同行政策
+					<a href="#" class="remove">删除</a>
+				</p>
+				<p>
+					KMG/CTU/SHA/LJG/PEK/MFM/XIYKMG/CTU/SHA/LJG/PEK/MFM/XIYKMG/CTU/SHA/LJG/PEK/MFM/XIYKMG/CTU/SHA/LJG/PEK/MFM/XIY(3U/MU)<br />
+					普通政策：可采购同行政策<br />
+					特价政策：可采购同行政策<br />
+					团队政策：只显示我的默认返点政策<br />
+					缺口政策：可采购同行政策<br />
+					特殊政策：可采购同行政策
+					<a href="#" class="remove">删除</a>
+				</p>
+			</div>
+	<div class="btns">
+		<button class="btn class1">提交</button>
+		<button class="btn class2">取消</button>
+	</div>
+	<div style="background:#1A1A1A;color:#fff;margin:10px 0;padding:8px 0;text-align:center;">---------------------------------分割线---------------------------------</div>
+	<h4>交互规则</h4>
+	<p>1.在设置完后点击添加到下面分组，实现添加分组，添加完后下面分组模块出现分组信息。</p>
+	<p>2.上方链接操作同以前版本。</p>
+	<p>3.在政策限制中选中“即使我未发布政策也只允许采购我发布的默认返点的团队政策”显示下方<code>class="box"</code>中内容，默认选择第已项,<code>class="box"</code>隐藏</p>
+	<p>4.在右侧双击分组信息，将信息提取到上方显示，进行重新编辑，点击添加后替代原分组信息。</p>
+	<p>5.分组信息后点删除，删除该分组信息。</p>
+	<p>6.用户点保存时，记录备注信息，保存操作内容。取消者返回。</p>
+</body>
+</html>

@@ -1,0 +1,239 @@
+html,
+body,
+div,
+ul,
+li,
+span{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style-type: none;
+}
+#content{
+	margin: 15px auto;
+	width: 76.8%;
+}
+.airFlag li{
+	border: 1px solid #666;
+	float: left;
+	height: 40px;
+	width: 24%;
+}
+.flag{
+	display: block;
+	height: 30px;
+	background: url(../images/airLogo.png) no-repeat 0 100px;
+	padding-left: 30px;
+	line-height: 30px;
+	float:left;
+}
+/*
+	东方航空
+	############################################
+*/
+.flag_MU{
+	background-position: 0 6px;
+}
+/*
+	中国航空
+	############################################
+*/
+.flag_CA{
+	background-position: 0 -61px;
+}
+/*
+	南方航空
+	############################################
+*/
+.flag_CZ{
+	background-position: 0 -134px;
+}
+/*
+	上海航空
+	############################################
+*/
+.flag_FM{
+	background-position: 0 -206px;
+}
+/*
+	深圳航空
+	############################################
+*/
+.flag_ZH{
+	background-position: 0 -274px;
+} 
+/*
+	厦门航空
+	############################################
+*/
+.flag_MF{
+	background-position: 0 -345px;
+}
+/*
+	海南航空
+	############################################
+*/
+.flag_HU{
+	background-position: 0 -415px;
+}
+/*
+	吉祥航空
+	############################################
+*/
+.flag_8L{
+	background-position: 0 -491px;
+}
+/*
+	四川航空
+	############################################
+*/
+.flag_3U{
+	background-position: 0 -565px;
+}
+/*
+	山东航空
+	############################################
+*/
+.flag_SC{
+	background-position: 0 -641px;
+}
+/*
+	############################################
+*/
+.flag_unknow1{
+	background-position: 0 -714px;
+}
+/*
+	吉祥航空
+	############################################
+*/
+.flag_HO{
+	background-position: 0 -783px;
+}
+/*
+	奥凯航空
+	############################################
+*/
+.flag_BK{
+	background-position: 0 -851px;
+}
+/*
+	成都航空
+	############################################
+*/
+.flag_EU{
+	background-position: 0 -924px;
+}
+/*
+	华夏航空
+	############################################
+*/
+.flag_G5{
+	background-position: 0 -992px;
+}
+/*
+	联合航空
+	############################################
+*/
+.flag_KN{
+	background-position: 0 -1074px;
+}
+/*
+	############################################
+*/
+.flag_unknow2{
+	background-position: 0 -1149px;
+}
+/*
+	西部航空
+	############################################
+*/
+.flag_PN{
+	background-position: 0 -1245px;
+}
+/*
+	天津航空
+	############################################
+*/
+.flag_GS{
+	background-position: 0 -1333px;
+}
+/*
+	############################################
+*/
+.flag_unknow3{
+	background-position: 0 -1418px;
+}
+/*
+	大新华航空
+	############################################
+*/
+.flag_CN{
+	background-position: 0 -1518px;
+}
+/*
+	############################################
+*/
+.flag_unknow4{
+	background-position: 0 -1611px;
+}
+/*
+	首都航空
+	############################################
+*/
+.flag_JD{
+	background-position: 0 -1682px;
+}
+/*
+	幸福航空
+	############################################
+*/
+.flag_JR{
+	background-position: 0 -1755px;
+}
+/*
+	昆明航空
+	############################################
+*/
+.flag_KY{
+	background-position: 0 -1824px;
+}
+/*
+	西藏航空
+	############################################
+*/
+.flag_TV{
+	background-position: 0 -1887px;
+}
+/*
+	############################################
+*/
+.flag_unknow5{
+	background-position: 0 -1958px;
+}
+/*
+	############################################
+*/
+.flag_unknow6{
+	background-position: 0 -2034px;
+}
+/*
+	############################################
+*/
+.flag_unknow7{
+	background-position: 0 -2101px;
+}
+/*
+	############################################
+*/
+.flag_unknow8{
+	background-position: 0 -2162px;
+}
+/*
+	重庆航空
+	############################################
+*/
+.flag_OQ{
+	background-position: 0 -2222px;
+}

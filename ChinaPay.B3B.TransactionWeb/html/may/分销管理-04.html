@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/Styles/skins/default/core.css" />
+	<link rel="stylesheet" type="text/css" href="/Styles/skins/default/form.css" />
+</head>
+<body>
+	<h3 class="titleBg">默认用户组-采买设置<span class="pad-l">本设置将限制本组用户所能采购的政策范围及返点等，若您需要对所有用户统一设置请点此<a href="#" class="obvious-a">全局设置</a></span></h3>
+	<div class="box-a">
+		<div class="clearfix">
+			<div class="user-type-left">用户组名称：默认用户组 <a href="#" class="obvious-a">修改</a></div>
+			<div class="user-type-right">用户数量：183 <a href="#" class="obvious-a">查看用户列表</a> | <a href="#">添加用户</a></div>
+		</div>
+		<div class="user-type">用户组描述：默认组就是常规用户分组，主要是对一些通过促销等方式吸引进来的用户所设置的用户组。</div>
+	</div>
+	<div class="importantBox broaden">
+		<p class="important">采买限制将控制您的用户只允许购买哪些航空公司及哪些出港城市的航班，若您没有发布某些航线的政策时，将显示您所设置的默认返点。</p>
+	</div>
+	<table class="mini-table">
+		<tr>
+			<th><label class="title">限制航空公司：</label></th>
+			<td class="check-box-list">
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span><input type="checkbox" /><label>国航</label></span>
+				<span class="r"><input type="checkbox" /><label>全选</label><input type="checkbox" class="mar-l" /><label>反选</label></span>
+			</td>
+		</tr>
+		<tr>
+			<th><label class="title">限制出港城市：</label></th>
+			<td>
+				<div class="clearfix">
+					<div class="s-dbl_select op_item wangfanTh fl" style="display:inline-block;*display:inline;">
+                        <input type="radio" id="radInculd" checked="checked" name="radDepartureRange" value="0"><label for="radInculd">包含</label>&nbsp;&nbsp;
+                        <input type="radio" id="radUnInculd" name="radDepartureRange" value="1"><label for="radUnInculd">不包含</label><br>
+                        <input type="text" class="text text_width" id="txtAirports" style="width:300px;"><br>
+                            <div class="op_item">
+                                <select class="op_con op_con_l" id="lbSource" multiple="multiple">
+                                </select>
+                                <select class="op_con op_con_r" id="lbSelected" multiple="multiple">
+                                </select>
+                                <div class="btns">
+                                    <button class="btn class2" id="btnAddAll">
+                                        全部添加</button>
+                                    <button class="btn class2" id="btnAdd">
+                                        添&nbsp;&nbsp; &nbsp;&nbsp; 加</button>
+                                    <button class="btn class2" id="btnRemove">
+                                        删&nbsp;&nbsp; &nbsp;&nbsp; 除</button>
+                                    <button class="btn class2" id="btnRemoveAll">
+                                        全部删除</button>
+                                </div>
+                            </div>
+                	</div>
+                	<div class="obvious1 fl" style="margin:10px 0 0 30px;">温馨提示：<br /><br />支持多选，可用Shift连选，也支持Ctrl间隔选择。<br /><br />可手动输入机场三字码，如果三字码正确，城市名字会自动加到右边的已选择列表中。<br /><br />输入三字码时，如果有多个，请用"/"分隔，如：CTU/PEK<br /><br />留空则表示选择了全国出港城市</div>
+                </div>
+			</td>
+		</tr>
+		<tr>
+			<th><label class="title">普通政策限制：</label></th>
+			<td>
+				<label class="g-radiobox"><input type="radio" />我未发布政策时允许下级采购其他供应商的普通政策</label>
+				<label class="g-radiobox"><input type="radio" />即使我未发布政策也只允许采购我发布的默认返点的普通政策</label>
+			</td>
+		</tr>
+		<tr>
+			<th><label class="title">特价政策限制：</label></th>
+			<td>
+				<label class="g-radiobox"><input type="radio" />我未发布政策时允许下级采购其他供应商的特价政策</label>
+				<label class="g-radiobox"><input type="radio" />即使我未发布政策也只允许采购我发布的默认返点的特价政策</label>
+				<div class="box">
+					<p>当您未发布采购所采买的航线政策时，将使用下面的默认返点，仅适用于普通政策默认返点：</p>
+					<p>下级默认返点：<input type="text" class="text" />% <span class="pad-l obvious1">仅对成人类型乘客进行限制，不支持儿童政策出票</span></p>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<button class="btn class1">提交</button>
+				<button class="btn class2">取消</button>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

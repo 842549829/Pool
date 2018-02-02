@@ -1,0 +1,30 @@
+﻿.airlineSelector { background:none repeat scroll 0 0 #FFFFFF; border:1px solid #CCCCCC; padding:0 5px 5px 10px; position:absolute; width:345px; z-index:999; }
+.airlineSelector img { cursor:pointer; position:absolute; right:5px; top:5px; }
+.airlineSelector span { color: #F60; padding-left:120px; }
+.airlineSelector li { float:left; display:inline; width:68px; cursor:pointer; height:14px; line-height:14px; margin:5px 0; }
+.clearfix:after { content:'\0020'; display:block; height:0; clear:both; }
+.clearfix { *zoom:1;}
+
+#hotCity { border:1px solid #ccc; width:350px; padding:0px 5px 5px; position:absolute; background:#FFF; display:none; z-index:999; }
+#hotCity img { position:absolute;right: 5px; top:5px; cursor:pointer; }
+.hotCityNav { _height:1%; overflow:hidden; border-bottom:1px solid #ddd; margin:0 auto; }
+.hotCityNav span { float:left; padding:0 8px; height:18px; line-height:18px; border:1px solid #ddd; text-align:center; display:block; margin-right:8px; font-size:12px; background:#fff; cursor:pointer; color:#E60012; position:relative; bottom:-1px; }
+.hotCityNav span.active { background:#E8EDF1; }
+.searchBlock .cityList, .cityList { padding:5px 0; margin:0 auto; height:auto; width:340px; display:none; }
+.searchBlock .cityList li, .cityList li { float:left; margin:5px 0px; list-style:none; line-height:14px; height:14px; cursor:pointer; width:20%; }
+.searchBlock .cityList li:hover, .cityList li:hover { color:#F60; }
+ul.searchmain li.inputbox input.baseStyle { color:#c1c1c1; vertical-align: middle; font-size: 12px; padding-left: 5px; }
+ul.searchmain li input.Disable { background:#efefef; }
+ul.searchmain li input.searchbu { border:medium none; color:#FFFFFF; cursor:pointer; height:26px; margin:2px; padding-bottom:3px !important; padding-left:1px; text-align:center; width:130px; }
+img.btn_inputSlct { margin-top: 3px; vertical-align:middle; cursor:pointer;display: inline; }
+
+#tipContent { position: absolute; width: 180px !important; border: 1px solid #FA8484; background: #fcfcfc; cursor: pointer; color: #00a9e4; list-style-type: none; z-index: 9999; margin-left:-1px; }
+.hint { width: 180px; padding-left: 6px; font-size: 12px; color: #656565; background: #fff; }
+.mout { width: 180px; padding-left: 6px; font-size: 12px; line-height: 160%; color: #00a9e4; background: #fff; }
+.mover { width: 180px; padding-left: 6px; line-height: 160%; font-size: 12px; color: #00a9e4; background: #dcebfe; cursor: hand; }
+.selected { width: 180px; padding-left: 6px; line-height: 160%; font-size: 12px; color: #666; background: #FCE0E0; }
+.tdleft { padding-left: 6px; font-size: 12px; }
+.tdright { padding-right: 4px; }
+
+.loading { margin:20px auto;width: 213px;text-align:center; }
+.loading p { margin:15px auto; color:#f60;font-size:16px; }

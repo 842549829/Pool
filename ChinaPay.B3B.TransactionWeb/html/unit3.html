@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>B3B机票平台</title>
+	<meta charset="utf-8" />
+	<link href="/Styles/core.css" rel="stylesheet" type="text/css" />
+	<link href="/Styles/form.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		.tatistics-l{
+			border-right: 2px solid #dedede;
+			margin-right: 5%;
+			min-width: 140px;
+			width: 20%;
+		}
+		.tatistics-r{
+			width: 74%;
+		}
+		.tatistics-l p{
+			height: 30px;
+			padding: 0 10px 10px;
+		}
+	</style>
+</head>
+<body>
+	<div style="max-width:1097px;min-width:813px;">
+		<h3 class="titleBg">当日票量统计</h3>
+		<div class="box-a clearfix">
+			<div class="fl tatistics-l">
+				<p>
+					<input type="checkbox" />
+					<label>按航空公司统计</label>
+				</p>
+				<p>
+					<input type="checkbox" />
+					<label>按航线统计</label>
+				</p>
+				<p>
+					<input type="checkbox" />
+					<label>按航班号统计</label>
+				</p>
+				<p>
+					<input type="checkbox" />
+					<label>按舱位统计</label>
+				</p>
+			</div>
+			<table class="fl tatistics-r">
+				<tr>
+					<td colspan="2">
+						<div class="input">
+							<span class="name">时段：</span>
+							<input type="text" class="text text-s1" /> - <input type="text" class="text text-s1" />
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="input">
+							<span class="name">出发机场：</span>
+							<input type="text" class="text" style="height:22px;width:40px" />
+							<select></select>
+						</div>
+					</td>
+					<td>
+						<div class="input">
+							<span class="name">到达机场：</span>
+							<input type="text" class="text" style="height:22px;width:40px" />
+							<select></select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="input">
+							<span class="name">产品类型：</span>
+							<input type="text" class="text" style="height:22px;width:40px" />
+							<select></select>
+						</div>
+					</td>
+					<td>
+						<div class="input">
+							<span class="name">出方：</span>
+							<input type="text" class="text" style="height:22px;width:40px" />
+							<select></select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="input">
+							<span class="name">出品方：</span>
+							<select></select>
+						</div>
+					</td>
+					<td>
+						<div class="input">
+							<input type="button" value="查询" class="btn class1" />
+							<input type="button" value="下载" class="btn class2" />
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</html>

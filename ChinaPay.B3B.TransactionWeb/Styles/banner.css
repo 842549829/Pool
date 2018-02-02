@@ -1,0 +1,448 @@
+@charset:utf-8;
+/*  background
+	###############################################
+*/
+.bannerBg1{background-color:#FBF9EB;}
+.bannerBg2{background: url(../images/banner/iphone/bg.png) repeat;}
+.bannerBg3{background-color: #f3efdb;}
+.bannerBg4{background-color: #e4debe;}
+.bannerBg5{background: url(../images/banner/dijia/bg.png) repeat-x;}
+.bannerBg6{background-color: #B10200;}
+.bannerBg7{background-color: #E7E7E7;}
+.bannerBg8{background-color: #137415;}
+
+/*  header
+	###############################################
+*/
+.header{background: url(../images/banner/hd_bg.png) repeat-x;height: 96px;}
+.header .nav{height: 90px;margin: 0 auto;padding: 15px 0;width: 1040px;}
+.header .nav li{float: left;}
+.header .nav li a{color:#fff;font-size:16px;font-weight:600;display: block;height: 52px;line-height:47px;text-align:center;padding-right:20px;width: 108px;}
+.header .nav li a:hover{text-decoration: none;}
+.hdNavBtn1{background: url(../images/banner/nav_btn1.png) no-repeat;height: 52px;width: 128px;}
+.hdNavBtn2{background: url(../images/banner/nav_btn2.png) no-repeat right 70%;height: 52px;width: 128px;}
+
+
+
+/*  general
+	###############################################
+*/
+.chapter:hover{cursor: default;text-decoration: none;}
+
+
+/*  title
+	###############################################
+*/
+.bannerTitle{background: no-repeat 50% bottom;border:0;height: 386px;min-width: 1040px;width: 100%;}
+.b3bTitle{background-image: url(../images/banner/b3b/title.jpg);}
+.zsTitle{background-image: url(../images/banner/zhaoshang/title.jpg);height: 396px;}
+.creatTitle{background-image: url(../images/banner/creat/title.jpg);}
+.luckTitle{background-image: url(../images/banner/luck/title.jpg);height: 426px;}
+.serviceTitle{background-image: url(../images/banner/service/title.jpg);}
+.introduceTitle{background-image: url(../images/banner/introduce/title.jpg);}
+.posTitle{background-image: url(../images/banner/pos/title.jpg);}
+.jifenTitle{background-image: url(../images/banner/jifen/title.jpg);}
+.bianmaTitle{background-image: url(../images/banner/bianma/title.jpg);}
+.dijiaTitle{background-image: url(/images/banner/dijia/title.jpg);}
+.creditTitle{background-image: url(/images/banner/credit/title.jpg);height: 520px;}
+.newyearTitle{background-image: url(../images/banner/newyear/title.jpg);height: 990px;*height:980px;}
+.summerTitle{background-image: url(../images/banner/summer/title.jpg);height: 580px;}
+
+
+/*  general
+	###############################################
+*/
+.bannerContent{margin: 0 auto;width: 1040px;}
+.bannerContent p{font-size: 14px;line-height: 25px;}
+.info{color: #0181E6;}
+.default{color: #838383;}
+.warning{color: #FCD800;}
+.font-larger{font-size: 26px;}
+.font-large{font-size: 20px;}
+
+
+/*  b3b
+	###############################################
+*/
+.b3bcontentHd{background: url(../images/banner/b3b/text1.png) no-repeat;height: 46px;margin: 10px auto;width: 450px;}
+.b3bContent{background: url(../images/banner/b3b/textarea.png) no-repeat;height: 326px;margin: 10px 35px;padding: 70px 50px 0;width: 870px;}
+.b3bContent p{text-indent: 2em;}
+
+
+.zsnav{height: 30px;margin: 15px 8px;}
+.zsnav li{float: left;padding: 0 12px;width: 316px;}
+.zsnav li a{background-color: #d5c9db;color: #734b88;display: block;font-size: 14px;font-weight: bold;height: 30px;line-height: 30px;text-align: center;}
+.zsnav li a.selected,.zsnav li a:hover{background-color: #734b88;color: #fff;text-decoration: none;}
+.zstextarea1{background: url(../images/banner/zhaoshang/textarea1.png) no-repeat;height: 554px;margin: 0 0 15px 10px;padding: 0 35px;width: 970px;}
+.zstextarea2{background: url(../images/banner/zhaoshang/textarea2.png) no-repeat;height: 504px;margin: 0 0 15px 10px;padding: 0 35px;width: 970px;}
+.zstextarea3{background: url(../images/banner/zhaoshang/textarea3.png) no-repeat;height: 424px;margin: 0 0 15px 10px;padding: 0 35px;width: 970px;}
+.zsHd{color: #734b88;font-size: 14px;padding: 25px 0;}
+.zsParagraph{padding: 0 30px 30px 10px;}
+.zsParagraph span{font-weight: bold;}
+p.zsPhone{background-color: #734b88;color: #fff;font-size: 24px;font-weight: bold;height: 90px;line-height: 90px;margin: 15px 20px;text-align: center;width: 1000px;}
+
+.creatContent{background:url(../images/banner/creat/content.png) no-repeat;height: 746px;margin: 15px 20px;width: 1000px;}
+.creatHd{color: #fff;font-size: 16px;height: 45px;line-height: 45px;margin-bottom:18px;padding-left: 30px; }
+.creatHd1{color: #b51033;font-size: 24px;height: 30px;margin-bottom: 15px;}
+.creatLeft{display: inline;float: left;height: 350px;width: 450px;}
+.creatLeft .creatHd1{padding: 10px 0 0 75px; }
+.creatLeft p{margin: 10px 0;padding-left: 30px;text-indent: 2em;}
+.creatRight{display: inline;float: right;height: 350px;width: 550px;}
+.creatRight .creatHd1{padding: 10px 0 0 175px; }
+.creatRight p{margin: 10px 0;padding-right: 30px;text-align: right;}
+.creatRight p span{display: block;padding-right: 240px;}
+.creatRight p span i{display: block;text-align: left;}
+.creatBottom .creatHd1{padding: 18px 0 0 80px; }
+.creatBottom p{margin: 5px 0;padding: 0 60px;position: relative;}
+.creatBottom p span{display: block;left:30px; position: absolute;}
+
+.luckContent{background:url(../images/banner/luck/content.png) no-repeat;height: 700px;margin: 15px 33px;position: relative;width: 974px;}
+.luckSpecialnote{height: 208px;left: 525px;position: absolute;top: 428px;width: 403px;}
+.luckDescription{height: 148px;left: 53px;position: absolute;top: 489px;width: 403px;}
+.luckActivityflow{height: 205px;left: 53px;position: absolute;top: 220px;width: 403px;}
+.luckRules{height: 128px;left: 53px;position: absolute;top: 31px;width: 403px;}
+.luckShow{height: 380px;left: 525px;position: absolute;top: 31px;width: 403px;}
+.luckHd{color: #fff;font-size: 18px;height: 30px;line-height: 30px;padding: 0 0 5px 30px;}
+.luckContent p{color: #24a2b7;line-height: 18px;padding: 0 10px 0 50px;position: relative;}
+.luckContent p.description{padding: 0 10px 0 30px;text-indent: 2em;}
+.luckContent p span{display: block;left: 30px;position: absolute;}
+.iPhone5{background: url(../images/banner/luck/iPhone5.png) no-repeat left top;float: left;font-size: 18px;height: 20px;line-height: 20px;margin: 40px 20px 0 60px;padding-top: 222px;text-align: center;width: 120px;}
+.HTC{background: url(../images/banner/luck/HTC.png) no-repeat right top;float: right;font-size: 18px;height: 20px;line-height: 20px;margin: 40px 60px 0 20px;padding-top: 222px;text-align: center;width: 120px;}
+
+.serviceContent{background-color: #e4debe;height: 660px;margin: 0 20px 15px;overflow: hidden;width: 1000px;}
+.serviceHd{background: url(../images/banner/service/header.png) no-repeat; color: #fc4700;font-size: 20px;height: 44px;margin:15px 45px;padding: 40px 0 0 70px; position: relative;width: 840px;}
+.serviceHd span{ height: 30px;left: 8px;position: absolute;text-indent: -9999px;top: 5px;width: 30px;}
+.serviceHd1{background: url(../images/banner/service/1.png) no-repeat;}
+.serviceHd2{background: url(../images/banner/service/2.png) no-repeat;}
+.serviceHd3{background: url(../images/banner/service/3.png) no-repeat;}
+.serviceContent p{border-bottom: 1px dotted #858584;height: 30px;line-height: 30px;margin:0 70px;  width: 860px;}
+.serviceContent p span{display: block;float: left;padding-right: 100px;width: 220px;}
+.serviceContent p span.lastChild{padding-right: 0;}
+
+.introduceContent{margin: 0;min-width: 1040px;overflow: hidden;width: 100%;}
+.introduceContentTop{background: url(../images/banner/introduce/content.png) no-repeat 50% 50%;height: 560px;position: relative; width: 100%;z-index: 1;}
+.introduceContentTop p{font-size: 14px;line-height: 30px;text-indent: 2em;}
+.introduceContentBg{margin: 0 auto;width: 1000px;}
+.introduceContentLeft{display: inline;float: left;height: 410px;padding: 50px 35px;width: 200px;}
+.introduceContentMiddle{display: inline;float: left;height: 410px;padding: 70px 35px;width: 390px;}
+.introduceContentRight{display: inline;float: right;height: 410px;padding: 50px 35px;width: 200px;}
+.introduceHd1{background: url(../images/banner/introduce/header2.png) no-repeat;color: #fff;font-size: 24px;height: 78px;line-height: 60px;margin: 0 auto;padding-left: 50px;width: 206px;}
+.introduceHd1 span{font-size: 45px;vertical-align: middle;padding-right: 5px;}
+.introduceHd2{background: url(../images/banner/introduce/header1.png) no-repeat;color: #fff;font-size: 24px;height: 78px;line-height: 60px;margin: 120px auto 0;padding-left: 60px;width: 712px;}
+.introduceContentBottom{background-color: #f6f3e2;border: 1px solid #E4DEBE;height: 700px;margin: -100px auto 0;position: relative;width: 890px;z-index: 0;}
+.introduceContentBottom p{font-size: 14px;line-height: 30px;padding:15px 50px; }
+.introduceContentBottom p span{display: block;font-weight: bold;}
+.pTitle{color: #865d31;font-size: 16px;}
+
+.posContent{background: url(../images/banner/pos/content.png) no-repeat 50% 50%;height: 1082px;margin: 0 auto;overflow: hidden;width: 994px;}
+.posContentLeft{display: inline;float: left;height: 1035px;margin: 20px 0 0 14px;overflow: hidden;width: 680px;}
+.posContentLeft h4{font-size: 18px;padding: 15px 0 10px 30px;}
+.posContentFirst{margin: 25px 0 0 37px;height: 205px;width: 615px;}
+.posContentLeft p{padding-left: 30px;}
+.posContentSecond{margin: 25px 0 0 37px;height: 750px;width: 615px;}
+.posContentBlod{font-weight: bold;}
+.posContentIndent{text-indent: 2em;}
+.posContentRight{display: inline;float: right;height: 1035px;margin: 20px 25px 0 0;overflow: hidden;width: 265px;}
+.posContentTouch{padding: 15px 18px;}
+
+.jifenContentFirst{background: url(../images/banner/jifen/textarea2.png) no-repeat;height: 114px;margin: 20px;width: 1000px;}
+.jifenContentSecond{background: url(../images/banner/jifen/textarea1.png) no-repeat;height: 318px;margin: 20px;width: 1000px;}
+.jifenHd{color: #a40000;font-size: 18px;padding: 10px 0 20px 20px;}
+.jifenContent p{padding: 0 0 0 20px;}
+
+.bianmaContent{background: #CFE4FF url(../images/banner/bianma/content.png) no-repeat 50% 50%;box-shadow:5px 5px 10px #999;color: #2335C7;height: 1067px;margin: 0 auto 20px;position: relative;width: 983px;}
+.bianmaFlight1Bg{background: url(../images/banner/bianma/flight1.png) no-repeat;height: 120px;left: -30px;position: absolute;top: 90px;width: 308px;}
+.bianmaFlight2Bg{background: url(../images/banner/bianma/flight2.png) no-repeat;height: 219px;left: -75px;position: absolute;top: 430px;width: 308px;}
+.bianmaFlight3Bg{background: url(../images/banner/bianma/flight3.png) no-repeat;height: 163px;left: 805px;position: absolute;top: 305px;width: 241px;}
+.bianmaLine1{background: url(../images/banner/bianma/line1.png) no-repeat;height: 4px;left: 265px;position: absolute;top: 195px;width: 695px;}
+.bianmaLine2{background: url(../images/banner/bianma/line2.png) no-repeat;height: 4px;left: 45px;position: absolute;top: 445px;width: 646px;}
+.bianmaDream{background: url(../images/banner/bianma/dream.png) no-repeat;height: 401px;left: 20px;position: absolute;top: 665px;width: 253px;}
+.bianmaDream h4{color: #B78334;font-size: 20px;padding: 25px 0 10px 70px;}
+.bianmaDream p{color: #B78334;font-size: 14px;line-height: 26px;padding: 5px 0 0 42px;text-indent: 1em;}
+.bianmaCharacter h4{overflow: hidden;text-indent: -9999px;}
+.bianmaCharacter p{font-size: 14px;line-height: 25px;text-indent: 2em;}
+.bianmaCharacter1{background: url(../images/banner/bianma/characteristic1.png) no-repeat;height: 100px;left: 100px;position: absolute;top: 5px;width: 420px;}
+.bianmaCharacter1 p{padding-top: 20px;}
+.bianmaCharacter2{background: url(../images/banner/bianma/characteristic2.png) no-repeat;height: 200px;left: 470px;position: absolute;top: 30px;width: 480px;}
+.bianmaCharacter3{background: url(../images/banner/bianma/characteristic3.png) no-repeat;height: 120px;left: 400px;position: absolute;top: 205px;width: 550px;}
+.bianmaCharacter4{background: url(../images/banner/bianma/characteristic4.png) no-repeat 80px 0;height: 170px;left: 80px;position: absolute;top: 240px;width: 380px;}
+.bianmaCharacter4 p{padding-top: 30px;}
+.bianmaCharacter5{background: url(../images/banner/bianma/characteristic5.png) no-repeat 30px 0;height: 170px;left:70px;position: absolute;top: 420px;width: 540px;}
+.bianmaCharacter5 p{padding-top: 20px;}
+.bianmaCharacter6{background: url(../images/banner/bianma/characteristic6.png) no-repeat 240px 0;height: 400px;left: 440px;position: absolute;top: 550px;width: 540px;}
+
+.dijiaContent{background-color: #FEB13F;border: 1px solid #FEB13F;box-shadow: -5px 5px 10px #555;margin: 0 auto;width: 940px;}
+.dijiaHd{background: url(/images/banner/dijia/hd.png) no-repeat;border: 1px solid #FEB13F;height: 67px;margin: 10px auto;width: 924px;}
+.dijiaHd h2{color: #fff;font-size: 20px;margin: 30px 0 0 80px;}
+.dijiaHd h2 span{padding-right:50px;}
+.dijiaList{margin: 0 10px;}
+.dijiaList li{float: left;height: 86px;margin: 10px;text-indent: -9999px;width: 195px;}
+.dijia1{background: url(/images/banner/dijia/KMGTZAT.png) no-repeat;}
+.dijia2{background: url(/images/banner/dijia/ZATTKMG.png) no-repeat;}
+.dijia3{background: url(/images/banner/dijia/KMGTWNH.png) no-repeat;}
+.dijia4{background: url(/images/banner/dijia/WNHTKMG.png) no-repeat;}
+.dijia5{background: url(/images/banner/dijia/KMGTLJG.png) no-repeat;}
+.dijia6{background: url(/images/banner/dijia/LJGTKMG.png) no-repeat;}
+.dijiaBox{background: url(/images/banner/dijia/boxbg.png) no-repeat 520px 0;margin: -100px auto 0;padding: 199px 0 0 0;width: 900px;}
+.dijiaBoxBd{background-color: #A4D716;border: 1px solid #A4D716;box-shadow: -2px 2px 5px #555;margin: 0 auto 30px;padding: 15px;}
+.dijiaBoxHd{background: url(/images/banner/dijia/boxhd.png) no-repeat;height: 91px;margin: -66px auto 0;width: 512px;}
+.dijiaBoxHd h4{text-indent: -9999px;}
+.dijiaBoxContent p{color: #fff;font-size: 16px;line-height: 2;padding-left: 80px;}
+.dijiaBoxContent p span{margin-left: -80px;}
+
+.creditContent{background-color: #0263A8;border: 1px solid #0263A8;margin-left: 4px;width: 1043px;}
+.creditContent h2{background: url(/images/banner/credit/header.png) no-repeat;height: 35px;margin: 5px auto;text-indent: -9999px;width: 770px;}
+.creditList{width: 1090px;margin-left: -25px;}
+.creditList li{float: left;height: 103px;text-indent: -9999px;margin: 0 10px;width: 343px;}
+.creditLi1{background: url(/images/banner/credit/list1.png) no-repeat;}
+.creditLi2{background: url(/images/banner/credit/list2.png) no-repeat;}
+.creditLi3{background: url(/images/banner/credit/list3.png) no-repeat;}
+.creditTextBox{background: url(/images/banner/credit/textbox.png) no-repeat;height: 410px;margin: 5px auto 15px;padding-top: 24px;width: 1000px;}
+.creditTextBox h3{background: url(/images/banner/credit/header1.png) no-repeat;height: 42px;margin: 25px 5px 15px;text-indent: -9999px;padding: 0;width: 320px;}
+.creditTextBox h4{color: #fff;font-size: 18px;padding: 0 0 0 20px;margin-bottom: 15px;}
+.creditTextBox p{color: #fff;font-size: 18px;line-height: 1.7;padding: 0 0 0 20px;text-indent: 2em;}
+.creditTextBox p.p{padding-left: 130px;}
+.creditTextBox p span{margin-left:-110px;}
+
+.newyearContent{margin: 0 auto 20px;width: 920px;}
+.newyearHd1{
+	background: url(/images/banner/newyear/hd1.png) no-repeat;
+	color: #FDE21F;
+	font-size: 26px;
+	font-weight: 400;
+	height: 37px;
+	margin: 0 auto 10px;
+	padding: 10px 10px 0 0;
+	text-align: center;
+	width: 902px;
+}
+.newyearHd2{
+	background: url(/images/banner/newyear/hd2.png) no-repeat;
+	color: #fff;
+	margin: 10px auto 10px;
+}
+.newyearBox1Bg{
+	background: url(/images/banner/newyear/bg1.png) repeat;
+	margin-top: -3px;
+}
+.newyearBox1{
+	margin: 0 auto 30px;
+	padding: 10px 0;
+	position: relative;
+	width: 912px;
+}
+.newyearBox1 h1{
+	color: #E20300;
+	font-size: 40px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.newyearBox2{
+	background: url(/images/banner/newyear/bg2.jpg) no-repeat 1px 0;
+	box-shadow: 1px 5px 5px #999;
+	height: 450px;
+	margin: 0 auto 30px;
+	padding: 10px;
+	position: relative;
+	width: 892px;
+}
+.newyearBox3{
+	background-color: #0081E6;
+	box-shadow: 1px 5px 5px #999;
+	height: 50px;
+	margin: 0 auto 10px;
+	width: 912px;
+}
+.newyearBox3 p{
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 50px;
+	padding-left: 30px;
+}
+.newyearBox4{
+	background: url(/images/banner/newyear/bn1.jpg) no-repeat;
+	box-shadow: 1px 5px 5px #999;
+	height: 164px;
+	margin: 0 auto 20px;
+	width: 912px;
+}
+.newyearBox5{
+	background: #E60D15;
+	box-shadow: 1px 5px 5px #999;
+	height: 80px;
+	margin: 0 auto 20px;
+	position: relative;
+	width: 912px;
+}
+.newyearLine{
+	background: url(/images/banner/newyear/line1.png) repeat;
+	height: 2px;
+	margin: 10px 0;
+	width: 100%;
+}
+.newyearNav{
+	margin: 20px 0 25px 20px;
+}
+.newyearNav li{
+	color: #fff;
+	float: left;
+	font-size: 18px;
+	height: 33px;
+	line-height: 24px;
+	margin: 0 13px;
+}
+.newyearlistIco{
+	background: url(/images/banner/newyear/list-ico.png) no-repeat 50% 50%;
+	width: 24px;
+}
+.newyearlist1{
+	background: url(/images/banner/newyear/list1.png) no-repeat;
+	padding-left: 30px;
+	width: 95px;
+}
+.newyearlist2{
+	background: url(/images/banner/newyear/list2.png) no-repeat;
+	text-align: center;
+	width: 152px;
+}
+.newyearlist3{
+	background: url(/images/banner/newyear/list3.png) no-repeat;
+	text-align: center;
+	width: 180px;
+}
+.newyearPic1{
+	background: url(/images/banner/newyear/pic1.png) no-repeat;
+	height: 136px;
+	left: -50px;
+	position: absolute;
+	top: -10px;
+	width: 111px;
+}
+.newyearPic2{
+	background: url(/images/banner/newyear/pic2.png) no-repeat;
+	height: 133px;
+	left: -30px;
+	position: absolute;
+	top: -80px;
+	width: 256px;
+}
+.newyearPic3{
+	background: url(/images/banner/newyear/pic3.png) no-repeat;
+	height: 88px;
+	left: 10px;
+	position: absolute;
+	top: -5px;
+	width: 97px;
+}
+.newyearBanner{
+	background: url(/images/banner/newyear/bn.png) no-repeat;
+	height: 110px;
+	margin: 0 5px;
+	padding: 5px 15px;
+	width: 410px;
+}
+.newyearBanner p{
+	color: #fff;
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 50px;
+	padding-left: 40px;
+}
+.newyearInfo1 h4{
+	color: #B46A01;
+	font-size: 18px;	
+}
+.newyearInfo1 .fl{
+	padding-left: 10%;
+	width: 39.9%;
+}
+.newyearInfo1 .fr{
+	padding-left: 5%;
+	width: 44.9%;
+}
+.newyearInfo1 p{
+	color: #B46A01;
+	font-size: 18px;
+	line-height: 30px;
+}
+.newyearInfo1 p a{
+	color: #ED2704;
+	padding-right: 20px;
+}
+.newyearGoods1{
+	height: 100px;
+	left: 318px;
+	line-height: 30px;
+	padding-top: 10px;
+	position: absolute;
+	top: 280px;
+	width: 270px;
+}
+.newyearGoods2{
+	height: 100px;
+	left: 48px;
+	line-height: 30px;
+	padding-top: 10px;
+	position: absolute;
+	top: 290px;
+	width: 247px;
+}
+.newyearGoods3{
+	height: 100px;
+	left: 609px;
+	line-height: 30px;
+	padding-top: 10px;
+	position: absolute;
+	top: 290px;
+	width: 247px;
+}
+.newyearInfo2{
+	bottom: 20px;
+	left: 10px;
+	position: absolute;
+}
+.newyearInfo2 p{
+	color: #FCD800;
+	font-size: 18px;
+	font-weight: 600;
+}
+.newyearInfo2 p span{
+	color: #fff;
+	font-size: 12px;
+	font-weight: 400;
+	padding-left: 15px;
+}
+.newyearInfo3{
+	padding-left: 110px;
+}
+.newyearInfo3 p{
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 40px;
+}
+.newyearInfo3 p span{
+	font-weight: 400;
+}
+
+.summerBox{background: url(/images/banner/summer/box-bg.png) no-repeat;height: 227px;position: relative;width: 1036px;}
+.summerRight{float: right;width: 280px;}
+.summerRight img{height: 152px;margin: 35px 45px 0 20px;width: 215px;}
+.summerLeft{margin-right: 280px;}
+.summerLeft p{text-indent: 2em;padding-left: 60px;padding-top: 90px;}
+.summerPriceBox{background-color: #fff;height: 58px;left: -58px;position: absolute;top: 26px;width: 360px;}
+.summerPriceBox .summerPrice{background-color: #E2E2E2;border-right: 1px solid #D3D3D3;color: #D3010E;font-size: 24px;font-weight: 600;float: left;height: 54px;line-height: 54px;margin-top: 2px;margin-left: 2px;text-align: center;width: 80px;}
+.summerPriceBox .summerWay{background: #E2E2E2 url(/images/banner/summer/fight.png) no-repeat 215px 50%;border-left: 1px solid #fff;color: #2856AE;float: right;font-size: 20px;font-weight: 600;height: 54px;line-height: 54px;margin-top: 2px;margin-right: 2px;padding-right: 59px;text-align: center;width: 215px;}
+.summerPriceBox .summerWay span{font-size:16px;font-weight:400;}
+p.summerMore{background: url(/images/banner/summer/box-bg.png) no-repeat 0 bottom;font-size: 20px;height: 60px;line-height: 40px;text-align: center;width: 1036px;}
+.summerHeader{height: 90px;top: 485px;left: 0;padding-top: 5px;position: absolute;width: 100%;}
+.summerHeader p{color: #fff;font-size: 20px;line-height: 40px;margin:0 auto;width:980px;}
+.summerBoxShadow{box-shadow: 0 2px 10px #666;}
+.summerContent{margin: 0 auto;width: 1055px;}
+.summerNewHd{background: url(/images/banner/summer/new_01.png) no-repeat 0 0;height: 380px;width: 1055px;}
+.summerNewBox1{background: url(/images/banner/summer/new_02.png) no-repeat 0 0;font-size: 24px;height: 55px;line-height: 55px;padding-bottom: 17px;text-align: center;width: 1055px;}
+.summerNewBox2{background: url(/images/banner/summer/new_03.png) no-repeat 0 0;height: 180px;padding: 33px 50px 10px;width: 955px;}
+.summerNewBox3{background: url(/images/banner/summer/new_04.png) no-repeat 0 0;height: 125px;padding: 23px 50px 10px;width: 955px;}
+.summerNewBox2 p,
+.summerNewBox3 p{font-size: 16px;line-height: 2;text-indent: 2em;}

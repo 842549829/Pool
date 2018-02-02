@@ -1,0 +1,679 @@
+﻿/* 代码注释
+ ######################################################################
+ */
+
+
+/*注册头部菜单*/
+#enrol{width:100%;height:36px;}
+#enrol ul li{width:326px; height:36px;float:left;text-align:center;line-height:36px;color:#fff;background:url(/images/reg/3.png) no-repeat 50% 2px;position:relative;}
+#enrol ul li em.regisert_ico{background:url(/images/regiserttype.png) no-repeat 0 0;display:block;height:60px;position:absolute;right:0;text-align:left;text-indent:-9999px;top:-20px; width:60px;}
+#enrol ul li em.purchaser_ico{background-position:0 0;}
+#enrol ul li em.provide_ico{background-position:-60px 0;}
+#enrol ul li em.agent_ico{background-position:-120px 0;}
+#enrol ul li span{background:url(/Images/b.png) no-repeat right -15px; padding-right:35px;}
+#enrol ul li.e1{background:url(/images/reg/4.png) no-repeat 50% top;color:#4a5164;}
+#enrol ul li.e1 span{background:url(/Images/b.png) no-repeat right 4px; padding-right:35px;}
+#enrolPenrol{margin:0 auto; width:938px; background-color:#f3f3f3; padding:20px;}
+
+/*法律条款*/
+#clause .clauseText{overflow:auto; border:#93ae84 1px solid; height:100px; text-align:center; line-height:1.8em; color:#7a7a7a;}
+#clause p{text-align:center; margin:10px 0;}
+
+/*注册成功*/
+#succeed{width:980px; margin:0 auto;}
+
+
+/*关于我们*/
+.bn{width:980px; margin:0 auto; background:url(/Images/del/ab_bg.jpg) no-repeat;height:70px; clear:both;}
+.bn_1{width:980px; margin:0 auto; background:url(/Images/del/ab_bg3.jpg) no-repeat;height:70px; clear:both;}
+#Swrap{width:980px; margin:0 auto; padding-top:20px;}
+#Swrap .secondL{float:left; margin-right:20px; width:200px; background:url(/Images/del/t.gif) no-repeat left 3px;}
+#Swrap .secondL li{border-bottom:1px  dashed #d1d1d1; height:30px; line-height:30px; padding-left:20px;}
+#Swrap .secondL li span{font-weight:bold; padding:0 5px;}
+#Swrap .secondR{float:left; width:760px; line-height:1.8em;}
+#Swrap .secondR h3{border-bottom:2px #cecece solid; width:100%; height:20px; padding-bottom:10px; margin-bottom:10px;}
+#Swrap .secondR p img{margin:40px 0;}
+#Swrap .secondB {margin:20px 0; float:left; width:100%;}
+#Swrap .secondB img,#Swrap .secondB ul{float:left;}
+#Swrap .secondB ul{position:relative; top:30px; left:50px;}
+#Swrap .secondB ul li{margin:5px 0;}
+
+/*客服服务*/
+#Swrap .secondB a{background:url(/Images/del/qq.gif) no-repeat;width:109px; height:24px; display:inline-block; margin:0 15px 0 0;}
+#Swrap .secondB a.qqOnline{background-position:left top;}
+#Swrap .secondB a.qqFloor{background-position:left bottom;}
+#Swrap .secondR p i{font-weight:bold; font-size:16px; color:red;}
+
+
+/*page*/
+
+#page span,#page a{display:inline;}
+#page span i{color:red; font-weight:bold;}
+#page .pageBox{padding:5px 10px; border:1px #cecece solid; background-color:#ececec; width:190px; height:55px; line-height:55px;}
+#page .pageBox a,#page .pageBox p,#page .pageBox input{display:inline;}
+#page .pageBox a{background-color:#f5f5f5; border:1px #dddddd solid; text-decoration:none; padding:2px 10px; margin-left:10px;}
+#page .pageBox a:hover{background-color:#ebebeb;}
+#page .pageBox input{border:1px #dddddd solid; background-color:white; width:15px; height:10px; overflow:hidden; margin:0 5px;}
+
+/*提示*/
+.tip{margin:15px 0;}
+.ErrorTipEmpty{padding:5px;color:white; margin:5px 0 0;float:left;width:100%;}
+.ErrorTip{color:#CE2E52;background-color:#FFF9D7; border:1px solid #E1C921;}
+
+/*面包屑*/
+.current{margin:15px 0;}
+
+/*选择列表*/
+.shop{}
+
+/*浮动调整*/
+.tips{display:inline;}
+ul.box-b{margin:10px 0;}
+ul.box-b li{display:inline; margin:0 10px;}
+/*.btn{margin:10px 0;}*/
+
+/*数字输入框*/
+input.digit{width:20px !important; margin-right:2px;} 
+
+
+/*登录后的界面样式*/
+#middle{width:65.3%; float:left; margin-right:2%;}
+#middle .scheduled{margin-bottom:25px; padding-bottom:5px;border-bottom:1px #cecece solid;}
+#middle .scheduled ul{float:left;}
+#middle .scheduled ul li{display:inline; margin:0 60px 10px 0; float:left;width:240px}
+#middle .scheduled ul li img{ display: inline;}
+.scheduled .tab-menu { padding-bottom:15px;}
+#middle .newList h3{margin-bottom:5px;}
+#middle .newList ul li{margin-bottom:15px; float:left; margin-right:150px;}
+#middle .newList ul li span{color:#828282; margin-right:10px;}
+#middle .newList ul li i{color:#ff6602; font-weight:bold; margin-left:10px;}
+#middle .remind{ background-color:#fffedf; width:95%; padding:20px; border:1px solid #fdecc6; margin-bottom:20px; overflow:hidden;}
+#middle .remind p{float:left;width:200px;height:25px; color:#3f7cca;}
+#middle .remind p a{color:#3f7cca;}
+#middle .policy{ background-color:#fffedf; width:95%; padding:20px; border:1px solid #fdecc6; margin-bottom:20px; overflow:hidden;}
+#middle .policy li h3,#middle .policy li p {float:left;color:#3f7cca;}
+#middle .policy li h3{font-weight:normal;}
+#middle .policy li{clear:both; float:left; margin-bottom:15px; width:100%;}
+li.tips{display:block; width:100% !important; text-align:right; position:relative; left:-10px;}
+li.tips button{margin-left:20px;}
+p.tab{margin-bottom:20px;}
+p.tab a{display:inline-block; width:125px; height:35px;text-align:center; line-height:25px;}
+p.tab a.on{background:url(/Images/nBg.png) no-repeat; color:white; font-weight:bold; }
+#imgList ul{margin:5px 0 25px 0; float:left;}
+#imgList li{display:inline-block; float:left;}
+#imgList li.listNew{margin-left:15px; width:135px; line-height:1.3em; position:relative; top:-4px;}
+#imgList p.title_5{font-size:14px; color:#5c7aad; margin-bottom:5px;}
+div.bn_5 button{position:relative; left:130px;}
+#right{border-left:1px #cecece solid; border-bottom:1px #cecece solid; float:left; width:28.8%; padding-left:2%;}
+.tips-box_1{padding:10px 10px 10px 25px; margin-bottom:10px; border:1px dashed #ffc885; background-color:#ffe6d7; color:#686868;}
+.tips-box_1 strong{color:#ff6100; margin-right:10px;}
+.color{color:#fc6700; text-decoration:underline;}
+.waitTime,.waitedTime{font-size:20px;font-weight:900;line-height: 1.2em;font-family: "微软雅黑" , "宋体";}
+
+
+/* 浠ｇ爜娉ㄩ噴   Tc 浠庤繖涓嬭竟寮€濮嬪啓鑷繁椤甸潰鐨勪唬鐮?
+ ######################################################################
+ */
+
+/* 鐧诲綍
+    ################################################################
+*/
+#loginBigPic1{
+    background: url(/images/login/01-summer.jpg) no-repeat 50% 50%; 
+    height: 367px;
+    position: absolute;
+    width: 100%;
+}
+#loginBigPic2{
+    background: url(/images/login/02-zs.jpg) no-repeat 50% 50%;
+    height: 367px;
+    position: absolute;
+    width: 100%;
+}
+#loginBigPic3{
+    background: url(/images/login/03-xy.jpg) no-repeat 50% 50%;
+    height: 367px;
+    position: absolute;
+    width: 100%;
+}
+#loginBigPic4{
+    background: url(/images/login/04-pos.jpg) no-repeat 50% 50%;
+    height: 367px;
+    position: absolute;
+    width: 100%;
+}
+#loginBigPic5{
+    background: url(/images/login/05-xx.jpg) no-repeat 50% 50%;
+    height: 367px;
+    position: absolute;
+    width: 100%;
+}
+#loginSmallPic1{
+    background: url(/images/login/01-gft.jpg) no-repeat 50% 50%;
+    height: 150px;
+    position: absolute;
+    width: 100%;
+}
+#loginSmallPic2{
+    background: url(/images/login/02-tui.jpg) no-repeat 50% 50%;
+    height: 150px;
+    position: absolute;
+    width: 100%;
+}
+#loginSmallPic3{
+    background: url(/images/login/03-mai.jpg) no-repeat 50% 50%;
+    height: 150px;
+    position: absolute;
+    width: 100%;
+}
+#loginSmallPic4{
+    background: url(/images/login/04-sq.jpg) no-repeat 50% 50%;
+    height: 150px;
+    position: absolute;
+    width: 100%;
+}
+.loginBgBox{
+    height: 367px;
+    min-width: 1024px;
+    overflow:hidden;
+    position: relative;
+    width: 100%;
+}
+.focus{
+    width: 100%;
+    height: 367px;
+}
+.jfocus{
+	position: relative;
+	overflow: hidden;
+}
+.jfocus li{
+	width: 100%;
+	height: 367px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.jfocus .index{
+	position: absolute;
+	left: 42%;
+	top: 90%;
+	z-index: 2;
+}
+.jfocus .index a{
+	background: url(/images/login/slide_btn.png) no-repeat right top;
+    cursor: pointer;
+    float: left;
+    height: 5px;
+    margin: 0 5px;
+    width: 40px;
+}
+.jfocus .index a.curr{
+	background: url(/images/login/slide_btn.png) no-repeat;
+}
+.imageSlideBtns li.selectedBgSlide{
+    background: url(/images/login/slide_btn.png) no-repeat;
+}
+.loginAreaBox
+{
+    width:980px;
+    margin: 0 auto;
+    z-index:100;
+    position:relative;
+}
+.loginArea{
+    background: url(/images/login/loginarea.png) no-repeat;
+    height: 271px;
+    right:0;
+    padding: 25px 30px;
+    position: absolute;
+    top: 10px;
+    width: 256px;
+}
+.loginArea h4{
+    color: black;
+}
+.loginArea p{
+    color: #666;
+    line-height: 20px;
+    position:relative;
+    width:246px;
+}
+.loginArea p a{
+    color: #666;
+    position:absolute;
+    right:0;
+    text-decoration: underline;
+    top:0;
+}
+.loginArea p a:hover{
+    color: #002164;
+}
+.loginBorderBox{
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    cursor: text;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+}
+.loginBorderBox input{
+    border: 0;
+    color: black;
+    font-size:16px;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    width: 210px;
+}
+.unlock{
+    background: url(/images/login/pwd.png) no-repeat;
+    display: block;
+    float: right;
+    height: 20px;
+    margin: 5px 10px 0 0;
+    width: 17px;
+}
+.loginBorderBox1{
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    cursor: text;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 150px;
+}
+.loginBorderBox1 input{
+    border: 0;
+    color: black;
+    font-size:16px;
+    height: 23px;
+    line-height: 23px;
+    width: 140px;
+}
+.checkCore{
+    border: 1px solid #e6e6e6;
+    float: right;
+    height: 30px;
+    width: 100px;
+}
+.loginBtnBox{
+    height: 30px;
+    padding: 10px 0;
+}
+.loginBtn{
+    background-color: #FF8D15;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    height: 30px;
+    width: 150px;
+}
+.loginBtn:hover{
+    background-color: #F2A250;
+}
+.loginBtnBox a{
+    background-color: #706C6B;
+    color: #fff;
+    display: block;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 100px;
+}
+.loginBtnBox a:hover{
+    background-color: #9D9B9B;
+    text-decoration: none;
+}
+.loginArea p.phone{
+    color: #000;
+}
+.loginSubBox
+{
+    height:200px;
+    margin: 15px auto 15px;
+    width: 980px;
+    min-width:980px;
+}
+.recommend{
+    width:64%;
+    background-color: #fdfdfd;
+    border: 1px solid #dbdbdb;
+    float: left;
+    height: 190px;
+    overflow:hidden;
+}
+.recommendTitle{
+    height: 32px;
+    width: 100%;
+    background-color: #4A5163;
+    overflow: hidden;
+}
+.header{
+    height: 30px;
+    background: url(/images/10px.png) no-repeat 15px 50%;
+    color: white;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 0 0 0 30px;
+    float: left;
+}
+.recommendTitle ul{
+    height: 28px;
+    margin: 4px 15px 0;
+    float: left;
+    line-height: 28px;
+}
+.recommendTitle ul li {
+    float: left;
+}
+.recommendTitle ul li a{
+    padding: 0 10px;
+    height: 28px;
+    display: block;
+    color: white;
+    width:30px;
+    text-align:center;
+}
+.recommendTitle ul li a.selectedCity,
+.recommendTitle ul li a:hover{
+    background-color: white;
+    color: #002164;
+    font-weight:bold;
+    text-decoration: none;
+}
+.recommendList{
+    margin: 10px 2%;
+}
+.recommendList li {
+    float: left;
+    line-height: 25px;
+    width: 30%;
+    margin: 2px 3% 2px 0;
+}
+.flightInfo{
+    border-bottom: 1px dotted #666;
+}
+.recommendList li a{
+    color: #002164;
+}
+.bigBox{
+    background-color: #E6E6E6;
+    border: 1px solid #E6E6E6;
+    float: right;
+    height: 190px;
+    width:33%;   
+}
+.smallBox{
+    background-color: #fff;
+    height: 170px;
+    margin: 10px 3%;
+    width: 94%;
+    overflow: hidden;
+}
+.loginSmallBox{
+    height: 150px;
+    margin: 10px 2%;
+    overflow: hidden;
+    position: relative;
+    width:96%;
+}
+.smallPicBox{
+    height: 150px;
+    position: relative;
+    width: 100%;
+}
+.smallSlideBtns{
+    left: 20.5%;
+    position: absolute;
+    top: 93.5%;
+}
+.smallSlideBtns li{
+    background: url(/images/login/slide_btn.png) no-repeat right top;
+    cursor: pointer;
+    float: left;
+    height: 5px;
+    margin: 0 5px;
+    width: 40px;
+}
+.smallSlideBtns li.selectedSmallSlide{
+    background: url(/images/login/slide_btn.png) no-repeat;
+}
+/* 涓夊瓧鐮?
+    ################################################################
+*/
+.queryBox
+{
+    margin:20px auto;
+    width:390px;
+}
+.queryBox p
+{
+    height:35px;
+    line-height:35px;
+}
+.queryText
+{
+    border:1px solid #999;
+    color:#58A4DB;
+    font-size:20px;
+    font-weight:bold;
+    height:33px;
+    line-height:33px;
+    margin:0 5px;
+    padding:0 3px;
+    vertical-align:middle;
+    width:200px;
+}
+.queryBtn
+{
+    background-color:#FBA011;
+    border:0;
+    color:#fff;
+    height:35px;
+    vertical-align:middle;
+    width:100px;
+}
+.queryBtn:hover
+{
+    background-color:#FAB44B;
+}
+.queryPrompt
+{
+    color:#666;
+    padding:0 0 0 50px;
+}
+.tList
+{
+    text-align:center;
+    width:100%;
+}
+.tList h4
+{
+    background-color:#f3f3f3;
+    height:30px;
+    line-height:30px;
+    margin:15px 0;
+    padding:0;   
+}
+.tList ul li
+{
+    display:inline;
+    float:left;
+    margin-right:16px;
+    width:233px;
+}
+.tList ul li.lastChild
+{
+    margin-right:0;
+}
+.tList ul li span
+{
+    display:inline;
+    float:left;
+    height:30px;
+    line-height:30px;
+}
+.tTitle
+{
+    background-color:#dedede;
+    margin:5px 1px;
+    width:114px;
+}
+.tContent
+{
+    background-color:#f3f3f3;
+    margin:5px 1px;
+    width:110px;
+}
+.tList ul li span.tCR
+{
+    float:right;
+}
+div#Condition
+{
+    margin-top:15px;
+}
+
+
+/*  lostPwd
+    #################################################
+*/
+.lostPwdHeader{
+    background: url(/images/banner_bg.png) no-repeat 50% 50%;
+    height: 80px;
+    margin: 0 auto;
+    width: 980px;
+}
+.lostPwdContent{
+    border: 1px solid #666;
+    box-shadow: 0 0 10px #666;
+    margin: 30px auto;
+    width: 900px;
+}
+.lostPwdTitle{
+    background: #fffae6;
+    border: 1px solid #e5bb30;
+    height: 30px;
+    line-height: 30px;
+    margin: 15px 200px;
+    width: 500px;
+}
+.lostPwdTitle p{
+    background: url(/images/important.png) no-repeat;
+    padding-left: 40px;
+}
+.lostPwdGoback
+{
+    background:#ff8c01;
+    color:#fff;
+    display:block;
+    height:30px;
+    line-height:30px;
+    margin:15px auto;
+    text-align:center;
+    width:80px;
+}
+.lostPwdGoback:hover
+{
+    background:#ffaa43;
+    text-decoration:none;
+}
+.lostPwdTitle p.lostPwdSuccess
+{
+    background: url(/images/success.png) no-repeat 0 -1px;
+}
+.lostPwdContent ul{
+    margin: 15px 200px;
+}
+.lostPwdContent ul li{
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 10px;
+}
+.lostPwdContent ul li label{
+    display: block;
+    float: left;
+    text-align: right;
+    width: 150px;
+}
+.lostPwdContent ul li input{
+    display: block;
+    float: left;
+}
+.codeMsg{
+    margin: 15px 0 15px 360px;
+}
+.lostPwdContent img{
+    height: 30px;
+    margin: 15px 0 15px 360px;
+    width: 100px;
+}
+.lostPwdBtn{
+    margin: 15px 0 15px 360px;
+}
+
+/*  releasetips
+    #################################################
+*/
+.releasetips{
+    background: #1F8DCA url(/images/about/release/heng.jpg) no-repeat 50% 50%;
+    height: 60px;
+    margin: 10px 0;
+    width: 100%;
+}
+.releasecon{
+    margin: 0 auto;
+    width: 980px;
+}
+.releasenew{
+    background: url(/images/about/release/date.gif) no-repeat 0 50%;
+    height: 60px;
+    width: 146px;
+}
+.releasetipsMini{
+    background: #1F8DCA url(/images/about/release/hengMini.jpg) no-repeat 50% 50%;
+    height: 60px;
+    margin: 10px 0;
+    width: 100%;
+}
+.releaseconMini{
+    margin: 0 auto;
+    width: 813px;
+}
+.releasenewMini{
+    background: url(/images/about/release/dateMini.gif) no-repeat 0 50%;
+    height: 60px;
+    width: 54px;
+}
+
+.drop-header{
+		background-color: #f2f2f2;
+		background-image: -webkit-gradient(linear,center top,center bottom,from(#f2f2f2),to(#fff));
+		background-image: -webkit-linear-gradient(top,#f2f2f2,#fff);
+		background-image: -moz-linear-gradient(top,#f2f2f2,#fff);
+		background-image: -ms-linear-gradient(top,#f2f2f2,#fff);
+		background-image: -o-linear-gradient(top,#f2f2f2,#fff);
+		background-image: linear-gradient(top,#f2f2f2,#fff);
+		border: 1px solid #cecece;
+		border-radius: 10px 10px 0 0;
+		cursor: pointer;
+		float: right;
+		height: 30px;
+		line-height: 30px;
+		padding: 0;
+		text-align: center;
+		width: 150px;
+}
+.drop-content{
+		border: 1px solid #cecece;
+}
+.drop-content .type{
+		height: 25px;
+		line-height: 25px;
+}
+.drop-content table{
+		margin-bottom: 0 !important;
+}

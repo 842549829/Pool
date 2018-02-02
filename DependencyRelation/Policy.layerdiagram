@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="5157445d-4cdc-4977-9734-05726d17b96e" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="0f088aff-7a3f-40e9-98e0-2c10c63a8a50" name="PolicyManage">
+      <description>1、运营对单位的政策的挂起、解挂、审核与取消审核
+2、单位对自己发布的政策的管理
+3、单位与其他供应商发布的政策的对比</description>
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="a60d8619-6d1f-4b6d-ab93-e302747a9006" direction="Forward">
+          <layerMoniker Id="7500fde1-b81e-4b07-a30d-118f437d8b8b" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="90aa9c64-b69a-464d-8c5b-a443605536e0" direction="Forward">
+          <layerMoniker Id="efcd7b69-9f50-43c4-8134-5d1e8c504c4e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="c9263ad6-28c2-493d-94c6-1b77d07d8b2c" name="PolicyMatch">
+      <description>1、航班查询的政策匹配
+2、政策选择页面的政策匹配
+3、生成订单前的指定政策匹配
+4、编码导入时的政策匹配
+5、资源方提供资源后，选择出票方的政策匹配
+6、换供应商出票时的政策匹配</description>
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="0c3adb59-848b-481a-8a1b-f5225fffc9d7" direction="Forward">
+          <layerMoniker Id="0f088aff-7a3f-40e9-98e0-2c10c63a8a50" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="e13260b6-2573-492c-b158-73ac59adaed6" direction="Forward">
+          <layerMoniker Id="5ce8bcef-7826-4c6b-b25c-2377e625e6ea" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="378264ac-52ea-461e-80cb-d243658a3e85" direction="Forward">
+          <layerMoniker Id="90f09f95-1d10-49ec-8650-79a8b1bcfa7b" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="b638697c-0b38-472a-b3fe-1f2d4a330afe" direction="Forward">
+          <layerMoniker Id="51c12d4f-930c-495d-9fbe-5f8277e07a32" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="7924eaf2-5c1d-4422-91fe-14e774d7cbfe" direction="Forward">
+          <layerMoniker Id="7500fde1-b81e-4b07-a30d-118f437d8b8b" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="d04522b7-25a0-4d16-899e-0ea13df7109b" direction="Forward">
+          <layerMoniker Id="efcd7b69-9f50-43c4-8134-5d1e8c504c4e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="51c12d4f-930c-495d-9fbe-5f8277e07a32" name="FlightQuery">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="b4faa225-7e4b-480a-87af-69b6f04a361d" direction="Forward">
+          <layerMoniker Id="a088b6b2-9eaf-497d-b56e-c6ae8b4dd7ab" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="d20d5af1-146c-4d26-9555-afc65c9e12c3" direction="Forward">
+          <layerMoniker Id="0f088aff-7a3f-40e9-98e0-2c10c63a8a50" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="7500fde1-b81e-4b07-a30d-118f437d8b8b" name="Company">
+      <description>1、运营对单位政策设置（包括允许发布的政策数 和 能发布的航空公司与出发地）
+2、单位对下级或内部机构的采购设置（根据航空公司和出发地进行设置）</description>
+    </layer>
+    <layer Id="5ce8bcef-7826-4c6b-b25c-2377e625e6ea" name="SystemParam" />
+    <layer Id="efcd7b69-9f50-43c4-8134-5d1e8c504c4e" name="CompanyParam" />
+    <layer Id="90f09f95-1d10-49ec-8650-79a8b1bcfa7b" name="SystemSetting">
+      <description>1、VIP设置
+2、VIP协调
+3、政策协调</description>
+    </layer>
+    <layer Id="5352f822-82f2-47a3-9e59-0f728d000c07" name="Infrastructures" />
+    <layer Id="eac32b17-c8bf-45b6-be43-1a6fc0b85b0a" name="Log" />
+    <layer Id="a088b6b2-9eaf-497d-b56e-c6ae8b4dd7ab" name="FoundationData" />
+  </layers>
+</layerModel>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b8bc3f06-6c43-4288-83e9-faa5d1e32df8" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="a1dc8b22-b7db-429d-bf5b-2609cbfba4b9" name="ChinaPay.B3B.Service.Log">
+      <description>日志服务</description>
+    </layer>
+    <layer Id="fe45a168-939f-43dd-ad42-5664578e1617" name="ChinaPay.B3B.Service.Foundation">
+      <description>基础数据服务</description>
+    </layer>
+    <layer Id="5c84ccce-a389-4d42-b716-b40d1fff21ee" name="ChinaPay.B3B.Service.SystemManagement">
+      <description>系统管理服务</description>
+    </layer>
+    <layer Id="4bd622c2-4376-494e-a289-a17db1f8e7d6" name="ChinaPay.B3B.Service.Order">
+      <description>订单服务</description>
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="8036ec5f-ad93-4382-a126-548318819fcc" direction="Forward">
+          <layerMoniker Id="3680c44c-2ac0-4d87-a20b-bd5dcddebc52" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="6765e7ac-6d11-4512-80b0-8ee84ff28cbe" direction="Forward">
+          <layerMoniker Id="fea49860-8b09-49c5-bcb9-3e7da2e22a49" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="fea49860-8b09-49c5-bcb9-3e7da2e22a49" name="ChinaPay.B3B.Service.Organization">
+      <description>组织机构服务</description>
+    </layer>
+    <layer Id="c5708af3-8f5f-495f-8a96-e3c3588077ce" name="ChinaPay.B3B.Service.Policy">
+      <description>政策管理</description>
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="b8baceb1-c992-40a6-a07b-ae494946def4" direction="Forward">
+          <layerMoniker Id="fea49860-8b09-49c5-bcb9-3e7da2e22a49" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="a9012355-ec39-445c-87f7-2ed598ca4340" direction="Forward">
+          <layerMoniker Id="80d45c57-31c4-4ed9-80de-a6627c33a391" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="3680c44c-2ac0-4d87-a20b-bd5dcddebc52" name="ChinaPay.B3B.Service.PolicyMatch">
+      <description>政策匹配服务</description>
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="689fb17c-d936-4a97-9327-57fe9460a629" direction="Forward">
+          <layerMoniker Id="8dbffd61-d82f-4228-a2d3-c65783174fef" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="2fbbbe75-259c-47cb-9e45-56e2ce4c43d0" direction="Forward">
+          <layerMoniker Id="c5708af3-8f5f-495f-8a96-e3c3588077ce" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="29ee3979-f47b-447a-8bec-c85cb0540e31" direction="Forward">
+          <layerMoniker Id="fea49860-8b09-49c5-bcb9-3e7da2e22a49" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="0947a2a0-9a9e-44dd-a060-a7ee1e07bd74" direction="Forward">
+          <layerMoniker Id="80d45c57-31c4-4ed9-80de-a6627c33a391" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="cbc32136-9fe3-4f68-8447-5acdbbfff149" direction="Forward">
+          <layerMoniker Id="5c84ccce-a389-4d42-b716-b40d1fff21ee" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="1488cb24-fe20-4155-b5f8-b7242d3d8b9c" name="ChinaPay.B3B.Service.Command">
+      <description>指令服务</description>
+    </layer>
+    <layer Id="8dbffd61-d82f-4228-a2d3-c65783174fef" name="ChinaPay.B3B.Service.FlightQuery">
+      <description>航班查询服务</description>
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="c864928e-5473-4c9b-a50e-9c0d080e7240" direction="Forward">
+          <layerMoniker Id="c5708af3-8f5f-495f-8a96-e3c3588077ce" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="97d5ab98-a5e2-4fab-826e-45694dba1a79" direction="Forward">
+          <layerMoniker Id="1488cb24-fe20-4155-b5f8-b7242d3d8b9c" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="2a7f318a-91d4-482a-b3e5-2639d3f0ed90" direction="Forward">
+          <layerMoniker Id="fe45a168-939f-43dd-ad42-5664578e1617" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="407d8a74-9c42-4472-80b5-745fadbbd816" direction="Forward">
+          <layerMoniker Id="5c84ccce-a389-4d42-b716-b40d1fff21ee" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="801ee858-0ff4-4930-9b82-b11fe2b4ef24" name="ChinaPay.B3B.Service.Permission">
+      <description>权限服务</description>
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="a654e3f1-0196-4d9c-b843-e4b79f764d3d" direction="Forward">
+          <layerMoniker Id="fea49860-8b09-49c5-bcb9-3e7da2e22a49" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="704439a8-5554-4c2b-8bf8-8d1426081b92" name="ChinaPay.B3B.Service.Announce">
+      <description>平台公告服务</description>
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="72ef1db7-8e7d-4348-8667-f637a6fc94d6" direction="Forward">
+          <layerMoniker Id="fea49860-8b09-49c5-bcb9-3e7da2e22a49" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="80d45c57-31c4-4ed9-80de-a6627c33a391" name="ChinaPay.B3B.Service.SystemSetting">
+      <description>系统设置服务</description>
+    </layer>
+  </layers>
+</layerModel>

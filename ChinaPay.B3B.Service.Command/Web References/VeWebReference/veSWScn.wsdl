@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="urn:veSWScnService" xmlns:atls="http://tempuri.org/vc/atl/server/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:veSWScnService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="urn:veSWScnService">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RtPnrIn">
+    <wsdl:part name="bstrPnrNO" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RtPnrOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BookIn">
+    <wsdl:part name="bstrCmds" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BookOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateXCDIn">
+    <wsdl:part name="bstrTicketNO" type="s:string" />
+    <wsdl:part name="bstrXCDH" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateXCDOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelXCDIn">
+    <wsdl:part name="bstrTicketNO" type="s:string" />
+    <wsdl:part name="bstrXCDH" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelXCDOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AVHIn">
+    <wsdl:part name="bstrHC" type="s:string" />
+    <wsdl:part name="bstrCFDate" type="s:string" />
+    <wsdl:part name="bstrHGKS" type="s:string" />
+    <wsdl:part name="bstrIFZD" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AVHOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FFIn">
+    <wsdl:part name="bstrHBH" type="s:string" />
+    <wsdl:part name="bstrDate" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FFOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DetrIn">
+    <wsdl:part name="bstrTicketNO" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DetrOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrIn">
+    <wsdl:part name="bstrPNR" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ParsePnrOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ETDZIn">
+    <wsdl:part name="bstrPnrNO" type="s:string" />
+    <wsdl:part name="bstrUser" type="s:string" />
+    <wsdl:part name="bstrPwd" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+    <wsdl:part name="bstrEI" type="s:string" />
+    <wsdl:part name="bstrPAT" type="s:string" />
+    <wsdl:part name="bstrSCNY" type="s:string" />
+    <wsdl:part name="bstrPersons" type="s:string" />
+    <wsdl:part name="bstrDDBH" type="s:string" />
+    <wsdl:part name="bstrDYLX" type="s:string" />
+    <wsdl:part name="bstrIsTest" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ETDZOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TSSIn">
+    <wsdl:part name="bstrTicketNO" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="strIsSuspended" type="s:string" />
+    <wsdl:part name="strOffice" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TSSOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PATIn">
+    <wsdl:part name="bstrSS" type="s:string" />
+    <wsdl:part name="bstrPAT" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PATOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDIn">
+    <wsdl:part name="bstrCityPair" type="s:string" />
+    <wsdl:part name="bstrCFDate" type="s:string" />
+    <wsdl:part name="bstrHGKS" type="s:string" />
+    <wsdl:part name="bstrNeedParsed" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CYIn">
+    <wsdl:part name="bstrPnrNO" type="s:string" />
+    <wsdl:part name="bstrTargetOffice" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CYOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FLPIn">
+    <wsdl:part name="bstrHBH" type="s:string" />
+    <wsdl:part name="bstrDate" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FLPOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NFDIn">
+    <wsdl:part name="bstrCityPair" type="s:string" />
+    <wsdl:part name="bstrDate" type="s:string" />
+    <wsdl:part name="bstrHGKS" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NFDOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EditPNRIn">
+    <wsdl:part name="bstrPnrNO" type="s:string" />
+    <wsdl:part name="bstrCmds" type="s:string" />
+    <wsdl:part name="bstrNeedSealed" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EditPNROut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelPNRIn">
+    <wsdl:part name="bstrPnrNO" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelPNROut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CLRFIn">
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CLRFOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ANIn">
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="strNewPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ANOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TKScanIn">
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="strTickets" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TKScanOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddUserIn">
+    <wsdl:part name="strCode" type="s:string" />
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddUserOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AVHXMLIn">
+    <wsdl:part name="bstrHC" type="s:string" />
+    <wsdl:part name="bstrCFDate" type="s:string" />
+    <wsdl:part name="bstrHGKS" type="s:string" />
+    <wsdl:part name="bstrIFZD" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AVHXMLOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ONLYDETRIn">
+    <wsdl:part name="bstrDETR" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ONLYDETROut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DelUserIn">
+    <wsdl:part name="strCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DelUserOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyUserIn">
+    <wsdl:part name="strCode" type="s:string" />
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyUserOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DetrXMLIn">
+    <wsdl:part name="bstrDETR" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DetrXMLOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PNRPATIn">
+    <wsdl:part name="bstrPnrNO" type="s:string" />
+    <wsdl:part name="bstrPAT" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PNRPATOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QTEIn">
+    <wsdl:part name="bstrSS" type="s:string" />
+    <wsdl:part name="bstrQTE" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QTEOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllGroupsIn" />
+  <wsdl:message name="GetAllGroupsOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByGroupIn">
+    <wsdl:part name="strGroupID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByGroupOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllGroupsAndUsersIn" />
+  <wsdl:message name="GetAllGroupsAndUsersOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupByUserIn">
+    <wsdl:part name="strUserCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupByUserOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddUser2In">
+    <wsdl:part name="strCode" type="s:string" />
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strPassword" type="s:string" />
+    <wsdl:part name="strGroupID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddUser2Out">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SwitchGroupIn">
+    <wsdl:part name="strCode" type="s:string" />
+    <wsdl:part name="strOldGroupID" type="s:string" />
+    <wsdl:part name="strNewGroupID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SwitchGroupOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WFIn">
+    <wsdl:part name="strCity" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WFOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateXCD2In">
+    <wsdl:part name="bstrTicketNO" type="s:string" />
+    <wsdl:part name="bstrXCDH" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+    <wsdl:part name="bstrNeedParsed" type="s:string" />
+    <wsdl:part name="bstrTested" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateXCD2Out">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QTE2In">
+    <wsdl:part name="bstrSS" type="s:string" />
+    <wsdl:part name="bstrQTE" type="s:string" />
+    <wsdl:part name="bstrChildCmds" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QTE2Out">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PnrAuthIn">
+    <wsdl:part name="strPnrNO" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+    <wsdl:part name="bstrTargetOffices" type="s:string" />
+    <wsdl:part name="bstrOfficesToDelete" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PnrAuthOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SSRFOIDIn">
+    <wsdl:part name="strPnrNO" type="s:string" />
+    <wsdl:part name="bstrName" type="s:string" />
+    <wsdl:part name="bstrOldFOID" type="s:string" />
+    <wsdl:part name="bstrNewFOID" type="s:string" />
+    <wsdl:part name="bstrType" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SSRFOIDOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AVHFLTIn">
+    <wsdl:part name="strFlightNO" type="s:string" />
+    <wsdl:part name="bstrDate" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AVHFLTOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PNRPAT2In">
+    <wsdl:part name="bstrPnrNO" type="s:string" />
+    <wsdl:part name="bstrPAT" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PNRPAT2Out">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="XCDstateIn">
+    <wsdl:part name="bstrTicketNO" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="XCDstateOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RRTPNRIn">
+    <wsdl:part name="bstrPnrNO" type="s:string" />
+    <wsdl:part name="bstrFlight" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RRTPNROut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Detr2In">
+    <wsdl:part name="bstrTicketNO" type="s:string" />
+    <wsdl:part name="bstrUserName" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Detr2Out">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RtxPnrIn">
+    <wsdl:part name="bstrPnrNO" type="s:string" />
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="bstrOffice" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RtxPnrOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GeneralCmdProcessIn">
+    <wsdl:part name="bstrInputXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GeneralCmdProcessOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:portType name="veSWScnServiceSoap">
+    <wsdl:operation name="RtPnr">
+      <wsdl:input message="s0:RtPnrIn" />
+      <wsdl:output message="s0:RtPnrOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Book">
+      <wsdl:input message="s0:BookIn" />
+      <wsdl:output message="s0:BookOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateXCD">
+      <wsdl:input message="s0:CreateXCDIn" />
+      <wsdl:output message="s0:CreateXCDOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelXCD">
+      <wsdl:input message="s0:CancelXCDIn" />
+      <wsdl:output message="s0:CancelXCDOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AVH">
+      <wsdl:input message="s0:AVHIn" />
+      <wsdl:output message="s0:AVHOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FF">
+      <wsdl:input message="s0:FFIn" />
+      <wsdl:output message="s0:FFOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Detr">
+      <wsdl:input message="s0:DetrIn" />
+      <wsdl:output message="s0:DetrOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnr">
+      <wsdl:input message="s0:ParsePnrIn" />
+      <wsdl:output message="s0:ParsePnrOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ETDZ">
+      <wsdl:input message="s0:ETDZIn" />
+      <wsdl:output message="s0:ETDZOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TSS">
+      <wsdl:input message="s0:TSSIn" />
+      <wsdl:output message="s0:TSSOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PAT">
+      <wsdl:input message="s0:PATIn" />
+      <wsdl:output message="s0:PATOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FD">
+      <wsdl:input message="s0:FDIn" />
+      <wsdl:output message="s0:FDOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CY">
+      <wsdl:input message="s0:CYIn" />
+      <wsdl:output message="s0:CYOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FLP">
+      <wsdl:input message="s0:FLPIn" />
+      <wsdl:output message="s0:FLPOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NFD">
+      <wsdl:input message="s0:NFDIn" />
+      <wsdl:output message="s0:NFDOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPNR">
+      <wsdl:input message="s0:EditPNRIn" />
+      <wsdl:output message="s0:EditPNROut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelPNR">
+      <wsdl:input message="s0:CancelPNRIn" />
+      <wsdl:output message="s0:CancelPNROut" />
+    </wsdl:operation>
+    <wsdl:operation name="CLRF">
+      <wsdl:input message="s0:CLRFIn" />
+      <wsdl:output message="s0:CLRFOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AN">
+      <wsdl:input message="s0:ANIn" />
+      <wsdl:output message="s0:ANOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TKScan">
+      <wsdl:input message="s0:TKScanIn" />
+      <wsdl:output message="s0:TKScanOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input message="s0:AddUserIn" />
+      <wsdl:output message="s0:AddUserOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AVHXML">
+      <wsdl:input message="s0:AVHXMLIn" />
+      <wsdl:output message="s0:AVHXMLOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ONLYDETR">
+      <wsdl:input message="s0:ONLYDETRIn" />
+      <wsdl:output message="s0:ONLYDETROut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelUser">
+      <wsdl:input message="s0:DelUserIn" />
+      <wsdl:output message="s0:DelUserOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUser">
+      <wsdl:input message="s0:ModifyUserIn" />
+      <wsdl:output message="s0:ModifyUserOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetrXML">
+      <wsdl:input message="s0:DetrXMLIn" />
+      <wsdl:output message="s0:DetrXMLOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PNRPAT">
+      <wsdl:input message="s0:PNRPATIn" />
+      <wsdl:output message="s0:PNRPATOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QTE">
+      <wsdl:input message="s0:QTEIn" />
+      <wsdl:output message="s0:QTEOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroups">
+      <wsdl:input message="s0:GetAllGroupsIn" />
+      <wsdl:output message="s0:GetAllGroupsOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByGroup">
+      <wsdl:input message="s0:GetUsersByGroupIn" />
+      <wsdl:output message="s0:GetUsersByGroupOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroupsAndUsers">
+      <wsdl:input message="s0:GetAllGroupsAndUsersIn" />
+      <wsdl:output message="s0:GetAllGroupsAndUsersOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupByUser">
+      <wsdl:input message="s0:GetGroupByUserIn" />
+      <wsdl:output message="s0:GetGroupByUserOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser2">
+      <wsdl:input message="s0:AddUser2In" />
+      <wsdl:output message="s0:AddUser2Out" />
+    </wsdl:operation>
+    <wsdl:operation name="SwitchGroup">
+      <wsdl:input message="s0:SwitchGroupIn" />
+      <wsdl:output message="s0:SwitchGroupOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WF">
+      <wsdl:input message="s0:WFIn" />
+      <wsdl:output message="s0:WFOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateXCD2">
+      <wsdl:input message="s0:CreateXCD2In" />
+      <wsdl:output message="s0:CreateXCD2Out" />
+    </wsdl:operation>
+    <wsdl:operation name="QTE2">
+      <wsdl:input message="s0:QTE2In" />
+      <wsdl:output message="s0:QTE2Out" />
+    </wsdl:operation>
+    <wsdl:operation name="PnrAuth">
+      <wsdl:input message="s0:PnrAuthIn" />
+      <wsdl:output message="s0:PnrAuthOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SSRFOID">
+      <wsdl:input message="s0:SSRFOIDIn" />
+      <wsdl:output message="s0:SSRFOIDOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AVHFLT">
+      <wsdl:input message="s0:AVHFLTIn" />
+      <wsdl:output message="s0:AVHFLTOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PNRPAT2">
+      <wsdl:input message="s0:PNRPAT2In" />
+      <wsdl:output message="s0:PNRPAT2Out" />
+    </wsdl:operation>
+    <wsdl:operation name="XCDstate">
+      <wsdl:input message="s0:XCDstateIn" />
+      <wsdl:output message="s0:XCDstateOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RRTPNR">
+      <wsdl:input message="s0:RRTPNRIn" />
+      <wsdl:output message="s0:RRTPNROut" />
+    </wsdl:operation>
+    <wsdl:operation name="Detr2">
+      <wsdl:input message="s0:Detr2In" />
+      <wsdl:output message="s0:Detr2Out" />
+    </wsdl:operation>
+    <wsdl:operation name="RtxPnr">
+      <wsdl:input message="s0:RtxPnrIn" />
+      <wsdl:output message="s0:RtxPnrOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneralCmdProcess">
+      <wsdl:input message="s0:GeneralCmdProcessIn" />
+      <wsdl:output message="s0:GeneralCmdProcessOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="veSWScnServiceSoap" type="s0:veSWScnServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="RtPnr">
+      <soap:operation soapAction="#RtPnr" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Book">
+      <soap:operation soapAction="#Book" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateXCD">
+      <soap:operation soapAction="#CreateXCD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelXCD">
+      <soap:operation soapAction="#CancelXCD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AVH">
+      <soap:operation soapAction="#AVH" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FF">
+      <soap:operation soapAction="#FF" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detr">
+      <soap:operation soapAction="#Detr" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParsePnr">
+      <soap:operation soapAction="#ParsePnr" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ETDZ">
+      <soap:operation soapAction="#ETDZ" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TSS">
+      <soap:operation soapAction="#TSS" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PAT">
+      <soap:operation soapAction="#PAT" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FD">
+      <soap:operation soapAction="#FD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CY">
+      <soap:operation soapAction="#CY" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FLP">
+      <soap:operation soapAction="#FLP" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NFD">
+      <soap:operation soapAction="#NFD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPNR">
+      <soap:operation soapAction="#EditPNR" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPNR">
+      <soap:operation soapAction="#CancelPNR" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CLRF">
+      <soap:operation soapAction="#CLRF" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AN">
+      <soap:operation soapAction="#AN" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TKScan">
+      <soap:operation soapAction="#TKScan" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="#AddUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AVHXML">
+      <soap:operation soapAction="#AVHXML" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONLYDETR">
+      <soap:operation soapAction="#ONLYDETR" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelUser">
+      <soap:operation soapAction="#DelUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUser">
+      <soap:operation soapAction="#ModifyUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetrXML">
+      <soap:operation soapAction="#DetrXML" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PNRPAT">
+      <soap:operation soapAction="#PNRPAT" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QTE">
+      <soap:operation soapAction="#QTE" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroups">
+      <soap:operation soapAction="#GetAllGroups" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByGroup">
+      <soap:operation soapAction="#GetUsersByGroup" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroupsAndUsers">
+      <soap:operation soapAction="#GetAllGroupsAndUsers" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupByUser">
+      <soap:operation soapAction="#GetGroupByUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser2">
+      <soap:operation soapAction="#AddUser2" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SwitchGroup">
+      <soap:operation soapAction="#SwitchGroup" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WF">
+      <soap:operation soapAction="#WF" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateXCD2">
+      <soap:operation soapAction="#CreateXCD2" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QTE2">
+      <soap:operation soapAction="#QTE2" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PnrAuth">
+      <soap:operation soapAction="#PnrAuth" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSRFOID">
+      <soap:operation soapAction="#SSRFOID" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AVHFLT">
+      <soap:operation soapAction="#AVHFLT" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PNRPAT2">
+      <soap:operation soapAction="#PNRPAT2" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XCDstate">
+      <soap:operation soapAction="#XCDstate" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RRTPNR">
+      <soap:operation soapAction="#RRTPNR" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detr2">
+      <soap:operation soapAction="#Detr2" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RtxPnr">
+      <soap:operation soapAction="#RtxPnr" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneralCmdProcess">
+      <soap:operation soapAction="#GeneralCmdProcess" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:veSWScnService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="veSWScnService">
+    <wsdl:port name="veSWScnServiceSoap" binding="s0:veSWScnServiceSoap">
+      <soap:address location="http://116.55.243.38:80/veSWScn/veSWScn.dll?Handler=Default" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

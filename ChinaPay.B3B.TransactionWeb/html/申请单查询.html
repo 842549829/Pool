@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>申请单查询</title>
+	<link rel="stylesheet" type="text/css" href="/Styles/core.css?20121118">
+	<link rel="stylesheet" type="text/css" href="/Styles/form.css?20121118">
+	<link rel="stylesheet" type="text/css" href="/Styles/page.css?20121118">
+</head>
+<body>
+	<form style="width:1090px;float:right;margin-right:10px;">
+		<h3 class="titleBg">申请单查询</h3>
+		<ul class="orderNav clearfix">
+			<li><a href="#" class="curr">改期</a></li>
+			<li><a href="#">退票</a></li>
+			<li><a href="#">废票</a></li>
+		</ul>
+		<div class="orderBox">
+			<div class="orderCondition clearfix">
+				<span>预订日期：<input type="text" class="text text-s" />-<input type="text" class="text text-s" /></span>
+				<span>乘机人：<input type="text" class="text" /></span>
+				<span>PNR：<input type="text" class="text" /></span>
+				<span>申请单编号：<input type="text" class="text" /></span>
+				<a href="#" class="btn class1 fl">查询</a>
+			</div>
+			<ul class="orderSubnav clearfix">
+				<li><a href="#" class="orderValue curr">全部</a></li>
+				<li><a href="#">等待处理</a></li>
+				<li><a href="#">同意改期待支付改期费</a></li>
+				<li><a href="#">已经付款，等待改期</a></li>
+				<li><a href="#">改期审核不通过</a></li>
+				<li><a href="#">退款审核不通过待处理</a></li>
+				<li><a href="#">拒绝退票</a></li>
+				<li><a href="#">拒绝废票</a></li>
+				<li><a href="#">已取消</a></li>
+				<li><a href="#">改期成功，交易结束</a></li>
+				<li><a href="#">已经退款，交易结束</a></li>
+			</ul>
+			<div class="table">
+				<table>
+					<tr>
+						<th>申请单编号</th>
+						<th>PNR</th>
+						<th>行程</th>
+						<th>乘机人</th>
+						<th>申请时间</th>
+						<th>锁定信息</th>
+						<th>操作</th>
+					</tr>
+					<tr>
+						<td><a href="#" class="obvious-a">1209101000020</a></td>
+						<td>HT85XS（小）<br />MJH1BC（大）</td>
+						<td>MU5708 Y PEK-KMG 2012-10-9 12:20</td>
+						<td>王兴栋<br />莫杰</td>
+						<td>2012-11-12 <br /> 22:00</td>
+						<td>出票方<br>(WEH133)</td>
+						<td>
+							<a href="RefundApplyformDetail.aspx?id=1211122000021" class="obvious">详情</a> 
+                			<br />
+                			<a href="Coordination.aspx?type=1&amp;id=1211122000021" class="obvious">协调</a>
+				    		<br /> 
+				    		<a class="obvious" href="../ApplyformLog.aspx?id=1211122000021">日志</a>
+                		</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="obvious-a">1209101000020</a></td>
+						<td>HT85XS（小）<br />MJH1BC（大）</td>
+						<td>MU5708 Y PEK-KMG 2012-10-9 12:20</td>
+						<td>王兴栋<br />莫杰</td>
+						<td>2012-11-12 <br /> 22:00</td>
+						<td>出票方<br>(WEH133)</td>
+						<td>
+							<a href="RefundApplyformDetail.aspx?id=1211122000021" class="obvious">详情</a> 
+                			<br />
+                			<a href="Coordination.aspx?type=1&amp;id=1211122000021" class="obvious">协调</a>
+				    		<br /> 
+				    		<a class="obvious" href="../ApplyformLog.aspx?id=1211122000021">日志</a>
+                		</td>
+					</tr>
+				</table>
+				<div class="btns">
+					<div class="dataPager clearfix">
+						<span id="pPages">
+							<a id="pager_lbPage1" disabled="disabled" class="yemaa" style="margin-left:5px;margin-right:5px;text-decoration:none;">1</a>
+							<a id="pager_lbPage2" href="javascript:__doPostBack('pager$lbPage2','')" style="margin-left:5px;margin-right:5px;">2</a>
+						</span>
+						<a id="pager_lbnNext" href="javascript:__doPostBack('pager$lbnNext','')">下一页 &gt;</a>
+						<a id="pager_lbnLast" href="javascript:__doPostBack('pager$lbnLast','')">末页</a>
+						共 <span id="pager_lblTotalCount">11</span> 条 每页 <span id="pager_lblPageSize">10</span> 条 第 <span id="lblCurrentPage">1</span> / <span id="pager_lblTotalPage">2</span> 页
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

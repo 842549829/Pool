@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{41D94D83-9BF2-487E-9542-78E138287C7B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChinaPay.B3B.DataTransferObject</RootNamespace>
+    <AssemblyName>ChinaPay.B3B.DataTransferObject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChinaPay.Core">
+      <HintPath>..\DependentDLL\ChinaPay.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Utility">
+      <HintPath>..\DependentDLL\ChinaPay.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Izual.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\Izual.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Announce\AnnounceListView.cs" />
+    <Compile Include="Announce\AnnounceQueryCondition.cs" />
+    <Compile Include="Announce\AnnounceView.cs" />
+    <Compile Include="Announce\Suggest.cs" />
+    <Compile Include="Command\PNR\FlightView.cs" />
+    <Compile Include="Command\PNR\ItineraryType.cs" />
+    <Compile Include="Command\PNR\PassengerConsistsType.cs" />
+    <Compile Include="Command\PNR\PassengerView.cs" />
+    <Compile Include="Command\PNR\PriceView.cs" />
+    <Compile Include="Command\PNR\PNRContentView.cs" />
+    <Compile Include="Command\PNR\PNRType.cs" />
+    <Compile Include="Command\PNR\ReservationInfo.cs" />
+    <Compile Include="Command\PNR\ReservationPassengerInfo.cs" />
+    <Compile Include="Command\PNR\ReservationSegmentInfo.cs" />
+    <Compile Include="Command\PNR\TeamInfo.cs" />
+    <Compile Include="Command\PNR\TicketView.cs" />
+    <Compile Include="Commodity\CommodityView.cs" />
+    <Compile Include="Common\Currency.cs" />
+    <Compile Include="Common\PayInterface.cs" />
+    <Compile Include="Common\PNRPair.cs" />
+    <Compile Include="Common\RequestResult.cs" />
+    <Compile Include="FlightQuery\AirportView.cs" />
+    <Compile Include="FlightQuery\Enums.cs" />
+    <Compile Include="FlightQuery\FlightView.cs" />
+    <Compile Include="FlightQuery\PolicyView.cs" />
+    <Compile Include="FlightTransfer\FlightTransferCondition.cs" />
+    <Compile Include="Foundation\AirlineRulesView.cs" />
+    <Compile Include="Foundation\BunkQueryCondition.cs" />
+    <Compile Include="Foundation\FixedNavigationView.cs" />
+    <Compile Include="FlightTransfer\InfomrRecordSearchConditoin.cs" />
+    <Compile Include="Foundation\RefundAndReschedulingDetailView.cs" />
+    <Compile Include="Foundation\RefundAndReschedulingView.cs" />
+    <Compile Include="Integral\IntegralConsumptionView.cs" />
+    <Compile Include="Integral\IntegralInfoView.cs" />
+    <Compile Include="Integral\IntegralParameterView.cs" />
+    <Compile Include="Itinerary\ItineraryQueryCondition.cs" />
+    <Compile Include="Log\FareErrorLogQueryCondition.cs" />
+    <Compile Include="Log\InterfaceInvokeLogQueryCondition.cs" />
+    <Compile Include="Log\SMSLogQueryCondition.cs" />
+    <Compile Include="Order\AutoPayCondition.cs" />
+    <Compile Include="Order\EmergentOrderView.cs" />
+    <Compile Include="Order\ETDZPassengerView.cs" />
+    <Compile Include="Order\External\AutoPayResult.cs" />
+    <Compile Include="Order\External\ExternalOrderCondition.cs" />
+    <Compile Include="Order\External\ExternalOrderListView.cs" />
+    <Compile Include="Order\External\ExternalOrderView.cs" />
+    <Compile Include="Order\External\Payment.cs" />
+    <Compile Include="Order\External\TicketInfo.cs" />
+    <Compile Include="Order\FreezeQueryCondition.cs" />
+    <Compile Include="Order\External\ExternalPlatformNotifyView.cs" />
+    <Compile Include="Order\PlatformProcessRefundView.cs" />
+    <Compile Include="Order\PriceView.cs" />
+    <Compile Include="Order\RefundOrPostPoneQueryCondition.cs" />
+    <Compile Include="Organization\AccountCombine\AccountBasicEnterprise .cs" />
+    <Compile Include="Organization\AccountCombine\AccountBasicIndividual.cs" />
+    <Compile Include="Organization\AccountCombine\AccountEnterprise.cs" />
+    <Compile Include="Organization\AccountCombine\AccountIndividual.cs" />
+    <Compile Include="Organization\AccountCombine\AccountInfo.cs" />
+    <Compile Include="Organization\AccountCombine\CompanyEnterpriseUpdateInfo.cs" />
+    <Compile Include="Organization\AccountCombine\CompanyIndividualUpdateInfo.cs" />
+    <Compile Include="Organization\AccountCombine\CompanyQueryConditionInfo.cs" />
+    <Compile Include="Organization\AccountCombine\PayAccountEnterprise.cs" />
+    <Compile Include="Organization\AccountCombine\PayAccountIndividual.cs" />
+    <Compile Include="Organization\AccountCombine\ProviderAuditInfo.cs" />
+    <Compile Include="Organization\AccountCombine\PurchaseEnterpriseInfo.cs" />
+    <Compile Include="Organization\AccountCombine\PurchaseIndividualInfo.cs" />
+    <Compile Include="Organization\AccountCombine\SupplierEnterpriseAuditInfo.cs" />
+    <Compile Include="Organization\AccountCombine\SupplierIndividualAuditInfo.cs" />
+    <Compile Include="Organization\AccountDetailInfo.cs" />
+    <Compile Include="Organization\AddressInfo.cs" />
+    <Compile Include="Organization\CompanyAuditInfo.cs" />
+    <Compile Include="Organization\CompanyAuditQueryCondition.cs" />
+    <Compile Include="Organization\CompanyDetailInfo.cs" />
+    <Compile Include="Organization\CompanyGroupInfo.cs" />
+    <Compile Include="Organization\CompanyGroupMemberListInfo.cs" />
+    <Compile Include="Organization\CompanyGroupMemberParameter.cs" />
+    <Compile Include="Organization\CompanyInfo.cs" />
+    <Compile Include="Organization\CompanyInitInfo.cs" />
+    <Compile Include="Organization\CompanyListInfo.cs" />
+    <Compile Include="Organization\CompanyQueryParameter.cs" />
+    <Compile Include="Organization\CompanySettingsInfo.cs" />
+    <Compile Include="Organization\DistribtionOEMUserCompanyDetailInfo.cs" />
+    <Compile Include="Organization\DistributionOEMCondition.cs" />
+    <Compile Include="Organization\DistributionOEMUserCondition.cs" />
+    <Compile Include="Organization\DistributionOEMUserEnterpriseUpdateInfo.cs" />
+    <Compile Include="Organization\DistributionOEMUserIndividualUpdateInfo.cs" />
+    <Compile Include="Organization\DistributionOEMUserListView.cs" />
+    <Compile Include="Organization\DistributionOEMView.cs" />
+    <Compile Include="Organization\EmployeeDetailInfo.cs" />
+    <Compile Include="Organization\EmployeeListView.cs" />
+    <Compile Include="Organization\EmployeeQueryParameter.cs" />
+    <Compile Include="Organization\ExtendCompanyView.cs" />
+    <Compile Include="Organization\ExternalInterfaceInfo.cs" />
+    <Compile Include="Organization\ExternalInterfaceQueryCondition.cs" />
+    <Compile Include="Organization\ExternalInterfaceView.cs" />
+    <Compile Include="Organization\GroupLimitationInfo.cs" />
+    <Compile Include="Organization\IncomeGroupListView.cs" />
+    <Compile Include="Organization\IncomeGroupView.cs" />
+    <Compile Include="Organization\LoginInfo.cs" />
+    <Compile Include="Organization\PrintHours.cs" />
+    <Compile Include="Organization\PaymentsAccountQueryCondition.cs" />
+    <Compile Include="Foundation\AirCraftView.cs" />
+    <Compile Include="Foundation\AirlineView.cs" />
+    <Compile Include="Foundation\AirportView.cs" />
+    <Compile Include="Foundation\AreaView.cs" />
+    <Compile Include="Foundation\BAFValueView.cs" />
+    <Compile Include="Foundation\BAFView.cs" />
+    <Compile Include="Foundation\BasicPriceView.cs" />
+    <Compile Include="Foundation\BunkView.cs" />
+    <Compile Include="Foundation\ChildOrderableBunkView.cs" />
+    <Compile Include="Foundation\CityView.cs" />
+    <Compile Include="Foundation\CountyView.cs" />
+    <Compile Include="Foundation\LocationLevel.cs" />
+    <Compile Include="Foundation\ProvinceView.cs" />
+    <Compile Include="Foundation\RefundAndReschedulingBaseView.cs" />
+    <Compile Include="Log\Enums.cs" />
+    <Compile Include="Log\LogonLogQueryCondition.cs" />
+    <Compile Include="Order\ApplyformStatus.cs" />
+    <Compile Include="Order\Contact.cs" />
+    <Compile Include="Order\CredentialsUpdateInfo.cs" />
+    <Compile Include="Order\CredentialsUpdateInfoListView.cs" />
+    <Compile Include="Order\CredentialsUpdateInfoQueryCondition.cs" />
+    <Compile Include="Order\CredentialsUpdateRecordView.cs" />
+    <Compile Include="Order\Enums.cs" />
+    <Compile Include="Order\FlightListView.cs" />
+    <Compile Include="Order\FlightView.cs" />
+    <Compile Include="Order\OrderStatus.cs" />
+    <Compile Include="Order\PassengerView.cs" />
+    <Compile Include="Order\PostponeFeeView.cs" />
+    <Compile Include="Order\PostponeView.cs" />
+    <Compile Include="Order\RefundFailedRecord.cs" />
+    <Compile Include="Order\RefundFailedRecordQueryCondition.cs" />
+    <Compile Include="Order\RefundFeeView.cs" />
+    <Compile Include="Order\RoyaltyFailedRecord.cs" />
+    <Compile Include="Order\RoyaltyFailedRecordQueryCondition.cs" />
+    <Compile Include="Order\Settlement.cs" />
+    <Compile Include="Organization\ChangePasswordInfo.cs" />
+    <Compile Include="Organization\EmployeeInfo.cs" />
+    <Compile Include="Organization\RelationInfo.cs" />
+    <Compile Include="Organization\SpreadingQueryParameter.cs" />
+    <Compile Include="Organization\SpreadingsView.cs" />
+    <Compile Include="Organization\SubordinateCompanyListInfo.cs" />
+    <Compile Include="Organization\SubordinateQueryParameter.cs" />
+    <Compile Include="Organization\WithholdingView.cs" />
+    <Compile Include="Organization\WorkingSettingInfo.cs" />
+    <Compile Include="Permission\Enums.cs" />
+    <Compile Include="Permission\MenuView.cs" />
+    <Compile Include="Permission\PermissionRoleListView.cs" />
+    <Compile Include="Permission\PermissionRoleView.cs" />
+    <Compile Include="Permission\PermissionView.cs" />
+    <Compile Include="Permission\ResourceView.cs" />
+    <Compile Include="Permission\SubMenuView.cs" />
+    <Compile Include="Policy\BargainDefaultPolicyInfo.cs" />
+    <Compile Include="Policy\BargainDefaultPolicyQueryParameter.cs" />
+    <Compile Include="Policy\BasePolicyQueryCondition.cs" />
+    <Compile Include="Policy\Deduction.cs" />
+    <Compile Include="Policy\DefaultPolicyDetailInfo.cs" />
+    <Compile Include="Policy\DefaultPolicyQueryParameter.cs" />
+    <Compile Include="Policy\ExternalPolicyView.cs" />
+    <Compile Include="Policy\FilterConditions.cs" />
+    <Compile Include="Policy\GeneralPolicyRegisterView.cs" />
+    <Compile Include="Policy\GeneralPolicyView.cs" />
+    <Compile Include="Policy\HoldOn\HoldOnItem.cs" />
+    <Compile Include="Policy\HoldOn\HoldOnView.cs" />
+    <Compile Include="Policy\MatchEnvironment.cs" />
+    <Compile Include="Policy\PolicyHarmonyQueryParameter.cs" />
+    <Compile Include="Policy\PolicyInfo.cs" />
+    <Compile Include="Policy\PolicyInfoBase.cs" />
+    <Compile Include="Policy\PolicyCompareCondition.cs" />
+    <Compile Include="Policy\PolicyHarmonyInfo.cs" />
+    <Compile Include="Policy\PolicyQueryCondition.cs" />
+    <Compile Include="Policy\PolicyQueryParameter.cs" />
+    <Compile Include="Policy\PolicyReleaseInfo.cs" />
+    <Compile Include="Policy\NormalPolicySetting.cs" />
+    <Compile Include="Policy\PolicySettingInfo.cs" />
+    <Compile Include="Policy\PolicySettingQueryParameter.cs" />
+    <Compile Include="Policy\ProductionPolicyRegisterView.cs" />
+    <Compile Include="Policy\ProductionPolicyView.cs" />
+    <Compile Include="Policy\PromotionPolicyRegisterView.cs" />
+    <Compile Include="Policy\PromotionPolicyView.cs" />
+    <Compile Include="Policy\PurchaseLimitationInfo.cs" />
+    <Compile Include="Policy\RefundAndReschedulingProvision.cs" />
+    <Compile Include="Policy\Schedule.cs" />
+    <Compile Include="Policy\SpecialPolicyQueryCondition.cs" />
+    <Compile Include="Policy\SpecialPolicyRegisterView.cs" />
+    <Compile Include="Policy\SpecialPolicyView.cs" />
+    <Compile Include="Policy\SuspendInfo.cs" />
+    <Compile Include="Policy\SuspendInfoQueryParameter.cs" />
+    <Compile Include="Policy\OwnerDefaultPolicyInfo.cs" />
+    <Compile Include="Policy\VoyageCondition.cs" />
+    <Compile Include="RefreshService.cs" />
+    <Compile Include="Report\ErrorRefundQueryCondition.cs" />
+    <Compile Include="Report\ETDZSpeedStatCondition.cs" />
+    <Compile Include="Report\GroupInfo.cs" />
+    <Compile Include="Report\PlatformExternalOrderView.cs" />
+    <Compile Include="Report\PlatformTicketView.cs" />
+    <Compile Include="Report\ProviderStatisticSearchCondition.cs" />
+    <Compile Include="Report\ProvideTicketView.cs" />
+    <Compile Include="Report\PurchaseStatisticView.cs" />
+    <Compile Include="Report\PurchaseTicketView.cs" />
+    <Compile Include="Report\RoyaltyProfitCondition.cs" />
+    <Compile Include="Report\SpreadTicketView.cs" />
+    <Compile Include="Report\SupplyTicketView.cs" />
+    <Compile Include="Report\TodayProvideStatisticQueryCondition.cs" />
+    <Compile Include="SystemManagement\SpecialProductView.cs" />
+    <Compile Include="SystemSetting\CompanyGroup\MemberListView.cs" />
+    <Compile Include="SystemSetting\MarketingArea\AreaListView.cs" />
+    <Compile Include="SystemSetting\MarketingArea\AreaRelationListView.cs" />
+    <Compile Include="SystemSetting\OnLineCustomer\DivideGroupView.cs" />
+    <Compile Include="SystemSetting\OnLineCustomer\MemberView.cs" />
+    <Compile Include="SystemSetting\OnLineCustomer\OnLineCustomerView.cs" />
+    <Compile Include="SystemSetting\PolicyHarmony\PolicyHarmonyQueryCondition.cs" />
+    <Compile Include="SystemSetting\PolicyHarmony\PolicyHarmonyView.cs" />
+    <Compile Include="SystemSetting\MarketingArea\AreaQueryConditon.cs" />
+    <Compile Include="SystemSetting\MarketingArea\AreaRelationQueryCondtion.cs" />
+    <Compile Include="SystemSetting\MarketingArea\AreaRelationView.cs" />
+    <Compile Include="SystemSetting\MarketingArea\AreaView.cs" />
+    <Compile Include="SystemSetting\CompanyGroup\CompanyGroupListView.cs" />
+    <Compile Include="SystemSetting\CompanyGroup\CompanyGroupQueryCondition.cs" />
+    <Compile Include="SystemSetting\CompanyGroup\CompanyGroupView.cs" />
+    <Compile Include="SystemSetting\CompanyGroup\Limitation.cs" />
+    <Compile Include="Organization\Customer.cs" />
+    <Compile Include="Organization\CustomerQueryCondition.cs" />
+    <Compile Include="Log\OperationLogQueryCondition.cs" />
+    <Compile Include="Order\ApplyformListView.cs" />
+    <Compile Include="Order\ApplyformQueryCondition.cs" />
+    <Compile Include="Order\OrderListView.cs" />
+    <Compile Include="Order\OrderQueryCondition.cs" />
+    <Compile Include="Order\OrderView.cs" />
+    <Compile Include="Order\RefundProcessView.cs" />
+    <Compile Include="Order\ResourceView.cs" />
+    <Compile Include="Order\TicketNoView.cs" />
+    <Compile Include="SystemSetting\CompanyGroup\MemberQueryCondition.cs" />
+    <Compile Include="Policy\HoldOn\HoldOnListView.cs" />
+    <Compile Include="Common\AirportPair.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemSetting\VIPHarmonyView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SystemSetting\VIPHarmony\VIPHarmonyListView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SystemSetting\VIPHarmony\VIPHarmonyView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SystemSetting\VIP\VIPManageQueryCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SystemSetting\VIP\VIPManageView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Order\ApplyformView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChinaPay.B3B.Common\ChinaPay.B3B.Common.csproj">
+      <Project>{1A2B88D1-C6C9-491F-9AF0-DE5D5CD713BC}</Project>
+      <Name>ChinaPay.B3B.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.DataEnvironment\ChinaPay.B3B.DataEnvironment.csproj">
+      <Project>{2F327D7D-E2AB-4339-9A6A-721E9EF91131}</Project>
+      <Name>ChinaPay.B3B.DataEnvironment</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

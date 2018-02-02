@@ -1,0 +1,106 @@
+@charset:utf-8;
+h4{
+	font-size: 24px;
+}
+.errorBg{
+	width: 960px;
+	height: 440px;
+	margin: 15px auto;
+	position: relative;
+}
+#noExist{
+	background-image: url(../Images/about/about_28.jpg);
+}
+#noExistTitle{
+	position: absolute;
+	top: 160px;
+	left: 175px;
+	color: #333;
+}
+#noExistTitle span{
+	padding-left: 10px;
+}
+#noExistTitle a{
+	padding-left: 10px;
+	color: #325BAC;
+}
+#noExistLink{
+	position: absolute;
+	top: 300px;
+	left: 100px;
+	color: #646464;
+}
+#noExistLink a{
+	text-decoration: underline;
+	color: #646464;
+}
+#limits{
+	background-image: url(../Images/about/about_31.jpg);
+}
+#limitsTitle{
+	position: absolute;
+	top: 165px;
+	left: 410px;
+	color: #333;
+}
+#limitsTitle a{
+	color: #325BAC;
+}
+#limitsContent{
+	position: absolute;
+	top: 240px;
+	left: 430px;
+	color: #646464;
+}
+#limitsContent ul{
+	list-style-type: square;
+}
+#limitsContent ul li{
+	padding: 5px 0;
+}
+#limitsLink{
+	position: absolute;
+	top: 360px;
+	left: 300px;
+	color: #646464;
+}
+#limitsLink a{
+	text-decoration: underline;
+	color: #646464;
+}
+#error{
+	background-image: url(../Images/about/waaw.jpg);
+}
+#errorTitle{
+	position: absolute;
+	top: 170px;
+	left: 370px;
+	color: #333;
+}
+#errorTitle span{
+	line-height:25px; 
+}
+#errorLink{
+	position: absolute;
+	top: 290px;
+	left: 265px;
+}
+#errorLink span{
+	display: block;
+	color: #ff6600;
+	font-size: 24px;
+}
+#errorLink a{
+	margin: 30px 0 0 165px;
+	display: block;
+	text-align: center;
+	color: #fff;
+	width: 108px;
+	height: 30px;
+	line-height: 30px;
+	background-image: url(../Images/about/wawa2.png);
+}
+#errorLink a:hover{
+	font-size: 14px;
+	text-decoration: none;
+}

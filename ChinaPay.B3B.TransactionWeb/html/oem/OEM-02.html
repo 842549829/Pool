@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>站点信息</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/page.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/core.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/form.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/register.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/oem.css" />
+</head>
+<body style="width:980px;margin: 10px auto;">
+	<h3 class="titleBg">页头设置</h3>
+	<div class="O_formBox">
+		<span>网站关键词：</span><br />
+		<input type="text" class="text" />
+		<span class="muted">多个关键词以半角短号隔开，利于搜索引擎收录和抓取</span>
+	</div>
+	<div class="O_formBox">
+		<span>网站描述：</span><br />
+		<input type="text" class="text" />
+		<span class="muted">在搜索引擎中显示您的网站描述，利于搜索引擎等抓取</span>
+	</div>
+	<div class="O_formBox">
+		<span>logo设置：</span><br />
+		<input type="file" class="text" />
+		<span class="muted">建议使用200x30像素的png图片，最大体积不能超过50kb</span>
+	</div>
+	<div class="O_formBox">
+		<span>增加头部链接：</span>
+		<div>
+			<input type="text" placeholder="链接名称" />
+			<input type="text" placeholder="链接地址" />
+			<a class='add'>+</a><span class="muted">请注意控制头部链接的数量，链接太多将会影响用户体验</span>
+		</div>
+	</div>
+	<input type="submit" value="提交" class="btn class1" />
+	<script type="text/javascript" src="/Scripts/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var count=0;
+			var flag=2;
+			var remove;
+			$(".add").live("click",function(){
+				$line=$("<div><input type='text' placeholder='链接名称' />\n<input type='text' placeholder='链接地址' />\n<a class='add'>+</a></div>");
+				$(this).parent().parent().append($line).end().end().html("-").attr("class","reduce");
+				count++;
+				if(count==flag){
+					$(".add").css("visibility","hidden");
+				};
+			});
+			$(".reduce").live("click",function(){
+				if($(this).next().hasClass("muted")){
+					remove=$(this).next().remove();
+					$(this).parent().next().append(remove).end().remove();
+				}else{
+					$(this).parent().remove();
+				};
+				count--;
+				if(count!=flag){
+					$(".add").css("visibility","visible");
+				}
+			});
+		});
+	</script>
+</body>
+</html>

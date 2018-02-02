@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="urn:VeShareWebServiceService" xmlns:atls="http://tempuri.org/vc/atl/server/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:VeShareWebServiceService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="urn:VeShareWebServiceService">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessRequestIn">
+    <wsdl:part name="bstrCmd" type="s:string" />
+    <wsdl:part name="bstrUserName" type="s:string" />
+    <wsdl:part name="bstrPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcessRequestOut">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:portType name="VeShareWebServiceServiceSoap">
+    <wsdl:operation name="ProcessRequest">
+      <wsdl:input message="s0:ProcessRequestIn" />
+      <wsdl:output message="s0:ProcessRequestOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VeShareWebServiceServiceSoap" type="s0:VeShareWebServiceServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="ProcessRequest">
+      <soap:operation soapAction="#ProcessRequest" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:VeShareWebServiceService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:VeShareWebServiceService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VeShareWebServiceService">
+    <wsdl:port name="VeShareWebServiceServiceSoap" binding="s0:VeShareWebServiceServiceSoap">
+      <soap:address location="http://116.55.243.38:80/VeShareWebService/VeShareWebService.dll?Handler=Default" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

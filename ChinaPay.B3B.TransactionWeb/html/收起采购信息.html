@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+	<meta charset="uft-8">
+	<link rel="stylesheet" type="text/css" href="/Styles/core.css">
+	<link rel="stylesheet" type="text/css" href="/Styles/page.css">
+	<link rel="stylesheet" type="text/css" href="/Styles/form.css">
+</head>
+<body style="width:980px;margin:10px auto;">
+	<div class="form volumn drop-box">
+		<div class="clearfix">
+			<h4 class="drop-header">显示采购信息</h4>
+		</div>
+		<div class="drop-content hidden">
+			<p class="type">采购方</p>
+		<table>
+			<tr>
+				<td class="title">123</td>
+				<td>456</td>
+				<td class="title">123</td>
+				<td>456</td>
+				<td class="title">123</td>
+				<td>456</td>
+			</tr>
+			<tr>
+				<td class="title">123</td>
+				<td>456</td>
+				<td class="title">123</td>
+				<td>456</td>
+				<td class="title">123</td>
+				<td>456</td>
+			</tr>
+			<tr>
+				<td class="title">123</td>
+				<td>456</td>
+				<td class="title">123</td>
+				<td>456</td>
+				<td class="title">123</td>
+				<td>456</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<script type="text/javascript" src="/Scripts/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$(".drop-header").toggle(function(){
+			$(this).html("收起采购信息").parent().next().slideToggle("500");
+		},function(){
+			$(this).html("显示采购信息").parent().next().slideToggle("500");
+
+		});
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿.O-wrap{background: url(img/OEM_bg.jpg) no-repeat 50% 80px;margin: 0 auto;min-height: 490px;position: relative;}
+.O-header-bg{background-color: #6196C3;height: 83px;}
+.O-footer-bg{background-color: #EDEDED;color: #8B8B8B;padding-bottom: 10px;}
+.O-header,
+.O-content,
+.O-footer{margin: 0 auto;position: relative;width: 980px;}
+.O-logo{height: 80px;left: 20px;position: absolute;top: 0;width: 80px;}
+.O-bar{background-color: #3B6F9C;border-radius: 8px;color: #fff;height: 40px;line-height: 40px;padding: 0 20px;position: absolute;right: 0;top: 25px;width: 750px;}
+.O-bar a{color: #fff;}
+.O-bar p a{display: inline-block;margin: 0 20px;}
+.O-bar p a{*display: inline;}
+.O-phone{background: url(img/phone.png) no-repeat 5px 50%;display: inline-block;margin-left: 40px;padding-left: 30px;}
+.O-phone{*display: inline;}
+.O-ui{position: absolute;right: 20px;top: 0;}
+.O-register{background: url(img/reg.png) no-repeat 50% 50%;color: #fff;display: inline-block;height: 20px;margin-right: 10px;line-height: 20px;text-align: center;width: 45px;}
+.O-register{*display: inline;}
+.O-register:hover{text-decoration: none;}
+.O-login-box{background-color: #fff;border: 1px solid #D7D8D7;height: 300px;position: absolute;right: -5px;top: 5px;width: 280px;}
+.O-login-area h4{background-color: #F8F9F8;border-bottom: 1px solid #D7D8D7;color: #000;font-size: 16px;height: 40px;line-height: 40px;margin: 0;padding: 0;text-align: center;}
+.O-login-info-box{margin-left: 50px;}
+.O-login-info{line-height: 1.5;padding: 10px 0;position: relative;}
+.O-login-info input.text{border: 1px solid #E6E7E6;width: 180px;}
+.O-login-info input[type="checkbox"]{margin-right: 5px;vertical-align: top;}
+.O-login-info img{display: inline-block;width: 90px;height: 25px;vertical-align: middle;}
+.O-login-info.last{padding-bottom: 0;}
+.O-save-pw{bottom: -10px;left: 0;position: absolute;vertical-align: top;}
+.O-forget-pw{position: absolute;right: 45px;top: 9px;}
+.O-warning{color: #D92672;line-height: 20px;padding-left: 50px;}
+.O-login-btn{background-color: #EB8000;border: 0 none;color: #fff;font-size: 16px;font-weight: 400;height: 30px;line-height: 30px;margin: 0 90px;padding: 0;word-spacing: 10px;width: 100px;}
+.O-login-btn:hover{background-color: #E58E29;}
+.O-con{padding-top: 340px;}
+.O-tips-box{background: url(img/ico-tips.png) no-repeat;float: left;height: 110px;margin: 0 25px 10px;text-align: center;width: 140px;}
+.O-tips-box h4{padding: 85px 0 5px;}
+.O-tips-a{background-position: 10px 0;}
+.O-tips-b{background-position: -180px 0;}
+.O-tips-c{background-position: -375px 0;}
+.O-tips-d{background-position: -570px 0;}
+.O-tips-e{background-position: -760px 0;}
+.O-collaborate{float: left;width: 50%;}
+.O-collaborate h4{margin: 10px 0;padding: 0;}
+.O-fight-com{background: url(img/ico-fight.png);display: block;height: 74px;text-indent: -9999px;width: 400px;}
+.O-other-com{background: url(img/ico-other.png);display: block;height: 64px;text-indent: -9999px;width: 416px;}
+.O-copyright p{line-height: 20px;text-align: center;}

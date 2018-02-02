@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://cancelorder.b2b.service.version1_0.webservice.model.ltips.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="CancelOrderServiceImpl_1_0Service" targetNamespace="http://cancelorder.b2b.service.version1_0.webservice.model.ltips.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://cancelorder.b2b.service.version1_0.webservice.model.ltips.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="cancelOrder" type="tns:cancelOrder" />
+      <xs:element name="cancelOrderResponse" type="tns:cancelOrderResponse" />
+      <xs:complexType name="cancelOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:cancelOrderRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelOrderRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:abstractLiantuoRequest">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="canclePNR" type="xs:int" />
+              <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+              <xs:element minOccurs="0" name="param1" type="xs:string" />
+              <xs:element minOccurs="0" name="param2" type="xs:string" />
+              <xs:element minOccurs="0" name="param3" type="xs:string" />
+              <xs:element minOccurs="0" name="param4" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="abstractLiantuoRequest" abstract="true">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="agencyCode" type="xs:string" />
+          <xs:element minOccurs="0" name="sign" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:cancelOrderReply" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelOrderReply">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:abstractLiantuoReply">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="orderStatus" type="xs:string" />
+              <xs:element minOccurs="0" name="param1" type="xs:string" />
+              <xs:element minOccurs="0" name="param2" type="xs:string" />
+              <xs:element minOccurs="0" name="param3" type="xs:string" />
+              <xs:element minOccurs="0" name="param4" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="abstractLiantuoReply" abstract="true">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="returnCode" type="xs:string" />
+          <xs:element minOccurs="0" name="returnMessage" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="cancelOrder">
+    <wsdl:part name="parameters" element="tns:cancelOrder" />
+  </wsdl:message>
+  <wsdl:message name="cancelOrderResponse">
+    <wsdl:part name="parameters" element="tns:cancelOrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CancelOrderService_1_0">
+    <wsdl:operation name="cancelOrder">
+      <wsdl:input name="cancelOrder" message="tns:cancelOrder" />
+      <wsdl:output name="cancelOrderResponse" message="tns:cancelOrderResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CancelOrderServiceImpl_1_0ServiceSoapBinding" type="tns:CancelOrderService_1_0">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="cancelOrder">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="cancelOrder">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cancelOrderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CancelOrderServiceImpl_1_0Service">
+    <wsdl:port name="CancelOrderServiceImpl_1_0Port" binding="tns:CancelOrderServiceImpl_1_0ServiceSoapBinding">
+      <soap:address location="http://wstest.51book.com:55779/ltips/services/cancelOrderService1.0" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

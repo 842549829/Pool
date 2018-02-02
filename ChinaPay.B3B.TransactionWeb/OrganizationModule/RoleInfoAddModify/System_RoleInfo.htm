@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>角色信息</title>
+    <link href="skinPath/core.css" rel="stylesheet" type="text/css" />
+    <link href="skinPath/form.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/Scripts/widget/common.js"></script>
+    <script type="text/javascript">
+        LoadSkins();
+    </script>
+
+</head>
+<body>
+    <div class="form table">
+        <h3 id="title" class="titleBg">
+            添加角色</h3>
+        <table>
+            <colgroup>
+                <col class="w20" />
+                <col class="w70" />
+            </colgroup>
+            <tr>
+                <td class="title">
+                    角色名称:
+                </td>
+                <td>
+                    <input style="float: left;" id="RoleName" class="text" />
+                    <input style="float: left; margin-left: 20px;" type="button" id="btnCheck" value="验证角色名称"
+                        class="btn class3" />
+                    <label style="float: left; margin-left: 20px;" id="msg">
+                    </label>
+                    <label style="display: none;" id="RoleId">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="title" valign="top">
+                    备注信息:
+                </td>
+                <td class="style1">
+                    <textarea id="RoleRemark" style="height: 80px; width: 100%" class="text"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="title">
+                    状态:
+                </td>
+                <td>
+                    <div class="input" align="left">
+                        <input id="radEnable" type="radio" name="rad" checked="checked" value="0" /><label
+                            for="radEnable">启用</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input id="radDisEnable" type="radio" name="rad" value="1" /><label for="radDisEnable">禁用</label></div>
+                </td>
+            </tr>
+        </table>
+        <div class="btns">
+            <input type="button" id="btnSave" value="确认" class="btn class1" />
+            <input type="button" id="btnModify" value="修改" class="btn class1" />
+            <input type="button" value="返回" id="btnCancel" onclick="javascript:window.location.href='System_RoleMenusList.aspx';"
+                class="btn class2" />
+        </div>
+    </div>
+    <script src="/Scripts/json2.js" type="text/javascript"></script>
+    <script src="/Scripts/Menus/company_role_info.js" type="text/javascript"></script>
+
+</body>
+</html>

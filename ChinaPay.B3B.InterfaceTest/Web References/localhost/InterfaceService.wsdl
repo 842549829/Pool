@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Execute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PNRImport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pnrContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sign" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PNRImportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PNRImportResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProduceOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pnrContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="associatePNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contact" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="policyId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="batchNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sign" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProduceOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProduceOrderResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderPay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sign" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderPayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderPayResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sign" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryOrderResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryApplyform">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sign" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryApplyformResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryApplyformResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplyPostpone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passengers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voyages" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reason" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sign" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplyPostponeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApplyPostponeResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplyRefund">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passengers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voyages" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="refundType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reason" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sign" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplyRefundResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApplyRefundResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayApplyform">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sign" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayApplyformResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayApplyformResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PNRImportWithoutPat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pnrContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sign" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PNRImportWithoutPatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PNRImportWithoutPatResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayApplyformByPayType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sign" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayApplyformByPayTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayApplyformByPayTypeResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayOrderByPayType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sign" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayOrderByPayTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayOrderByPayTypeResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ExecuteSoapIn">
+    <wsdl:part name="parameters" element="tns:Execute" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="PNRImportSoapIn">
+    <wsdl:part name="parameters" element="tns:PNRImport" />
+  </wsdl:message>
+  <wsdl:message name="PNRImportSoapOut">
+    <wsdl:part name="parameters" element="tns:PNRImportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProduceOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:ProduceOrder" />
+  </wsdl:message>
+  <wsdl:message name="ProduceOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:ProduceOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="OrderPaySoapIn">
+    <wsdl:part name="parameters" element="tns:OrderPay" />
+  </wsdl:message>
+  <wsdl:message name="OrderPaySoapOut">
+    <wsdl:part name="parameters" element="tns:OrderPayResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryOrder" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryApplyformSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryApplyform" />
+  </wsdl:message>
+  <wsdl:message name="QueryApplyformSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryApplyformResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApplyPostponeSoapIn">
+    <wsdl:part name="parameters" element="tns:ApplyPostpone" />
+  </wsdl:message>
+  <wsdl:message name="ApplyPostponeSoapOut">
+    <wsdl:part name="parameters" element="tns:ApplyPostponeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApplyRefundSoapIn">
+    <wsdl:part name="parameters" element="tns:ApplyRefund" />
+  </wsdl:message>
+  <wsdl:message name="ApplyRefundSoapOut">
+    <wsdl:part name="parameters" element="tns:ApplyRefundResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayApplyformSoapIn">
+    <wsdl:part name="parameters" element="tns:PayApplyform" />
+  </wsdl:message>
+  <wsdl:message name="PayApplyformSoapOut">
+    <wsdl:part name="parameters" element="tns:PayApplyformResponse" />
+  </wsdl:message>
+  <wsdl:message name="PNRImportWithoutPatSoapIn">
+    <wsdl:part name="parameters" element="tns:PNRImportWithoutPat" />
+  </wsdl:message>
+  <wsdl:message name="PNRImportWithoutPatSoapOut">
+    <wsdl:part name="parameters" element="tns:PNRImportWithoutPatResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayApplyformByPayTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:PayApplyformByPayType" />
+  </wsdl:message>
+  <wsdl:message name="PayApplyformByPayTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:PayApplyformByPayTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayOrderByPayTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:PayOrderByPayType" />
+  </wsdl:message>
+  <wsdl:message name="PayOrderByPayTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:PayOrderByPayTypeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InterfaceServiceSoap">
+    <wsdl:operation name="Execute">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">统一接口方法</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteSoapIn" />
+      <wsdl:output message="tns:ExecuteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PNRImport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">编码内容导入</wsdl:documentation>
+      <wsdl:input message="tns:PNRImportSoapIn" />
+      <wsdl:output message="tns:PNRImportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProduceOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">生成订单</wsdl:documentation>
+      <wsdl:input message="tns:ProduceOrderSoapIn" />
+      <wsdl:output message="tns:ProduceOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderPay">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">订单支付</wsdl:documentation>
+      <wsdl:input message="tns:OrderPaySoapIn" />
+      <wsdl:output message="tns:OrderPaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询订单详情</wsdl:documentation>
+      <wsdl:input message="tns:QueryOrderSoapIn" />
+      <wsdl:output message="tns:QueryOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryApplyform">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询申请详情</wsdl:documentation>
+      <wsdl:input message="tns:QueryApplyformSoapIn" />
+      <wsdl:output message="tns:QueryApplyformSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyPostpone">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">申请改期</wsdl:documentation>
+      <wsdl:input message="tns:ApplyPostponeSoapIn" />
+      <wsdl:output message="tns:ApplyPostponeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyRefund">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">申请退废票</wsdl:documentation>
+      <wsdl:input message="tns:ApplyRefundSoapIn" />
+      <wsdl:output message="tns:ApplyRefundSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayApplyform">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">改期支付</wsdl:documentation>
+      <wsdl:input message="tns:PayApplyformSoapIn" />
+      <wsdl:output message="tns:PayApplyformSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PNRImportWithoutPat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">编码内容导入(不需要PAT)</wsdl:documentation>
+      <wsdl:input message="tns:PNRImportWithoutPatSoapIn" />
+      <wsdl:output message="tns:PNRImportWithoutPatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayApplyformByPayType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">改期在线支付</wsdl:documentation>
+      <wsdl:input message="tns:PayApplyformByPayTypeSoapIn" />
+      <wsdl:output message="tns:PayApplyformByPayTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayOrderByPayType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">订单在线支付</wsdl:documentation>
+      <wsdl:input message="tns:PayOrderByPayTypeSoapIn" />
+      <wsdl:output message="tns:PayOrderByPayTypeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InterfaceServiceSoap" type="tns:InterfaceServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Execute">
+      <soap:operation soapAction="http://tempuri.org/Execute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PNRImport">
+      <soap:operation soapAction="http://tempuri.org/PNRImport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProduceOrder">
+      <soap:operation soapAction="http://tempuri.org/ProduceOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderPay">
+      <soap:operation soapAction="http://tempuri.org/OrderPay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrder">
+      <soap:operation soapAction="http://tempuri.org/QueryOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryApplyform">
+      <soap:operation soapAction="http://tempuri.org/QueryApplyform" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyPostpone">
+      <soap:operation soapAction="http://tempuri.org/ApplyPostpone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyRefund">
+      <soap:operation soapAction="http://tempuri.org/ApplyRefund" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayApplyform">
+      <soap:operation soapAction="http://tempuri.org/PayApplyform" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PNRImportWithoutPat">
+      <soap:operation soapAction="http://tempuri.org/PNRImportWithoutPat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayApplyformByPayType">
+      <soap:operation soapAction="http://tempuri.org/PayApplyformByPayType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayOrderByPayType">
+      <soap:operation soapAction="http://tempuri.org/PayOrderByPayType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InterfaceServiceSoap12" type="tns:InterfaceServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Execute">
+      <soap12:operation soapAction="http://tempuri.org/Execute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PNRImport">
+      <soap12:operation soapAction="http://tempuri.org/PNRImport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProduceOrder">
+      <soap12:operation soapAction="http://tempuri.org/ProduceOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderPay">
+      <soap12:operation soapAction="http://tempuri.org/OrderPay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrder">
+      <soap12:operation soapAction="http://tempuri.org/QueryOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryApplyform">
+      <soap12:operation soapAction="http://tempuri.org/QueryApplyform" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyPostpone">
+      <soap12:operation soapAction="http://tempuri.org/ApplyPostpone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyRefund">
+      <soap12:operation soapAction="http://tempuri.org/ApplyRefund" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayApplyform">
+      <soap12:operation soapAction="http://tempuri.org/PayApplyform" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PNRImportWithoutPat">
+      <soap12:operation soapAction="http://tempuri.org/PNRImportWithoutPat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayApplyformByPayType">
+      <soap12:operation soapAction="http://tempuri.org/PayApplyformByPayType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayOrderByPayType">
+      <soap12:operation soapAction="http://tempuri.org/PayOrderByPayType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InterfaceService">
+    <wsdl:port name="InterfaceServiceSoap" binding="tns:InterfaceServiceSoap">
+      <soap:address location="http://localhost:1177/InterfaceService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InterfaceServiceSoap12" binding="tns:InterfaceServiceSoap12">
+      <soap12:address location="http://localhost:1177/InterfaceService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>普通政策发布</title>
+    <link rel="stylesheet" href="skinPath/core.css" />
+    <link rel="stylesheet" href="skinPath/form.css" />
+    <link rel="stylesheet" href="/Styles/icon/fontello.css" />
+    <link rel="stylesheet" href="skinPath/page.css" />
+    <script src="/Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Scripts/widget/common.js"></script>
+    <script type="text/javascript">
+        LoadSkins();
+    </script>
+    <style>
+        .text_width
+        {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="form">
+            <h3 class="titleBg">
+                普通政策发布</h3>
+            <ul class="navType2" id="sel">
+                <li><a href="javascript:;" class="navType2Selected" id="dancheng">单程政策</a></li>
+                <li><a href="javascript:;" id="wanfang">往返政策</a></li>
+                <li><a href="javascript:;" id="danchengwanfang">单程·往返政策</a></li>
+                <li><a href="javascript:;" id="zhongzhuan">中转联程政策</a></li>
+            </ul>
+            <table class="tab-mid">
+                <colgroup>
+                    <col class="w15" />
+                    <col class="w35" />
+                    <col class="w15" />
+                    <col class="w35" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td class="title">
+                            航空公司
+                        </td>
+                        <td colspan="3">
+                            <select id="selProvince" class="fl" style="line-height: 28px; margin-left: 20px;"
+                                onchange="ClearBunksByAirline();">
+                            </select>
+                            <span><span class="zidingyi fl" style="line-height: 28px; margin-left: 50px;">自定义编号</span>
+                                <select id="selZidingy" class="fl zidingyi" style="line-height: 28px; margin-left: 20px;">
+                                </select></span> <span id="selOfficeTd">
+                                    <label class="fl" style="line-height: 28px; margin-left: 50px;">
+                                        OFFICE号</label>
+                                    <select id="selOffice" class="fl" style="line-height: 28px; margin-left: 20px;">
+                                    </select>
+                                    <span class="obvious2 fl" style="line-height: 28px;">需授权</span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title" style="vertical-align: top; min-width: 50px;">
+                            始发地
+                        </td>
+                        <td>
+                            <div class="s-dbl_select">
+                                <input type="radio" id="radInculd" checked="checked" name="radDepartureRange" value="0" /><label
+                                    for="radInculd">包含</label>&nbsp;&nbsp;
+                                <input type="radio" id="radUnInculd" name="radDepartureRange" value="1" /><label
+                                    for="radUnInculd">不包含</label><br />
+                                <input type="text" class="text text_width" id="txtAirports" /><br />
+                                <div class="op_item">
+                                    <select class="op_con op_con_l" id="lbSource" multiple="multiple">
+                                    </select>
+                                    <select class="op_con op_con_r" id="lbSelected" multiple="multiple">
+                                    </select>
+                                    <div class="btns">
+                                        <button class="btn class2" id="btnAddAll" runat="server">
+                                            全部添加</button>
+                                        <button class="btn class2" id="btnAdd" runat="server">
+                                            添&nbsp;&nbsp; &nbsp;&nbsp; 加</button>
+                                        <button class="btn class2" id="btnRemove" runat="server">
+                                            删&nbsp;&nbsp; &nbsp;&nbsp; 除</button>
+                                        <button class="btn class2" id="btnRemoveAll" runat="server">
+                                            全部删除</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="title" style="display: block; height: 259px; vertical-align: top; min-width: 50px;
+                            position: relative;">
+                            <span id="liancheng">目的地</span>
+                            <div>
+                                <a href="javascript:;" id="duihuan" class="policyBtn2">←调换→</a></div>
+                        </td>
+                        <td>
+                            <div class="s-dbl_select">
+                                <input type="radio" id="radInculd1" checked="checked" name="radInculd1" value="0" /><label
+                                    for="radInculd1">包含</label>&nbsp;&nbsp;
+                                <input type="radio" id="radUnInculd1" name="radInculd1" value="1" /><label for="radUnInculd1">不包含</label><br />
+                                <input type="text" class="text text_width" id="txtAirports1" /><br />
+                                <div class="op_item">
+                                    <select class="op_con op_con_l" id="lbSource1" multiple="multiple">
+                                    </select>
+                                    <select class="op_con op_con_r" id="lbSelected1" multiple="multiple">
+                                    </select>
+                                    <div class="btns">
+                                        <button class="btn class2" id="btnAddAll1" runat="server">
+                                            全部添加</button>
+                                        <button class="btn class2" id="btnAdd1" runat="server">
+                                            添&nbsp;&nbsp; &nbsp;&nbsp; 加</button>
+                                        <button class="btn class2" id="btnRemove1" runat="server">
+                                            删&nbsp;&nbsp; &nbsp;&nbsp; 除</button>
+                                        <button class="btn class2" id="btnRemoveAll1" runat="server">
+                                            全部删除</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="classDisplay" style="display: none;">
+                        <td class="title">
+                            目的地
+                        </td>
+                        <td colspan="2">
+                            <div class="s-dbl_select classDisplay">
+                                <input type="radio" id="radInculd2" checked="checked" name="radInculd2" value="0" /><label
+                                    for="radInculd2">包含</label>&nbsp;&nbsp;
+                                <input type="radio" id="radUnInculd2" name="radInculd2" value="1" /><label for="radUnInculd2">不包含</label><br />
+                                <input type="text" class="text text_width" id="txtAirports2" style="width: 95%;" /><br />
+                                <div class="op_item">
+                                    <select class="op_con op_con_l" id="lbSource2" multiple="multiple">
+                                    </select>
+                                    <select class="op_con op_con_r" id="lbSelected2" multiple="multiple">
+                                    </select>
+                                    <div class="btns">
+                                        <button class="btn class2" id="btnAddAll2" runat="server">
+                                            全部添加</button>
+                                        <button class="btn class2" id="btnAdd2" runat="server">
+                                            添&nbsp;&nbsp; &nbsp;&nbsp; 加</button>
+                                        <button class="btn class2" id="btnRemove2" runat="server">
+                                            删&nbsp;&nbsp; &nbsp;&nbsp; 除</button>
+                                        <button class="btn class2" id="btnRemoveAll2" runat="server">
+                                            全部删除</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <p class="obvious1">
+                                <br />
+                                温馨提示： 支持多选，可用Shift连选，也支持Ctrl间隔选择。 可手动输入机场三字码，如果三字码正确，城市名字会自动加到右边的已选择列表中。 输入三字码时，如果有多个，请用“/”分隔，如：CTU/PEK</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title">
+                            排除航段
+                        </td>
+                        <td colspan="2">
+                            <input id="txtOutWithFilght" class="text text_width" type="text" />
+                        </td>
+                        <td>
+                            <p class="obvious1 paichutishi">
+                                提示： 输入排除航线，多条航线之间用“ / ”隔开，（如：昆明到广州到杭州不适用，填写KMGCANHGH）；支持多城市混合输入，如KMG/SHACTU/KMGPEKXIY这样的航段均会被排除
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title" id="qucheng">
+                            航班限制
+                        </td>
+                        <td colspan="2">
+                            <input type="radio" value="0" name="QuchengFilght" id="radBuXian" checked="checked" /><label
+                                for="radBuXian">不限</label>
+                            <input type="radio" value="1" name="QuchengFilght" id="radYiXia" /><label for="radYiXia">仅适用以下航班</label>
+                            <input type="radio" value="2" name="QuchengFilght" id="radNotYiXia" /><label for="radNotYiXia">不适用以下航班</label>
+                            <br />
+                            <input id="txtQuChengFilght" class="text text_width" type="text" />
+                        </td>
+                        <td>
+                            <p class="obvious1">
+                                提示： 不加航空公司二字码，在输入框中输入限定的航班号，支持 * 匹配（如580*即支持5801到5809）。多航班请用“/ ”分隔，如：4590/580*
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="class_display" style="display: none;">
+                        <td class="title" id="huicheng">
+                            回程航班
+                        </td>
+                        <td colspan="2">
+                            <input type="radio" value="0" name="ReturnFilght" id="radReturnBuXian" checked="checked" /><label
+                                for="radReturnBuXian">不限</label>
+                            <input type="radio" value="1" name="ReturnFilght" id="radReturnYiXia" /><label for="radReturnYiXia">仅适用以下航班</label>
+                            <input type="radio" value="2" name="ReturnFilght" id="radReturnNotYiXia" /><label
+                                for="radReturnNotYiXia">不适用以下航班</label>
+                            <br />
+                            <input id="txtReturnFilght" class="text text_width" type="text" />
+                        </td>
+                        <td>
+                            <p class="obvious1">
+                                提示： 不加航空公司二字码，在输入框中输入限定的航班号，支持 * 匹配（如580*即支持5801到5809）。多航班请用“/ ”分隔，如：4590/580*
+                            </p>
+                        </td>
+                    </tr>
+                   <!-- <tr>
+                        <td class="title">
+                            选择出票条件
+                        </td>
+                        <td colspan="2">
+                            <select onchange="selDrawDondition(this);" style="width: 300px;" id="selDraw">
+                            </select>
+                        </td>
+                        <td class="obvious1">
+                            提示：此条件在公司工作信息维护中设置。是一个便捷方式。
+                        </td>
+                    </tr>-->
+                    <tr>
+                        <td class="title">
+                            出票条件
+                        </td>
+                        <td colspan="2">
+                            <textarea class="text textarea_width" id="txtDrawerCondition"></textarea>
+                        </td>
+                        <td class="obvious1">
+                            提示：如果有特别要说明的出票条件，请填写，若没有，则不用填。本内容会展示给买家，请谨慎填写。 <a href="javascript:zidingyi(1);">自定义出票条件</a>
+                        </td>
+                    </tr>
+                    <!--<tr>
+                        <td class="title">
+                            选择政策备注
+                        </td>
+                        <td colspan="2">
+                            <select onchange="selPRemark(this);" style="width: 300px;" id="selRemark">
+                            </select>
+                        </td>
+                        <td class="obvious1">
+                            提示：此条件在公司工作信息维护中设置。是一个便捷方式。
+                        </td>
+                    </tr>-->
+                    <tr>
+                        <td class="title">
+                            政策备注
+                        </td>
+                        <td colspan="2">
+                            <textarea class="text textarea_width" id="txtRemark"></textarea>
+                        </td>
+                        <td class="obvious1">
+                            提示：本内容只有卖家才能查看，主要是提示出票员核对政策使用规定。避免犯错，提高操作标准。若没有，则不用填。 <a href="javascript:zidingyi(2);">
+                                自定义政策备注</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="policy_group">
+            <div class="parent_div">
+                <h4 class="groupHd">
+                    第&nbsp;1&nbsp;组政策</h4>
+                <div class="groupCt">
+                    <div class="groupBox1">
+                        <div class="clearfix">
+                            <div class="fl pd_right groupLine">
+                                适用航班日期：
+                                <input type="text" onchange='ClearBunksByTime(this);' class="text datepicker datefrom  class3 quchengkaishi" />
+                                至
+                                <input type="text" onchange='ClearBunksByTime(this);' class="text datepicker datefrom  class3 quchengjieshu" />
+                            </div>
+                            <div class="fl pd_right groupLine">
+                                开始出票日期：
+                                <input type="text" onchange='ClearBunksByTime(this);' class="text datepicker datefrom  class3 chupiao" />
+                            </div>
+                            <div class="fl groupLine">
+                                <input type="button" class="btn class2 btnRefresh" value="刷新舱位" />
+                            </div>
+                        </div>
+                        <div class="groupLine">
+                            航班排除日期：
+                            <input type="text" class="text text_width" />
+                            <p class="obvious1 pd">
+                                请填写政策航班排除日期，单天如：20121121 连续多天如:20121125-20121127 多个天数用“,”隔开。
+                            </p>
+                        </div>
+                        <div class="pd_left">
+                            适用班期：
+                            <input type="checkbox" id="mon" checked='checked' value="1" />
+                            <label for="mon">
+                                周一</label>
+                            <input type="checkbox" id="tue" checked='checked' value="2" />
+                            <label for="tue">
+                                周二</label>
+                            <input type="checkbox" id="wed" checked='checked' value="3" />
+                            <label for="wed">
+                                周三</label>
+                            <input type="checkbox" id="thur" checked='checked' value="4" />
+                            <label for="thur">
+                                周四</label>
+                            <input type="checkbox" id="fri" checked='checked' value="5" />
+                            <label for="fri">
+                                周五</label>
+                            <input type="checkbox" id="sat" checked='checked' value="6" />
+                            <label for="sat">
+                                周六</label>
+                            <input type="checkbox" id="sun" checked='checked' value="7" />
+                            <label for="sun">
+                                周日</label><span class="obvious1">提示：若某个班期不适用，请将周期前的勾去掉</span>
+                        </div>
+                    </div>
+                    <div class="groupBox2">
+                        <table>
+                            <tr>
+                                <th>
+                                    舱位
+                                </th>
+                                <th>
+                                    客票类型
+                                </th>
+                                <th class='canHaveSubordinate' style='display: none;'>
+                                    内部佣金
+                                </th>
+                                <th>
+                                    下级佣金
+                                </th>
+                                <th class='allowBrotherPurchase' style='display: none;'>
+                                    同行佣金
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="BunksRad">
+                                    <label class='refBtnBunks btn class3'>
+                                        点击获取舱位</label>
+                                </td>
+                                <td class='BSP'>
+                                    <input type="checkbox" checked="checked" id="bsp" />
+                                    <label for="bsp">
+                                        BSP</label>
+                                </td>
+                                <td class='canHaveSubordinate' style='display: none;'>
+                                    <input type="text" class="text text-s" />%
+                                </td>
+                                <td>
+                                    <input type="text" class="text text-s" />%
+                                </td>
+                                <td class="allowBrotherPurchase" style='display: none;'>
+                                    <input type="text" class="text text-s" />%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="BunksRad">
+                                    <label class='refBtnBunks btn class3'>
+                                        点击获取舱位</label>
+                                </td>
+                                <td class='B2B'>
+                                    <input type="checkbox" checked="checked" id="b2b" class='chkb2b' />
+                                    <label for="b2b">
+                                        B2B</label>
+                                    <br />
+                                    <span style='margin-left: 125px' class='qfqcp'>
+                                        <input type='checkbox' id='qfqcp' class='qfqcp' style='margin-left: 20px;' />
+                                        <label for='qfqcp' class='qfqcp'>
+                                            起飞前2小时内可出票</label></span>
+                                </td>
+                                <td class='canHaveSubordinate' style='display: none;'>
+                                    <input type="text" class="text text-s" />%
+                                </td>
+                                <td>
+                                    <input type="text" class="text text-s" />%
+                                </td>
+                                <td class="allowBrotherPurchase" style='display: none;'>
+                                    <input type="text" class="text text-s" />%
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="clearfix">
+                            <div class="fl policy_check">
+                                <input type="checkbox" id="zjsh" />
+                                <label for="zjsh">
+                                    直接审核</label>
+                                <input type="checkbox" id="hbmcp" />
+                                <label for="hbmcp">
+                                    需换编码出票</label>
+                                <span class="wfjc">
+                                    <input type="checkbox" id="wfjc" />
+                                    <label for="wfjc">
+                                        适用于往返降舱政策</label></span>
+                                <input type="checkbox" id="syddlc" class='syddlc' style='display: none;' />
+                                <label for="syddlc" class='syddlc' style='display: none;'>
+                                    适用多段联程</label>
+                            </div>
+                            <div class="fr">
+                                <input type="button" class="btn class2 btnpolicyaddgroup" value="添加新组政策&nbsp;&nbsp;+" />
+                                <input type="button" class="btn class2" onclick='DelPolicyGroup(this);' value="删除本组政策&nbsp;&nbsp;×" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-c">
+            <input type="button" class="btn class1" id="btnPublish" value="发      布" />
+            <input type="button" class="btn class1" id="btnPolicyAdd" value="发布并继续" />
+            <input type="button" class="btn class2" id="btnReturn" value="返      回" />
+        </div>
+        <a id="divOpcial" style="display: none;" data="{type:'pop',id:'divZidingyi'}"></a>
+        <div id="divZidingyi" class="form layer3" style="display: none; width:700px;">
+            <div class='hd'><H4>自定义条件<A class='close' href="javascript:void(0)">关闭</A></H4></div>
+            <div class="table customerTb" id="divZidingyiTb"></div>
+        </div>
+    </div>
+    <script src="/Scripts/DateExtandJSCount-min.js" type="text/javascript"></script>
+    <script src="/Scripts/json2.js" type="text/javascript"></script>
+    <script src="/Scripts/airport.js" type="text/javascript"></script>
+    <script src="/Scripts/PolicyModule/Policy_Airports.js" type="text/javascript"></script>
+    <script src="/Scripts/DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <script src="/Scripts/widget/common.js" type="text/javascript"></script>
+    <script src="/Scripts/PolicyModule/policy_publish.js?20130415" type="text/javascript"></script>
+    <script src="/Scripts/PolicyModule/policy_vaildate.js?20130415" type="text/javascript"></script>
+    <script src="/Scripts/PolicyModule/base_policy_insert_vaildate.js?20130415" type="text/javascript"></script>
+    <script src="/Scripts/PolicyModule/base_policy_publish.js?20130415" type="text/javascript"></script>
+    <script src="/Scripts/PolicyModule/policy_draw.js?20130516" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".wfjc").css("display", "none");
+            $("#sel li a").click(function () {
+                $("#sel li a").removeClass("navType2Selected");
+                $(this).addClass("navType2Selected");
+                ShowOrHides($(this).attr("id"));
+            });
+            $(".chkb2b").live("click", function () {
+                if (!$(this).is(":checked")) {
+                    $(this).parent().find(".qfqcp").css("visibility", "hidden");
+                } else {
+                    $(this).parent().find(".qfqcp").css("visibility", "");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>默认角色菜单列表</title>
+    <link href="skinPath/core.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/Scripts/widget/common.js"></script>
+    <script type="text/javascript">
+        LoadSkins();
+    </script>
+
+</head>
+<body>
+    <div class="column  table">
+        <h3 class="titleBg">
+            公司类别权限设置</h3>
+        <table cellspacing="0"  cellpadding="0"> 
+        </table>
+    </div>
+    <script type="text/javascript" src="/Scripts/json2.js"></script>
+    <script type="text/javascript" language="javascript">
+        $("table").html("");
+        $(function () {
+            sendPostRequest("/PermissionHandlers/PermissionQuery.ashx/QueryRoleDefaultList", null, function (e) {
+                var table = "<tr><th>公司类别</th><th>描述</th><th class='op w40'>操作</th></tr>";
+                $.each(e, function (i, item) {
+                    table += "<tr><td>" + item.Description[0] + "</td><td>" + item.Description[1] + "</td><td class='op' ><a href='System_RoleMenu.htm?id=" + item.Id + "&name=" + item.Description[0] + "&code=" + item.Name + "'>公司权限设置</a></td></tr>";
+                });
+                $("table").append(table);
+            }, function (e) {
+                if (e.status == 300) {
+                    alert(JSON.parse(e.responseText));
+                } else {
+                    alert(e.statusText);
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>

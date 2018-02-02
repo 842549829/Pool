@@ -1,0 +1,139 @@
+.O-wrap{background: url(../images/oem/OEM_bg1.jpg) no-repeat 50% 78px;margin: 0 auto;min-height: 490px;min-width:980px;position: relative;}
+.O-header-bg{background: url(../images/oem/head1.png) no-repeat 50% bottom;height: 83px;}
+.O-footer-bg{background: #EDEDED url(/images/oem/shadow.png) repeat-x 0 0;color: #8B8B8B;;padding: 15px 0 10px;}
+.O-header,
+.O-content,
+.O-footer{margin: 0 auto;position: relative;width: 980px;}
+.O-logo{height: 30px;left: 130px;position: absolute;top: 30px;width: 220px;}
+.O-bar{color: #3A7BB5;height: 40px;line-height: 40px;position: absolute;right: 0;top: 5px;width: 550px;}
+
+/* 电话图标 */
+.O-phone{background: url(../images/oem/phone1.png) no-repeat 5px 50%;display: inline-block;padding-left: 30px;}
+.O-phone{*display: inline;}
+
+.O-ui{position: absolute;right: 0;top: 0;}
+
+/* 注册按钮 */
+.O-register{background: url(../images/oem/reg1.png) no-repeat 50% 50%;color: #fff;display: inline-block;height: 20px;margin-right: 10px; line-height: 20px;text-align: center;width: 45px;}
+.O-register{*display: inline;}
+.O-register:hover{text-decoration: none;}
+
+/* 登录区域 */
+.O-login-box{background: url(../images/login/loginarea.png) no-repeat;height: 321px;position: absolute;right: -5px;top: 5px;width: 316px;}
+.O-login-area{background-color: #eee;border-radius: 10px;margin: 20px 20px 10px;padding: 15px;}
+.O-login-area h4{color: #3A7BB5;margin: 0;padding: 0;text-align: center;}
+.O-line{background: url(../images/oem/line.png) repeat-x;height: 2px;margin: 10px 0;width: 100%;}
+.O-login-info{padding: 5px 0 20px;position: relative;}
+.O-login-info input.text{border: 1px solid #E6E7E6;width: 180px;}
+.O-login-info input[type="checkbox"]{margin-right: 5px;vertical-align: top;}
+.O-login-info img{display: inline-block;width: 90px;height: 25px;vertical-align: middle;*vertical-align: baseline;}
+.O-login-info.last{padding-bottom: 0;}
+.O-save-pw{bottom: 0;left: 0;position: absolute;vertical-align: top;}
+.O-forget-pw{bottom: 0;position: absolute;right: 10px;text-decoration: underline;}
+.O-warning{color: #D92672;line-height: 20px;margin-left:80px;}
+.O-login-btn{background-color: #00A2E1;border:0 none;color: #fff;cursor:pointer;display:inline-block;font-size: 16px;font-weight: 400;height: 30px;line-height: 30px;margin: 0 20px;padding: 0;word-spacing: 10px;width: 150px;}
+.O-register-btn{background-color: #B3B3B3;border:0 none;color: #333;display:inline-block;font-size: 16px;font-weight: 400;height: 30px;line-height: 30px;margin: 0;padding: 0;text-align:center;vertical-align:top;width: 90px;}
+.O-register-btn:hover{background-color:#909090;text-decoration:none;}
+.O-login-btn:hover{background-color: #48AFD6;}
+.O-login-btn，.O-register-btn{*display:inline;}
+
+.O-con{margin-bottom: 30px;padding-top: 350px;}
+
+/* 推荐信息 */
+.O-recommend-box{float: left;position: relative;width: 700px;}
+.O-aim-box{float: right;width: 200px;}
+.O-recommend-box .O-title{left: 0;position: absolute;top: 0;}
+.O-title{background: url(../images/oem/title1.png) no-repeat 3px 0;color: #006CBE;height: 26px;line-height: 26px;padding: 0 0 0 30px;}
+.O-recommend-menu{height: 26px;line-height: 26px;margin: 0 0 10px 100px;}
+.O-recommend-menu li{background: url(../images/oem/menu1.png) no-repeat;cursor: pointer;float: left;height: 26px;line-height: 26px;text-align: center;width: 70px;}
+.O-recommend-menu li.curr{background-position: right 50%;color: #fff;}
+.O-recommend-menu li.curr a{color:#fff;}
+.O-recommend-con{height: 124px;overflow: hidden;width: 100%;}
+.O-recommend-con li{border-bottom: 1px dashed #DEDEDE;float: left;height: 20px;line-height: 20px;margin: 0 10px;padding: 5px 0;width: 210px;}
+.O-fight{background: url(../images/oem/fight1.png) no-repeat 50% 6px;display: inline-block;height: 20px;width: 25px;}
+.O-city{padding: 0 5px;}
+.O-fight{*display: inline;}
+.O-way{padding: 0 20px 0 10px;}
+.O-price{color: #FD6000;font-size: 14px;font-weight: 600;}
+
+.O-aim{background-color: #E6E6E6;border-radius: 5px;margin: 5px 0;padding: 15px;width: 130px;}
+.O-aim li{text-align: justify;width: 100%;}
+
+/* 合作 */
+.O-collaborate{float: left;margin-bottom:20px;width: 50%;}
+.O-collaborate h4{margin: 10px 0 20px;;padding: 0;}
+.O-fight-link{background-image: url(../images/oem/ico-fight.png);background-repeat:no-repeat;float:left;height:30px;margin:0 5px;text-indent: -9999px;width:35px;}
+.O-fight-ico1{background-position:0 0;}
+.O-fight-ico2{background-position:-44px 0;}
+.O-fight-ico3{background-position:-88px 0;}
+.O-fight-ico4{background-position:-134px 0;}
+.O-fight-ico5{background-position:-178px 0;}
+.O-fight-ico6{background-position:-224px 0;}
+.O-fight-ico7{background-position:-274px 0;}
+.O-fight-ico8{background-position:-314px 0;}
+.O-fight-ico9{background-position:-358px 0;}
+.O-fight-ico10{background-position:0 -42px;}
+.O-fight-ico11{background-position:-44px -42px;}
+.O-fight-ico12{background-position:-88px -42px;}
+.O-fight-ico13{background-position:-134px -42px;}
+.O-fight-ico14{background-position:-178px -42px;}
+.O-fight-ico15{background-position:-224px -42px;}
+.O-fight-ico16{background-position:-274px -42px;}
+.O-fight-ico17{background-position:-314px -42px;}
+.O-fight-ico18{background-position:-358px -42px;}
+.O-fight-ico1:hover{background-position:0 -75px;}
+.O-fight-ico2:hover{background-position:-44px -75px;}
+.O-fight-ico3:hover{background-position:-88px -75px;}
+.O-fight-ico4:hover{background-position:-134px -75px;}
+.O-fight-ico5:hover{background-position:-178px -75px;}
+.O-fight-ico6:hover{background-position:-224px -75px;}
+.O-fight-ico7:hover{background-position:-274px -75px;}
+.O-fight-ico8:hover{background-position:-314px -75px;}
+.O-fight-ico9:hover{background-position:-358px -75px;}
+.O-fight-ico10:hover{background-position:0 -117px;}
+.O-fight-ico11:hover{background-position:-44px -117px;}
+.O-fight-ico12:hover{background-position:-88px -117px;}
+.O-fight-ico13:hover{background-position:-134px -117px;}
+.O-fight-ico14:hover{background-position:-178px -117px;}
+.O-fight-ico15:hover{background-position:-224px -117px;}
+.O-fight-ico16:hover{background-position:-274px -117px;}
+.O-fight-ico17:hover{background-position:-314px -117px;}
+.O-fight-ico18:hover{background-position:-358px -117px;}
+.O-other-link{background-image: url(../images/oem/ico-other.png);background-repeat:no-repeat;float:left;height: 30px;margin:0 2px;text-indent: -9999px;width: 30px;}
+.O-other-ico1{background-position:0 0;}
+.O-other-ico2{background-position:-44px 0;width:80px;}
+.O-other-ico3{background-position:-120px 0;width:150px;}
+.O-other-ico4{background-position:-270px 0;width:80px;}
+.O-other-ico5{background-position:-350px 0;width:80px;}
+.O-other-ico6{background-position:0 -30px;}
+.O-other-ico7{background-position:-32px -30px;}
+.O-other-ico8{background-position:-64px -30px;}
+.O-other-ico9{background-position:-92px -30px;}
+.O-other-ico10{background-position:-122px -30px;}
+.O-other-ico11{background-position:-156px -30px;}
+.O-other-ico12{background-position:-194px -30px;}
+.O-other-ico13{background-position:-228px -30px;}
+.O-other-ico14{background-position:-262px -30px;}
+.O-other-ico15{background-position:-294px -30px;}
+.O-other-ico16{background-position:-324px -30px;}
+.O-other-ico17{background-position:-354px -30px;}
+.O-other-ico18{background-position:-384px -30px;}
+.O-other-ico1:hover{background-position:0 -61px;}
+.O-other-ico2:hover{background-position:-44px -61px;}
+.O-other-ico3:hover{background-position:-120px -61px;}
+.O-other-ico4:hover{background-position:-270px -61px;}
+.O-other-ico5:hover{background-position:-350px -61px;}
+.O-other-ico6:hover{background-position:0 -91px;}
+.O-other-ico7:hover{background-position:-32px -91px;}
+.O-other-ico8:hover{background-position:-64px -91px;}
+.O-other-ico9:hover{background-position:-92px -91px;}
+.O-other-ico10:hover{background-position:-122px -91px;}
+.O-other-ico11:hover{background-position:-156px -91px;}
+.O-other-ico12:hover{background-position:-194px -91px;}
+.O-other-ico13:hover{background-position:-228px -91px;}
+.O-other-ico14:hover{background-position:-262px -91px;}
+.O-other-ico15:hover{background-position:-294px -91px;}
+.O-other-ico16:hover{background-position:-324px -91px;}
+.O-other-ico17:hover{background-position:-354px -91px;}
+.O-other-ico18:hover{background-position:-384px -91px;}
+.O-copyright p{line-height: 20px;text-align: center;}

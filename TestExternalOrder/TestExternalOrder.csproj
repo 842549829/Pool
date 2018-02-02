@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D19845E2-1F25-4A67-8C3B-F7AC12D4D652}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestExternalOrder</RootNamespace>
+    <AssemblyName>TestExternalOrder</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChinaPay.Comm.Infrastructure">
+      <HintPath>..\DependentDLL\ChinaPay.Comm.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Core">
+      <HintPath>..\DependentDLL\ChinaPay.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Data">
+      <HintPath>..\DependentDLL\ChinaPay.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.DataAccess">
+      <HintPath>..\DependentDLL\ChinaPay.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.PoolPay.Service">
+      <HintPath>..\DependentDLL\ChinaPay.PoolPay.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Repository">
+      <HintPath>..\DependentDLL\ChinaPay.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Sequence">
+      <HintPath>..\DependentDLL\ChinaPay.Sequence.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.SMS">
+      <HintPath>..\DependentDLL\ChinaPay.SMS.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.SMS.Service">
+      <HintPath>..\DependentDLL\ChinaPay.SMS.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="ChinaPay.Utility">
+      <HintPath>..\DependentDLL\ChinaPay.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Izual.Core">
+      <HintPath>..\DependentDLL\Izual.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PoolPay.DataTransferObject">
+      <HintPath>..\DependentDLL\PoolPay.DataTransferObject.dll</HintPath>
+    </Reference>
+    <Reference Include="PoolPay.DomainModel">
+      <HintPath>..\DependentDLL\PoolPay.DomainModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OrderRepositoryTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="测试引用\ChinaPay.B3B.Service.Order.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChinaPay.B3B.Common\ChinaPay.B3B.Common.csproj">
+      <Project>{1A2B88D1-C6C9-491F-9AF0-DE5D5CD713BC}</Project>
+      <Name>ChinaPay.B3B.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.DataEnvironment\ChinaPay.B3B.DataEnvironment.csproj">
+      <Project>{2F327D7D-E2AB-4339-9A6A-721E9EF91131}</Project>
+      <Name>ChinaPay.B3B.DataEnvironment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.DataTransferObject\ChinaPay.B3B.DataTransferObject.csproj">
+      <Project>{41D94D83-9BF2-487E-9542-78E138287C7B}</Project>
+      <Name>ChinaPay.B3B.DataTransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Command\ChinaPay.B3B.Service.Command.csproj">
+      <Project>{EF8E1402-7388-4FB1-BAC0-4C2380EB7A85}</Project>
+      <Name>ChinaPay.B3B.Service.Command</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.ExternalPlatform\ChinaPay.B3B.Service.ExternalPlatform.csproj">
+      <Project>{25A1C6B1-63D5-43F3-881B-79FCDC3E54B2}</Project>
+      <Name>ChinaPay.B3B.Service.ExternalPlatform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Foundation\ChinaPay.B3B.Service.Foundation.csproj">
+      <Project>{6B27FDF3-33E6-4F67-9A03-1C6C6D1D023E}</Project>
+      <Name>ChinaPay.B3B.Service.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Integral\ChinaPay.B3B.Service.Integral.csproj">
+      <Project>{D590A0D0-F8BD-48E1-A994-CAB1BDD3AC63}</Project>
+      <Name>ChinaPay.B3B.Service.Integral</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Locker\ChinaPay.B3B.Service.Locker.csproj">
+      <Project>{B176C22D-A49C-4BEB-B55D-63F10B774722}</Project>
+      <Name>ChinaPay.B3B.Service.Locker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Log\ChinaPay.B3B.Service.Log.csproj">
+      <Project>{A610B1FF-C0EF-4FF7-A246-7CC4BA76BD21}</Project>
+      <Name>ChinaPay.B3B.Service.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Order\ChinaPay.B3B.Service.Order.csproj">
+      <Project>{114E29C9-EFDD-43E4-8087-D66A1006BFDB}</Project>
+      <Name>ChinaPay.B3B.Service.Order</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Organization\ChinaPay.B3B.Service.Organization.csproj">
+      <Project>{97490979-5CB9-4925-B5FD-A95FA1204711}</Project>
+      <Name>ChinaPay.B3B.Service.Organization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.PolicyMatch\ChinaPay.B3B.Service.PolicyMatch.csproj">
+      <Project>{DE224BD1-F706-4258-A853-1A219EDBCF35}</Project>
+      <Name>ChinaPay.B3B.Service.PolicyMatch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Policy\ChinaPay.B3B.Service.Policy.csproj">
+      <Project>{08F2DE67-74C5-4F7F-B084-16D5EAC2C2A9}</Project>
+      <Name>ChinaPay.B3B.Service.Policy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Remind\ChinaPay.B3B.Service.Remind.csproj">
+      <Project>{F6DBE331-DA35-4D62-91E8-4994AAE412A8}</Project>
+      <Name>ChinaPay.B3B.Service.Remind</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.Statistic\ChinaPay.B3B.Service.Statistic.csproj">
+      <Project>{86D8D2D8-F556-4E74-9644-E0F2FDD7D13F}</Project>
+      <Name>ChinaPay.B3B.Service.Statistic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaPay.B3B.Service.SystemManagement\ChinaPay.B3B.Service.SystemManagement.csproj">
+      <Project>{828B159A-5475-4610-BB05-03FF862B7E67}</Project>
+      <Name>ChinaPay.B3B.Service.SystemManagement</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

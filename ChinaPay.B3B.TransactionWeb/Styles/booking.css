@@ -1,0 +1,432 @@
+p#bander{
+	width: 100%;
+	height: 60px;
+	background-color: #6C7493;
+	border: 1px solid black;
+	color: white;
+}
+p#userinfor{
+	margin:0; 
+	width:65%;
+	height: 35px;
+	float: left;
+	background-color: #ffe6d7;
+	border: 1px dotted #d1d1d1;
+	line-height: 35px;
+	padding-left: 1.1%;
+}
+p#userscore{
+	float: right;
+	width: 32.9%;
+	height: 40px;
+	padding:10px 0 0 1%;
+	background-image: url(../images/caigou-ico.png);
+	background-position:-875px -52px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left:68%; 
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+}
+p#userscore a{
+	color: white;
+	font-size: 12px;
+	font-weight: normal;
+}
+.content{
+	width: 100%;
+	margin: 15px 0;
+	position: relative;
+}
+.inqueryBox{
+	width:32.4%;
+	_width:32.3%;
+	background-color: #fdfdfd;
+	border: 1px solid #dbdbdb;
+	float: left;
+	height: 350px;
+	position: relative;
+}
+.leftBox{
+	margin-right: 1%;
+}
+.rightBox{
+	margin-left: 1%;
+}
+.boxTitle{
+	height: 41px;
+	width: 100%;
+	background-image: url(../images/667px.png);
+	background-position:-175px 0;
+}
+.boxTitle1{
+	height: 41px;
+	width: 100%;
+	background-image: url(../images/667px.png);
+	background-position:-73px -43px;
+}
+.recommend{
+	width:66.1%;
+	background-color: #fdfdfd;
+	border: 1px solid #dbdbdb;
+	float: left;
+	height: 190px;
+	overflow:hidden;
+}
+.recommendTitle{
+	height: 32px;
+	width: 100%;
+	background-image: url(../images/667px.png);
+}
+div.help{
+	float: left;
+	width:32.4%;
+	background-color: #fdfdfd;
+	border: 1px solid #dbdbdb;
+	height: 190px;
+}
+#plane{
+	margin-left: 10%;
+	height: 53px;
+	background-image: url(../images/fly.png);
+	background-repeat: no-repeat;
+	padding: 0 0 0 26%;
+	line-height: 53px;
+	position: relative;
+	top: -10px;
+	left: 0px;
+	color: white;
+	font-size: 14px;
+}
+.inqueryBox table{
+	margin: 10px;
+	width: 94%;
+}
+.inqueryBox table td{
+	padding: 10px 0;
+	vertical-align: middle;
+}
+.title{
+	width: 28%;
+}
+.borderBox{
+	width: 85%;
+	height: 26px;
+	border:1px solid #abadb3;
+}
+.inputBox{
+	float: left;
+	border: 0;
+	width: 80%;
+	height: 20px;
+	line-height:20px;
+}
+.cityBox{
+	display: block;
+	margin-top: 2px;
+	background-image: url(../images/caigou-ico.png);
+	background-position: 0 -37px;
+	height: 20px;
+	width: 23px;
+	overflow: hidden;
+	padding: 0;
+	cursor: pointer;
+}
+.arrivalBox{
+	display: block;
+	margin-top: 2px;
+	background-image: url(../images/caigou-ico.png);
+	background-position: -43px -37px;
+	height: 20px;
+	width: 23px;
+	overflow: hidden;
+	padding: 0;
+	cursor: pointer;
+}
+.returnBox{
+	display: block;
+	margin-top: 2px;
+	background-image: url(../images/caigou-ico.png);
+	background-position: -66px -37px;
+	height: 20px;
+	width: 23px;
+	overflow: hidden;
+	padding: 0;
+	cursor: pointer;
+}
+.inquireBtn{
+	color: white;
+	width: 120px;
+	height: 30px;
+	background-color: #fc8231;
+	border:0;
+	cursor:pointer;
+}
+.inquireBtn{
+	color: white;
+	width: 120px;
+	height: 30px;
+	background-color: #fc8231;
+	border:0;
+	cursor:pointer;
+}
+.btnFixed
+{
+    position:absolute;
+    top:300px;
+    left:100px;
+}
+.inquireBtn:hover{
+	background-color: #f64;
+}
+#changeCity{
+	position: absolute;
+	top:31%;
+	left:87%;
+	width:23px;
+	height:56px;
+	background-image: url(../images/huan.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+#PNR
+{
+    background: url(../images/ky.png) no-repeat;
+    color: white;
+    font-size: 14px;
+    height: 46px;
+    line-height: 38px;
+	margin-left: 10%;
+	padding: 0 0 0 26%;
+	position: relative;
+	top: -2px;
+}
+.PNRText{
+	height: 18px;
+	line-height:18px;
+	border:1px solid #abadb3;
+	width:110px;
+}
+.PNRprompt
+{
+    color:#666;
+    margin: 0 0 15px 50px;
+}
+.PNRTips1
+{
+    border-top: 1px dotted #bdbdbd;
+    line-height: 20px;
+    padding:20px 0 21px;
+    text-align:center;
+}
+.PNRTips1 .arrowR
+{
+    background: url(../images/right.gif) no-repeat 0 0;
+    display:inline-block;
+    *display:inline;
+    height:14px;
+    width: 38px;
+}
+#PAT
+{
+    color: #2450A0;
+}
+/*
+.PNRTips1
+{
+    text-align:center;
+}
+.PNRTips1 h4
+{
+    background-color:#E3E3E3;
+    height:20px;
+    line-height:20px;
+    padding:0;
+}
+.PNRTips1 p
+{
+    background: url(../images/pnrtips_ico.png) no-repeat 0 -1px;
+    color:#666;
+    height:32px;
+    line-height:16px;
+    padding:10px 0;
+}
+#PAT
+{
+    background: url(../images/pnrtips_ico.png) no-repeat 0 -58px;
+    color:#fff;
+    display:inline-block;
+    height:28px;
+    line-height:28px;
+    margin-left:40px;
+    padding-left:20px;
+    text-align:left;
+    width:96px;
+}
+#PAT
+{
+    *display:inline;
+}
+#PAT:hover
+{
+    text-decoration:none;
+}
+#PAT
+{
+    color: #6585C2;
+    display:block;
+    margin:10px 0 20px 140px; 
+}
+.prompt{
+	width: 15%;
+	display: block;
+	float: left;
+	line-height: 20px;
+	margin-left:10px; 
+	padding:0;
+}
+.promptText{
+	float: left;
+	width: 75%;
+	line-height: 20px;
+}
+.promptText a{
+	color: #6585C2;
+}
+*/
+.header{
+	height: 30px;
+	background: url(../images/10px.png) no-repeat 15px 50%;
+	color: white;
+	font-size: 14px;
+	line-height: 30px;
+	padding: 0 0 0 30px;
+	float: left;
+}
+.boxTitle1 a{
+	line-height: 33px;
+	float: right;
+	color: white;
+	padding-right: 5%;
+}
+.recommendTitle ul{
+	height: 30px;
+	margin: 5px 15px 0;
+	float: left;
+	line-height: 25px;
+}
+.recommendTitle ul li {
+	float: left;
+}
+.recommendTitle ul li a{
+	padding: 0 10px;
+	height: 29px;
+	display: block;
+	color: white;
+	width:30px;
+    text-align:center;
+}
+div.recommendTitle .selectedCity{
+	background-color: white;
+	color: #6C7493;
+	text-decoration: none;
+}
+.announcement{
+	margin: 15px 5%;
+}
+.announcement li{
+	padding:10px 0;
+	width: 100%;
+	float: left;
+	font-size: 12px;
+}
+.announcement li a{
+	display: block;
+	float: left;
+	width: 70%;
+	height: 15px;
+	overflow: hidden;
+}
+.announcement li span{
+	float: right;
+	display: inline;
+}
+.recommendList{
+	margin: 10px 2%;
+}
+.recommendList li {
+	float: left;
+	line-height: 25px;
+	width: 30%;
+	margin: 5px 3% 5px 0;
+}
+.flightInfo{
+	border-bottom: 1px dotted #666;
+}
+.recommendList li a{
+	color: #6585C2;
+}
+.help ul{
+	margin: 10px 9%;
+}
+.help ul li{
+	float: left;
+	height: 17px;
+	line-height:17px;
+	padding: 10px 5px;
+	font-size: 12px;
+}
+.assistantPic{
+	height: 17px;
+	width: 17px;
+	float: left;
+	margin-right: 10px;
+}
+#myTicket{
+	background-image: url(../images/caigou-ico.png);
+	background-position: 0 -57px;
+}
+#myPoints{
+	background-image: url(../images/caigou-ico.png);
+	background-position: -18px -57px;
+}
+#information{
+	background-image: url(../images/caigou-ico.png);
+	background-position: -36px -57px;
+}
+#modifyPwd{
+	background-image: url(../images/caigou-ico.png);
+	background-position: 0 -75px;
+}
+#account{
+	background-image: url(../images/caigou-ico.png);
+	background-position: -18px -75px;
+}
+#helpCenter{
+	background-image: url(../images/caigou-ico.png);
+	background-position: -36px -75px;
+}
+.help img{
+	margin:10px auto;
+}
+#hotline{
+	margin:15px 13%;
+	height: 22px;
+	background: url(../images/phone.png) no-repeat;
+	line-height: 22px;
+	padding-left: 50px;
+}
+.AdultPNRCode,.childrenPNR {
+    display: none;   
+}
+.emptyPNR {
+    height: 46px; 
+    *height:48px;  
+}
+#errorInfo {
+    text-align: left;
+    clear: left;
+    padding: 5px;   
+}

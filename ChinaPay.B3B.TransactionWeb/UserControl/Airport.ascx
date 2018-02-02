@@ -1,0 +1,3 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Airport.ascx.cs" Inherits="ChinaPay.B3B.TransactionWeb.UserControl.Airport" %>
+<asp:TextBox runat="server" ID="txtAirport" Width="40px" Height="22px" onkeyup="SelectItem(this,'-')" MaxLength="3" CssClass="text fl"></asp:TextBox>
+<asp:DropDownList runat="server" CssClass="text ctag" ID="ddlAirports" Width="130px" onchange="ShowKey(this,'-',0)"></asp:DropDownList>

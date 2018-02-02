@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeBehind="OrderBill.ascx.cs" Inherits="ChinaPay.B3B.TransactionWeb.OrderModule.UserControls.OrderBill" %>
+<div class="column table"><h3 class="titleBg">账单信息</h3><div runat="server" id="divBills" class="table"></div></div>

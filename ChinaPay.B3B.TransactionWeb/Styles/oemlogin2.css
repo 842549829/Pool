@@ -1,0 +1,118 @@
+.O-wrap{background: url(../images/oem/OEM_bg2.jpg) no-repeat 50% 78px;margin: 0 auto;min-height: 490px;min-width:980px;position: relative;}
+.O-header-bg{background: #6196C3 url(/images/oem/shadow.png) repeat-x 0 81px;height: 83px;}
+.O-footer-bg{background: #EDEDED url(/images/oem/shadow.png) repeat-x;color: #8B8B8B;padding: 15px 0 10px;}
+.O-header,
+.O-content,
+.O-footer{margin: 0 auto;position: relative;width: 980px;}
+.O-logo{height: 30px;left: -50px;position: absolute;top: 30px;width: 220px;}
+.O-bar{background: url(/images/oem/bar2.png) no-repeat;color: #fff;height: 40px;line-height: 40px;padding: 0 20px;position: absolute;right: 0;top: 25px;width: 750px;}
+.O-bar a{color: #fff;}
+.O-bar p a{display: inline-block;margin: 0 20px;}
+.O-bar p a{*display: inline;}
+.O-phone{background: url(../images/oem/phone2.png) no-repeat 5px 50%;display: inline-block;margin-left: 40px;padding-left: 30px;}
+.O-phone{*display: inline;}
+.O-ui{position: absolute;right: 20px;top: 0;}
+.O-register{background: url(../images/oem/reg2.png) no-repeat 50% 50%;color: #fff;display: inline-block;height: 20px;margin-right: 10px;line-height: 20px;text-align: center;width: 45px;}
+.O-register{*display: inline;}
+.O-register:hover{text-decoration: none;}
+.O-login-box{background-color: #fff;border: 1px solid #D7D8D7;height: 300px;position: absolute;right: 0;top: 5px;width: 280px;}
+.O-login-area h4{background-color: #F8F9F8;border-bottom: 1px solid #D7D8D7;color: #000;font-size: 16px;height: 40px;line-height: 40px;margin: 0;padding: 0;text-align: center;}
+.O-line{background: url(../images/oem/line.png) repeat-x;height: 2px;margin: 10px 0;width: 100%;}
+.O-login-info-box{margin-left: 50px;}
+.O-login-info{line-height: 1.5;padding: 10px 0;position: relative;}
+.O-login-info input.text{border: 1px solid #E6E7E6;width: 180px;}
+.O-login-info input[type="checkbox"]{margin-right: 5px;vertical-align: top;}
+.O-login-info img{display: inline-block;width: 90px;height: 25px;vertical-align: middle;*vertical-align: baseline;}
+.O-login-info.last{padding-bottom: 0;}
+.O-save-pw{bottom: 0;left: 45px;position: absolute;vertical-align: top;}
+.O-forget-pw{position: absolute;right: 45px;top: 9px;}
+.O-warning{color: #D92672;line-height: 20px;padding-left: 130px;}
+.O-login-btn{background-color: #EB8000;border:0 none;color: #fff;font-size: 16px;font-weight: 400;height: 30px;line-height: 30px;margin: 0 30px;padding: 0;word-spacing: 10px;width: 100px; vertical-align:middle;}
+.O-login-btn:hover{background-color: #E58E29;}
+.O-con{margin-bottom:30px;padding-top: 350px;}
+.O-tips-box{background: url(../images/oem/ico-tips.png) no-repeat;float: left;height: 110px;margin: 0 25px 10px;text-align: center;width: 140px;}
+.O-tips-box h4{padding: 85px 0 5px;}
+.O-tips-a{background-position: 10px 0;}
+.O-tips-b{background-position: -180px 0;}
+.O-tips-c{background-position: -375px 0;}
+.O-tips-d{background-position: -570px 0;}
+.O-tips-e{background-position: -760px 0;}
+.O-collaborate{float: left;margin-bottom:20px;width: 50%;}
+.O-collaborate h4{margin: 10px 0 20px;padding: 0;}
+.O-fight-link{background-image: url(../images/oem/ico-fight.png);background-repeat:no-repeat;float:left;height:30px;margin:0 5px;text-indent: -9999px;width:35px;}
+.O-fight-ico1{background-position:0 0;}
+.O-fight-ico2{background-position:-44px 0;}
+.O-fight-ico3{background-position:-88px 0;}
+.O-fight-ico4{background-position:-134px 0;}
+.O-fight-ico5{background-position:-178px 0;}
+.O-fight-ico6{background-position:-224px 0;}
+.O-fight-ico7{background-position:-274px 0;}
+.O-fight-ico8{background-position:-314px 0;}
+.O-fight-ico9{background-position:-358px 0;}
+.O-fight-ico10{background-position:0 -42px;}
+.O-fight-ico11{background-position:-44px -42px;}
+.O-fight-ico12{background-position:-88px -42px;}
+.O-fight-ico13{background-position:-134px -42px;}
+.O-fight-ico14{background-position:-178px -42px;}
+.O-fight-ico15{background-position:-224px -42px;}
+.O-fight-ico16{background-position:-274px -42px;}
+.O-fight-ico17{background-position:-314px -42px;}
+.O-fight-ico18{background-position:-358px -42px;}
+.O-fight-ico1:hover{background-position:0 -75px;}
+.O-fight-ico2:hover{background-position:-44px -75px;}
+.O-fight-ico3:hover{background-position:-88px -75px;}
+.O-fight-ico4:hover{background-position:-134px -75px;}
+.O-fight-ico5:hover{background-position:-178px -75px;}
+.O-fight-ico6:hover{background-position:-224px -75px;}
+.O-fight-ico7:hover{background-position:-274px -75px;}
+.O-fight-ico8:hover{background-position:-314px -75px;}
+.O-fight-ico9:hover{background-position:-358px -75px;}
+.O-fight-ico10:hover{background-position:0 -117px;}
+.O-fight-ico11:hover{background-position:-44px -117px;}
+.O-fight-ico12:hover{background-position:-88px -117px;}
+.O-fight-ico13:hover{background-position:-134px -117px;}
+.O-fight-ico14:hover{background-position:-178px -117px;}
+.O-fight-ico15:hover{background-position:-224px -117px;}
+.O-fight-ico16:hover{background-position:-274px -117px;}
+.O-fight-ico17:hover{background-position:-314px -117px;}
+.O-fight-ico18:hover{background-position:-358px -117px;}
+.O-other-link{background-image: url(../images/oem/ico-other.png);background-repeat:no-repeat;float:left;height: 30px;margin:0 2px;text-indent: -9999px;width: 30px;}
+.O-other-ico1{background-position:0 0;}
+.O-other-ico2{background-position:-44px 0;width:80px;}
+.O-other-ico3{background-position:-120px 0;width:150px;}
+.O-other-ico4{background-position:-270px 0;width:80px;}
+.O-other-ico5{background-position:-350px 0;width:80px;}
+.O-other-ico6{background-position:0 -30px;}
+.O-other-ico7{background-position:-32px -30px;}
+.O-other-ico8{background-position:-64px -30px;}
+.O-other-ico9{background-position:-92px -30px;}
+.O-other-ico10{background-position:-122px -30px;}
+.O-other-ico11{background-position:-156px -30px;}
+.O-other-ico12{background-position:-194px -30px;}
+.O-other-ico13{background-position:-228px -30px;}
+.O-other-ico14{background-position:-262px -30px;}
+.O-other-ico15{background-position:-294px -30px;}
+.O-other-ico16{background-position:-324px -30px;}
+.O-other-ico17{background-position:-354px -30px;}
+.O-other-ico18{background-position:-384px -30px;}
+.O-other-ico1:hover{background-position:0 -61px;}
+.O-other-ico2:hover{background-position:-44px -61px;}
+.O-other-ico3:hover{background-position:-120px -61px;}
+.O-other-ico4:hover{background-position:-270px -61px;}
+.O-other-ico5:hover{background-position:-350px -61px;}
+.O-other-ico6:hover{background-position:0 -91px;}
+.O-other-ico7:hover{background-position:-32px -91px;}
+.O-other-ico8:hover{background-position:-64px -91px;}
+.O-other-ico9:hover{background-position:-92px -91px;}
+.O-other-ico10:hover{background-position:-122px -91px;}
+.O-other-ico11:hover{background-position:-156px -91px;}
+.O-other-ico12:hover{background-position:-194px -91px;}
+.O-other-ico13:hover{background-position:-228px -91px;}
+.O-other-ico14:hover{background-position:-262px -91px;}
+.O-other-ico15:hover{background-position:-294px -91px;}
+.O-other-ico16:hover{background-position:-324px -91px;}
+.O-other-ico17:hover{background-position:-354px -91px;}
+.O-other-ico18:hover{background-position:-384px -91px;}
+.O-copyright p{line-height: 20px;text-align: center;}
+.O-register-btn{background-color: #B3B3B3;border:0 none;color: #333;display:inline-block;font-size: 16px;font-weight: 400;height: 30px;line-height: 30px;margin: 0;padding: 0;text-align:center;width: 90px; vertical-align:middle;}
+#btnRegister{text-decoration:none;}

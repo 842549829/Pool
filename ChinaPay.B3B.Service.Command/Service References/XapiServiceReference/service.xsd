@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.b3b.so/xapi/" elementFormDefault="qualified" targetNamespace="http://www.b3b.so/xapi/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cmd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandType" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="lockfirst" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="flag" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="type" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="tid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="agentId" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMessageResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

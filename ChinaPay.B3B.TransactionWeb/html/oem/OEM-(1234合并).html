@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>站点信息</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/page.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/core.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/form.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/register.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/oem.css" />
+</head>
+<body>
+    <div class="O_menu_nav">
+		<h3 class="titleBg"><a name="O1">站点信息设置</a></h3>
+		<div class="clearfix">
+            <p>编辑授权明细：<span>webchong(云南特价机票网)</span></p>
+			<a href="#O1" class="curr">站点信息</a>
+			<a href="#O2">页头信息</a>
+			<a href="#O3">页尾信息</a>
+			<a href="#O4">风格管理</a>
+		</div>
+	</div>
+	<div class="O_menu_con">
+        <a name="O1" class="anchor"></a>
+		<div class="O_formBox">
+			<span>网站名称：</span><br />
+			<input type="text" class="text" />
+			<span class="muted">网站名称，将显示在浏览器窗口标题等位置</span>
+		</div>
+		<div class="O_formBox">
+			<span>网站域名：</span><br />
+			<input type="text" class="text" />
+			<span class="muted">用户可用通过该域名访问您的站点，也作为站内首页跳转URL，请确认您已将域名解析到116.55.243.38</span>
+			<a href="#">解析帮助</a>
+		</div>
+		<div class="O_formBox">
+			<span>管理员邮箱：</span><br />
+			<input type="text" class="text" />
+			<span class="muted">管理员E-ma，将作为系统发邮件的时候的发件人地址</span>
+		</div>
+		<div class="O_formBox">
+			<span>网站备案信息代码：</span><br />
+			<textarea class="text" rows="3" cols="60"></textarea>
+			<span class="muted">页面底部可用显示ICP备案信息，在此输入您的授权码</span>
+		</div>
+		<div class="O_formBox">
+			<span>网站第三方统计代码：</span><br />
+			<textarea class="text" rows="3" cols="60"></textarea>
+			<span class="muted">页面底部可用显示第三方统计帮助您查看网站的相关访问统计信息</span>
+		</div>
+		<div class="O_formBox">
+			<span>是否关闭站点：</span><br />
+			<input type="radio" />
+			<label>开启</label>
+			<input type="radio" />
+			<label>关闭</label>
+		</div>
+		<div class="O_formBox">
+			<span>是否允许用户自行注册：</span><br />
+			<input type="radio" />
+			<label>允许</label>
+			<input type="radio" />
+			<label>禁止</label>
+		</div>
+	</div>
+	<div class="O_menu_con">
+		<a name="O2" class="anchor"></a>
+		<div class="O_formBox">
+			<span>网站关键词：</span><br />
+			<input type="text" class="text" />
+			<span class="muted">多个关键词以半角短号隔开，利于搜索引擎收录和抓取</span>
+		</div>
+		<div class="O_formBox">
+			<span>网站描述：</span><br />
+			<input type="text" class="text" />
+			<span class="muted">在搜索引擎中显示您的网站描述，利于搜索引擎等抓取</span>
+		</div>
+		<div class="O_formBox">
+			<span>logo设置：</span><br />
+			<input type="file" class="text" />
+			<span class="muted">建议使用200x30像素的png图片，最大体积不能超过50kb</span>
+		</div>
+		<div class="O_formBox">
+			<span>增加头部链接：</span>
+			<div>
+				<input type="text" placeholder="链接名称" />
+				<input type="text" placeholder="链接地址" />
+				<a class='add'>+</a><span class="muted">请注意控制头部链接的数量，链接太多将会影响用户体验</span>
+			</div>
+		</div>
+	</div>
+	<div class="O_menu_con">
+		<a name="O3" class="anchor"></a>
+		<div class="O_formBox">
+			<span>底部链接管理：</span>
+			<div>
+				<input type="text" placeholder="链接名称" />
+				<input type="text" placeholder="链接地址" />
+				<a class="add">+</a><span class="muted">请注意控制页脚链接的数量，链接太多将会影响用户体验</span>
+			</div>
+		</div>
+		<div class="O_formBox">
+			<span>底部背景色：</span><br />
+			<input type="text" class="text" />
+			<input type="text" class="text" />
+			<span class="muted">输入16进制颜色#RRGGBB</span>
+		</div>
+		<div class="O_formBox">
+			<span>底部版权信息：</span><br />
+			<input type="text" class="text" />
+			<span class="muted">版权信息将显示在底部链接的下一行</span>
+		</div>
+		<div class="O_formBox">
+			<span>logo设置：</span><br />
+			<input type="file" class="text" />
+			<span class="muted">建议使用200x30像素的png图片，最大体积不能超过50kb</span>
+		</div>
+	</div>
+	<div class="O_menu_con">
+		<a name="O4" class="anchor"></a>
+		<ul class="O_StyleList clearfix">
+			<li><img src="/images/oem/eg_01.jpg" /><p class="bor">蓝色商务</p><p><input type="radio" /><label>设为默认</label></p></li>
+			<li><img src="/images/oem/eg_02.jpg" /><p class="bor">蓝色商务</p><p><input type="radio" /><label>设为默认</label></p></li>
+			<li><img src="/images/oem/eg_01.jpg" /><p class="bor">蓝色商务</p><p><input type="radio" /><label>设为默认</label></p></li>
+			<li><img src="/images/oem/eg_02.jpg" /><p class="bor">蓝色商务</p><p><input type="radio" /><label>设为默认</label></p></li>
+			<li><img src="/images/oem/eg_01.jpg" /><p class="bor">蓝色商务</p><p><input type="radio" /><label>设为默认</label></p></li>
+			<li><img src="/images/oem/eg_02.jpg" /><p class="bor">蓝色商务</p><p><input type="radio" /><label>设为默认</label></p></li>
+			<li><img src="/images/oem/eg_01.jpg" /><p class="bor">蓝色商务</p><p><input type="radio" /><label>设为默认</label></p></li>
+			<li><img src="/images/oem/eg_02.jpg" /><p class="bor">蓝色商务</p><p><input type="radio" /><label>设为默认</label></p></li>
+			<li><img src="/images/oem/eg_01.jpg" /><p class="bor">蓝色商务</p><p><input type="radio" /><label>设为默认</label></p></li>
+			<li><img src="/images/oem/eg_02.jpg" /><p class="bor">蓝色商务</p><p><input type="radio" /><label>设为默认</label></p></li>
+			<li><img src="/images/oem/eg_01.jpg" /><p class="bor">蓝色商务</p><p><input type="radio" /><label>设为默认</label></p></li>
+		</ul>
+	</div>
+	<div class="O_menu_btns">
+		<input type="submit" value="提  交" class="btn class1" />
+		<input type="button" value="取  消" class="btn class2" />
+	</div>
+</body>
+</html>

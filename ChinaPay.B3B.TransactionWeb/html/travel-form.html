@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>B3B机票平台</title>
+	<meta charset="utf-8" />
+	<link href="/Styles/core.css" rel="stylesheet" type="text/css" />
+	<link href="/Styles/form.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		.ticket-num{
+			border-bottom: 2px solid #dedede;
+			padding: 25px 0;
+			text-align: center;
+			width: 100%;
+		}
+		.ticket-table{
+			border:1px solid #aaa;
+			margin:15px auto;
+			width: 900px;
+		}
+		.ticket-table caption{
+			font-size: 16px;
+			font-weight: 600;
+			padding: 10px 0;
+		}
+		.ticket-table th,
+		.ticket-table td{
+			border: 1px solid #aaa;
+			padding: 2px 3px;
+		}
+		.ticket-table th{
+			background-color: #f8f8f8;
+			height: 40px;
+			line-height: 40px;
+		}
+		.ticket-table td{
+			height: 30px;
+			line-height: 30px;
+		}
+		.wd6{
+			width: 60px;
+		}
+		.wd8{
+			width: 80px;
+		}
+		.wd9{
+			width: 90px;
+		}
+		.wd10{
+			width: 100px;
+		}
+		.wd12{
+			width: 120px;
+		}
+		.wd17{
+			width: 170px;
+		}
+	</style>
+</head>
+<body>
+	<div class="ticket-num">
+		<label>请输入票号:</label>
+		<input type="text" class="text" />
+		<button class="btn class1">导入</button>
+	</div>
+	<table class="ticket-table">
+		<caption>行程告知单</caption>
+		<tr>
+			<td colspan="9">
+				<label>旅客姓名: </label><input type="text" class="text wd17" />
+				<label style="padding-left:100px;">证件号码: </label><input type="text" class="text wd17" />
+				<label style="padding-left:100px;">备注: </label><input type="text" class="text wd17" />
+			</td>
+		</tr>
+		<tr>
+			<th style="width:130px;">始发地/目的地</th>
+			<th style="width:100px;">航空公司</th>
+			<th style="width:80px;">航班号</th>
+			<th style="width:100px;">舱位类型</th>
+			<th style="width:50px;">舱位</th>
+			<th style="width:100px;">起飞时间</th>
+			<th style="width:100px;">到达时间</th>
+			<th style="width:120px;">客票有效期</th>
+			<th style="width:100px;">免费行李</th>
+		</tr>
+		<tr>
+			<td>自 <input type="text" class="text wd9" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd6" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd6" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd9" /></td>
+			<td><input type="text" class="text wd8" /></td>
+		</tr>
+		<tr>
+			<td>至 <input type="text" class="text wd9" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd6" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd6" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd9" /></td>
+			<td><input type="text" class="text wd8" /></td>
+		</tr>
+		<tr>
+			<td>至 <input type="text" class="text wd9" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd6" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd6" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd9" /></td>
+			<td><input type="text" class="text wd8" /></td>
+		</tr>
+		<tr>
+			<td>至 <input type="text" class="text wd9" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd6" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd6" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd9" /></td>
+			<td><input type="text" class="text wd8" /></td>
+		</tr>
+		<tr>
+			<td>至 <input type="text" class="text wd9" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd6" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd6" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd8" /></td>
+			<td><input type="text" class="text wd9" /></td>
+			<td><input type="text" class="text wd8" /></td>
+		</tr>
+		<tr>	<td colspan="9">
+				<label>票价: </label><input type="text" class="text wd9" /> 元
+				<label style="padding-left:15px;">民航基金: </label><input type="text" class="text wd9" /> 元
+				<label style="padding-left:15px;">燃油附加费: </label><input type="text" class="text wd9" /> 元
+				<label style="padding-left:15px;">其他税费: </label><input type="text" class="text wd9" /> 元
+				<label style="padding-left:15px;">合计: </label><input type="text" class="text wd9" /> 元
+			</td>
+		</tr>
+		<tr>
+			<td colspan="9">
+				<label>电子客票号码: </label><input type="text" class="text wd10" />
+				<label style="padding-left:50px;">保险费: </label><input type="text" class="text wd6" /> 元
+				<label style="padding-left:50px;">填开单位: </label><input type="text" class="text wd12" />
+				<label style="padding-left:50px;">填开日期: </label><input type="text" class="text wd12" />
+			</td>
+		</tr>
+	</table>
+	<div class="btns">
+		<button class="btn class1">打印</button>
+		<button class="btn class2">预览</button>
+	</div>
+</body>
+</html> 

@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>用户管理</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/page.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/core.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/form.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/register.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/oem.css" />
+</head>
+<body style="width:980px;margin: 10px auto;">
+	<h3 class="titleBg">用户管理</h3>
+	<div class="box-a">
+		<table>
+			<colgroup><col class="w35" /><col class="w35" /><col class="w30" /></colgroup>
+			<tr>
+				<td>
+					<div class="input">
+						<span class="name">开户时间：</span>
+						<input type="text" class="text text-s" />
+						至
+						<input type="text" class="text text-s" />
+					</div>
+				</td>
+				<td>
+					<div class="input">
+						<span class="name">用户名：</span>
+						<input type="text" class="text" />
+					</div>
+				</td>
+				<td>
+					<div class="input">
+						<span class="name">状态：</span>
+						<input type="text" class="text" />
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="input">
+						<span class="name">公司简称：</span>
+						<input type="text" class="text" />
+					</div>
+				</td>
+				<td>
+					<div class="input">
+						<span class="name">联系人：</span>
+						<input type="text" class="text" />
+					</div>
+				</td>
+				<td>
+					<div class="input">
+						<span class="name">收益组：</span>
+						<input type="text" class="text" />
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="btns" colspan="3">
+					<input type="submit" value="查  询" class="btn class1 submit" />
+					<input type="button" value="开  户" class="btn class2" />
+					<input type="button" value="收益组管理" class="btn class2" />
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="table">
+		<table>
+			<colgroup><col class="w20" /><col class="w15" /><col class="w10" /><col class="w10" /><col class="w15" /><col class="w10" /><col class="w10" /><col class="w20" /></colgroup>
+			<tr>
+				<th>开户时间</th>
+				<th>用户名</th>
+				<th>公司简称</th>
+				<th>收益组</th>
+				<th>公司类型</th>
+				<th>联系人</th>
+				<th>状态</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td>2013/1/15 10:37:54</td>
+				<td>webchong</td>
+				<td>儒雅票务</td>
+				<td>昆明地区</td>
+				<td>采购商(个人)</td>
+				<td>孙悟空</td>
+				<td>正常</td>
+				<td><a href="#">编辑</a><a href="#">停用</a></td>
+			</tr>
+			<tr>
+				<td>2013/1/15 10:37:54</td>
+				<td>webchong</td>
+				<td>儒雅票务</td>
+				<td>昆明地区</td>
+				<td>采购商(个人)</td>
+				<td>孙悟空</td>
+				<td>正常</td>
+				<td><a href="#">编辑</a><a href="#">停用</a></td>
+			</tr>
+			<tr>
+				<td>2013/1/15 10:37:54</td>
+				<td>webchong</td>
+				<td>儒雅票务</td>
+				<td>昆明地区</td>
+				<td>采购商(个人)</td>
+				<td>孙悟空</td>
+				<td>正常</td>
+				<td><a href="#">编辑</a><a href="#">停用</a></td>
+			</tr>
+		</table>
+	</div>
+	<div class="btns">
+		<div class="dataPager clearfix">
+			<span id="pPages">
+				<a class="yemaa" style="margin-left:5px;margin-right:5px;text-decoration:none;">1</a>
+				<a style="margin-left:5px;margin-right:5px;">2</a>
+				<a style="margin-left:5px;margin-right:5px;">3</a>
+				<a style="margin-left:5px;margin-right:5px;">4</a>
+				<a style="margin-left:5px;margin-right:5px;">5</a>
+			</span>
+			<a href="javascript:__doPostBack('pager$lbnNext','')">下一页 &gt;</a>
+			<a href="javascript:__doPostBack('pager$lbnLast','')">末页</a>
+		每页显示
+		<select style="width:50px;">
+			<option selected="selected" value="10">10</option>
+			<option value="20">20</option>
+			<option value="30">30</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+		</select>条&nbsp;&nbsp;共 <span>185</span> 条 &nbsp;&nbsp;第 <span>1</span> / <span>19</span> 页</div>
+	</div>
+</body>
+</html>
